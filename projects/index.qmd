@@ -1,7 +1,7 @@
 ---
 title: "Projects"
 description: |
-  Project we are currently working on
+  Projects we are currently working on
 listing: 
   sort: "desc"
   type: default

@@ -4,6 +4,7 @@
     "items": [
       "/projects/FlashDrive.html",
       "/projects/miniHPC.html",
+      "/projects/offlinedatasci.html",
       "/projects/RaspberryPi.html"
     ]
   },
@@ -22,7 +23,7 @@
     "items": [
       "/projects/FlashDrive.html",
       "/projects/RaspberryPi.html",
-      "/projects/index.html",
+      "/projects/offlinedatasci.html",
       "/projects/miniHPC.html"
     ]
   },

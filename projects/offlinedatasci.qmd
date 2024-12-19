@@ -1,0 +1,11 @@
+---
+title: "The OfflineDataSci Python package"
+categories:
+  - offlinedatasci
+image: images/pixie.jpg
+image-alt: "A photo of Raspberry Pi High Performance cluster consisting of six nodes. "
+---
+
+The quick brown fox
+
+

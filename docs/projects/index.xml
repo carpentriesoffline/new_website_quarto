@@ -8,10 +8,10 @@
 <title>CarpentriesOffline</title>
 <link>https://carpentriesoffline.org/new_website_quarto/projects/</link>
 <atom:link href="https://carpentriesoffline.org/new_website_quarto/projects/index.xml" rel="self" type="application/rss+xml"/>
-<description>Project we are currently working on
+<description>Projects we are currently working on
 </description>
 <generator>quarto-1.6.39</generator>
-<lastBuildDate>Thu, 19 Dec 2024 15:08:15 GMT</lastBuildDate>
+<lastBuildDate>Thu, 19 Dec 2024 15:27:25 GMT</lastBuildDate>
 <item>
   <title>Bootable Flash Drive</title>
   <link>https://carpentriesoffline.org/new_website_quarto/projects/FlashDrive.html</link>
@@ -27,7 +27,7 @@
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>flashdrive</category>
   <guid>https://carpentriesoffline.org/new_website_quarto/projects/FlashDrive.html</guid>
-  <pubDate>Thu, 19 Dec 2024 15:08:15 GMT</pubDate>
+  <pubDate>Thu, 19 Dec 2024 15:27:25 GMT</pubDate>
   <media:content url="https://carpentriesoffline.org/new_website_quarto/projects/images/flashdrive.png" medium="image" type="image/png" height="203" width="144"/>
 </item>
 <item>
@@ -45,7 +45,25 @@
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>minihpc</category>
   <guid>https://carpentriesoffline.org/new_website_quarto/projects/miniHPC.html</guid>
-  <pubDate>Thu, 19 Dec 2024 15:08:15 GMT</pubDate>
+  <pubDate>Thu, 19 Dec 2024 15:27:25 GMT</pubDate>
+  <media:content url="https://carpentriesoffline.org/new_website_quarto/projects/images/pixie.jpg" medium="image" type="image/jpeg"/>
+</item>
+<item>
+  <title>The OfflineDataSci Python package</title>
+  <link>https://carpentriesoffline.org/new_website_quarto/projects/offlinedatasci.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>The quick brown fox</p>
+
+
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>offlinedatasci</category>
+  <guid>https://carpentriesoffline.org/new_website_quarto/projects/offlinedatasci.html</guid>
+  <pubDate>Thu, 19 Dec 2024 15:27:25 GMT</pubDate>
   <media:content url="https://carpentriesoffline.org/new_website_quarto/projects/images/pixie.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
@@ -63,7 +81,7 @@
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>sdcard</category>
   <guid>https://carpentriesoffline.org/new_website_quarto/projects/RaspberryPi.html</guid>
-  <pubDate>Thu, 19 Dec 2024 15:08:15 GMT</pubDate>
+  <pubDate>Thu, 19 Dec 2024 15:27:25 GMT</pubDate>
   <media:content url="https://carpentriesoffline.org/new_website_quarto/projects/images/sd_card.png" medium="image" type="image/png" height="164" width="144"/>
 </item>
 </channel>

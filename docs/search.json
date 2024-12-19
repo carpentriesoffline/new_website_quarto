@@ -11,7 +11,7 @@
     "href": "projects/index.html",
     "title": "Projects",
     "section": "",
-    "text": "Bootable Flash Drive\n\n\n\n\n\n\nflashdrive\n\n\n\n\n\n\n1 min\n\n\n4 words\n\n\n\n\n\n\n\n\n\n\n\n\nThe miniHPC\n\n\n\n\n\n\nminihpc\n\n\n\n\n\n\n1 min\n\n\n4 words\n\n\n\n\n\n\n\n\n\n\n\n\nCarpentriesOffline with a Raspberry Pi\n\n\n\n\n\n\nsdcard\n\n\n\n\n\n\n1 min\n\n\n4 words\n\n\n\n\n\n\nNo matching items\n\n Back to top"
+    "text": "Bootable Flash Drive\n\n\n\n\n\n\nflashdrive\n\n\n\n\n\n\n1 min\n\n\n4 words\n\n\n\n\n\n\n\n\n\n\n\n\nThe miniHPC\n\n\n\n\n\n\nminihpc\n\n\n\n\n\n\n1 min\n\n\n4 words\n\n\n\n\n\n\n\n\n\n\n\n\nThe OfflineDataSci Python package\n\n\n\n\n\n\nofflinedatasci\n\n\n\n\n\n\n1 min\n\n\n4 words\n\n\n\n\n\n\n\n\n\n\n\n\nCarpentriesOffline with a Raspberry Pi\n\n\n\n\n\n\nsdcard\n\n\n\n\n\n\n1 min\n\n\n4 words\n\n\n\n\n\n\nNo matching items\n\n Back to top"
   },
   {
     "objectID": "lessons/onboarding_sdcard.html",
@@ -115,6 +115,13 @@
     "objectID": "projects/miniHPC.html",
     "href": "projects/miniHPC.html",
     "title": "The miniHPC",
+    "section": "",
+    "text": "The quick brown fox\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "projects/offlinedatasci.html",
+    "href": "projects/offlinedatasci.html",
+    "title": "The OfflineDataSci Python package",
     "section": "",
     "text": "The quick brown fox\n\n\n\n Back to top"
   }

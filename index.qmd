@@ -5,7 +5,7 @@ listing:
   id: Project
   contents:
   - /projects
-  - "!projects/index.md"
+  - "!projects/index.qmd"
   type: grid
   categories: false
   sort-ui: false
