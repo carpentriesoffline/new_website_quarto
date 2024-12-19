@@ -1,0 +1,9 @@
+---
+title: "Bootable Flash Drive"
+categories:
+  - flashdrive
+image: images/flashdrive.png
+image-alt: "A photo of a flash drive"
+---
+
+The quick brown fox

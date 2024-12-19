@@ -1,0 +1,10 @@
+---
+title: "The miniHPC"
+categories:
+  - minihpc
+image: images/pixie.jpg
+image-alt: "A photo of Raspberry Pi High Performance cluster consisting of six nodes. "
+---
+
+The quick brown fox
+

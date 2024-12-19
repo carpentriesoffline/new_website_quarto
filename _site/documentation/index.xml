@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>CarpentriesOffline</title>
+<link>https://carpentriesoffline.org/documentation/</link>
+<atom:link href="https://carpentriesoffline.org/documentation/index.xml" rel="self" type="application/rss+xml"/>
+<description>CarpentriesOffline Documentation
+</description>
+<generator>quarto-1.6.39</generator>
+<lastBuildDate>Thu, 19 Dec 2024 10:30:14 GMT</lastBuildDate>
+<item>
+  <title>CarpentriesOffline SD card images</title>
+  <link>https://carpentriesoffline.org/documentation/creating_an_sdcard.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>The quick brown fox</p>
+
+
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>HPC minihpc sdcard</category>
+  <guid>https://carpentriesoffline.org/documentation/creating_an_sdcard.html</guid>
+  <pubDate>Thu, 19 Dec 2024 10:30:14 GMT</pubDate>
+</item>
+<item>
+  <title>Setting up EESSI with PXE on the miniHPC</title>
+  <link>https://carpentriesoffline.org/documentation/eessi_with_pxe.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>The quick brown fox</p>
+
+
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>HPC minihpc</category>
+  <guid>https://carpentriesoffline.org/documentation/eessi_with_pxe.html</guid>
+  <pubDate>Thu, 19 Dec 2024 10:30:14 GMT</pubDate>
+</item>
+<item>
+  <title>Creating a compute node with a Raspberry Pi for the miniHPC</title>
+  <link>https://carpentriesoffline.org/documentation/minihpc_compute_node.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>The quick brown fox</p>
+
+
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>HPC minihpc</category>
+  <guid>https://carpentriesoffline.org/documentation/minihpc_compute_node.html</guid>
+  <pubDate>Thu, 19 Dec 2024 10:30:14 GMT</pubDate>
+</item>
+<item>
+  <title>Creating a login node with a Raspberry Pi for the miniHPC</title>
+  <link>https://carpentriesoffline.org/documentation/minihpc_login_node.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>The quick brown fox</p>
+
+
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>HPC minihpc</category>
+  <guid>https://carpentriesoffline.org/documentation/minihpc_login_node.html</guid>
+  <pubDate>Thu, 19 Dec 2024 10:30:14 GMT</pubDate>
+</item>
+<item>
+  <title>Setting up PXE on the miniHPC</title>
+  <link>https://carpentriesoffline.org/documentation/pxe.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>The quick brown fox</p>
+
+
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>HPC minihpc</category>
+  <guid>https://carpentriesoffline.org/documentation/pxe.html</guid>
+  <pubDate>Thu, 19 Dec 2024 10:30:14 GMT</pubDate>
+</item>
+</channel>
+</rss>

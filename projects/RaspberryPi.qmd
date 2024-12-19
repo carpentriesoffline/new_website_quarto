@@ -1,0 +1,11 @@
+---
+title: "CarpentriesOffline with a Raspberry Pi"
+categories:
+  - sdcard
+image: images/sd_card.png
+image-alt: "A photo of a micro sd card"
+---
+
+The quick brown fox
+
+

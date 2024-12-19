@@ -1,0 +1,8 @@
+---
+title: "Setting up PXE on the miniHPC"
+categories:
+  - HPC minihpc 
+---
+
+The quick brown fox
+

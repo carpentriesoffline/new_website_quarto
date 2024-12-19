@@ -1,0 +1,48 @@
+project:
+  type: website
+  preview:
+    port: 4000
+
+website:
+  title: "CarpentriesOffline"
+  description: "CarpentriesOffline Website"
+  site-url: "https://carpentriesoffline.org"
+  page-navigation: true
+  back-to-top-navigation: true
+  favicon: images/favicon.ico
+  repo-url: https://github.com/carpentriesoffline/CarpentriesOffline.github.io
+  repo-actions: [edit, issue]
+  navbar:
+    toggle-position: right
+    logo-href: https://carpentriesoffline.org
+    logo: images/OFFLINE.png
+    logo-alt: "CarpentriesOffline web page and documentation"
+    title: false
+    collapse-below: lg
+    tools:
+    - icon: github
+      href: https://github.com/carpentriesoffline
+    right:
+      - text: Home
+        href: index.qmd
+      - text: Projects
+        href: projects/index.qmd
+        aria-label: Project Descriptions
+      - text: Documentation
+        href: documentation/index.qmd
+      - text: Lessons
+        href: lessons/index.qmd
+      - text: "About"
+        href: about.qmd
+
+format:
+  html:
+    theme:
+      - assets/theme-light.scss
+    css: assets/nhsr.css
+    code-link: true
+    link-external-newwindow: true
+    toc: true
+
+execute:
+  freeze: auto

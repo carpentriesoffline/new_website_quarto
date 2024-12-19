@@ -1,0 +1,19 @@
+---
+page-layout: article
+title-block-banner: true
+---
+
+# About CarpentriesOffline
+
+CarpentriesOffline was born out of the Software Sustainability Institute’s 2021 Collababorations Workshop. The idea was formed by a team during the Collaborative Ideas session, and the implementation began on the Hack Day. Our aim was to find a solution to the challenges presented when trying to run workshops with limited or no Internet access.
+
+## The SSI CW 2021 HackDay Team
+<center>
+Our HackDay team. Very proud of ourselves for winning the HackDay with CarpenPi:
+![Original Team](https://carpentriesoffline.org/images/SSICW2021_HackDayWinners-600px.jpg)
+</center>
+
+| | | |
+|-|-|-|
+|Flick Anderson|Jannetta Steyn|Sam Haynes|
+|Emily Lewis|Abhishek Dasgupta|Alison Clarke|

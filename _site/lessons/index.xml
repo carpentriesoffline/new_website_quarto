@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>CarpentriesOffline</title>
+<link>https://carpentriesoffline.org/lessons/</link>
+<atom:link href="https://carpentriesoffline.org/lessons/index.xml" rel="self" type="application/rss+xml"/>
+<description>CarpentriesOffline Lessons
+</description>
+<generator>quarto-1.6.39</generator>
+<lastBuildDate>Thu, 19 Dec 2024 10:30:20 GMT</lastBuildDate>
+<item>
+  <title>Building a miniHPC with Raspberry Pis</title>
+  <link>https://carpentriesoffline.org/lessons/building_a_minihpc.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>The quick brown fox</p>
+
+
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>HPC minihpc</category>
+  <guid>https://carpentriesoffline.org/lessons/building_a_minihpc.html</guid>
+  <pubDate>Thu, 19 Dec 2024 10:30:20 GMT</pubDate>
+</item>
+<item>
+  <title>Onboarding Instructors to use a Raspberry Pi with the SD card</title>
+  <link>https://carpentriesoffline.org/lessons/onboarding_sdcard.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>The quick brown fox</p>
+
+
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>sdcard</category>
+  <guid>https://carpentriesoffline.org/lessons/onboarding_sdcard.html</guid>
+  <pubDate>Thu, 19 Dec 2024 10:30:20 GMT</pubDate>
+</item>
+</channel>
+</rss>

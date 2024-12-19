@@ -1,0 +1,21 @@
+---
+title: "Projects"
+description: |
+  Project we are currently working on
+listing: 
+  sort: "desc"
+  type: default
+  categories: true
+  image-placeholder: /images/OFFLINE.png
+  sort-ui: false
+  filter-ui: false
+  fields: [image, title, categories, word-count, reading-time]
+  page-size: 5
+  feed: true
+format: 
+  html: 
+    page-layout: full
+title-block-banner: false
+citation: false
+---
+
