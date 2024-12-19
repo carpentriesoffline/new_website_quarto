@@ -2,15 +2,16 @@ project:
   type: website
   preview:
     port: 4000
+  output-dir: docs
 
 website:
   title: "CarpentriesOffline"
   description: "CarpentriesOffline Website"
-  site-url: "https://carpentriesoffline.org"
+  site-url: "https://carpentriesoffline.org/new_website_quarto/"
   page-navigation: true
   back-to-top-navigation: true
   favicon: images/favicon.ico
-  repo-url: https://github.com/carpentriesoffline/CarpentriesOffline.github.io
+  repo-url: https://github.com/carpentriesoffline/new_website_quarto
   repo-actions: [edit, issue]
   navbar:
     toggle-position: right
