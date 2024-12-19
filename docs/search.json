@@ -86,9 +86,9 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Home Page",
+    "title": "CarpentriesOffline",
     "section": "",
-    "text": "(If you would like to fix something or contribute, please make your way to our GitHub repositories at https://github.com/carpentriesoffline/).\nCarpentriesOffline aims to provide a solution for running Software, Data, Library and HPC Carpentries workshop in areas where there is limited or no Internet access.\nSeveral people have also pointed out that an offline solution could serve more than just folks in Internet challenged areas. Sometimes, it would be useful not to have to rely on Internet access to avoid any problems during a workshop. So there is scope for this project to serve a much wider community that originally anticipated.\nWe started the project by creating a software image that can be written to an SD card for use in a Raspberry Pi (RPi) computer, to turn it into an access point and a server. However, for the past few years RPis have become very difficult to source. We also learnt that there are certain limits when using RPis and so we decided to look into alternative solutions.\nWe would not want to see the RPi idea go to waste as we still believe it will provide an excellent solution. But to provide an alternative we have thought it well to start work on creating a bootable USB stick with a version of Linux and all the previously mentioned content and services. Learners and instructors usually have their own laptops when they attend a workshop. The USB stick can then be used to turn the instructors laptop into an access point and web server.\nThere are now three threads of development for CarpentriesOffline, 1) The Raspberry Pi SD card image, 2) The bootable flashdrive and 3) a mini HPC.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBootable Flash Drive\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCarpentriesOffline with a Raspberry Pi\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProjects\n\n\nProject we are currently working on\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items\n\n Back to top"
+    "text": "CarpentriesOffline aims to provide a solution for running Software, Data, Library and HPC Carpentries workshop in areas where there is limited or no Internet access."
   },
   {
     "objectID": "lessons/index.html",
@@ -110,5 +110,19 @@
     "title": "The miniHPC",
     "section": "",
     "text": "The quick brown fox\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "index.html#projects",
+    "href": "index.html#projects",
+    "title": "CarpentriesOffline",
+    "section": "Projects",
+    "text": "Projects"
+  },
+  {
+    "objectID": "index.html#our-projects",
+    "href": "index.html#our-projects",
+    "title": "CarpentriesOffline",
+    "section": "Our Projects",
+    "text": "Our Projects"
   }
 ]
