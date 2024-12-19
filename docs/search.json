@@ -91,6 +91,13 @@
     "text": "CarpentriesOffline aims to provide a solution for running Software, Data, Library and HPC Carpentries workshop in areas where there is limited or no Internet access."
   },
   {
+    "objectID": "index.html#our-projects",
+    "href": "index.html#our-projects",
+    "title": "CarpentriesOffline",
+    "section": "Our Projects",
+    "text": "Our Projects"
+  },
+  {
     "objectID": "lessons/index.html",
     "href": "lessons/index.html",
     "title": "Lessons",
@@ -110,19 +117,5 @@
     "title": "The miniHPC",
     "section": "",
     "text": "The quick brown fox\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "index.html#projects",
-    "href": "index.html#projects",
-    "title": "CarpentriesOffline",
-    "section": "Projects",
-    "text": "Projects"
-  },
-  {
-    "objectID": "index.html#our-projects",
-    "href": "index.html#our-projects",
-    "title": "CarpentriesOffline",
-    "section": "Our Projects",
-    "text": "Our Projects"
   }
 ]
