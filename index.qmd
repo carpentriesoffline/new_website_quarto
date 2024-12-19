@@ -14,7 +14,9 @@ listing:
   feed: false
 ---
 
+![](images/OFFLINE.png)
 
 CarpentriesOffline aims to provide a solution for running Software, Data, Library and HPC Carpentries workshop in areas where there is limited or no Internet access.
 
 ## Our Projects
+

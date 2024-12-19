@@ -15,10 +15,10 @@ website:
   repo-actions: [edit, issue]
   navbar:
     toggle-position: right
+    logo: images/OFFLINE_logo.png
     logo-href: https://carpentriesoffline.org/new_website_quarto
-    logo: images/OFFLINE.png
     logo-alt: "CarpentriesOffline web page and documentation"
-    title: false
+    title: CarpentriesOffline
     collapse-below: lg
     tools:
     - icon: github

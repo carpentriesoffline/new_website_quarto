@@ -83,10 +83,9 @@ $footer-fg:                   $nhs-Pink;
 
 // title
 .navbar-title {
-  font-size: 0.75em;
+  font-size: 2em;
   font-weight: 500;
   color: $nhs-DarkBlue;
-  text-transform: uppercase;
   letter-spacing: .1em;
 
   &:hover {
@@ -103,7 +102,7 @@ $footer-fg:                   $nhs-Pink;
 }
 
 .navbar-logo {
-  max-height: 100px;
+  max-height: 50px;
   max-width: 100%;
   align-items: baseline;
 }
