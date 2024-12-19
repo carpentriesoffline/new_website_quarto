@@ -1,5 +1,8 @@
 ---
 title: ""
+format:
+  html:
+    toc: false
 
 listing:
   id: Project
