@@ -4,7 +4,7 @@ description: |
   CarpentriesOffline Documentation
 listing: 
   sort: "desc"
-  type: default
+  type: table
   categories: true
   sort-ui: false
   filter-ui: false
@@ -14,6 +14,7 @@ listing:
 format: 
   html: 
     page-layout: full
+    toc: true
 title-block-banner: false
 citation: false
 ---

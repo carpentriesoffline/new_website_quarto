@@ -4,8 +4,8 @@ description: |
   Projects we are currently working on
 listing: 
   sort: "desc"
-  type: default
-  categories: true
+  type: grid
+  categories: false
   image-placeholder: /images/OFFLINE.png
   sort-ui: false
   filter-ui: false
@@ -15,6 +15,7 @@ listing:
 format: 
   html: 
     page-layout: full
+    toc: false
 title-block-banner: false
 citation: false
 ---
