@@ -11,7 +11,7 @@
     "href": "projects/index.html",
     "title": "Projects",
     "section": "",
-    "text": "Bootable Flash Drive\n\n\n1 min\n\n\n\nflashdrive\n\n\n\n\n\nWord Count\n\n\n4 words\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe miniHPC\n\n\n1 min\n\n\n\nminihpc\n\n\n\n\n\nWord Count\n\n\n4 words\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe OfflineDataSci Python package\n\n\n1 min\n\n\n\nofflinedatasci\n\n\n\n\n\nWord Count\n\n\n4 words\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCarpentriesOffline with a Raspberry Pi\n\n\n1 min\n\n\n\nsdcard\n\n\n\n\n\nWord Count\n\n\n4 words\n\n\n\n\n\n\n\n\n\nNo matching items\n\n Back to top"
+    "text": "Bootable Flash Drive\n\n\n\nflashdrive\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCarpentriesOffline with a Raspberry Pi\n\n\n\nsdcard\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe miniHPC\n\n\n\nminihpc\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe OfflineDataSci Python package\n\n\n\nofflinedatasci\n\n\n\n\n\n\n\n\nNo matching items\n\n Back to top"
   },
   {
     "objectID": "lessons/onboarding_sdcard.html",
@@ -74,7 +74,7 @@
     "href": "documentation/index.html",
     "title": "Documents",
     "section": "",
-    "text": "Title\n\n\nCategories\n\n\nWord Count\n\n\nReading Time\n\n\n\n\n\n\n\n\n\nCarpentriesOffline SD card images\n\n\nminihpc sdcard\n\n\n4 words\n\n\n1 min\n\n\n\n\n\n\n\nSetting up EESSI with PXE on the miniHPC\n\n\nminihpc\n\n\n4 words\n\n\n1 min\n\n\n\n\n\n\n\nCreating a compute node with a Raspberry Pi for the miniHPC\n\n\nminihpc\n\n\n4 words\n\n\n1 min\n\n\n\n\n\n\n\nCreating a login node with a Raspberry Pi for the miniHPC\n\n\nminihpc\n\n\n4 words\n\n\n1 min\n\n\n\n\n\n\n\nSetting up PXE on the miniHPC\n\n\nminihpc\n\n\n4 words\n\n\n1 min\n\n\n\n\n\n\n\nA summary of the services required on the login node\n\n\nminihpc\n\n\n6 words\n\n\n1 min\n\n\n\n\n\nNo matching items\n\n\n  \n\n Back to top"
+    "text": "Title\n\n\nCategories\n\n\n\n\n\n\n\n\n\nSetting up EESSI with PXE on the miniHPC\n\n\nminihpc\n\n\n\n\n\n\n\nA summary of the services required on the login node\n\n\nminihpc\n\n\n\n\n\n\n\nCreating a login node with a Raspberry Pi for the miniHPC\n\n\nminihpc\n\n\n\n\n\n\n\nSetting up PXE on the miniHPC\n\n\nminihpc\n\n\n\n\n\n\n\nCreating a compute node with a Raspberry Pi for the miniHPC\n\n\nminihpc\n\n\n\n\n\n\n\nCarpentriesOffline SD card images\n\n\nminihpc, sdcard\n\n\n\n\n\nNo matching items\n\n Back to top"
   },
   {
     "objectID": "documentation/minihpc_login_node.html",
@@ -102,7 +102,7 @@
     "href": "lessons/index.html",
     "title": "Lessons",
     "section": "",
-    "text": "Building a miniHPC with Raspberry Pis\n\n\n\n\n\n\nHPC minihpc\n\n\n\n\n\n\n1 min\n\n\n4 words\n\n\n\n\n\n\n\n\n\n\n\n\nOnboarding Instructors to use a Raspberry Pi with the SD card\n\n\n\n\n\n\nsdcard\n\n\n\n\n\n\n1 min\n\n\n4 words\n\n\n\n\n\n\nNo matching items\n\n Back to top"
+    "text": "Onboarding Instructors to use a Raspberry Pi with the SD card\n\n\n\nsdcard\n\n\n\n\n\n\n\n\n\n\n\n\nBuilding a miniHPC with Raspberry Pis\n\n\n\nHPC\n\n\nminihpc\n\n\n\n\n\n\n\n\nNo matching items\n\n Back to top"
   },
   {
     "objectID": "projects/FlashDrive.html",
@@ -173,5 +173,12 @@
     "title": "About CarpentriesOffline",
     "section": "",
     "text": "Software Sustainability Institute: In 2022 I became an SSI fellow. As a fellow I received £3000 form the SSI to spend towards developing the CarpentriesOffline project. Since then I have received further support which has enabled me to obtain more equipment.\n\n\n\n\n\n\n\nNewcastle University"
+  },
+  {
+    "objectID": "index.html#featured-projects",
+    "href": "index.html#featured-projects",
+    "title": "CarpentriesOffline",
+    "section": "Featured Projects",
+    "text": "Featured Projects"
   }
 ]

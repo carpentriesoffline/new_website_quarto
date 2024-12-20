@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.39">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -38,10 +38,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-d641152881ee6c40fe62c2858416ffe2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -182,15 +182,15 @@ window.Quarto = {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
 
 
 
 
 <p><img src="images/OFFLINE.png" class="img-fluid"></p>
 <p>CarpentriesOffline aims to provide a solution for running Software, Data, Library and HPC Carpentries workshop in areas where there is limited or no Internet access.</p>
-<section id="our-projects" class="level2">
-<h2 class="anchored" data-anchor-id="our-projects">Our Projects</h2>
+<section id="featured-projects" class="level2">
+<h2 class="anchored" data-anchor-id="featured-projects">Featured Projects</h2>
 
 
 
@@ -198,7 +198,7 @@ window.Quarto = {
 
 <div class="quarto-listing quarto-listing-container-grid" id="listing-Project">
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="Zmxhc2hkcml2ZQ==" data-listing-file-modified-sort="1734563243382" data-listing-reading-time-sort="1" data-listing-word-count-sort="4">
+<div class="g-col-1" data-index="0" data-categories="flashdrive" data-listing-file-modified-sort="1734688494205" data-listing-reading-time-sort="1" data-listing-word-count-sort="4">
 <a href="./projects/FlashDrive.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -220,7 +220,7 @@ The quick brown fox
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="1" data-categories="c2RjYXJk" data-listing-file-modified-sort="1734548767854" data-listing-reading-time-sort="1" data-listing-word-count-sort="4">
+<div class="g-col-1" data-index="1" data-categories="sdcard" data-listing-file-modified-sort="1734688494205" data-listing-reading-time-sort="1" data-listing-word-count-sort="4">
 <a href="./projects/RaspberryPi.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -242,7 +242,7 @@ The quick brown fox
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="2" data-categories="b2ZmbGluZWRhdGFzY2k=" data-listing-file-modified-sort="1734622298938" data-listing-reading-time-sort="1" data-listing-word-count-sort="4">
+<div class="g-col-1" data-index="2" data-categories="offlinedatasci" data-listing-file-modified-sort="1734688494210" data-listing-reading-time-sort="1" data-listing-word-count-sort="4">
 <a href="./projects/offlinedatasci.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -251,28 +251,6 @@ The quick brown fox
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 The OfflineDataSci Python package
-</h5>
-<div class="card-text listing-description">
-The quick brown fox
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="3" data-categories="bWluaWhwYw==" data-listing-file-modified-sort="1734549668380" data-listing-reading-time-sort="1" data-listing-word-count-sort="4">
-<a href="./projects/miniHPC.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./projects/images/pixie.jpg" class="thumbnail-image card-img" style="height: 150px;" alt="A photo of Raspberry Pi High Performance cluster consisting of six nodes. ">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-The miniHPC
 </h5>
 <div class="card-text listing-description">
 The quick brown fox
@@ -373,6 +351,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -488,6 +468,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
+      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {
