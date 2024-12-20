@@ -12,12 +12,14 @@ $carp-bodygrey      : #585858;
 $carp-headingsgrey  : #111827;
 
 // Base document colors
-$link-color:                 $carp-red;
-
-// Banner
+$link-color:                 $carp-blue;      // Links
 $body-bg:                    $carp-lightgrey; // Background
+$body-color:                 $carp-bodygrey;  // Body text;
+$heading-color:              $carp-headingsgrey; // Headings
 
-// Links
+h1, h2, h3, h4, h5, h6 {
+  color: $heading-color !important;
+}
 
 $link-decoration:             underline;
 $link-hover-decoration:       none;
