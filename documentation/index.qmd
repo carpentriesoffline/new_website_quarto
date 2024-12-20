@@ -8,8 +8,8 @@ listing:
   categories: true
   sort-ui: false
   filter-ui: false
-  fields: [image, title, categories, word-count, reading-time]
-  page-size: 5
+  fields: [image, title, categories]
+  page-size: 20
   feed: true
 format: 
   html: 

@@ -1,7 +1,6 @@
 ---
 title: "CarpentriesOffline SD card images"
-categories:
-  - minihpc sdcard
+categories: [minihpc, sdcard]
 ---
 
 The quick brown fox
