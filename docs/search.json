@@ -131,5 +131,40 @@
     "title": "About CarpentriesOffline",
     "section": "",
     "text": "Virnaliz Cruz\nAbhishek Dasgupta\nColin Sauze\nJannetta Steyn\nEthan White"
+  },
+  {
+    "objectID": "documentation/services.html#wpa_supplicant",
+    "href": "documentation/services.html#wpa_supplicant",
+    "title": "A summary of the services required on the login node",
+    "section": "wpa_supplicant",
+    "text": "wpa_supplicant"
+  },
+  {
+    "objectID": "documentation/services.html#nfs",
+    "href": "documentation/services.html#nfs",
+    "title": "A summary of the services required on the login node",
+    "section": "nfs",
+    "text": "nfs"
+  },
+  {
+    "objectID": "documentation/services.html#ntp",
+    "href": "documentation/services.html#ntp",
+    "title": "A summary of the services required on the login node",
+    "section": "ntp",
+    "text": "ntp"
+  },
+  {
+    "objectID": "documentation/services.html#networkmanager",
+    "href": "documentation/services.html#networkmanager",
+    "title": "A summary of the services required on the login node",
+    "section": "NetworkManager",
+    "text": "NetworkManager"
+  },
+  {
+    "objectID": "documentation/services.html#iptables",
+    "href": "documentation/services.html#iptables",
+    "title": "A summary of the services required on the login node",
+    "section": "iptables",
+    "text": "iptables"
   }
 ]
