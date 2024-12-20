@@ -1,0 +1,170 @@
+[
+  {
+    "objectID": "projects/RaspberryPi.html",
+    "href": "projects/RaspberryPi.html",
+    "title": "CarpentriesOffline with a Raspberry Pi",
+    "section": "",
+    "text": "The quick brown fox\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "projects/miniHPC.html",
+    "href": "projects/miniHPC.html",
+    "title": "The miniHPC",
+    "section": "",
+    "text": "The quick brown fox\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "projects/FlashDrive.html",
+    "href": "projects/FlashDrive.html",
+    "title": "Bootable Flash Drive",
+    "section": "",
+    "text": "The quick brown fox\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "lessons/index.html",
+    "href": "lessons/index.html",
+    "title": "Lessons",
+    "section": "",
+    "text": "Building a miniHPC with Raspberry Pis\n\n\n\nHPC\n\n\nminihpc\n\n\n\n\n\n\n\n\n\n\n\n\nOnboarding Instructors to use a Raspberry Pi with the SD card\n\n\n\nsdcard\n\n\n\n\n\n\n\n\nNo matching items\n\n Back to top"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "CarpentriesOffline",
+    "section": "",
+    "text": "CarpentriesOffline aims to provide a solution for running Software, Data, Library and HPC Carpentries workshop in areas where there is limited or no Internet access."
+  },
+  {
+    "objectID": "index.html#featured-projects",
+    "href": "index.html#featured-projects",
+    "title": "CarpentriesOffline",
+    "section": "Featured Projects",
+    "text": "Featured Projects"
+  },
+  {
+    "objectID": "documentation/pxe.html",
+    "href": "documentation/pxe.html",
+    "title": "Setting up PXE on the miniHPC",
+    "section": "",
+    "text": "The quick brown fox\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "documentation/minihpc_compute_node.html",
+    "href": "documentation/minihpc_compute_node.html",
+    "title": "Creating a compute node with a Raspberry Pi for the miniHPC",
+    "section": "",
+    "text": "The quick brown fox\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "documentation/eessi_with_pxe.html",
+    "href": "documentation/eessi_with_pxe.html",
+    "title": "Setting up EESSI with PXE on the miniHPC",
+    "section": "",
+    "text": "The quick brown fox\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About CarpentriesOffline",
+    "section": "",
+    "text": "CarpentriesOffline was born out of the Software Sustainability Institute’s 2021 Collababorations Workshop. The idea was formed by a team during the Collaborative Ideas session, and the implementation began on the Hack Day. Our aim was to find a solution to the challenges presented when trying to run workshops with limited or no Internet access.\n\n\n\nVirnaliz Cruz\nAbhishek Dasgupta\nColin Sauze\nJannetta Steyn\nEthan White\n\n\n\n\n\nOur HackDay team. Very proud of ourselves for winning the HackDay with CarpenPi: \n\n\n\n\nFlick Anderson\nJannetta Steyn\nSam Haynes\n\n\nEmily Lewis\nAbhishek Dasgupta\nAlison Clarke"
+  },
+  {
+    "objectID": "about.html#our-current-core-team",
+    "href": "about.html#our-current-core-team",
+    "title": "About CarpentriesOffline",
+    "section": "",
+    "text": "Virnaliz Cruz\nAbhishek Dasgupta\nColin Sauze\nJannetta Steyn\nEthan White"
+  },
+  {
+    "objectID": "about.html#the-ssi-cw-2021-hackday-team",
+    "href": "about.html#the-ssi-cw-2021-hackday-team",
+    "title": "About CarpentriesOffline",
+    "section": "",
+    "text": "Our HackDay team. Very proud of ourselves for winning the HackDay with CarpenPi: \n\n\n\n\nFlick Anderson\nJannetta Steyn\nSam Haynes\n\n\nEmily Lewis\nAbhishek Dasgupta\nAlison Clarke"
+  },
+  {
+    "objectID": "documentation/creating_an_sdcard.html",
+    "href": "documentation/creating_an_sdcard.html",
+    "title": "CarpentriesOffline SD card images",
+    "section": "",
+    "text": "The quick brown fox\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "documentation/index.html",
+    "href": "documentation/index.html",
+    "title": "Documents",
+    "section": "",
+    "text": "Title\n\n\nCategories\n\n\n\n\n\n\n\n\n\nCarpentriesOffline SD card images\n\n\nminihpc, sdcard\n\n\n\n\n\n\n\nSetting up EESSI with PXE on the miniHPC\n\n\nminihpc\n\n\n\n\n\n\n\nCreating a compute node with a Raspberry Pi for the miniHPC\n\n\nminihpc\n\n\n\n\n\n\n\nCreating a login node with a Raspberry Pi for the miniHPC\n\n\nminihpc\n\n\n\n\n\n\n\nSetting up PXE on the miniHPC\n\n\nminihpc\n\n\n\n\n\n\n\nA summary of the services required on the login node\n\n\nminihpc\n\n\n\n\n\nNo matching items\n\n Back to top"
+  },
+  {
+    "objectID": "documentation/minihpc_login_node.html",
+    "href": "documentation/minihpc_login_node.html",
+    "title": "Creating a login node with a Raspberry Pi for the miniHPC",
+    "section": "",
+    "text": "The quick brown fox\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "documentation/services.html#wpa_supplicant",
+    "href": "documentation/services.html#wpa_supplicant",
+    "title": "A summary of the services required on the login node",
+    "section": "wpa_supplicant",
+    "text": "wpa_supplicant"
+  },
+  {
+    "objectID": "documentation/services.html#nfs",
+    "href": "documentation/services.html#nfs",
+    "title": "A summary of the services required on the login node",
+    "section": "nfs",
+    "text": "nfs"
+  },
+  {
+    "objectID": "documentation/services.html#ntp",
+    "href": "documentation/services.html#ntp",
+    "title": "A summary of the services required on the login node",
+    "section": "ntp",
+    "text": "ntp"
+  },
+  {
+    "objectID": "documentation/services.html#networkmanager",
+    "href": "documentation/services.html#networkmanager",
+    "title": "A summary of the services required on the login node",
+    "section": "NetworkManager",
+    "text": "NetworkManager"
+  },
+  {
+    "objectID": "documentation/services.html#iptables",
+    "href": "documentation/services.html#iptables",
+    "title": "A summary of the services required on the login node",
+    "section": "iptables",
+    "text": "iptables"
+  },
+  {
+    "objectID": "lessons/building_a_minihpc.html",
+    "href": "lessons/building_a_minihpc.html",
+    "title": "Building a miniHPC with Raspberry Pis",
+    "section": "",
+    "text": "The quick brown fox\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "lessons/onboarding_sdcard.html",
+    "href": "lessons/onboarding_sdcard.html",
+    "title": "Onboarding Instructors to use a Raspberry Pi with the SD card",
+    "section": "",
+    "text": "The quick brown fox\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "projects/index.html",
+    "href": "projects/index.html",
+    "title": "Projects",
+    "section": "",
+    "text": "Bootable Flash Drive\n\n\n\nflashdrive\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe miniHPC\n\n\n\nminihpc\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe OfflineDataSci Python package\n\n\n\nofflinedatasci\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCarpentriesOffline with a Raspberry Pi\n\n\n\nsdcard\n\n\n\n\n\n\n\n\nNo matching items\n\n Back to top"
+  },
+  {
+    "objectID": "projects/offlinedatasci.html",
+    "href": "projects/offlinedatasci.html",
+    "title": "The OfflineDataSci Python package",
+    "section": "",
+    "text": "The quick brown fox\n\n\n\n Back to top"
+  }
+]
