@@ -7,6 +7,14 @@ title-block-banner: true
 
 CarpentriesOffline was born out of the Software Sustainability Institute’s 2021 Collababorations Workshop. The idea was formed by a team during the Collaborative Ideas session, and the implementation began on the Hack Day. Our aim was to find a solution to the challenges presented when trying to run workshops with limited or no Internet access.
 
+## Funding and Support
+
+::: {layout-ncol=2}
+![Software Sustainability Institute: In 2022 I became an SSI fellow. As a fellow I received £3000 form the SSI to spend towards developing the CarpentriesOffline project. Since then I have received further support which has enabled me to obtain more equipment.](images/SSI_SUBMARK-LOGO.svg){width=100px}
+
+![Newcastle University](images/Newcastle_University_logo.svg){height=100px}
+:::
+
 ## Our current core team
 
 - Virnaliz Cruz

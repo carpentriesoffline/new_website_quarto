@@ -81,7 +81,8 @@ ul.task-list li input[type="checkbox"] {
 
     const options = {
       valueNames: ['listing-image','listing-title','listing-categories','listing-word-count','listing-reading-time',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
-      
+      page: 5,
+    pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
       searchColumns: ["listing-title","listing-author"],
     };
 
@@ -183,7 +184,7 @@ window.Quarto = {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(5)</span></div><div class="category" data-category="bWluaWhwYw==">minihpc <span class="quarto-category-count">(4)</span></div><div class="category" data-category="bWluaWhwYyUyMHNkY2FyZA==">minihpc sdcard <span class="quarto-category-count">(1)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(6)</span></div><div class="category" data-category="bWluaWhwYw==">minihpc <span class="quarto-category-count">(5)</span></div><div class="category" data-category="bWluaWhwYyUyMHNkY2FyZA==">minihpc sdcard <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content column-page-left" id="quarto-document-content">
 
@@ -321,11 +322,31 @@ Reading Time
 <span class="listing-reading-time">1 min</span>
 </td>
 </tr>
+<tr data-index="5" data-categories="bWluaWhwYw==" data-listing-file-modified-sort="1734677584941" data-listing-reading-time-sort="1" data-listing-word-count-sort="6" data-listing-title-sort="A summary of the services required on the login node" data-listing-filename-sort="services.qmd">
+<td>
+<span class="listing-image"><div class="listing-item-img-placeholder card-img-top" style="height: 40px;">&nbsp;</div></span>
+</td>
+<td>
+<a href="../documentation/services.html" class="title listing-title">A summary of the services required on the login node</a>
+</td>
+<td>
+<span class="listing-categories">minihpc</span>
+</td>
+<td>
+<span class="listing-word-count">6 words</span>
+</td>
+<td>
+<span class="listing-reading-time">1 min</span>
+</td>
+</tr>
 </tbody>
 </table>
 <div class="listing-no-matching d-none">
 No matching items
 </div>
+<nav id="listing-pagination" class="listing-pagination" aria-label="Page Navigation">
+  <ul class="pagination"></ul>
+</nav>
 </div><a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
