@@ -19,6 +19,8 @@ $heading-color:              $carp-headingsgrey;  // Headings
 $border-color:               $carp-grey;          // Sets line colour underneath some headings
 h1, h2, h3, h4, h5, h6 {
   color: $heading-color !important;
+  line-height: 1.3em !important;
+  margin-bottom: 0.5rem !important;
 }
 
 // Tables
@@ -167,7 +169,6 @@ $footer-fg:                   $carp-blue;
 .title {
   font-size: 2.5em;
   font-weight: 500;
-  line-height: 2em;
 }
 
 
