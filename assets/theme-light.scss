@@ -12,14 +12,32 @@ $carp-bodygrey      : #585858;
 $carp-headingsgrey  : #111827;
 
 // Base document colors
-$link-color:                 $carp-blue;      // Links
-$body-bg:                    $carp-lightgrey; // Background
-$body-color:                 $carp-bodygrey;  // Body text;
-$heading-color:              $carp-headingsgrey; // Headings
-
+$link-color:                 $carp-blue;          // Links
+$body-bg:                    $carp-lightgrey;     // Background
+$body-color:                 $carp-bodygrey;      // Body text;
+$heading-color:              $carp-headingsgrey;  // Headings
+$border-color:               $carp-grey;          // Sets line colour underneath some headings
 h1, h2, h3, h4, h5, h6 {
   color: $heading-color !important;
 }
+
+// Tables
+
+.table>:not(caption)>*>* { // Tables for posts
+  background-color: $body-bg !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
+.table {
+    border: none !important; // Removes lines at top/bottom of tables
+}
+
+.table thead th {
+    border-bottom: 2px solid $carp-grey !important; // Line under table headings
+}
+
+// Links
 
 $link-decoration:             underline;
 $link-hover-decoration:       none;
