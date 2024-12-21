@@ -1,3 +1,4 @@
+/*--https://docs.carpentries.org/resources/communications/brand_identity.html--*/
 /*-- scss:defaults --*/
 
 // Carpentries Colours
@@ -10,11 +11,16 @@ $carp-grey          : #D1D5DB;
 $carp-darkgrey      : #383838;
 $carp-bodygrey      : #585858;
 $carp-headingsgrey  : #111827;
+$carp-black         : #383838;
+$carp-midnight      : #001483;
+$carp-fire          : #ff4955;
+$carp-golden        : #ffc700;
+$carp-buttercup     : #fff7f1;
 
 // Base document colors
 $link-color:                 $carp-blue;          // Links
 $body-bg:                    $carp-lightgrey;     // Background
-$body-color:                 $carp-bodygrey;      // Body text;
+$body-color:                 $carp-black;      // Body text;
 $heading-color:              $carp-headingsgrey;  // Headings
 $border-color:               $carp-grey;          // Sets line colour underneath some headings
 h1, h2, h3, h4, h5, h6 {
@@ -77,7 +83,7 @@ $footer-fg:                   $carp-blue;
 
 // header
 .navbar {
-  background: transparent;
+  background: $carp-blue;
   padding-top: 10px;
 }
 
@@ -85,7 +91,7 @@ $footer-fg:                   $carp-blue;
 .navbar-title {
   font-size: 1.5em;
   font-weight: 500;
-  color: $carp-blue;
+  color: white;
   letter-spacing: .1em;
 
   &:hover {
@@ -109,8 +115,7 @@ $footer-fg:                   $carp-blue;
 
 // links
 .navbar-nav .nav-link {
-    color: $carp-blue !important;
-    text-transform: uppercase;
+    color: white !important;
     letter-spacing: .1em;
     border-bottom: 0px hidden $carp-blue;
     margin: 0px 10px 0px 10px;

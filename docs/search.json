@@ -30,14 +30,14 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "CarpentriesOffline",
+    "title": "The Carpentries Offline",
     "section": "",
     "text": "CarpentriesOffline aims to provide a solution for running Software, Data, Library and HPC Carpentries workshop in areas where there is limited or no Internet access."
   },
   {
     "objectID": "index.html#featured-projects",
     "href": "index.html#featured-projects",
-    "title": "CarpentriesOffline",
+    "title": "The Carpentries Offline",
     "section": "Featured Projects",
     "text": "Featured Projects"
   },
@@ -166,5 +166,26 @@
     "title": "The OfflineDataSci Python package",
     "section": "",
     "text": "The quick brown fox\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "people/jannetta.html",
+    "href": "people/jannetta.html",
+    "title": "Dr Jannetta Steyn",
+    "section": "",
+    "text": "Jannetta Steyn is a Senior Research Software Engineer and Head of Training and Community in the Research Software Engineering Team at Newcastle University."
+  },
+  {
+    "objectID": "people/jannetta.html#education",
+    "href": "people/jannetta.html#education",
+    "title": "Dr Jannetta Steyn",
+    "section": "Education",
+    "text": "Education\nNewcastle University | Newcastle-upon-Tyne, UK PhD Computational Neuroscience | Jan 2011 - Jun 2016\nNewcastle University | Newcastle-upon-Tyne, UK MSc Bioinformatics and Computational Systems Biology | Sep 2009 - Aug 2010\nThe Open University | Milton Keynes, UK MSc Computing for Commerce and Industry | Feb 2007 - Sep 2008"
+  },
+  {
+    "objectID": "people/jannetta.html#experience",
+    "href": "people/jannetta.html#experience",
+    "title": "Dr Jannetta Steyn",
+    "section": "Experience",
+    "text": "Experience\nNewcastle University | Senior Research Software Engineer | April 2019 - present\nNewcastle University | Senior Research Associate | January 2015 - March 2019\nSerco | Analyst/Programmer | December 2005 - February 2010"
   }
 ]
