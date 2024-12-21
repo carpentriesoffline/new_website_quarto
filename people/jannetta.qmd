@@ -1,0 +1,40 @@
+---
+title: Dr Jannetta Steyn
+about:
+  template: broadside
+  image: images/jannetta.png
+  links:
+    - icon: twitter
+      text: twitter
+      href: https://twitter.com/jannettas
+    - icon: github
+      text: GitHub
+      href: https://github.com/jsteyn
+    - icon: mastodon
+      text: Mastodon
+      href: https://hachyderm.io/@jannettas
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/jannetta/
+---
+
+Jannetta Steyn is a Senior Research Software Engineer and Head of Training and Community in the Research Software Engineering Team at Newcastle University.
+
+## Education
+
+Newcastle University | Newcastle-upon-Tyne, UK
+PhD Computational Neuroscience | Jan 2011 - Jun 2016
+
+Newcastle University | Newcastle-upon-Tyne, UK
+MSc Bioinformatics and Computational Systems Biology | Sep 2009 - Aug 2010
+
+The Open University | Milton Keynes, UK
+MSc Computing for Commerce and Industry | Feb 2007 - Sep 2008
+
+## Experience
+
+Newcastle University | Senior Research Software Engineer | April 2019 - present
+
+Newcastle University | Senior Research Associate | January 2015 - March 2019
+
+Serco | Analyst/Programmer | December 2005 - February 2010
