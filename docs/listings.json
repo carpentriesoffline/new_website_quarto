@@ -34,5 +34,13 @@
       "/projects/offlinedatasci.html",
       "/projects/RaspberryPi.html"
     ]
+  },
+  {
+    "listing": "/resources/index.html",
+    "items": []
+  },
+  {
+    "listing": "/blog/index.html",
+    "items": []
   }
 ]
