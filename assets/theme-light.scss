@@ -177,8 +177,8 @@ $footer-fg:                   $carp-blue;
 
 // title
 .title {
-  font-size: 2.5em;
-  font-weight: 500;
+  font-size: 2em;
+  font-weight: 700;
 }
 
 
@@ -271,6 +271,14 @@ details > summary {
 
 .listing-title {
   font-size: 1em
+}
+
+p {
+  font-size: 15.3px;
+}
+
+.level1 {
+  font-size: 15.3px;
 }
 
 .level2 {

@@ -243,5 +243,12 @@
     "title": "Setting up PXE on the miniHPC",
     "section": "List of ToDos",
     "text": "List of ToDos\n\nWrite the Raspberry Pi OS image to an SD card.\nRun and update and an upgrade.\nInstall and configure dnsmasq.\nInstall and configure nfs.\nDownload and install PXE scripts: git clone https://github.com/carpentriesoffline/pxe-boot.git"
+  },
+  {
+    "objectID": "index.html#projects",
+    "href": "index.html#projects",
+    "title": "The Carpentries Offline",
+    "section": "Projects",
+    "text": "Projects"
   }
 ]

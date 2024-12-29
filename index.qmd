@@ -4,22 +4,28 @@ format:
   html:
     toc: false
 
-listing:
-  id: Project
-  contents:
-  - /projects
-  - "!projects/index.qmd"
-  type: grid
-  categories: false
-  sort-ui: false
-  filter-ui: false
-  max-items: 3
-  feed: false
+# listing:
+#   id: Project
+#   contents:
+#   - /projects
+#   - "!projects/index.qmd"
+#   type: grid
+#   categories: false
+#   sort-ui: false
+#   filter-ui: false
+#   max-items: 3
+#   feed: false
 ---
 
 ![](images/OFFLINE.png)
 
 CarpentriesOffline aims to provide a solution for running Software, Data, Library and HPC Carpentries workshop in areas where there is limited or no Internet access.
 
-## Featured Projects
+## Projects
 
+[<img src="/projects/images/hexagon.png" height="140" alt = "empty hexagon"/>]()
+[<img src="/projects/images/hexagon_microSD.png" height="140" alt = "microSD card"/>](/projects/RaspberryPi.qmd)
+[<img src="/projects/images/hexagon_flashdrive.png" height="140" alt = "flash drive"/>](/projects/FlashDrive.qmd)
+[<img src="/projects/images/hexagon_minihpc.png" height="140" alt = "mini HPC"/>](/projects/miniHPC.qmd)
+[<img src="/projects/images/hexagon_python.png" height="140" alt = "OfflineDataSci"/>](/projects/offlinedatasci.qmd) 
+[<img src="/projects/images/hexagon.png" height="140" alt = "NHSRplotthedots"/>]()
