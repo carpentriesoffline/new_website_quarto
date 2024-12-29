@@ -20,7 +20,7 @@ CarpentriesOffline was born out of the Software Sustainability Institute’s 202
 - Virnaliz Cruz
 - Abhishek Dasgupta
 - Colin Sauze
-- Jannetta Steyn
+- [Jannetta Steyn](people/jannetta.qmd)
 - Ethan White
 
 
