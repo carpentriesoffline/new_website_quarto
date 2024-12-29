@@ -4,4 +4,15 @@ categories:
   - minihpc 
 ---
 
-The quick brown fox
+## What is PXE Boot?
+
+In computing, the **Preboot eXecution Environment** specification describes a standardised client–server environment that boots a software assembly, retrieved from a network, on PXE-enabled clients. ([Wikipedia](https://en.wikipedia.org/wiki/Preboot_Execution_Environment))
+
+## List of ToDos
+
+1. Write the Raspberry Pi OS image to an SD card.
+1. Run and update and an upgrade.
+1. Install and configure `dnsmasq`.
+1. Install and configure `nfs`.
+1. Download and install PXE scripts: `git clone https://github.com/carpentriesoffline/pxe-boot.git`
+
