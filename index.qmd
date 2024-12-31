@@ -3,18 +3,6 @@ title: ""
 format:
   html:
     toc: false
-
-# listing:
-#   id: Project
-#   contents:
-#   - /projects
-#   - "!projects/index.qmd"
-#   type: grid
-#   categories: false
-#   sort-ui: false
-#   filter-ui: false
-#   max-items: 3
-#   feed: false
 ---
 
 ![](images/OFFLINE.png)

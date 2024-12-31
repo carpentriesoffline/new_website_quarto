@@ -24,6 +24,15 @@ $body-color:                 $carp-black;      // Body text;
 $heading-color:              $carp-headingsgrey;  // Headings
 $border-color:               $carp-grey;          // Sets line colour underneath some headings
 
+.menu-text {
+  background: $carp-blue;
+  color: white;
+}
+
+span.navbar-toggler {
+	color: white;
+}
+
 .image_off, #home:hover .image_on{
    display:none;
    height: 140px;
@@ -70,7 +79,7 @@ $link-decoration:             underline;
 $link-hover-decoration:       none;
 
 // Navbar icons
-$navbar-fg:                   $carp-blue;
+$navbar-fg:                   white;
 $navbar-hl:                   $carp-blue;
 
 // Footer text

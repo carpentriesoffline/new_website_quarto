@@ -20,7 +20,6 @@ website:
     logo-href: https://carpentriesoffline.org/new_website_quarto
     logo-alt: "CarpentriesOffline web page and documentation"
     title: "The Carpentries Offline"
-    collapse-below: lg
     tools:
     - icon: github
       href: https://github.com/carpentriesoffline
