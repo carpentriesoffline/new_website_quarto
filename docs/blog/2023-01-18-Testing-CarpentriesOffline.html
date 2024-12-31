@@ -6,7 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="jannetta">
+<meta name="author" content="Jannetta S Steyn">
+<meta name="dcterms.date" content="2023-01-18">
 
 <title>CarpentriesOffline - Testing CarpentriesOffline – The Carpentries Offline</title>
 <style>
@@ -40,7 +41,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-853b1311312bf5f6e38475e7f1726ca7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-a0835a442e81dbdea47b368c81d8361a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -155,10 +156,16 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>jannetta </p>
+             <p>Jannetta S Steyn </p>
           </div>
   </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">January 18, 2023</p>
+    </div>
+  </div>
   
     
   </div>
@@ -168,7 +175,6 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><strong>Author: Jannetta S. Steyn</strong></p>
 <p>This blog post was originally published on 18 January 2023 on the <a href="https://www.software.ac.uk/blog/2023-01-18-testing-carpentriesoffline">SSI blog</a>.</p>
 <p>This is my third blog post for <a href="https://github.com/carpentriesoffline/CarpentriesOffline.github.io/blob/main/publications_and_conferences/carpentriesoffline.org">CarpentriesOffline</a> - our expedition to find an easy way to present Carpentries workshops when there is no or limited access to the Internet. It is also part of my activities as a <a href="https://software.ac.uk/">Software Sustainability Institute</a> Fellow. At the end of September 2022 I was visiting the <a href="https://http//www.sun.ac.za">University of Stellenbosch</a>&nbsp; in South Africa, at the invitation of <a href="https://www.software.ac.uk/about/fellows/kim-martin">Dr.&nbsp;Kim Martin</a>, to deliver two workshops. I discussed the first workshop, An <a href="https://society-rse.org/iot-for-novices-in-south-africa/">Introduction to The Internet of Things (IoT)</a> in <a href="https://www.software.ac.uk/blog/2023-01-10-internet-things-novices-south-africa">a previous blog post</a>. The second workshop was a two day workshop covering version control with Git and Programming with Python. At the same time I wanted to test some of our implementations and ideas for CarpentriesOffline. For the past year we (that would be myself, Colin Sauze, Abhishek Dasgupta, Ethan White and Virnaliz Cruz) have been working on creating an image that can be written to a micro-SD card which is used to boot Raspberry Pi (RPi) computer. The SD card then contains everything required to turn the RPi into an access point for computers to connect to and also acting as a web server making all the lesson material, program downloads and a colloborative version control system available. An RPi have relatively low power requirements and I have been able to run one for an entire day from an 60W USB power bank.</p>
 <p>There were a few things we wanted to test. We wanted to determine&nbsp; - how many people could connect to the CarpentriesOffline RPi server at any one time - how well did Gitea work as a replacement for GitHub - My intention was to also test an instance of JupyterHub installed on a Pi (but that didn’t happen as I unintentionally messed the Pi’s networking up when I installed a driver for a USB network card).</p>

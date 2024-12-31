@@ -3,6 +3,7 @@ layout: post
 author: "Jannetta S. Steyn"
 categories: CarpentriesOffline
 title: CarpentriesOffline - Running Software/Data and Library Carpentries workshops offline
+date: 2022/06/27
 ---
 
 This blog post was originally published on [Medium](https://medium.com/newcastle-university-research-software-engineering/running-software-data-and-library-carpentries-workshops-offline-a583adf087ca)

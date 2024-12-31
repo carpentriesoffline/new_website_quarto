@@ -23,6 +23,20 @@ $body-bg:                    $carp-lightgrey;     // Background
 $body-color:                 $carp-black;      // Body text;
 $heading-color:              $carp-headingsgrey;  // Headings
 $border-color:               $carp-grey;          // Sets line colour underneath some headings
+
+.image_off, #home:hover .image_on{
+   display:none;
+   height: 140px;
+   width: 121px;
+}
+
+.image_on, #home:hover .image_off{
+   display:block;
+   height: 140px;
+   width: 121px;
+}
+
+
 h1, h2, h3, h4, h5, h6 {
   color: $heading-color !important;
   line-height: 1.3em !important;

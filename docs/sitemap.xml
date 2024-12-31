@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://carpentriesoffline.org/new_website_quarto/projects/RaspberryPi.html</loc>
-    <lastmod>2024-12-29T00:14:43.164Z</lastmod>
+    <loc>https://carpentriesoffline.org/new_website_quarto/resources/index.html</loc>
+    <lastmod>2024-12-29T00:14:43.372Z</lastmod>
   </url>
   <url>
-    <loc>https://carpentriesoffline.org/new_website_quarto/projects/miniHPC.html</loc>
-    <lastmod>2024-12-29T00:14:43.359Z</lastmod>
+    <loc>https://carpentriesoffline.org/new_website_quarto/projects/offlinedatasci.html</loc>
+    <lastmod>2024-12-29T00:14:43.363Z</lastmod>
   </url>
   <url>
-    <loc>https://carpentriesoffline.org/new_website_quarto/projects/FlashDrive.html</loc>
-    <lastmod>2024-12-29T00:14:43.161Z</lastmod>
+    <loc>https://carpentriesoffline.org/new_website_quarto/projects/index.html</loc>
+    <lastmod>2024-12-29T00:14:43.355Z</lastmod>
+  </url>
+  <url>
+    <loc>https://carpentriesoffline.org/new_website_quarto/people/jannetta.html</loc>
+    <lastmod>2024-12-29T00:14:43.159Z</lastmod>
   </url>
   <url>
     <loc>https://carpentriesoffline.org/new_website_quarto/lessons/index.html</loc>
@@ -18,7 +22,7 @@
   </url>
   <url>
     <loc>https://carpentriesoffline.org/new_website_quarto/index.html</loc>
-    <lastmod>2024-12-29T23:45:36.199Z</lastmod>
+    <lastmod>2024-12-31T03:30:08.483Z</lastmod>
   </url>
   <url>
     <loc>https://carpentriesoffline.org/new_website_quarto/documentation/pxe.html</loc>
@@ -33,8 +37,24 @@
     <lastmod>2024-12-29T00:14:43.087Z</lastmod>
   </url>
   <url>
+    <loc>https://carpentriesoffline.org/new_website_quarto/blog/index.html</loc>
+    <lastmod>2024-12-29T00:14:42.706Z</lastmod>
+  </url>
+  <url>
+    <loc>https://carpentriesoffline.org/new_website_quarto/blog/2022-12-12-CarpentriesOffline.html</loc>
+    <lastmod>2024-12-31T01:10:22.987Z</lastmod>
+  </url>
+  <url>
     <loc>https://carpentriesoffline.org/new_website_quarto/about.html</loc>
     <lastmod>2024-12-29T14:37:40.628Z</lastmod>
+  </url>
+  <url>
+    <loc>https://carpentriesoffline.org/new_website_quarto/blog/2022-06-27-CarpentriesOffline.html</loc>
+    <lastmod>2024-12-31T01:08:32.193Z</lastmod>
+  </url>
+  <url>
+    <loc>https://carpentriesoffline.org/new_website_quarto/blog/2023-01-18-Testing-CarpentriesOffline.html</loc>
+    <lastmod>2024-12-31T01:11:12.447Z</lastmod>
   </url>
   <url>
     <loc>https://carpentriesoffline.org/new_website_quarto/documentation/creating_an_sdcard.html</loc>
@@ -61,35 +81,15 @@
     <lastmod>2024-12-29T00:14:43.123Z</lastmod>
   </url>
   <url>
-    <loc>https://carpentriesoffline.org/new_website_quarto/projects/index.html</loc>
-    <lastmod>2024-12-29T00:14:43.355Z</lastmod>
+    <loc>https://carpentriesoffline.org/new_website_quarto/projects/FlashDrive.html</loc>
+    <lastmod>2024-12-29T00:14:43.161Z</lastmod>
   </url>
   <url>
-    <loc>https://carpentriesoffline.org/new_website_quarto/projects/offlinedatasci.html</loc>
-    <lastmod>2024-12-29T00:14:43.363Z</lastmod>
+    <loc>https://carpentriesoffline.org/new_website_quarto/projects/miniHPC.html</loc>
+    <lastmod>2024-12-29T00:14:43.359Z</lastmod>
   </url>
   <url>
-    <loc>https://carpentriesoffline.org/new_website_quarto/people/jannetta.html</loc>
-    <lastmod>2024-12-29T00:14:43.159Z</lastmod>
-  </url>
-  <url>
-    <loc>https://carpentriesoffline.org/new_website_quarto/resources/index.html</loc>
-    <lastmod>2024-12-29T00:14:43.372Z</lastmod>
-  </url>
-  <url>
-    <loc>https://carpentriesoffline.org/new_website_quarto/blog/index.html</loc>
-    <lastmod>2024-12-29T00:14:42.706Z</lastmod>
-  </url>
-  <url>
-    <loc>https://carpentriesoffline.org/new_website_quarto/blog/2023-01-18-Testing-CarpentriesOffline.html</loc>
-    <lastmod>2024-12-29T00:31:34.946Z</lastmod>
-  </url>
-  <url>
-    <loc>https://carpentriesoffline.org/new_website_quarto/blog/2022-06-27-CarpentriesOffline.html</loc>
-    <lastmod>2024-12-29T00:32:54.351Z</lastmod>
-  </url>
-  <url>
-    <loc>https://carpentriesoffline.org/new_website_quarto/blog/2022-12-12-CarpentriesOffline.html</loc>
-    <lastmod>2024-12-29T00:32:56.293Z</lastmod>
+    <loc>https://carpentriesoffline.org/new_website_quarto/projects/RaspberryPi.html</loc>
+    <lastmod>2024-12-29T00:14:43.164Z</lastmod>
   </url>
 </urlset>

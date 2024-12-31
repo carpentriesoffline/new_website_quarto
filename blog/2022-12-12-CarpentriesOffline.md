@@ -3,6 +3,7 @@ layout: post
 author: ["Jannetta S. Steyn", "Colin Sauze", "Abhishek Dasgupta"]
 categories: CarpentriesOffline
 title: CarpentriesOffline - CarpentryCon 2022 feedback and call for help
+date: 2022/12/12
 ---
 
 This blog post was originally published on 18 January 2023 on the [Medium](https://medium.com/@jannetta/carpentriesoffline-carpentrycon-2022-feedback-and-call-for-help-3379345f07cf)

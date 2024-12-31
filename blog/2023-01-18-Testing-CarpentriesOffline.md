@@ -3,6 +3,7 @@ layout: post
 author: "Jannetta S Steyn"
 categories: CarpentriesOffline
 title: CarpentriesOffline - Testing CarpentriesOffline
+date: 2023/01/18
 ---
 
 This blog post was originally published on 18 January 2023 on the [SSI blog](https://www.software.ac.uk/blog/2023-01-18-testing-carpentriesoffline).
