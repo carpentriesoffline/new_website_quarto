@@ -1,9 +1,5 @@
 [
   {
-    "listing": "/resources/index.html",
-    "items": []
-  },
-  {
     "listing": "/projects/index.html",
     "items": [
       "/projects/RaspberryPi.html",
@@ -20,14 +16,6 @@
     ]
   },
   {
-    "listing": "/blog/index.html",
-    "items": [
-      "/blog/2022-12-12-CarpentriesOffline.html",
-      "/blog/2023-01-18-Testing-CarpentriesOffline.html",
-      "/blog/2022-06-27-CarpentriesOffline.html"
-    ]
-  },
-  {
     "listing": "/documentation/index.html",
     "items": [
       "/documentation/pxe.html",
@@ -37,5 +25,17 @@
       "/documentation/services.html",
       "/documentation/eessi_with_pxe.html"
     ]
+  },
+  {
+    "listing": "/blog/index.html",
+    "items": [
+      "/blog/2022-12-12-CarpentriesOffline.html",
+      "/blog/2023-01-18-Testing-CarpentriesOffline.html",
+      "/blog/2022-06-27-CarpentriesOffline.html"
+    ]
+  },
+  {
+    "listing": "/resources/index.html",
+    "items": []
   }
 ]
