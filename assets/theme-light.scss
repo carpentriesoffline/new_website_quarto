@@ -29,10 +29,6 @@ $border-color:               $carp-grey;          // Sets line colour underneath
   color: white;
 }
 
-span.navbar-toggler {
-	color: white;
-}
-
 .image_off, #home:hover .image_on{
    display:none;
    height: 140px;
@@ -80,7 +76,7 @@ $link-hover-decoration:       none;
 
 // Navbar icons
 $navbar-fg:                   white;
-$navbar-hl:                   $carp-blue;
+$navbar-hl:                   red;
 
 // Footer text
 $footer-fg:                   $carp-blue;

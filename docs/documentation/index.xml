@@ -11,7 +11,7 @@
 <description>CarpentriesOffline Documentation
 </description>
 <generator>quarto-1.6.39</generator>
-<lastBuildDate>Tue, 31 Dec 2024 13:25:30 GMT</lastBuildDate>
+<lastBuildDate>Tue, 31 Dec 2024 13:33:46 GMT</lastBuildDate>
 <item>
   <title>Setting up PXE on the miniHPC</title>
   <link>https://carpentriesoffline.org/new_website_quarto/documentation/pxe.html</link>
@@ -40,7 +40,7 @@
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>minihpc</category>
   <guid>https://carpentriesoffline.org/new_website_quarto/documentation/pxe.html</guid>
-  <pubDate>Tue, 31 Dec 2024 13:25:30 GMT</pubDate>
+  <pubDate>Tue, 31 Dec 2024 13:33:46 GMT</pubDate>
 </item>
 <item>
   <title>Creating a login node with a Raspberry Pi for the miniHPC</title>
@@ -57,7 +57,7 @@
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>minihpc</category>
   <guid>https://carpentriesoffline.org/new_website_quarto/documentation/minihpc_login_node.html</guid>
-  <pubDate>Tue, 31 Dec 2024 13:25:30 GMT</pubDate>
+  <pubDate>Tue, 31 Dec 2024 13:33:46 GMT</pubDate>
 </item>
 <item>
   <title>Creating a compute node with a Raspberry Pi for the miniHPC</title>
@@ -74,7 +74,7 @@
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>minihpc</category>
   <guid>https://carpentriesoffline.org/new_website_quarto/documentation/minihpc_compute_node.html</guid>
-  <pubDate>Tue, 31 Dec 2024 13:25:30 GMT</pubDate>
+  <pubDate>Tue, 31 Dec 2024 13:33:46 GMT</pubDate>
 </item>
 <item>
   <title>CarpentriesOffline SD card images</title>
@@ -92,7 +92,7 @@
   <category>minihpc</category>
   <category>sdcard</category>
   <guid>https://carpentriesoffline.org/new_website_quarto/documentation/creating_an_sdcard.html</guid>
-  <pubDate>Tue, 31 Dec 2024 13:25:30 GMT</pubDate>
+  <pubDate>Tue, 31 Dec 2024 13:33:46 GMT</pubDate>
 </item>
 <item>
   <title>A summary of the services required on the login node</title>
@@ -126,7 +126,7 @@
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>minihpc</category>
   <guid>https://carpentriesoffline.org/new_website_quarto/documentation/services.html</guid>
-  <pubDate>Tue, 31 Dec 2024 13:25:30 GMT</pubDate>
+  <pubDate>Tue, 31 Dec 2024 13:33:46 GMT</pubDate>
 </item>
 <item>
   <title>Setting up EESSI with PXE on the miniHPC</title>
@@ -143,7 +143,7 @@
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>minihpc</category>
   <guid>https://carpentriesoffline.org/new_website_quarto/documentation/eessi_with_pxe.html</guid>
-  <pubDate>Tue, 31 Dec 2024 13:25:30 GMT</pubDate>
+  <pubDate>Tue, 31 Dec 2024 13:33:46 GMT</pubDate>
 </item>
 </channel>
 </rss>
