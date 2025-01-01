@@ -2,10 +2,10 @@
   {
     "listing": "/projects/index.html",
     "items": [
-      "/projects/RaspberryPi.html",
-      "/projects/offlinedatasci.html",
+      "/projects/FlashDrive.html",
       "/projects/miniHPC.html",
-      "/projects/FlashDrive.html"
+      "/projects/offlinedatasci.html",
+      "/projects/RaspberryPi.html"
     ]
   },
   {
@@ -18,12 +18,12 @@
   {
     "listing": "/documentation/index.html",
     "items": [
-      "/documentation/pxe.html",
-      "/documentation/minihpc_login_node.html",
-      "/documentation/minihpc_compute_node.html",
       "/documentation/creating_an_sdcard.html",
-      "/documentation/services.html",
-      "/documentation/eessi_with_pxe.html"
+      "/documentation/eessi_with_pxe.html",
+      "/documentation/minihpc_compute_node.html",
+      "/documentation/minihpc_login_node.html",
+      "/documentation/pxe.html",
+      "/documentation/services.html"
     ]
   },
   {

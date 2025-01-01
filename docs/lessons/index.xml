@@ -11,7 +11,7 @@
 <description>CarpentriesOffline Lessons
 </description>
 <generator>quarto-1.6.39</generator>
-<lastBuildDate>Tue, 31 Dec 2024 18:59:48 GMT</lastBuildDate>
+<lastBuildDate>Wed, 01 Jan 2025 22:54:35 GMT</lastBuildDate>
 <item>
   <title>Building a miniHPC with Raspberry Pis</title>
   <link>https://carpentriesoffline.org/new_website_quarto/lessons/building_a_minihpc.html</link>
@@ -28,7 +28,7 @@
   <category>HPC</category>
   <category>minihpc</category>
   <guid>https://carpentriesoffline.org/new_website_quarto/lessons/building_a_minihpc.html</guid>
-  <pubDate>Tue, 31 Dec 2024 18:59:48 GMT</pubDate>
+  <pubDate>Wed, 01 Jan 2025 22:54:35 GMT</pubDate>
 </item>
 <item>
   <title>Onboarding Instructors to use a Raspberry Pi with the SD card</title>
@@ -45,7 +45,7 @@
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>sdcard</category>
   <guid>https://carpentriesoffline.org/new_website_quarto/lessons/onboarding_sdcard.html</guid>
-  <pubDate>Tue, 31 Dec 2024 18:59:48 GMT</pubDate>
+  <pubDate>Wed, 01 Jan 2025 22:54:35 GMT</pubDate>
 </item>
 </channel>
 </rss>
