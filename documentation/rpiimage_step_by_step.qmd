@@ -2,8 +2,6 @@
 title: "Creating an SD card image: step-by-step"
 categories:
   - sdcard
-image: images/sd_card.png
-image-alt: "A photo of a micro sd card"
 ---
 
 ::: {.callout-note}
