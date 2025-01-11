@@ -1,5 +1,9 @@
 [
   {
+    "listing": "/resources/index.html",
+    "items": []
+  },
+  {
     "listing": "/projects/index.html",
     "items": [
       "/projects/FlashDrive.html",
@@ -16,6 +20,14 @@
     ]
   },
   {
+    "listing": "/blog/index.html",
+    "items": [
+      "/blog/2022-06-27-CarpentriesOffline.html",
+      "/blog/2022-12-12-CarpentriesOffline.html",
+      "/blog/2023-01-18-Testing-CarpentriesOffline.html"
+    ]
+  },
+  {
     "listing": "/documentation/index.html",
     "items": [
       "/documentation/creating_an_sdcard.html",
@@ -27,17 +39,5 @@
       "/documentation/rpiimage_step_by_step.html",
       "/documentation/services.html"
     ]
-  },
-  {
-    "listing": "/blog/index.html",
-    "items": [
-      "/blog/2022-12-12-CarpentriesOffline.html",
-      "/blog/2023-01-18-Testing-CarpentriesOffline.html",
-      "/blog/2022-06-27-CarpentriesOffline.html"
-    ]
-  },
-  {
-    "listing": "/resources/index.html",
-    "items": []
   }
 ]

@@ -11,7 +11,7 @@
 <description>Projects we are currently working on
 </description>
 <generator>quarto-1.6.39</generator>
-<lastBuildDate>Thu, 09 Jan 2025 22:35:11 GMT</lastBuildDate>
+<lastBuildDate>Sat, 11 Jan 2025 00:10:20 GMT</lastBuildDate>
 <item>
   <title>Bootable Flash Drive</title>
   <link>https://carpentriesoffline.org/new_website_quarto/projects/FlashDrive.html</link>
@@ -27,7 +27,7 @@
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>flashdrive</category>
   <guid>https://carpentriesoffline.org/new_website_quarto/projects/FlashDrive.html</guid>
-  <pubDate>Thu, 09 Jan 2025 22:35:11 GMT</pubDate>
+  <pubDate>Sat, 11 Jan 2025 00:10:20 GMT</pubDate>
   <media:content url="https://carpentriesoffline.org/new_website_quarto/projects/images/flashdrive.png" medium="image" type="image/png" height="203" width="144"/>
 </item>
 <item>
@@ -45,7 +45,7 @@
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>minihpc</category>
   <guid>https://carpentriesoffline.org/new_website_quarto/projects/miniHPC.html</guid>
-  <pubDate>Thu, 09 Jan 2025 22:35:11 GMT</pubDate>
+  <pubDate>Sat, 11 Jan 2025 00:10:20 GMT</pubDate>
   <media:content url="https://carpentriesoffline.org/new_website_quarto/projects/images/pixie.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
@@ -63,7 +63,7 @@
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>offlinedatasci</category>
   <guid>https://carpentriesoffline.org/new_website_quarto/projects/offlinedatasci.html</guid>
-  <pubDate>Thu, 09 Jan 2025 22:35:11 GMT</pubDate>
+  <pubDate>Sat, 11 Jan 2025 00:10:20 GMT</pubDate>
   <media:content url="https://carpentriesoffline.org/new_website_quarto/projects/images/pypilogo.svg" medium="image" type="image/svg+xml"/>
 </item>
 <item>
@@ -74,14 +74,25 @@
 
 
 
-<p>The quick brown fox</p>
+<p>For the last year we have been working on creating an image that can be written to an SD card which is then used to boot a Raspberry Pi (RPi). The SD card turns the RPi into:</p>
+<ul>
+<li>an access point for learners to connect to with their computers,</li>
+<li>a web server with all the learning materials</li>
+<li>a Gitea server which acts as a replacement for GitHub to practise the collaborative parts of version control with Git</li>
+</ul>
+<p>We have, so far, experienced a few challenges with this solution.</p>
+<ul>
+<li>there seems to be a limit to the number of computers that can connect to the RPi access point</li>
+<li>RPis suddenly became impossible to obtain after Covid lockdown - however, they are available again.</li>
+</ul>
+<p><a href="../documentation/rpiimage_step_by_step.html">Step-by-step instructions for creating the SD card image</a></p>
 
 
 
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>sdcard</category>
   <guid>https://carpentriesoffline.org/new_website_quarto/projects/RaspberryPi.html</guid>
-  <pubDate>Thu, 09 Jan 2025 22:35:11 GMT</pubDate>
+  <pubDate>Sat, 11 Jan 2025 00:10:20 GMT</pubDate>
   <media:content url="https://carpentriesoffline.org/new_website_quarto/projects/images/sd_card.png" medium="image" type="image/png" height="164" width="144"/>
 </item>
 </channel>

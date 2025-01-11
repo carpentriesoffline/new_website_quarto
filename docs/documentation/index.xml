@@ -11,7 +11,7 @@
 <description>CarpentriesOffline Documentation
 </description>
 <generator>quarto-1.6.39</generator>
-<lastBuildDate>Sat, 11 Jan 2025 00:03:54 GMT</lastBuildDate>
+<lastBuildDate>Sat, 11 Jan 2025 00:10:09 GMT</lastBuildDate>
 <item>
   <title>CarpentriesOffline SD card images</title>
   <link>https://carpentriesoffline.org/new_website_quarto/documentation/creating_an_sdcard.html</link>
@@ -28,7 +28,7 @@
   <category>minihpc</category>
   <category>sdcard</category>
   <guid>https://carpentriesoffline.org/new_website_quarto/documentation/creating_an_sdcard.html</guid>
-  <pubDate>Sat, 11 Jan 2025 00:03:54 GMT</pubDate>
+  <pubDate>Sat, 11 Jan 2025 00:10:09 GMT</pubDate>
 </item>
 <item>
   <title>Setting up EESSI with PXE on the miniHPC</title>
@@ -45,7 +45,7 @@
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>minihpc</category>
   <guid>https://carpentriesoffline.org/new_website_quarto/documentation/eessi_with_pxe.html</guid>
-  <pubDate>Sat, 11 Jan 2025 00:03:54 GMT</pubDate>
+  <pubDate>Sat, 11 Jan 2025 00:10:09 GMT</pubDate>
 </item>
 <item>
   <title>Creating a compute node with a Raspberry Pi for the miniHPC</title>
@@ -62,7 +62,7 @@
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>minihpc</category>
   <guid>https://carpentriesoffline.org/new_website_quarto/documentation/minihpc_compute_node.html</guid>
-  <pubDate>Sat, 11 Jan 2025 00:03:54 GMT</pubDate>
+  <pubDate>Sat, 11 Jan 2025 00:10:09 GMT</pubDate>
 </item>
 <item>
   <title>Creating a login node with a Raspberry Pi for the miniHPC</title>
@@ -79,7 +79,7 @@
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>minihpc</category>
   <guid>https://carpentriesoffline.org/new_website_quarto/documentation/minihpc_login_node.html</guid>
-  <pubDate>Sat, 11 Jan 2025 00:03:54 GMT</pubDate>
+  <pubDate>Sat, 11 Jan 2025 00:10:09 GMT</pubDate>
 </item>
 <item>
   <title>The Pixie Network</title>
@@ -223,7 +223,7 @@
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>miniHPC</category>
   <guid>https://carpentriesoffline.org/new_website_quarto/documentation/pixieNetwork.html</guid>
-  <pubDate>Sat, 11 Jan 2025 00:03:54 GMT</pubDate>
+  <pubDate>Sat, 11 Jan 2025 00:10:09 GMT</pubDate>
 </item>
 <item>
   <title>Setting up PXE on the miniHPC</title>
@@ -300,7 +300,7 @@ dhcp-host=a6:a6:a6:a6:a6:a6,192.168.5.106</code></pre>
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>minihpc</category>
   <guid>https://carpentriesoffline.org/new_website_quarto/documentation/pxe.html</guid>
-  <pubDate>Sat, 11 Jan 2025 00:03:54 GMT</pubDate>
+  <pubDate>Sat, 11 Jan 2025 00:10:09 GMT</pubDate>
 </item>
 <item>
   <title>Creating an SD card image: step-by-step</title>
@@ -408,8 +408,7 @@ network={
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>sdcard</category>
   <guid>https://carpentriesoffline.org/new_website_quarto/documentation/rpiimage_step_by_step.html</guid>
-  <pubDate>Sat, 11 Jan 2025 00:03:54 GMT</pubDate>
-  <media:content url="https://carpentriesoffline.org/new_website_quarto/documentation/images/sd_card.png" medium="image" type="image/png"/>
+  <pubDate>Sat, 11 Jan 2025 00:10:09 GMT</pubDate>
 </item>
 <item>
   <title>A summary of the services required on the login node</title>
@@ -443,7 +442,7 @@ network={
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>minihpc</category>
   <guid>https://carpentriesoffline.org/new_website_quarto/documentation/services.html</guid>
-  <pubDate>Sat, 11 Jan 2025 00:03:54 GMT</pubDate>
+  <pubDate>Sat, 11 Jan 2025 00:10:09 GMT</pubDate>
 </item>
 </channel>
 </rss>
