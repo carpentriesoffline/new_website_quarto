@@ -1,0 +1,30 @@
+---
+title: "The Pixie Network"
+categories:
+  - miniHPC
+---
+
+```{dot}
+digraph G { 
+  node [shape=box];
+
+  InternetAP [label="InternetAP\nwlan0=192.168.0.1"];
+	RaspAP [label="RaspAP\nwlan0=192.168.0.10\nwlan1=10.3.141.1"];
+  Switch [style=rounded, label="Switch"];
+  pixielogin [label="pixielogin\nwlan0=10.3.141.10\neth0=192.168.5.100"];
+  pixie001 [label="pixie001\neth0=192.168.5.101"];
+  pixie002 [label="pixie002\neth0=192.168.5.102"];
+  pixie003 [label="pixie003\neth0=192.168.5.103"];
+  pixie004 [label="pixie004\neth0=192.168.5.104"];
+  pixie005 [label="pixie005\neth0=192.168.5.105"];
+
+	InternetAP -> RaspAP;
+	RaspAP -> Switch;
+	Switch -> pixielogin;
+	Switch -> pixie001;
+	Switch -> pixie002;
+	Switch -> pixie003;
+	Switch -> pixie004;
+	Switch -> pixie005;
+	}
+```

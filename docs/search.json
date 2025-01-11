@@ -46,7 +46,7 @@
     "href": "projects/RaspberryPi.html",
     "title": "CarpentriesOffline with a Raspberry Pi",
     "section": "",
-    "text": "The quick brown fox\n\n\n\n Back to top"
+    "text": "For the last year we have been working on creating an image that can be written to an SD card which is then used to boot a Raspberry Pi (RPi). The SD card turns the RPi into:\n\nan access point for learners to connect to with their computers,\na web server with all the learning materials\na Gitea server which acts as a replacement for GitHub to practise the collaborative parts of version control with Git\n\nWe have, so far, experienced a few challenges with this solution.\n\nthere seems to be a limit to the number of computers that can connect to the RPi access point\nRPis suddenly became impossible to obtain after Covid lockdown - however, they are available again.\n\nStep-by-step instructions for creating the SD card image\n\n\n\n Back to top"
   },
   {
     "objectID": "blog/2023-01-18-Testing-CarpentriesOffline.html",
@@ -172,14 +172,14 @@
     "href": "documentation/pxe.html#list-of-todos",
     "title": "Setting up PXE on the miniHPC",
     "section": "List of ToDos",
-    "text": "List of ToDos\n\nWrite the Raspberry Pi OS image to an SD card.\nRun and update and an upgrade.\nInstall and configure dnsmasq.\nInstall and configure nfs.\nDownload and install PXE scripts: git clone https://github.com/carpentriesoffline/pxe-boot.git"
+    "text": "List of ToDos\n\nWrite the Raspberry Pi OS image to an SD card.\nRun and update and an upgrade.\nInstall and configure DNS masquerade.\nInstall and configure Network File System.\nDownload and install PXE scripts: git clone https://github.com/carpentriesoffline/pxe-boot.git"
   },
   {
     "objectID": "documentation/index.html",
     "href": "documentation/index.html",
     "title": "Documents",
     "section": "",
-    "text": "Title\n\n\nCategories\n\n\n\n\n\n\n\n\n\nCarpentriesOffline SD card images\n\n\nminihpc, sdcard\n\n\n\n\n\n\n\nSetting up EESSI with PXE on the miniHPC\n\n\nminihpc\n\n\n\n\n\n\n\nCreating a compute node with a Raspberry Pi for the miniHPC\n\n\nminihpc\n\n\n\n\n\n\n\nCreating a login node with a Raspberry Pi for the miniHPC\n\n\nminihpc\n\n\n\n\n\n\n\nSetting up PXE on the miniHPC\n\n\nminihpc\n\n\n\n\n\n\n\nA summary of the services required on the login node\n\n\nminihpc\n\n\n\n\n\nNo matching items\n\n Back to top"
+    "text": "Title\n\n\nCategories\n\n\n\n\n\n\n\n\n\nCarpentriesOffline SD card images\n\n\nminihpc, sdcard\n\n\n\n\n\n\n\nSetting up EESSI with PXE on the miniHPC\n\n\nminihpc\n\n\n\n\n\n\n\nCreating a compute node with a Raspberry Pi for the miniHPC\n\n\nminihpc\n\n\n\n\n\n\n\nCreating a login node with a Raspberry Pi for the miniHPC\n\n\nminihpc\n\n\n\n\n\n\n\nCreating an SD card image: step-by-step\n\n\nsdcard\n\n\n\n\n\n\n\nSetting up PXE on the miniHPC\n\n\nminihpc\n\n\n\n\n\n\n\nCreating an SD card image: step-by-step\n\n\nsdcard\n\n\n\n\n\n\n\nA summary of the services required on the login node\n\n\nminihpc\n\n\n\n\n\nNo matching items\n\n Back to top"
   },
   {
     "objectID": "documentation/creating_an_sdcard.html",
@@ -243,5 +243,33 @@
     "title": "Resources",
     "section": "",
     "text": "Title\n\n\nCategories\n\n\n\n\n\n\n\nNo matching items\n\n Back to top"
+  },
+  {
+    "objectID": "documentation/pxe.html#step-1",
+    "href": "documentation/pxe.html#step-1",
+    "title": "Setting up PXE on the miniHPC",
+    "section": "Step 1",
+    "text": "Step 1\nRather than duplicating instructions that might change, we’d rather link to the Raspberry Pi website where you can download the Raspberry Pi imager from and also find the instruction for writing an image to an SD card. The most important thing to remember is to select the Raspberry Pi OS Lite image because you don’t want to unneccessarily install a graphics environment which only takes up space on the installation disk and make things slower. The link to the web page is https://www.raspberrypi.com/software/."
+  },
+  {
+    "objectID": "documentation/pxe.html#step-2",
+    "href": "documentation/pxe.html#step-2",
+    "title": "Setting up PXE on the miniHPC",
+    "section": "Step 2",
+    "text": "Step 2\nIn a bash terminal do the following:\nsudo apt update -y\nsudo apt full-upgrade -y\n\nStep 3\nInstall dnsmasq and nfs (Network file system):\nsudo apt install dnsmasq nfs-kernel nfs-common\n\n\nStep 4\nConfigure DNS masquerading and NFS.\nTo configure DNS masquerading edit the file /etc/dnsmasq.conf as follows:\nport=0\nbind-dynamic\ninterface=eth0\ndomain-needed\nbogus-priv\nenable-tftp\ntftp-root=/pxe-boot\npxe-service=0,\"Raspberry Pi Boot\"\ndhcp-option=3,192.168.5.100\ndhcp-option=6,10.3.141.1\ndhcp-range=eth0,192.168.5.101,192.168.5.200,12h\ndhcp-host=a1:a1:a1:a1:a1:a1,192.168.5.101\ndhcp-host=a2:a2:a2:a2:a2:a2,192.168.5.102\ndhcp-host=a3:a3:a3:a3:a3:a3,192.168.5.103\ndhcp-host=a4:a4:a4:a4:a4:a4,192.168.5.104\ndhcp-host=a5:a5:a5:a5:a5:a5,192.168.5.105\ndhcp-host=a6:a6:a6:a6:a6:a6,192.168.5.106"
+  },
+  {
+    "objectID": "documentation/rpiimage_step_by_step.html",
+    "href": "documentation/rpiimage_step_by_step.html",
+    "title": "Creating an SD card image: step-by-step",
+    "section": "",
+    "text": "Note\n\n\n\n(2025-01-10) Transferred from the old website - this probably needs updating)\n\n\n\nCreating an SD card image: step-by-step\n\nUsing a pre-built image\nYou can download a pre-built image from our releases page\nThese are experimental and unlikely to be fully working yet. These are built as multipart zip files with names like release.zip and release.z01, this is due to a 2GB upload limit in our build process. Download each of these. To extract them on a Linux system run the following:\ncat release.z01 release.zip &gt; carpentries-offline.zip\n\nunzip carpentries-offline.zip\nAfter you have downloaded and unzipped the image files, write the image file to an SD card with Etcher or your image writing program of choice.\n\n\nInstalling CarpentriesOffline manually\n\nSetting up a Raspberry Pi\n\nDownload Raspbian OS Lite: https://www.raspberrypi.org/software/operating-systems/\nWrite image to SD card using rpi-imager: https://www.raspberrypi.org/software/\n\n\n\nSetup for headless config (useful if you don’t have a screen and keyboard to hand)\n\nIn the boot (small FAT32) partition on the SD card create an empty file called “ssh”\nIf you’re using WiFi to get access to the Pi, create a file called wpa_supplicant.conf in the boot partition. Paste in the following and set your network SSID and password appropriately.\n\n#set this to your country code, gb=great britain\ncountry=gb\nupdate_config=1\nctrl_interface=/var/run/wpa_supplicant\n\nnetwork={\n scan_ssid=1\n ssid=\"my_networks_ssid\"\n psk=\"my_networks_password\"\n}\n\n\nLogin to the Pi\nUse SSH or login with a local console if you have a monitor attached.\n\n\nRun the install script\n\nLogin to your Raspberry Pi with an SSH client or on a local screen/keyboard and run the command:\ncurl https://raw.githubusercontent.com/carpentriesoffline/carpentriesoffline-installer/main/setup.sh &gt; setup.sh && bash ./setup.sh\n\n\n\nChange the password\n\nRun the passwd command. Leaving the default password will mean anybody in your workshop can login to your Pi and change settings on it.\n\n\n\nConnect to Carpentries Offline\n\nAfter installing the Raspberry Pi will reboot.\nIt will then switch the WiFi interface to access point mode and will be available as a network called carpentries-offline.\nConnect to the carpentries-offline WiFi network\nVisting http://carpentriesoffline.org or http://192.168.1.1\nYou should get links to the Carpentries Lessons and the Gitea server on the Raspberry Pi\n\n\n\nUsing PyPi and CRAN mirrors from your Pi\n\nThese are downloaded to the Pi and placed in http://192.168.1.1/pypi and http://192.168.1.1/miniCRAN.\nYou will need to update your settings to use these locations. (TODO: write instructions on how to do this)\n\n\n\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "documentation/pixieNetwork.html",
+    "href": "documentation/pixieNetwork.html",
+    "title": "The Pixie Network",
+    "section": "",
+    "text": "G\n\n\n\nInternetAP\n\nInternetAP\nwlan0=192.168.0.1\n\n\n\nRaspAP\n\nRaspAP\nwlan0=192.168.0.10\nwlan1=10.3.141.1\n\n\n\nInternetAP-&gt;RaspAP\n\n\n\n\n\nSwitch\n\nSwitch\n\n\n\nRaspAP-&gt;Switch\n\n\n\n\n\npixielogin\n\npixielogin\nwlan0=10.3.141.10\neth0=192.168.5.100\n\n\n\nSwitch-&gt;pixielogin\n\n\n\n\n\npixie001\n\npixie001\neth0=192.168.5.101\n\n\n\nSwitch-&gt;pixie001\n\n\n\n\n\npixie002\n\npixie002\neth0=192.168.5.102\n\n\n\nSwitch-&gt;pixie002\n\n\n\n\n\npixie003\n\npixie003\neth0=192.168.5.103\n\n\n\nSwitch-&gt;pixie003\n\n\n\n\n\npixie004\n\npixie004\neth0=192.168.5.104\n\n\n\nSwitch-&gt;pixie004\n\n\n\n\n\npixie005\n\npixie005\neth0=192.168.5.105\n\n\n\nSwitch-&gt;pixie005\n\n\n\n\n\n\n\n\n\n\n\n\n\n Back to top"
   }
 ]

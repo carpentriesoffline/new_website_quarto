@@ -6,13 +6,58 @@ categories:
 
 ## What is PXE Boot?
 
-In computing, the **Preboot eXecution Environment** specification describes a standardised client–server environment that boots a software assembly, retrieved from a network, on PXE-enabled clients. ([Wikipedia](https://en.wikipedia.org/wiki/Preboot_Execution_Environment))
+*In computing, the* ***Preboot eXecution Environment*** *specification describes a standardised client–server environment that boots a software assembly, retrieved from a network, on PXE-enabled clients. ([Wikipedia](https://en.wikipedia.org/wiki/Preboot_Execution_Environment))*
 
 ## List of ToDos
 
-1. Write the Raspberry Pi OS image to an SD card.
-1. Run and update and an upgrade.
-1. Install and configure `dnsmasq`.
-1. Install and configure `nfs`.
-1. Download and install PXE scripts: `git clone https://github.com/carpentriesoffline/pxe-boot.git`
+- [ ] Write the Raspberry Pi OS image to an SD card.
+- [ ] Run and update and an upgrade.
+- [ ] Install and configure DNS masquerade.
+- [ ] Install and configure Network File System.
+- [ ] Download and install PXE scripts: `git clone https://github.com/carpentriesoffline/pxe-boot.git`
+
+## Step 1
+Rather than duplicating instructions that might change, we'd rather link to the Raspberry Pi website where you can download the Raspberry Pi imager from and also find the instruction for writing an image to an SD card. The most important thing to remember is to select the **Raspberry Pi OS Lite** image because you don't want to unneccessarily install a graphics environment which only takes up space on the installation disk and make things slower. The link to the web page is [https://www.raspberrypi.com/software/](https://www.raspberrypi.com/software/).
+
+## Step 2
+
+In a bash terminal do the following:
+
+```bash
+sudo apt update -y
+sudo apt full-upgrade -y
+```
+
+### Step 3
+
+Install dnsmasq and nfs (Network file system):
+```bash
+sudo apt install dnsmasq nfs-kernel nfs-common
+```
+
+### Step 4
+
+Configure DNS masquerading and NFS.
+
+To configure DNS masquerading edit the file `/etc/dnsmasq.conf` as follows:
+```
+port=0
+bind-dynamic
+interface=eth0
+domain-needed
+bogus-priv
+enable-tftp
+tftp-root=/pxe-boot
+pxe-service=0,"Raspberry Pi Boot"
+dhcp-option=3,192.168.5.100
+dhcp-option=6,10.3.141.1
+dhcp-range=eth0,192.168.5.101,192.168.5.200,12h
+dhcp-host=a1:a1:a1:a1:a1:a1,192.168.5.101
+dhcp-host=a2:a2:a2:a2:a2:a2,192.168.5.102
+dhcp-host=a3:a3:a3:a3:a3:a3,192.168.5.103
+dhcp-host=a4:a4:a4:a4:a4:a4,192.168.5.104
+dhcp-host=a5:a5:a5:a5:a5:a5,192.168.5.105
+dhcp-host=a6:a6:a6:a6:a6:a6,192.168.5.106
+```
+
 

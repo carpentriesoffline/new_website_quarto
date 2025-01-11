@@ -22,7 +22,9 @@
       "/documentation/eessi_with_pxe.html",
       "/documentation/minihpc_compute_node.html",
       "/documentation/minihpc_login_node.html",
+      "/documentation/pixieNetwork.html",
       "/documentation/pxe.html",
+      "/documentation/rpiimage_step_by_step.html",
       "/documentation/services.html"
     ]
   },

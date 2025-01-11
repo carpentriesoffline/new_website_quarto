@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Setting up PXE on the miniHPC – The Carpentries Offline</title>
+<title>Creating an SD card image: step-by-step – The Carpentries Offline</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -164,25 +164,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#what-is-pxe-boot" id="toc-what-is-pxe-boot" class="nav-link active" data-scroll-target="#what-is-pxe-boot">What is PXE Boot?</a></li>
-  <li><a href="#list-of-todos" id="toc-list-of-todos" class="nav-link" data-scroll-target="#list-of-todos">List of ToDos</a></li>
-  <li><a href="#step-1" id="toc-step-1" class="nav-link" data-scroll-target="#step-1">Step 1</a></li>
-  <li><a href="#step-2" id="toc-step-2" class="nav-link" data-scroll-target="#step-2">Step 2</a>
+  <li><a href="#creating-an-sd-card-image-step-by-step" id="toc-creating-an-sd-card-image-step-by-step" class="nav-link active" data-scroll-target="#creating-an-sd-card-image-step-by-step">Creating an SD card image: step-by-step</a>
   <ul class="collapse">
-  <li><a href="#step-3" id="toc-step-3" class="nav-link" data-scroll-target="#step-3">Step 3</a></li>
-  <li><a href="#step-4" id="toc-step-4" class="nav-link" data-scroll-target="#step-4">Step 4</a></li>
+  <li><a href="#using-a-pre-built-image" id="toc-using-a-pre-built-image" class="nav-link" data-scroll-target="#using-a-pre-built-image">Using a pre-built image</a></li>
+  <li><a href="#installing-carpentriesoffline-manually" id="toc-installing-carpentriesoffline-manually" class="nav-link" data-scroll-target="#installing-carpentriesoffline-manually">Installing CarpentriesOffline manually</a></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/carpentriesoffline/new_website_quarto/edit/main/documentation/pxe.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/carpentriesoffline/new_website_quarto/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/carpentriesoffline/new_website_quarto/edit/main/documentation/rpiimage_step_by_step.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/carpentriesoffline/new_website_quarto/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Setting up PXE on the miniHPC</h1>
+<h1 class="title">Creating an SD card image: step-by-step</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">minihpc</div>
+    <div class="quarto-category">sdcard</div>
   </div>
   </div>
 
@@ -200,57 +197,92 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="what-is-pxe-boot" class="level2">
-<h2 class="anchored" data-anchor-id="what-is-pxe-boot">What is PXE Boot?</h2>
-<p><em>In computing, the</em> <strong><em>Preboot eXecution Environment</em></strong> <em>specification describes a standardised client–server environment that boots a software assembly, retrieved from a network, on PXE-enabled clients. (<a href="https://en.wikipedia.org/wiki/Preboot_Execution_Environment">Wikipedia</a>)</em></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>(2025-01-10) Transferred from the old website - this probably needs updating)</p>
+</div>
+</div>
+<section id="creating-an-sd-card-image-step-by-step" class="level1">
+<h1>Creating an SD card image: step-by-step</h1>
+<section id="using-a-pre-built-image" class="level3">
+<h3 class="anchored" data-anchor-id="using-a-pre-built-image">Using a pre-built image</h3>
+<p>You can download a pre-built image from our <a href="https://github.com/carpentriesoffline/carpentriesoffline-installer/releases">releases page</a></p>
+<p>These are experimental and unlikely to be fully working yet. These are built as multipart zip files with names like release.zip and release.z01, this is due to a 2GB upload limit in our build process. Download each of these. To extract them on a Linux system run the following:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> release.z01 release.zip <span class="op">&gt;</span> carpentries-offline.zip</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">unzip</span> carpentries-offline.zip</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>After you have downloaded and unzipped the image files, write the image file to an SD card with Etcher or your image writing program of choice.</p>
 </section>
-<section id="list-of-todos" class="level2">
-<h2 class="anchored" data-anchor-id="list-of-todos">List of ToDos</h2>
-<ul class="task-list">
-<li><label><input type="checkbox">Write the Raspberry Pi OS image to an SD card.</label></li>
-<li><label><input type="checkbox">Run and update and an upgrade.</label></li>
-<li><label><input type="checkbox">Install and configure DNS masquerade.</label></li>
-<li><label><input type="checkbox">Install and configure Network File System.</label></li>
-<li><label><input type="checkbox">Download and install PXE scripts: <code>git clone https://github.com/carpentriesoffline/pxe-boot.git</code></label></li>
+<section id="installing-carpentriesoffline-manually" class="level3">
+<h3 class="anchored" data-anchor-id="installing-carpentriesoffline-manually">Installing CarpentriesOffline manually</h3>
+<section id="setting-up-a-raspberry-pi" class="level4">
+<h4 class="anchored" data-anchor-id="setting-up-a-raspberry-pi">Setting up a Raspberry Pi</h4>
+<ul>
+<li>Download Raspbian OS Lite: https://www.raspberrypi.org/software/operating-systems/</li>
+<li>Write image to SD card using rpi-imager: https://www.raspberrypi.org/software/</li>
 </ul>
 </section>
-<section id="step-1" class="level2">
-<h2 class="anchored" data-anchor-id="step-1">Step 1</h2>
-<p>Rather than duplicating instructions that might change, we’d rather link to the Raspberry Pi website where you can download the Raspberry Pi imager from and also find the instruction for writing an image to an SD card. The most important thing to remember is to select the <strong>Raspberry Pi OS Lite</strong> image because you don’t want to unneccessarily install a graphics environment which only takes up space on the installation disk and make things slower. The link to the web page is <a href="https://www.raspberrypi.com/software/">https://www.raspberrypi.com/software/</a>.</p>
+<section id="setup-for-headless-config-useful-if-you-dont-have-a-screen-and-keyboard-to-hand" class="level4">
+<h4 class="anchored" data-anchor-id="setup-for-headless-config-useful-if-you-dont-have-a-screen-and-keyboard-to-hand">Setup for headless config (useful if you don’t have a screen and keyboard to hand)</h4>
+<ul>
+<li>In the boot (small FAT32) partition on the SD card create an empty file called “ssh”</li>
+<li>If you’re using WiFi to get access to the Pi, create a file called wpa_supplicant.conf in the boot partition. Paste in the following and set your network SSID and password appropriately.</li>
+</ul>
+<pre><code>#set this to your country code, gb=great britain
+country=gb
+update_config=1
+ctrl_interface=/var/run/wpa_supplicant
+
+network={
+ scan_ssid=1
+ ssid="my_networks_ssid"
+ psk="my_networks_password"
+}</code></pre>
 </section>
-<section id="step-2" class="level2">
-<h2 class="anchored" data-anchor-id="step-2">Step 2</h2>
-<p>In a bash terminal do the following:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt update <span class="at">-y</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt full-upgrade <span class="at">-y</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<section id="step-3" class="level3">
-<h3 class="anchored" data-anchor-id="step-3">Step 3</h3>
-<p>Install dnsmasq and nfs (Network file system):</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install dnsmasq nfs-kernel nfs-common</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="login-to-the-pi" class="level4">
+<h4 class="anchored" data-anchor-id="login-to-the-pi">Login to the Pi</h4>
+<p>Use SSH or login with a local console if you have a monitor attached.</p>
 </section>
-<section id="step-4" class="level3">
-<h3 class="anchored" data-anchor-id="step-4">Step 4</h3>
-<p>Configure DNS masquerading and NFS.</p>
-<p>To configure DNS masquerading edit the file <code>/etc/dnsmasq.conf</code> as follows:</p>
-<pre><code>port=0
-bind-dynamic
-interface=eth0
-domain-needed
-bogus-priv
-enable-tftp
-tftp-root=/pxe-boot
-pxe-service=0,"Raspberry Pi Boot"
-dhcp-option=3,192.168.5.100
-dhcp-option=6,10.3.141.1
-dhcp-range=eth0,192.168.5.101,192.168.5.200,12h
-dhcp-host=a1:a1:a1:a1:a1:a1,192.168.5.101
-dhcp-host=a2:a2:a2:a2:a2:a2,192.168.5.102
-dhcp-host=a3:a3:a3:a3:a3:a3,192.168.5.103
-dhcp-host=a4:a4:a4:a4:a4:a4,192.168.5.104
-dhcp-host=a5:a5:a5:a5:a5:a5,192.168.5.105
-dhcp-host=a6:a6:a6:a6:a6:a6,192.168.5.106</code></pre>
+<section id="run-the-install-script" class="level4">
+<h4 class="anchored" data-anchor-id="run-the-install-script">Run the install script</h4>
+<ul>
+<li>Login to your Raspberry Pi with an SSH client or on a local screen/keyboard and run the command:</li>
+<li><code>curl https://raw.githubusercontent.com/carpentriesoffline/carpentriesoffline-installer/main/setup.sh &gt; setup.sh &amp;&amp; bash ./setup.sh</code></li>
+</ul>
+</section>
+<section id="change-the-password" class="level4">
+<h4 class="anchored" data-anchor-id="change-the-password">Change the password</h4>
+<ul>
+<li>Run the <code>passwd</code> command. Leaving the default password will mean anybody in your workshop can login to your Pi and change settings on it.</li>
+</ul>
+</section>
+<section id="connect-to-carpentries-offline" class="level4">
+<h4 class="anchored" data-anchor-id="connect-to-carpentries-offline">Connect to Carpentries Offline</h4>
+<ul>
+<li>After installing the Raspberry Pi will reboot.</li>
+<li>It will then switch the WiFi interface to access point mode and will be available as a network called carpentries-offline.</li>
+<li>Connect to the carpentries-offline WiFi network</li>
+<li>Visting <a href="http://carpentries.org">http://carpentriesoffline.org</a> or <a href="http://192.168.1.1">http://192.168.1.1</a></li>
+<li>You should get links to the Carpentries Lessons and the Gitea server on the Raspberry Pi</li>
+</ul>
+</section>
+<section id="using-pypi-and-cran-mirrors-from-your-pi" class="level4">
+<h4 class="anchored" data-anchor-id="using-pypi-and-cran-mirrors-from-your-pi">Using PyPi and CRAN mirrors from your Pi</h4>
+<ul>
+<li>These are downloaded to the Pi and placed in <a href="http://192.168.1.1/pypi">http://192.168.1.1/pypi</a> and <a href="http://192.168.1.1/miniCRAN">http://192.168.1.1/miniCRAN</a>.</li>
+<li>You will need to update your settings to use these locations. (TODO: write instructions on how to do this)</li>
+</ul>
 
 
+</section>
 </section>
 </section>
 
@@ -682,4 +714,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/carpentriesoffline/new_website_quarto/edit/main/documentation/pxe.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/carpentriesoffline/new_website_quarto/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/carpentriesoffline/new_website_quarto/edit/main/documentation/rpiimage_step_by_step.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/carpentriesoffline/new_website_quarto/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>

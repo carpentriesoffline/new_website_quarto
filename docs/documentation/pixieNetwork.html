@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Setting up PXE on the miniHPC – The Carpentries Offline</title>
+<title>The Pixie Network – The Carpentries Offline</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,40 +19,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -159,30 +125,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#what-is-pxe-boot" id="toc-what-is-pxe-boot" class="nav-link active" data-scroll-target="#what-is-pxe-boot">What is PXE Boot?</a></li>
-  <li><a href="#list-of-todos" id="toc-list-of-todos" class="nav-link" data-scroll-target="#list-of-todos">List of ToDos</a></li>
-  <li><a href="#step-1" id="toc-step-1" class="nav-link" data-scroll-target="#step-1">Step 1</a></li>
-  <li><a href="#step-2" id="toc-step-2" class="nav-link" data-scroll-target="#step-2">Step 2</a>
-  <ul class="collapse">
-  <li><a href="#step-3" id="toc-step-3" class="nav-link" data-scroll-target="#step-3">Step 3</a></li>
-  <li><a href="#step-4" id="toc-step-4" class="nav-link" data-scroll-target="#step-4">Step 4</a></li>
-  </ul></li>
-  </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/carpentriesoffline/new_website_quarto/edit/main/documentation/pxe.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/carpentriesoffline/new_website_quarto/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Setting up PXE on the miniHPC</h1>
+<h1 class="title">The Pixie Network</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">minihpc</div>
+    <div class="quarto-category">miniHPC</div>
   </div>
   </div>
 
@@ -200,59 +153,136 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="what-is-pxe-boot" class="level2">
-<h2 class="anchored" data-anchor-id="what-is-pxe-boot">What is PXE Boot?</h2>
-<p><em>In computing, the</em> <strong><em>Preboot eXecution Environment</em></strong> <em>specification describes a standardised client–server environment that boots a software assembly, retrieved from a network, on PXE-enabled clients. (<a href="https://en.wikipedia.org/wiki/Preboot_Execution_Environment">Wikipedia</a>)</em></p>
-</section>
-<section id="list-of-todos" class="level2">
-<h2 class="anchored" data-anchor-id="list-of-todos">List of ToDos</h2>
-<ul class="task-list">
-<li><label><input type="checkbox">Write the Raspberry Pi OS image to an SD card.</label></li>
-<li><label><input type="checkbox">Run and update and an upgrade.</label></li>
-<li><label><input type="checkbox">Install and configure DNS masquerade.</label></li>
-<li><label><input type="checkbox">Install and configure Network File System.</label></li>
-<li><label><input type="checkbox">Download and install PXE scripts: <code>git clone https://github.com/carpentriesoffline/pxe-boot.git</code></label></li>
-</ul>
-</section>
-<section id="step-1" class="level2">
-<h2 class="anchored" data-anchor-id="step-1">Step 1</h2>
-<p>Rather than duplicating instructions that might change, we’d rather link to the Raspberry Pi website where you can download the Raspberry Pi imager from and also find the instruction for writing an image to an SD card. The most important thing to remember is to select the <strong>Raspberry Pi OS Lite</strong> image because you don’t want to unneccessarily install a graphics environment which only takes up space on the installation disk and make things slower. The link to the web page is <a href="https://www.raspberrypi.com/software/">https://www.raspberrypi.com/software/</a>.</p>
-</section>
-<section id="step-2" class="level2">
-<h2 class="anchored" data-anchor-id="step-2">Step 2</h2>
-<p>In a bash terminal do the following:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt update <span class="at">-y</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt full-upgrade <span class="at">-y</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<section id="step-3" class="level3">
-<h3 class="anchored" data-anchor-id="step-3">Step 3</h3>
-<p>Install dnsmasq and nfs (Network file system):</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install dnsmasq nfs-kernel nfs-common</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="step-4" class="level3">
-<h3 class="anchored" data-anchor-id="step-4">Step 4</h3>
-<p>Configure DNS masquerading and NFS.</p>
-<p>To configure DNS masquerading edit the file <code>/etc/dnsmasq.conf</code> as follows:</p>
-<pre><code>port=0
-bind-dynamic
-interface=eth0
-domain-needed
-bogus-priv
-enable-tftp
-tftp-root=/pxe-boot
-pxe-service=0,"Raspberry Pi Boot"
-dhcp-option=3,192.168.5.100
-dhcp-option=6,10.3.141.1
-dhcp-range=eth0,192.168.5.101,192.168.5.200,12h
-dhcp-host=a1:a1:a1:a1:a1:a1,192.168.5.101
-dhcp-host=a2:a2:a2:a2:a2:a2,192.168.5.102
-dhcp-host=a3:a3:a3:a3:a3:a3,192.168.5.103
-dhcp-host=a4:a4:a4:a4:a4:a4,192.168.5.104
-dhcp-host=a5:a5:a5:a5:a5:a5,192.168.5.105
-dhcp-host=a6:a6:a6:a6:a6:a6,192.168.5.106</code></pre>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<svg width="672" height="480" viewbox="0.00 0.00 866.50 310.40" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 306.4)">
+<title>G</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-306.4 862.5,-306.4 862.5,4 -4,4"></polygon>
+<!-- InternetAP -->
+<g id="node1" class="node">
+<title>InternetAP</title>
+<polygon fill="none" stroke="black" points="491.36,-302.2 367.14,-302.2 367.14,-261 491.36,-261 491.36,-302.2"></polygon>
+<text text-anchor="middle" x="429.25" y="-285.8" font-family="Times,serif" font-size="14.00">InternetAP</text>
+<text text-anchor="middle" x="429.25" y="-269" font-family="Times,serif" font-size="14.00">wlan0=192.168.0.1</text>
+</g>
+<!-- RaspAP -->
+<g id="node2" class="node">
+<title>RaspAP</title>
+<polygon fill="none" stroke="black" points="494.86,-225 363.64,-225 363.64,-166.2 494.86,-166.2 494.86,-225"></polygon>
+<text text-anchor="middle" x="429.25" y="-208.2" font-family="Times,serif" font-size="14.00">RaspAP</text>
+<text text-anchor="middle" x="429.25" y="-191.4" font-family="Times,serif" font-size="14.00">wlan0=192.168.0.10</text>
+<text text-anchor="middle" x="429.25" y="-174.6" font-family="Times,serif" font-size="14.00">wlan1=10.3.141.1</text>
+</g>
+<!-- InternetAP&#45;&gt;RaspAP -->
+<g id="edge1" class="edge">
+<title>InternetAP-&gt;RaspAP</title>
+<path fill="none" stroke="black" d="M429.25,-260.69C429.25,-253.02 429.25,-243.98 429.25,-235.14"></path>
+<polygon fill="black" stroke="black" points="432.75,-234.95 429.25,-224.95 425.75,-234.95 432.75,-234.95"></polygon>
+</g>
+<!-- Switch -->
+<g id="node3" class="node">
+<title>Switch</title>
+<path fill="none" stroke="black" d="M444.64,-130.4C444.64,-130.4 413.86,-130.4 413.86,-130.4 407.86,-130.4 401.86,-124.4 401.86,-118.4 401.86,-118.4 401.86,-106.4 401.86,-106.4 401.86,-100.4 407.86,-94.4 413.86,-94.4 413.86,-94.4 444.64,-94.4 444.64,-94.4 450.64,-94.4 456.64,-100.4 456.64,-106.4 456.64,-106.4 456.64,-118.4 456.64,-118.4 456.64,-124.4 450.64,-130.4 444.64,-130.4"></path>
+<text text-anchor="middle" x="429.25" y="-108.2" font-family="Times,serif" font-size="14.00">Switch</text>
+</g>
+<!-- RaspAP&#45;&gt;Switch -->
+<g id="edge2" class="edge">
+<title>RaspAP-&gt;Switch</title>
+<path fill="none" stroke="black" d="M429.25,-166.2C429.25,-157.93 429.25,-148.92 429.25,-140.72"></path>
+<polygon fill="black" stroke="black" points="432.75,-140.54 429.25,-130.54 425.75,-140.54 432.75,-140.54"></polygon>
+</g>
+<!-- pixielogin -->
+<g id="node4" class="node">
+<title>pixielogin</title>
+<polygon fill="none" stroke="black" points="128.75,-58.6 -0.25,-58.6 -0.25,0.2 128.75,0.2 128.75,-58.6"></polygon>
+<text text-anchor="middle" x="64.25" y="-41.8" font-family="Times,serif" font-size="14.00">pixielogin</text>
+<text text-anchor="middle" x="64.25" y="-25" font-family="Times,serif" font-size="14.00">wlan0=10.3.141.10</text>
+<text text-anchor="middle" x="64.25" y="-8.2" font-family="Times,serif" font-size="14.00">eth0=192.168.5.100</text>
+</g>
+<!-- Switch&#45;&gt;pixielogin -->
+<g id="edge3" class="edge">
+<title>Switch-&gt;pixielogin</title>
+<path fill="none" stroke="black" d="M401.48,-108.14C350.75,-101.81 239.71,-86.19 138.29,-58.5"></path>
+<polygon fill="black" stroke="black" points="139.08,-55.09 128.51,-55.78 137.21,-61.83 139.08,-55.09"></polygon>
+</g>
+<!-- pixie001 -->
+<g id="node5" class="node">
+<title>pixie001</title>
+<polygon fill="none" stroke="black" points="274.75,-49.8 145.75,-49.8 145.75,-8.6 274.75,-8.6 274.75,-49.8"></polygon>
+<text text-anchor="middle" x="210.25" y="-33.4" font-family="Times,serif" font-size="14.00">pixie001</text>
+<text text-anchor="middle" x="210.25" y="-16.6" font-family="Times,serif" font-size="14.00">eth0=192.168.5.101</text>
+</g>
+<!-- Switch&#45;&gt;pixie001 -->
+<g id="edge4" class="edge">
+<title>Switch-&gt;pixie001</title>
+<path fill="none" stroke="black" d="M401.74,-101.6C372.35,-91.09 324.41,-73.82 283.25,-58.4 279.06,-56.83 274.73,-55.2 270.38,-53.54"></path>
+<polygon fill="black" stroke="black" points="271.45,-50.2 260.86,-49.9 268.95,-56.74 271.45,-50.2"></polygon>
+</g>
+<!-- pixie002 -->
+<g id="node6" class="node">
+<title>pixie002</title>
+<polygon fill="none" stroke="black" points="420.75,-49.8 291.75,-49.8 291.75,-8.6 420.75,-8.6 420.75,-49.8"></polygon>
+<text text-anchor="middle" x="356.25" y="-33.4" font-family="Times,serif" font-size="14.00">pixie002</text>
+<text text-anchor="middle" x="356.25" y="-16.6" font-family="Times,serif" font-size="14.00">eth0=192.168.5.102</text>
+</g>
+<!-- Switch&#45;&gt;pixie002 -->
+<g id="edge5" class="edge">
+<title>Switch-&gt;pixie002</title>
+<path fill="none" stroke="black" d="M413.77,-94.18C404.22,-83.56 391.77,-69.71 380.89,-57.61"></path>
+<polygon fill="black" stroke="black" points="383.31,-55.06 374.02,-49.97 378.1,-59.74 383.31,-55.06"></polygon>
+</g>
+<!-- pixie003 -->
+<g id="node7" class="node">
+<title>pixie003</title>
+<polygon fill="none" stroke="black" points="566.75,-49.8 437.75,-49.8 437.75,-8.6 566.75,-8.6 566.75,-49.8"></polygon>
+<text text-anchor="middle" x="502.25" y="-33.4" font-family="Times,serif" font-size="14.00">pixie003</text>
+<text text-anchor="middle" x="502.25" y="-16.6" font-family="Times,serif" font-size="14.00">eth0=192.168.5.103</text>
+</g>
+<!-- Switch&#45;&gt;pixie003 -->
+<g id="edge6" class="edge">
+<title>Switch-&gt;pixie003</title>
+<path fill="none" stroke="black" d="M444.73,-94.18C454.28,-83.56 466.73,-69.71 477.61,-57.61"></path>
+<polygon fill="black" stroke="black" points="480.4,-59.74 484.48,-49.97 475.19,-55.06 480.4,-59.74"></polygon>
+</g>
+<!-- pixie004 -->
+<g id="node8" class="node">
+<title>pixie004</title>
+<polygon fill="none" stroke="black" points="712.75,-49.8 583.75,-49.8 583.75,-8.6 712.75,-8.6 712.75,-49.8"></polygon>
+<text text-anchor="middle" x="648.25" y="-33.4" font-family="Times,serif" font-size="14.00">pixie004</text>
+<text text-anchor="middle" x="648.25" y="-16.6" font-family="Times,serif" font-size="14.00">eth0=192.168.5.104</text>
+</g>
+<!-- Switch&#45;&gt;pixie004 -->
+<g id="edge7" class="edge">
+<title>Switch-&gt;pixie004</title>
+<path fill="none" stroke="black" d="M456.76,-101.6C486.15,-91.09 534.09,-73.82 575.25,-58.4 579.44,-56.83 583.76,-55.2 588.11,-53.54"></path>
+<polygon fill="black" stroke="black" points="589.55,-56.74 597.64,-49.9 587.05,-50.2 589.55,-56.74"></polygon>
+</g>
+<!-- pixie005 -->
+<g id="node9" class="node">
+<title>pixie005</title>
+<polygon fill="none" stroke="black" points="858.75,-49.8 729.75,-49.8 729.75,-8.6 858.75,-8.6 858.75,-49.8"></polygon>
+<text text-anchor="middle" x="794.25" y="-33.4" font-family="Times,serif" font-size="14.00">pixie005</text>
+<text text-anchor="middle" x="794.25" y="-16.6" font-family="Times,serif" font-size="14.00">eth0=192.168.5.105</text>
+</g>
+<!-- Switch&#45;&gt;pixie005 -->
+<g id="edge8" class="edge">
+<title>Switch-&gt;pixie005</title>
+<path fill="none" stroke="black" d="M457.02,-108.14C509.38,-101.6 626.02,-85.18 721.25,-58.4 726.56,-56.91 732.03,-55.18 737.46,-53.32"></path>
+<polygon fill="black" stroke="black" points="738.92,-56.52 747.18,-49.88 736.58,-49.92 738.92,-56.52"></polygon>
+</g>
+</g>
+</svg>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
 
 
-</section>
-</section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -682,4 +712,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/carpentriesoffline/new_website_quarto/edit/main/documentation/pxe.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/carpentriesoffline/new_website_quarto/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/carpentriesoffline/new_website_quarto/edit/main/documentation/pixieNetwork.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/carpentriesoffline/new_website_quarto/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
