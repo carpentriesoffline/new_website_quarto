@@ -4,6 +4,9 @@ categories:
   - minihpc
 ---
 
+For the purposes of this documentation we'll assume network that looks as follow:
+
+
 ```{dot}
 digraph G { 
   node [shape=box];

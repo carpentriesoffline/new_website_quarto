@@ -6,4 +6,8 @@ image: images/flashdrive.png
 image-alt: "A photo of a flash drive"
 ---
 
-The quick brown fox
+::: {.callout-important}
+Watch this space for the latest flashdrive image. When it is ready, this will become a link to the download.
+:::
+
+It is possible to run a complete operating system just from a flashdrive. As an alternative to using a Raspberry Pi computer to act as a server, you can write the CarpentriesOffline OS to a flashdrive and then boot your computer from the flashdrive. The CarpentriesOffline Os is built on Slax which, in turn, is built on Debian. [Step-by-step instructions for creating a CarpentriesOffline flashdrive](/documentation/flashdrive_step_by_step.qmd).
