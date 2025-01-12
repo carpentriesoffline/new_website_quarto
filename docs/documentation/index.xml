@@ -11,7 +11,7 @@
 <description>CarpentriesOffline Documentation
 </description>
 <generator>quarto-1.6.39</generator>
-<lastBuildDate>Sat, 11 Jan 2025 14:55:43 GMT</lastBuildDate>
+<lastBuildDate>Sun, 12 Jan 2025 20:15:48 GMT</lastBuildDate>
 <item>
   <title>CarpentriesOffline SD card images</title>
   <link>https://carpentriesoffline.org/new_website_quarto/documentation/creating_an_sdcard.html</link>
@@ -28,7 +28,7 @@
   <category>minihpc</category>
   <category>sdcard</category>
   <guid>https://carpentriesoffline.org/new_website_quarto/documentation/creating_an_sdcard.html</guid>
-  <pubDate>Sat, 11 Jan 2025 14:55:43 GMT</pubDate>
+  <pubDate>Sun, 12 Jan 2025 20:15:48 GMT</pubDate>
 </item>
 <item>
   <title>Setting up EESSI with PXE on the miniHPC</title>
@@ -45,7 +45,49 @@
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>minihpc</category>
   <guid>https://carpentriesoffline.org/new_website_quarto/documentation/eessi_with_pxe.html</guid>
-  <pubDate>Sat, 11 Jan 2025 14:55:43 GMT</pubDate>
+  <pubDate>Sun, 12 Jan 2025 20:15:48 GMT</pubDate>
+</item>
+<item>
+  <title>Bootable Flash Drive - step-by-step</title>
+  <link>https://carpentriesoffline.org/new_website_quarto/documentation/flashdrive_step_by_step.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="these-are-the-manual-steps-for-creating-a-carpentriesoffline-flashdrive" class="level2">
+<h2 class="anchored" data-anchor-id="these-are-the-manual-steps-for-creating-a-carpentriesoffline-flashdrive">These are the manual steps for creating a CarpentriesOffline flashdrive:</h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Work in progress</p>
+</div>
+</div>
+<ol type="1">
+<li>You will need a 4GB flashdrive to start with</li>
+<li>Download Slax Linux. If you have a 32bit computer you will need the 32bit version which you can download with this link: <a href="https://slax.org/download-slax.php?a=32bit&amp;b=Debian">https://slax.org/download-slax.php?a=32bit&amp;b=Debian</a>. If you have a 64 bit computer, download Slax with this link: <a href="https://slax.org/download-slax.php?a=64bit&amp;b=Debian">https://slax.org/download-slax.php?a=64bit&amp;b=Debian</a></li>
+<li><ul>
+<li><p>The file you just downloaded is an ISO image which you can mount on your computer as a virtual disk. (Instructions to mount of the three main operating systems will follow soon).</p></li>
+<li><p>To mount on Linux, assuming you are in the same directory as where you download the iso to.</p></li>
+<li><p><code>sudo mount -o loop ./slax-##bit-#.#.#.iso</code></p></li>
+<li><p>where the #s are replaced by the actual numbers in the name of the file you downloaded.</p></li>
+</ul></li>
+</ol>
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>flashdrive</category>
+  <guid>https://carpentriesoffline.org/new_website_quarto/documentation/flashdrive_step_by_step.html</guid>
+  <pubDate>Sun, 12 Jan 2025 20:15:48 GMT</pubDate>
 </item>
 <item>
   <title>Creating a compute node with a Raspberry Pi for the miniHPC</title>
@@ -62,7 +104,7 @@
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>minihpc</category>
   <guid>https://carpentriesoffline.org/new_website_quarto/documentation/minihpc_compute_node.html</guid>
-  <pubDate>Sat, 11 Jan 2025 14:55:43 GMT</pubDate>
+  <pubDate>Sun, 12 Jan 2025 20:15:48 GMT</pubDate>
 </item>
 <item>
   <title>Creating a login node with a Raspberry Pi for the miniHPC</title>
@@ -79,7 +121,7 @@
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>minihpc</category>
   <guid>https://carpentriesoffline.org/new_website_quarto/documentation/minihpc_login_node.html</guid>
-  <pubDate>Sat, 11 Jan 2025 14:55:43 GMT</pubDate>
+  <pubDate>Sun, 12 Jan 2025 20:15:48 GMT</pubDate>
 </item>
 <item>
   <title>The Pixie Network</title>
@@ -224,7 +266,7 @@
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>minihpc</category>
   <guid>https://carpentriesoffline.org/new_website_quarto/documentation/pixieNetwork.html</guid>
-  <pubDate>Sat, 11 Jan 2025 14:55:43 GMT</pubDate>
+  <pubDate>Sun, 12 Jan 2025 20:15:48 GMT</pubDate>
 </item>
 <item>
   <title>Setting up PXE on the miniHPC</title>
@@ -301,7 +343,7 @@ dhcp-host=a6:a6:a6:a6:a6:a6,192.168.5.106</code></pre>
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>minihpc</category>
   <guid>https://carpentriesoffline.org/new_website_quarto/documentation/pxe.html</guid>
-  <pubDate>Sat, 11 Jan 2025 14:55:43 GMT</pubDate>
+  <pubDate>Sun, 12 Jan 2025 20:15:48 GMT</pubDate>
 </item>
 <item>
   <title>Creating an SD card image: step-by-step</title>
@@ -409,7 +451,7 @@ network={
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>sdcard</category>
   <guid>https://carpentriesoffline.org/new_website_quarto/documentation/rpiimage_step_by_step.html</guid>
-  <pubDate>Sat, 11 Jan 2025 14:55:43 GMT</pubDate>
+  <pubDate>Sun, 12 Jan 2025 20:15:48 GMT</pubDate>
 </item>
 <item>
   <title>A summary of the services required on the login node</title>
@@ -443,7 +485,7 @@ network={
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>minihpc</category>
   <guid>https://carpentriesoffline.org/new_website_quarto/documentation/services.html</guid>
-  <pubDate>Sat, 11 Jan 2025 14:55:43 GMT</pubDate>
+  <pubDate>Sun, 12 Jan 2025 20:15:48 GMT</pubDate>
 </item>
 </channel>
 </rss>

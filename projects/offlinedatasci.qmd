@@ -6,6 +6,6 @@ image: images/pypilogo.svg
 image-alt: "A photo of Raspberry Pi High Performance cluster consisting of six nodes. "
 ---
 
-The quick brown fox
+OfflineDataSci is a Python package that can be downloaded from PyPi. It scrapes and downloads all Carpentries lesson material to your local computer. This means that you don't need Internet access to view the materials. The package is also used to create the CarpentriesOffline operating system image for the Raspberry Pi and FlashDrive projects which allow you to turn a Raspberry Pi computer or your laptop (with the use of the FlashDrive) into a web server and an access point for learners to connect to.
 
-
+[Offline Documentation](/documentation/offlinedatasci.qmd)

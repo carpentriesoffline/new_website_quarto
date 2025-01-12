@@ -11,7 +11,7 @@
     "href": "projects/offlinedatasci.html",
     "title": "The OfflineDataSci Python package",
     "section": "",
-    "text": "The quick brown fox\n\n\n\n Back to top"
+    "text": "OfflineDataSci is a Python package that can be downloaded from PyPi. It scrapes and downloads all Carpentries lesson material to your local computer. This means that you don’t need Internet access to view the materials. The package is also used to create the CarpentriesOffline operating system image for the Raspberry Pi and FlashDrive projects which allow you to turn a Raspberry Pi computer or your laptop (with the use of the FlashDrive) into a web server and an access point for learners to connect to.\nOffline Documentation\n\n\n\n Back to top"
   },
   {
     "objectID": "projects/index.html",
@@ -158,7 +158,7 @@
     "href": "documentation/index.html",
     "title": "Documents",
     "section": "",
-    "text": "Title\n\n\nCategories\n\n\n\n\n\n\n\n\n\nCarpentriesOffline SD card images\n\n\nminihpc, sdcard\n\n\n\n\n\n\n\nSetting up EESSI with PXE on the miniHPC\n\n\nminihpc\n\n\n\n\n\n\n\nCreating a compute node with a Raspberry Pi for the miniHPC\n\n\nminihpc\n\n\n\n\n\n\n\nCreating a login node with a Raspberry Pi for the miniHPC\n\n\nminihpc\n\n\n\n\n\n\n\nThe Pixie Network\n\n\nminihpc\n\n\n\n\n\n\n\nSetting up PXE on the miniHPC\n\n\nminihpc\n\n\n\n\n\n\n\nCreating an SD card image: step-by-step\n\n\nsdcard\n\n\n\n\n\n\n\nA summary of the services required on the login node\n\n\nminihpc\n\n\n\n\n\nNo matching items\n\n Back to top"
+    "text": "Title\n\n\nCategories\n\n\n\n\n\n\n\n\n\nCarpentriesOffline SD card images\n\n\nminihpc, sdcard\n\n\n\n\n\n\n\nSetting up EESSI with PXE on the miniHPC\n\n\nminihpc\n\n\n\n\n\n\n\nBootable Flash Drive - step-by-step\n\n\nflashdrive\n\n\n\n\n\n\n\nCreating a compute node with a Raspberry Pi for the miniHPC\n\n\nminihpc\n\n\n\n\n\n\n\nCreating a login node with a Raspberry Pi for the miniHPC\n\n\nminihpc\n\n\n\n\n\n\n\nThe Pixie Network\n\n\nminihpc\n\n\n\n\n\n\n\nSetting up PXE on the miniHPC\n\n\nminihpc\n\n\n\n\n\n\n\nCreating an SD card image: step-by-step\n\n\nsdcard\n\n\n\n\n\n\n\nA summary of the services required on the login node\n\n\nminihpc\n\n\n\n\n\nNo matching items\n\n Back to top"
   },
   {
     "objectID": "documentation/minihpc_login_node.html",
@@ -299,5 +299,19 @@
     "title": "The miniHPC",
     "section": "Why a mini HPC?",
     "text": "Why a mini HPC?\nMany people have built Raspberry Pi HPCs, why do we want to include this as part of the CarpentriesOffline project? The need for this project became apparent in February 2023 when we ran a workshop for the N8 at Newcastle University using the Carpentries Incubator lesson, Introduction to High-Performance Computing. There are a few things that seem to, almost always, go wrong when running a workshop such as this one:\n\nPeople do not register for HPC accounts before the workshop. Most HPCs will have certain hoops you need to jump through when you want to obtain a user account on them. There are often time delays to get the accounts approved which means that if the learners did not obtain their logins before the workshop they are not guaranteed to get a login arranged on the day of the workshop.\nLogin nodes can experience problems due to users running processes on them that they are not supposed to. When this happens others users cannot log in. Obviously, workshop have to happen within a certain time frame and if the learners can’t get logged in, the workshop can’t continue.\nThe length of queues and the load on an HPC cannot be controlled and if it so happens that many other users are accessing the HPC on the day of the workshop, access can be slow and jobs in the queue might not get completed in a timely manner for the workshop.\nLast but not the least are problems with The Internet itself.\n\nHPCs are not easy to set up. Many document their processes but it still requires quite a lot of expertise to set up. What we would like to do is to create images of the SD cards required to boot the RPis and/or Rock Pis straight into an HPC. Instructors should be able to obtain specified hardware and know how to connect everything, write the OS image to an SD card or SSD and boot the computer into a usable HPC state."
+  },
+  {
+    "objectID": "documentation/offlinedatasci.html",
+    "href": "documentation/offlinedatasci.html",
+    "title": "Offline Documentation",
+    "section": "",
+    "text": "DevDocs centralizes documentation for a large number of programming languages and packages including many relevant to Data Science. The available documentation includes R, Python, Julia, JavaScript, pandas, Numpy, scikit-learn, SQLite, and much more.\nThe site is designed to use local storage for offline use, and the great thing is you don’t need to change anything to work offline. Just set up the sync the documentation you want and then visit the website, even if you’re offline."
+  },
+  {
+    "objectID": "documentation/offlinedatasci.html#instructions",
+    "href": "documentation/offlinedatasci.html#instructions",
+    "title": "Offline Documentation",
+    "section": "Instructions",
+    "text": "Instructions\n\nGo to https://devdocs.io/\nIn the menu bar on the left in the “Disabled” section (underneath CSS, HTML, HTTP, JavaScript, and Web APIs) find the documentation you want to access offline, hover over a version number, and click when it says “Enable”. You should see the documentation you just selected added to the list at the top of the side bar.\nGo to https://devdocs.io/offline and click “Install all” in the top right corner (or just select the documentation you want to sync by clicking “Install” next to each set of documentation)\nLeave the “Install updates automatically” box checked if you want the site to update as newer versions of the documentation become available or uncheck it to update manually.\nEnjoy browsing the same docs (including the integrated search), in the same way, online or offline!"
   }
 ]

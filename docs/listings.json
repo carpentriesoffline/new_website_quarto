@@ -32,6 +32,7 @@
     "items": [
       "/documentation/creating_an_sdcard.html",
       "/documentation/eessi_with_pxe.html",
+      "/documentation/flashdrive_step_by_step.html",
       "/documentation/minihpc_compute_node.html",
       "/documentation/minihpc_login_node.html",
       "/documentation/pixieNetwork.html",
