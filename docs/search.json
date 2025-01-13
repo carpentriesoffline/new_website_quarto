@@ -1,108 +1,17 @@
 [
   {
-    "objectID": "resources/index.html",
-    "href": "resources/index.html",
-    "title": "Resources",
-    "section": "",
-    "text": "Title\n\n\nCategories\n\n\n\n\n\n\n\nNo matching items\n\n Back to top"
-  },
-  {
-    "objectID": "projects/offlinedatasci.html",
-    "href": "projects/offlinedatasci.html",
-    "title": "The OfflineDataSci Python package",
-    "section": "",
-    "text": "OfflineDataSci is a Python package that can be downloaded from PyPi. It scrapes and downloads all Carpentries lesson material to your local computer. This means that you don’t need Internet access to view the materials. The package is also used to create the CarpentriesOffline operating system image for the Raspberry Pi and FlashDrive projects which allow you to turn a Raspberry Pi computer or your laptop (with the use of the FlashDrive) into a web server and an access point for learners to connect to.\nOffline Documentation\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "projects/index.html",
-    "href": "projects/index.html",
-    "title": "Projects",
-    "section": "",
-    "text": "Bootable Flash Drive\n\n\n\nflashdrive\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCarpentriesOffline with a Raspberry Pi\n\n\n\nsdcard\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe miniHPC\n\n\n\nminihpc\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe OfflineDataSci Python package\n\n\n\nofflinedatasci\n\n\n\n\n\n\n\n\nNo matching items\n\n Back to top"
-  },
-  {
-    "objectID": "people/jannetta.html",
-    "href": "people/jannetta.html",
-    "title": "Dr Jannetta Steyn",
-    "section": "",
-    "text": "Jannetta Steyn is a Senior Research Software Engineer and Head of Training and Community in the Research Software Engineering Team at Newcastle University."
-  },
-  {
-    "objectID": "people/jannetta.html#education",
-    "href": "people/jannetta.html#education",
-    "title": "Dr Jannetta Steyn",
-    "section": "Education",
-    "text": "Education\nNewcastle University | Newcastle-upon-Tyne, UK PhD Computational Neuroscience | Jan 2011 - Jun 2016\nNewcastle University | Newcastle-upon-Tyne, UK MSc Bioinformatics and Computational Systems Biology | Sep 2009 - Aug 2010\nThe Open University | Milton Keynes, UK MSc Computing for Commerce and Industry | Feb 2007 - Sep 2008"
-  },
-  {
-    "objectID": "people/jannetta.html#experience",
-    "href": "people/jannetta.html#experience",
-    "title": "Dr Jannetta Steyn",
-    "section": "Experience",
-    "text": "Experience\nNewcastle University | Senior Research Software Engineer | April 2019 - present\nNewcastle University | Senior Research Associate | January 2015 - March 2019\nSerco | Analyst/Programmer | December 2005 - February 2010"
-  },
-  {
-    "objectID": "lessons/index.html",
-    "href": "lessons/index.html",
-    "title": "Lessons",
-    "section": "",
-    "text": "Onboarding Instructors to use a Raspberry Pi with the SD card\n\n\n\nsdcard\n\n\n\n\n\n\n\n\n\n\n\n\nBuilding a miniHPC with Raspberry Pis\n\n\n\nHPC\n\n\nminihpc\n\n\n\n\n\n\n\n\nNo matching items\n\n Back to top"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "The Carpentries Offline",
-    "section": "",
-    "text": "CarpentriesOffline aims to provide a solution for running Software, Data, Library and HPC Carpentries workshop in areas where there is limited or no Internet access."
-  },
-  {
-    "objectID": "index.html#projects",
-    "href": "index.html#projects",
-    "title": "The Carpentries Offline",
-    "section": "Projects",
-    "text": "Projects"
-  },
-  {
-    "objectID": "documentation/rpiimage_step_by_step.html",
-    "href": "documentation/rpiimage_step_by_step.html",
-    "title": "Creating an SD card image: step-by-step",
-    "section": "",
-    "text": "Note\n\n\n\n(2025-01-10) Transferred from the old website - this probably needs updating)\n\n\n\nCreating an SD card image: step-by-step\n\nUsing a pre-built image\nYou can download a pre-built image from our releases page\nThese are experimental and unlikely to be fully working yet. These are built as multipart zip files with names like release.zip and release.z01, this is due to a 2GB upload limit in our build process. Download each of these. To extract them on a Linux system run the following:\ncat release.z01 release.zip &gt; carpentries-offline.zip\n\nunzip carpentries-offline.zip\nAfter you have downloaded and unzipped the image files, write the image file to an SD card with Etcher or your image writing program of choice.\n\n\nInstalling CarpentriesOffline manually\n\nSetting up a Raspberry Pi\n\nDownload Raspbian OS Lite: https://www.raspberrypi.org/software/operating-systems/\nWrite image to SD card using rpi-imager: https://www.raspberrypi.org/software/\n\n\n\nSetup for headless config (useful if you don’t have a screen and keyboard to hand)\n\nIn the boot (small FAT32) partition on the SD card create an empty file called “ssh”\nIf you’re using WiFi to get access to the Pi, create a file called wpa_supplicant.conf in the boot partition. Paste in the following and set your network SSID and password appropriately.\n\n#set this to your country code, gb=great britain\ncountry=gb\nupdate_config=1\nctrl_interface=/var/run/wpa_supplicant\n\nnetwork={\n scan_ssid=1\n ssid=\"my_networks_ssid\"\n psk=\"my_networks_password\"\n}\n\n\nLogin to the Pi\nUse SSH or login with a local console if you have a monitor attached.\n\n\nRun the install script\n\nLogin to your Raspberry Pi with an SSH client or on a local screen/keyboard and run the command:\ncurl https://raw.githubusercontent.com/carpentriesoffline/carpentriesoffline-installer/main/setup.sh &gt; setup.sh && bash ./setup.sh\n\n\n\nChange the password\n\nRun the passwd command. Leaving the default password will mean anybody in your workshop can login to your Pi and change settings on it.\n\n\n\nConnect to Carpentries Offline\n\nAfter installing the Raspberry Pi will reboot.\nIt will then switch the WiFi interface to access point mode and will be available as a network called carpentries-offline.\nConnect to the carpentries-offline WiFi network\nVisting http://carpentriesoffline.org or http://192.168.1.1\nYou should get links to the Carpentries Lessons and the Gitea server on the Raspberry Pi\n\n\n\nUsing PyPi and CRAN mirrors from your Pi\n\nThese are downloaded to the Pi and placed in http://192.168.1.1/pypi and http://192.168.1.1/miniCRAN.\nYou will need to update your settings to use these locations. (TODO: write instructions on how to do this)\n\n\n\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "documentation/pixieNetwork.html",
-    "href": "documentation/pixieNetwork.html",
-    "title": "The Pixie Network",
-    "section": "",
-    "text": "For the purposes of this documentation we’ll assume network that looks as follow:\n\n\n\n\n\n\n\nG\n\n\n\nInternetAP\n\nInternetAP\nwlan0=192.168.0.1\n\n\n\nRaspAP\n\nRaspAP\nwlan0=192.168.0.10\nwlan1=10.3.141.1\n\n\n\nInternetAP-&gt;RaspAP\n\n\n\n\n\nSwitch\n\nSwitch\n\n\n\nRaspAP-&gt;Switch\n\n\n\n\n\npixielogin\n\npixielogin\nwlan0=10.3.141.10\neth0=192.168.5.100\n\n\n\nSwitch-&gt;pixielogin\n\n\n\n\n\npixie001\n\npixie001\neth0=192.168.5.101\n\n\n\nSwitch-&gt;pixie001\n\n\n\n\n\npixie002\n\npixie002\neth0=192.168.5.102\n\n\n\nSwitch-&gt;pixie002\n\n\n\n\n\npixie003\n\npixie003\neth0=192.168.5.103\n\n\n\nSwitch-&gt;pixie003\n\n\n\n\n\npixie004\n\npixie004\neth0=192.168.5.104\n\n\n\nSwitch-&gt;pixie004\n\n\n\n\n\npixie005\n\npixie005\neth0=192.168.5.105\n\n\n\nSwitch-&gt;pixie005\n\n\n\n\n\n\n\n\n\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "documentation/minihpc_compute_node.html",
-    "href": "documentation/minihpc_compute_node.html",
-    "title": "Creating a compute node with a Raspberry Pi for the miniHPC",
+    "objectID": "lessons/building_a_minihpc.html",
+    "href": "lessons/building_a_minihpc.html",
+    "title": "Building a miniHPC with Raspberry Pis",
     "section": "",
     "text": "The quick brown fox\n\n\n\n Back to top"
   },
   {
-    "objectID": "documentation/eessi_with_pxe.html",
-    "href": "documentation/eessi_with_pxe.html",
-    "title": "Setting up EESSI with PXE on the miniHPC",
+    "objectID": "lessons/onboarding_sdcard.html",
+    "href": "lessons/onboarding_sdcard.html",
+    "title": "Onboarding Instructors to use a Raspberry Pi with the SD card",
     "section": "",
     "text": "The quick brown fox\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "blog/index.html",
-    "href": "blog/index.html",
-    "title": "Blog",
-    "section": "",
-    "text": "Title\n\n\nCategories\n\n\n\n\n\n\n\n\n\nCarpentriesOffline - Running Software/Data and Library Carpentries workshops offline\n\n\nCarpentriesOffline\n\n\n\n\n\n\n\nCarpentriesOffline - CarpentryCon 2022 feedback and call for help\n\n\nCarpentriesOffline\n\n\n\n\n\n\n\nCarpentriesOffline - Testing CarpentriesOffline\n\n\nCarpentriesOffline\n\n\n\n\n\nNo matching items\n\n Back to top"
-  },
-  {
-    "objectID": "blog/2022-12-12-CarpentriesOffline.html",
-    "href": "blog/2022-12-12-CarpentriesOffline.html",
-    "title": "CarpentriesOffline - CarpentryCon 2022 feedback and call for help",
-    "section": "",
-    "text": "This blog post was originally published on 18 January 2023 on the Medium\nIn July we published our first blog post to introduce CarpentriesOffline. This will be post number two, a report back of CarpentryCon 2022. We should probably get a name for this series. Any suggestions? If you are not familiar with CarpentriesOffline - it is a project to create an environment for delivering Carpentries workshops offline using Raspberry Pi (RPi) computers. It could be any computer lying around that you don’t know what to do with, but for starters we are focussing on the RPi. I (Jannetta) was fortunate enough to be able to attend quite a few sessions at CarpentryCon 2022 and as usual it was quite an experience. The amount of effort that the core team and the CarpentryCon Task Force must have put into organising the conference and make things run so smoothly goes beyond my comprehension. Not only were there sessions in both English and Spanish but we had sub-titles, captions, sign language and repeated sessions to accomodate people from different time zones. With the help of Colin Sauze and Abhishek Dasgupta, we ran a breakout session, and my lightning talk was presented in three sessions. From the four sessions we were able to get really interesting questions and invaluable feedback from the community. Several people expressed their interest in the project and willingness to contribute in some way or the other. Kari Jordan also asked whether there is any way that the core committee can support us. With this blogpost I would like to call on all readers who are interested in the project - whether it is just to see what we are up to or whether it is because you would like to help out - to make use of the following resources to get in contact: 1. Our GitHub repository: https://github.com/carpentriesoffline 2. We have a channel in the Carpentries Slack workspace. Just add the #carpentries-offline and start talking to us. If for any reason you have problems to get into contact with us via the above, then track one of us down in the main Carpentries Slack workspace. It is quite impossible for us to hide! Some of the things that we need help with are the following: 1. Our website (https://carpentriesoffline.org) 2. Testing our scripts for creating Raspberry Pi images 3. Testing our infrastructure 4. Running pilot offline workshops 5. Help with developing and testing our instructor onboarding workshop 6. Helping with arranging our monthly meetings - taking notes, sending out reminders, setting up the HackMD document, synchronising the HackMD doc to GitHub 7. Anything you think you can help with that I have not mentioned here. If you are interested, please get involved. Every little contribution would help.\nThis blog post was also posted on: - The Carpentries Website - Medium\n\n\n\n Back to top"
   },
   {
     "objectID": "about.html",
@@ -147,6 +56,41 @@
     "text": "This blog post was originally published on 18 January 2023 on the SSI blog.\nThis is my third blog post for CarpentriesOffline - our expedition to find an easy way to present Carpentries workshops when there is no or limited access to the Internet. It is also part of my activities as a Software Sustainability Institute Fellow. At the end of September 2022 I was visiting the University of Stellenbosch  in South Africa, at the invitation of Dr. Kim Martin, to deliver two workshops. I discussed the first workshop, An Introduction to The Internet of Things (IoT) in a previous blog post. The second workshop was a two day workshop covering version control with Git and Programming with Python. At the same time I wanted to test some of our implementations and ideas for CarpentriesOffline. For the past year we (that would be myself, Colin Sauze, Abhishek Dasgupta, Ethan White and Virnaliz Cruz) have been working on creating an image that can be written to a micro-SD card which is used to boot Raspberry Pi (RPi) computer. The SD card then contains everything required to turn the RPi into an access point for computers to connect to and also acting as a web server making all the lesson material, program downloads and a colloborative version control system available. An RPi have relatively low power requirements and I have been able to run one for an entire day from an 60W USB power bank.\nThere were a few things we wanted to test. We wanted to determine  - how many people could connect to the CarpentriesOffline RPi server at any one time - how well did Gitea work as a replacement for GitHub - My intention was to also test an instance of JupyterHub installed on a Pi (but that didn’t happen as I unintentionally messed the Pi’s networking up when I installed a driver for a USB network card).\n\nConnectivity\nWe started by asking people to connect to the server using the carpentries-offline.org domain. Only five managed to connect with the domain name and one person was able to connect with the IP address. Eventually eight people managed to connect at one time. We were able to confirm that if one person disconnected, another could connect. I have since googled the issue and it seems that the onboard network chipset of the Pi (BCM4345/6) limits the connections to eight. An external USB network card might thus increase the number of connections allowed. I did realise though that this issue is something that I need to add to my list of “things to check” when investigating hardware for CarpentriesOffline. Although it sounds like an obvious thing to check, I didn’t think of it as an issue before.\nThere is one question that sprouted from this test. Just before this workshop we ran the previously mentioned IoT workshop during which we were able to get 14 to 15 microcontrollers to connect to a RPi access point. However, for that workshop we used RaspAP rather than pure iptables (which now makes part of the CarpentriesOffline RPi image). This would contradict the limit of eight connections. It looks like more googling will be required.\n\n\nGitea\nGitea is a community managed lightweight code hosting solution that we decided to use when GitHub is not available for the collaborative part of the version control lesson. Gitea behaved really well. We did have the limit of only eight people being able to connect but they were all able to create accounts and push and pull to their repositories. Working colloboratively on repositories also worked smoothly and in the same manner as on GitHub. The Git lesson would thus require very limited modification to be adapted for use with Gitea. The one issue that will need resolving is the date and time on the Pi. RPis do not have a real-time-clock (RTC) on board. We have thought of this issue before but have not yet implemented a solution. One solution would be to have the Pi automatically synchronise with the instructor’s laptop or for the instructor to manually set the time and date every time the Pi is switched on for the workshop. My thinking, however, is that it is probably simple and cheap enough to buy an RTC for the Pi. An RTC costs about 5 GBP and is very simple to fit.\n\n\nGoing forward\nIt looks like we should invest time in finding solutions other than RPis.  This does not mean we abandon the RPi as an option though. The idea of being able to take everything you need to present a Carpentries workshop in a pocket mint sized box still intrigues me. However, what about creating a CarpentriesOffline environment on a USB flash drive, which is even smaller than a RPi, and use it to boot your laptop from. If you are anything  like me you always have a laptop with you anyway. And if you are not like me, there always seem to be old laptops floating around. The advantage of a laptop is that you don’t need an external screen and monitor (or network access) to work on it as it is part of the device. You can also, if everything is ready on the USB flashdrive, boot your laptop from the flashdrive and everything should be ready to present a workshop. I was also wondering whether instructors would be interested if we were to start making short “How-Tos” explaining, for instance, how to quickly create things like: - a webserver on a laptop (or a RPi) with the Carpentries lessons - an access point  - a Gitea server if GitHub becomes unavailable\nThis information is already freely available on The Internet, but as always you need to know what you are looking for and you then need to sift through tons of irrelevant information to find what is appropriate and what you can actually get to work. If you are a social scientist or a biologist, this is probably not your idea of fun, but to me it is. If these HowTos are available on the CarpentriesOffline website instructors will know where to go to find ready made solutions. If you have any suggestions, would like to volunteer or would just like to see what progress we are making, please join one of the CarpentriesOffline themed discussions. You can find a schedule of the meetings in the Community Discussions Etherpad.\n\n\n\n\n Back to top"
   },
   {
+    "objectID": "resources/index.html",
+    "href": "resources/index.html",
+    "title": "Resources",
+    "section": "",
+    "text": "Title\n\n\nCategories\n\n\n\n\n\n\n\nNo matching items\n\n Back to top"
+  },
+  {
+    "objectID": "projects/miniHPC.html",
+    "href": "projects/miniHPC.html",
+    "title": "The miniHPC",
+    "section": "",
+    "text": "Pixie is our prototype High Performance Computer (HPC), built with:"
+  },
+  {
+    "objectID": "projects/miniHPC.html#why-pi",
+    "href": "projects/miniHPC.html#why-pi",
+    "title": "The miniHPC",
+    "section": "Why Pi?",
+    "text": "Why Pi?\nThis projected started shortly after the Covid lockdown and because RPis are nowhere to be found, the decision was made to buy Rock 4SE SBCs. The problems is that these boards are only available at two companies in the UK, RS and OKdo, and OKdo is a subsidiary of RS. We noticed that they have discounts available for education so we started an enquiry into the possibility of getting these discounts. Unfortunately this is where the wheels came off. It took three weeks before we could eventually place an order and when the last batch of items, the PoE hats, arrived, they didn’t fit the Rock 4 boards. While this was going on, to not waste time, we started putting together a mini-HPC using Raspberry Pis that we already own."
+  },
+  {
+    "objectID": "projects/miniHPC.html#why-a-mini-hpc",
+    "href": "projects/miniHPC.html#why-a-mini-hpc",
+    "title": "The miniHPC",
+    "section": "Why a mini HPC?",
+    "text": "Why a mini HPC?\nMany people have built Raspberry Pi HPCs, why do we want to include this as part of the CarpentriesOffline project? The need for this project became apparent in February 2023 when we ran a workshop for the N8 at Newcastle University using the Carpentries Incubator lesson, Introduction to High-Performance Computing. There are a few things that seem to, almost always, go wrong when running a workshop such as this one:\n\nPeople do not register for HPC accounts before the workshop. Most HPCs will have certain hoops you need to jump through when you want to obtain a user account on them. There are often time delays to get the accounts approved which means that if the learners did not obtain their logins before the workshop they are not guaranteed to get a login arranged on the day of the workshop.\nLogin nodes can experience problems due to users running processes on them that they are not supposed to. When this happens others users cannot log in. Obviously, workshop have to happen within a certain time frame and if the learners can’t get logged in, the workshop can’t continue.\nThe length of queues and the load on an HPC cannot be controlled and if it so happens that many other users are accessing the HPC on the day of the workshop, access can be slow and jobs in the queue might not get completed in a timely manner for the workshop.\nLast but not the least are problems with The Internet itself.\n\nHPCs are not easy to set up. Many document their processes but it still requires quite a lot of expertise to set up. What we would like to do is to create images of the SD cards required to boot the RPis and/or Rock Pis straight into an HPC. Instructors should be able to obtain specified hardware and know how to connect everything, write the OS image to an SD card or SSD and boot the computer into a usable HPC state."
+  },
+  {
+    "objectID": "projects/RaspberryPi.html",
+    "href": "projects/RaspberryPi.html",
+    "title": "CarpentriesOffline with a Raspberry Pi",
+    "section": "",
+    "text": "For the last year we have been working on creating an image that can be written to an SD card which is then used to boot a Raspberry Pi (RPi). The SD card turns the RPi into:\n\nan access point for learners to connect to with their computers,\na web server with all the learning materials\na Gitea server which acts as a replacement for GitHub to practise the collaborative parts of version control with Git\n\nWe have, so far, experienced a few challenges with this solution.\n\nthere seems to be a limit to the number of computers that can connect to the RPi access point\nRPis suddenly became impossible to obtain after Covid lockdown - however, they are available again.\n\nStep-by-step instructions for creating the SD card image\n\n\n\n Back to top"
+  },
+  {
     "objectID": "documentation/creating_an_sdcard.html",
     "href": "documentation/creating_an_sdcard.html",
     "title": "CarpentriesOffline SD card images",
@@ -154,18 +98,25 @@
     "text": "The quick brown fox\n\n\n\n Back to top"
   },
   {
+    "objectID": "documentation/flashdrive_step_by_step.html",
+    "href": "documentation/flashdrive_step_by_step.html",
+    "title": "Bootable Flash Drive - step-by-step",
+    "section": "",
+    "text": "Note\n\n\n\nWork in progress\n\n\n\nYou will need a 4GB flashdrive to start with\nDownload Slax Linux. If you have a 32bit computer you will need the 32bit version which you can download with this link: https://slax.org/download-slax.php?a=32bit&b=Debian. If you have a 64 bit computer, download Slax with this link: https://slax.org/download-slax.php?a=64bit&b=Debian\n\nThe file you just downloaded is an ISO image which you can mount on your computer as a virtual disk. (Instructions to mount of the three main operating systems will follow soon).\nTo mount on Linux, assuming you are in the same directory as where you download the iso to.\nsudo mount -o loop ./slax-##bit-#.#.#.iso\nwhere the #s are replaced by the actual numbers in the name of the file you downloaded."
+  },
+  {
+    "objectID": "documentation/flashdrive_step_by_step.html#these-are-the-manual-steps-for-creating-a-carpentriesoffline-flashdrive",
+    "href": "documentation/flashdrive_step_by_step.html#these-are-the-manual-steps-for-creating-a-carpentriesoffline-flashdrive",
+    "title": "Bootable Flash Drive - step-by-step",
+    "section": "",
+    "text": "Note\n\n\n\nWork in progress\n\n\n\nYou will need a 4GB flashdrive to start with\nDownload Slax Linux. If you have a 32bit computer you will need the 32bit version which you can download with this link: https://slax.org/download-slax.php?a=32bit&b=Debian. If you have a 64 bit computer, download Slax with this link: https://slax.org/download-slax.php?a=64bit&b=Debian\n\nThe file you just downloaded is an ISO image which you can mount on your computer as a virtual disk. (Instructions to mount of the three main operating systems will follow soon).\nTo mount on Linux, assuming you are in the same directory as where you download the iso to.\nsudo mount -o loop ./slax-##bit-#.#.#.iso\nwhere the #s are replaced by the actual numbers in the name of the file you downloaded."
+  },
+  {
     "objectID": "documentation/index.html",
     "href": "documentation/index.html",
     "title": "Documents",
     "section": "",
     "text": "Title\n\n\nCategories\n\n\n\n\n\n\n\n\n\nSetting up EESSI with PXE on the miniHPC\n\n\nminihpc\n\n\n\n\n\n\n\nA summary of the services required on the login node\n\n\nminihpc\n\n\n\n\n\n\n\nCreating a login node with a Raspberry Pi for the miniHPC\n\n\nminihpc\n\n\n\n\n\n\n\nCreating an SD card image: step-by-step\n\n\nsdcard\n\n\n\n\n\n\n\nSetting up PXE on the miniHPC\n\n\nminihpc\n\n\n\n\n\n\n\nThe Pixie Network\n\n\nminihpc\n\n\n\n\n\n\n\nCreating a compute node with a Raspberry Pi for the miniHPC\n\n\nminihpc\n\n\n\n\n\n\n\nBootable Flash Drive - step-by-step\n\n\nflashdrive\n\n\n\n\n\n\n\nOffline Documentation\n\n\nofflinedatasci\n\n\n\n\n\n\n\nCarpentriesOffline SD card images\n\n\nminihpc, sdcard\n\n\n\n\n\nNo matching items\n\n Back to top"
-  },
-  {
-    "objectID": "documentation/minihpc_login_node.html",
-    "href": "documentation/minihpc_login_node.html",
-    "title": "Creating a login node with a Raspberry Pi for the miniHPC",
-    "section": "",
-    "text": "The quick brown fox\n\n\n\n Back to top"
   },
   {
     "objectID": "documentation/pxe.html",
@@ -203,6 +154,20 @@
     "text": "Step 2\nIn a bash terminal do the following:\nsudo apt update -y\nsudo apt full-upgrade -y\n\nStep 3\nInstall dnsmasq and nfs (Network file system):\nsudo apt install dnsmasq nfs-kernel nfs-common\n\n\nStep 4\nConfigure DNS masquerading and NFS.\nTo configure DNS masquerading edit the file /etc/dnsmasq.conf as follows:\nport=0\nbind-dynamic\ninterface=eth0\ndomain-needed\nbogus-priv\nenable-tftp\ntftp-root=/pxe-boot\npxe-service=0,\"Raspberry Pi Boot\"\ndhcp-option=3,192.168.5.100\ndhcp-option=6,10.3.141.1\ndhcp-range=eth0,192.168.5.101,192.168.5.200,12h\ndhcp-host=a1:a1:a1:a1:a1:a1,192.168.5.101\ndhcp-host=a2:a2:a2:a2:a2:a2,192.168.5.102\ndhcp-host=a3:a3:a3:a3:a3:a3,192.168.5.103\ndhcp-host=a4:a4:a4:a4:a4:a4,192.168.5.104\ndhcp-host=a5:a5:a5:a5:a5:a5,192.168.5.105\ndhcp-host=a6:a6:a6:a6:a6:a6,192.168.5.106"
   },
   {
+    "objectID": "documentation/minihpc_login_node.html",
+    "href": "documentation/minihpc_login_node.html",
+    "title": "Creating a login node with a Raspberry Pi for the miniHPC",
+    "section": "",
+    "text": "The quick brown fox\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "documentation/eessi_with_pxe.html",
+    "href": "documentation/eessi_with_pxe.html",
+    "title": "Setting up EESSI with PXE on the miniHPC",
+    "section": "",
+    "text": "The quick brown fox\n\n\n\n Back to top"
+  },
+  {
     "objectID": "documentation/services.html#wpa_supplicant",
     "href": "documentation/services.html#wpa_supplicant",
     "title": "A summary of the services required on the login node",
@@ -238,67 +203,25 @@
     "text": "iptables"
   },
   {
-    "objectID": "lessons/building_a_minihpc.html",
-    "href": "lessons/building_a_minihpc.html",
-    "title": "Building a miniHPC with Raspberry Pis",
+    "objectID": "documentation/rpiimage_step_by_step.html",
+    "href": "documentation/rpiimage_step_by_step.html",
+    "title": "Creating an SD card image: step-by-step",
+    "section": "",
+    "text": "Note\n\n\n\n(2025-01-10) Transferred from the old website - this probably needs updating)\n\n\n\nCreating an SD card image: step-by-step\n\nUsing a pre-built image\nYou can download a pre-built image from our releases page\nThese are experimental and unlikely to be fully working yet. These are built as multipart zip files with names like release.zip and release.z01, this is due to a 2GB upload limit in our build process. Download each of these. To extract them on a Linux system run the following:\ncat release.z01 release.zip &gt; carpentries-offline.zip\n\nunzip carpentries-offline.zip\nAfter you have downloaded and unzipped the image files, write the image file to an SD card with Etcher or your image writing program of choice.\n\n\nInstalling CarpentriesOffline manually\n\nSetting up a Raspberry Pi\n\nDownload Raspbian OS Lite: https://www.raspberrypi.org/software/operating-systems/\nWrite image to SD card using rpi-imager: https://www.raspberrypi.org/software/\n\n\n\nSetup for headless config (useful if you don’t have a screen and keyboard to hand)\n\nIn the boot (small FAT32) partition on the SD card create an empty file called “ssh”\nIf you’re using WiFi to get access to the Pi, create a file called wpa_supplicant.conf in the boot partition. Paste in the following and set your network SSID and password appropriately.\n\n#set this to your country code, gb=great britain\ncountry=gb\nupdate_config=1\nctrl_interface=/var/run/wpa_supplicant\n\nnetwork={\n scan_ssid=1\n ssid=\"my_networks_ssid\"\n psk=\"my_networks_password\"\n}\n\n\nLogin to the Pi\nUse SSH or login with a local console if you have a monitor attached.\n\n\nRun the install script\n\nLogin to your Raspberry Pi with an SSH client or on a local screen/keyboard and run the command:\ncurl https://raw.githubusercontent.com/carpentriesoffline/carpentriesoffline-installer/main/setup.sh &gt; setup.sh && bash ./setup.sh\n\n\n\nChange the password\n\nRun the passwd command. Leaving the default password will mean anybody in your workshop can login to your Pi and change settings on it.\n\n\n\nConnect to Carpentries Offline\n\nAfter installing the Raspberry Pi will reboot.\nIt will then switch the WiFi interface to access point mode and will be available as a network called carpentries-offline.\nConnect to the carpentries-offline WiFi network\nVisting http://carpentriesoffline.org or http://192.168.1.1\nYou should get links to the Carpentries Lessons and the Gitea server on the Raspberry Pi\n\n\n\nUsing PyPi and CRAN mirrors from your Pi\n\nThese are downloaded to the Pi and placed in http://192.168.1.1/pypi and http://192.168.1.1/miniCRAN.\nYou will need to update your settings to use these locations. (TODO: write instructions on how to do this)\n\n\n\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "documentation/pixieNetwork.html",
+    "href": "documentation/pixieNetwork.html",
+    "title": "The Pixie Network",
+    "section": "",
+    "text": "For the purposes of this documentation we’ll assume network that looks as follow:\n\n\n\n\n\n\n\nG\n\n\n\nInternetAP\n\nInternetAP\nwlan0=192.168.0.1\n\n\n\nRaspAP\n\nRaspAP\nwlan0=192.168.0.10\nwlan1=10.3.141.1\n\n\n\nInternetAP-&gt;RaspAP\n\n\n\n\n\nSwitch\n\nSwitch\n\n\n\nRaspAP-&gt;Switch\n\n\n\n\n\npixielogin\n\npixielogin\nwlan0=10.3.141.10\neth0=192.168.5.100\n\n\n\nSwitch-&gt;pixielogin\n\n\n\n\n\npixie001\n\npixie001\neth0=192.168.5.101\n\n\n\nSwitch-&gt;pixie001\n\n\n\n\n\npixie002\n\npixie002\neth0=192.168.5.102\n\n\n\nSwitch-&gt;pixie002\n\n\n\n\n\npixie003\n\npixie003\neth0=192.168.5.103\n\n\n\nSwitch-&gt;pixie003\n\n\n\n\n\npixie004\n\npixie004\neth0=192.168.5.104\n\n\n\nSwitch-&gt;pixie004\n\n\n\n\n\npixie005\n\npixie005\neth0=192.168.5.105\n\n\n\nSwitch-&gt;pixie005\n\n\n\n\n\n\n\n\n\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "documentation/minihpc_compute_node.html",
+    "href": "documentation/minihpc_compute_node.html",
+    "title": "Creating a compute node with a Raspberry Pi for the miniHPC",
     "section": "",
     "text": "The quick brown fox\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "lessons/onboarding_sdcard.html",
-    "href": "lessons/onboarding_sdcard.html",
-    "title": "Onboarding Instructors to use a Raspberry Pi with the SD card",
-    "section": "",
-    "text": "The quick brown fox\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "projects/FlashDrive.html",
-    "href": "projects/FlashDrive.html",
-    "title": "Bootable Flash Drive",
-    "section": "",
-    "text": "Important\n\n\n\nWatch this space for the latest flashdrive image. When it is ready, this will become a link to the download.\n\n\nIt is possible to run a complete operating system just from a flashdrive. As an alternative to using a Raspberry Pi computer to act as a server, you can write the CarpentriesOffline OS to a flashdrive and then boot your computer from the flashdrive. The CarpentriesOffline Os is built on Slax which, in turn, is built on Debian. Step-by-step instructions for creating a CarpentriesOffline flashdrive.\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "projects/miniHPC.html",
-    "href": "projects/miniHPC.html",
-    "title": "The miniHPC",
-    "section": "",
-    "text": "Pixie is our prototype High Performance Computer (HPC), built with:"
-  },
-  {
-    "objectID": "projects/RaspberryPi.html",
-    "href": "projects/RaspberryPi.html",
-    "title": "CarpentriesOffline with a Raspberry Pi",
-    "section": "",
-    "text": "For the last year we have been working on creating an image that can be written to an SD card which is then used to boot a Raspberry Pi (RPi). The SD card turns the RPi into:\n\nan access point for learners to connect to with their computers,\na web server with all the learning materials\na Gitea server which acts as a replacement for GitHub to practise the collaborative parts of version control with Git\n\nWe have, so far, experienced a few challenges with this solution.\n\nthere seems to be a limit to the number of computers that can connect to the RPi access point\nRPis suddenly became impossible to obtain after Covid lockdown - however, they are available again.\n\nStep-by-step instructions for creating the SD card image\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "documentation/flashdrive_step_by_step.html",
-    "href": "documentation/flashdrive_step_by_step.html",
-    "title": "Bootable Flash Drive - step-by-step",
-    "section": "",
-    "text": "Note\n\n\n\nWork in progress\n\n\n\nYou will need a 4GB flashdrive to start with\nDownload Slax Linux. If you have a 32bit computer you will need the 32bit version which you can download with this link: https://slax.org/download-slax.php?a=32bit&b=Debian. If you have a 64 bit computer, download Slax with this link: https://slax.org/download-slax.php?a=64bit&b=Debian\n\nThe file you just downloaded is an ISO image which you can mount on your computer as a virtual disk. (Instructions to mount of the three main operating systems will follow soon).\nTo mount on Linux, assuming you are in the same directory as where you download the iso to.\nsudo mount -o loop ./slax-##bit-#.#.#.iso\nwhere the #s are replaced by the actual numbers in the name of the file you downloaded."
-  },
-  {
-    "objectID": "documentation/flashdrive_step_by_step.html#these-are-the-manual-steps-for-creating-a-carpentriesoffline-flashdrive",
-    "href": "documentation/flashdrive_step_by_step.html#these-are-the-manual-steps-for-creating-a-carpentriesoffline-flashdrive",
-    "title": "Bootable Flash Drive - step-by-step",
-    "section": "",
-    "text": "Note\n\n\n\nWork in progress\n\n\n\nYou will need a 4GB flashdrive to start with\nDownload Slax Linux. If you have a 32bit computer you will need the 32bit version which you can download with this link: https://slax.org/download-slax.php?a=32bit&b=Debian. If you have a 64 bit computer, download Slax with this link: https://slax.org/download-slax.php?a=64bit&b=Debian\n\nThe file you just downloaded is an ISO image which you can mount on your computer as a virtual disk. (Instructions to mount of the three main operating systems will follow soon).\nTo mount on Linux, assuming you are in the same directory as where you download the iso to.\nsudo mount -o loop ./slax-##bit-#.#.#.iso\nwhere the #s are replaced by the actual numbers in the name of the file you downloaded."
-  },
-  {
-    "objectID": "projects/miniHPC.html#why-pi",
-    "href": "projects/miniHPC.html#why-pi",
-    "title": "The miniHPC",
-    "section": "Why Pi?",
-    "text": "Why Pi?\nThis projected started shortly after the Covid lockdown and because RPis are nowhere to be found, the decision was made to buy Rock 4SE SBCs. The problems is that these boards are only available at two companies in the UK, RS and OKdo, and OKdo is a subsidiary of RS. We noticed that they have discounts available for education so we started an enquiry into the possibility of getting these discounts. Unfortunately this is where the wheels came off. It took three weeks before we could eventually place an order and when the last batch of items, the PoE hats, arrived, they didn’t fit the Rock 4 boards. While this was going on, to not waste time, we started putting together a mini-HPC using Raspberry Pis that we already own."
-  },
-  {
-    "objectID": "projects/miniHPC.html#why-a-mini-hpc",
-    "href": "projects/miniHPC.html#why-a-mini-hpc",
-    "title": "The miniHPC",
-    "section": "Why a mini HPC?",
-    "text": "Why a mini HPC?\nMany people have built Raspberry Pi HPCs, why do we want to include this as part of the CarpentriesOffline project? The need for this project became apparent in February 2023 when we ran a workshop for the N8 at Newcastle University using the Carpentries Incubator lesson, Introduction to High-Performance Computing. There are a few things that seem to, almost always, go wrong when running a workshop such as this one:\n\nPeople do not register for HPC accounts before the workshop. Most HPCs will have certain hoops you need to jump through when you want to obtain a user account on them. There are often time delays to get the accounts approved which means that if the learners did not obtain their logins before the workshop they are not guaranteed to get a login arranged on the day of the workshop.\nLogin nodes can experience problems due to users running processes on them that they are not supposed to. When this happens others users cannot log in. Obviously, workshop have to happen within a certain time frame and if the learners can’t get logged in, the workshop can’t continue.\nThe length of queues and the load on an HPC cannot be controlled and if it so happens that many other users are accessing the HPC on the day of the workshop, access can be slow and jobs in the queue might not get completed in a timely manner for the workshop.\nLast but not the least are problems with The Internet itself.\n\nHPCs are not easy to set up. Many document their processes but it still requires quite a lot of expertise to set up. What we would like to do is to create images of the SD cards required to boot the RPis and/or Rock Pis straight into an HPC. Instructors should be able to obtain specified hardware and know how to connect everything, write the OS image to an SD card or SSD and boot the computer into a usable HPC state."
   },
   {
     "objectID": "documentation/offlinedatasci.html",
@@ -313,5 +236,82 @@
     "title": "Offline Documentation",
     "section": "Instructions",
     "text": "Instructions\n\nGo to https://devdocs.io/\nIn the menu bar on the left in the “Disabled” section (underneath CSS, HTML, HTTP, JavaScript, and Web APIs) find the documentation you want to access offline, hover over a version number, and click when it says “Enable”. You should see the documentation you just selected added to the list at the top of the side bar.\nGo to https://devdocs.io/offline and click “Install all” in the top right corner (or just select the documentation you want to sync by clicking “Install” next to each set of documentation)\nLeave the “Install updates automatically” box checked if you want the site to update as newer versions of the documentation become available or uncheck it to update manually.\nEnjoy browsing the same docs (including the integrated search), in the same way, online or offline!"
+  },
+  {
+    "objectID": "projects/FlashDrive.html",
+    "href": "projects/FlashDrive.html",
+    "title": "Bootable Flash Drive",
+    "section": "",
+    "text": "Important\n\n\n\nWatch this space for the latest flashdrive image. When it is ready, this will become a link to the download.\n\n\nIt is possible to run a complete operating system just from a flashdrive. As an alternative to using a Raspberry Pi computer to act as a server, you can write the CarpentriesOffline OS to a flashdrive and then boot your computer from the flashdrive. The CarpentriesOffline Os is built on Slax which, in turn, is built on Debian. Step-by-step instructions for creating a CarpentriesOffline flashdrive.\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "projects/index.html",
+    "href": "projects/index.html",
+    "title": "Projects",
+    "section": "",
+    "text": "Bootable Flash Drive\n\n\n\nflashdrive\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCarpentriesOffline with a Raspberry Pi\n\n\n\nsdcard\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe miniHPC\n\n\n\nminihpc\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe OfflineDataSci Python package\n\n\n\nofflinedatasci\n\n\n\n\n\n\n\n\nNo matching items\n\n Back to top"
+  },
+  {
+    "objectID": "projects/offlinedatasci.html",
+    "href": "projects/offlinedatasci.html",
+    "title": "The OfflineDataSci Python package",
+    "section": "",
+    "text": "OfflineDataSci is a Python package that can be downloaded from PyPi. It scrapes and downloads all Carpentries lesson material to your local computer. This means that you don’t need Internet access to view the materials. The package is also used to create the CarpentriesOffline operating system image for the Raspberry Pi and FlashDrive projects which allow you to turn a Raspberry Pi computer or your laptop (with the use of the FlashDrive) into a web server and an access point for learners to connect to.\nOffline Documentation\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "The Carpentries Offline",
+    "section": "",
+    "text": "CarpentriesOffline aims to provide a solution for running Software, Data, Library and HPC Carpentries workshop in areas where there is limited or no Internet access."
+  },
+  {
+    "objectID": "index.html#projects",
+    "href": "index.html#projects",
+    "title": "The Carpentries Offline",
+    "section": "Projects",
+    "text": "Projects"
+  },
+  {
+    "objectID": "blog/index.html",
+    "href": "blog/index.html",
+    "title": "Blog",
+    "section": "",
+    "text": "Title\n\n\nCategories\n\n\n\n\n\n\n\n\n\nCarpentriesOffline - Testing CarpentriesOffline\n\n\nCarpentriesOffline\n\n\n\n\n\n\n\nCarpentriesOffline - Running Software/Data and Library Carpentries workshops offline\n\n\nCarpentriesOffline\n\n\n\n\n\n\n\nCarpentriesOffline - CarpentryCon 2022 feedback and call for help\n\n\nCarpentriesOffline\n\n\n\n\n\nNo matching items\n\n Back to top"
+  },
+  {
+    "objectID": "blog/2022-12-12-CarpentriesOffline.html",
+    "href": "blog/2022-12-12-CarpentriesOffline.html",
+    "title": "CarpentriesOffline - CarpentryCon 2022 feedback and call for help",
+    "section": "",
+    "text": "This blog post was originally published on 18 January 2023 on the Medium\nIn July we published our first blog post to introduce CarpentriesOffline. This will be post number two, a report back of CarpentryCon 2022. We should probably get a name for this series. Any suggestions? If you are not familiar with CarpentriesOffline - it is a project to create an environment for delivering Carpentries workshops offline using Raspberry Pi (RPi) computers. It could be any computer lying around that you don’t know what to do with, but for starters we are focussing on the RPi. I (Jannetta) was fortunate enough to be able to attend quite a few sessions at CarpentryCon 2022 and as usual it was quite an experience. The amount of effort that the core team and the CarpentryCon Task Force must have put into organising the conference and make things run so smoothly goes beyond my comprehension. Not only were there sessions in both English and Spanish but we had sub-titles, captions, sign language and repeated sessions to accomodate people from different time zones. With the help of Colin Sauze and Abhishek Dasgupta, we ran a breakout session, and my lightning talk was presented in three sessions. From the four sessions we were able to get really interesting questions and invaluable feedback from the community. Several people expressed their interest in the project and willingness to contribute in some way or the other. Kari Jordan also asked whether there is any way that the core committee can support us. With this blogpost I would like to call on all readers who are interested in the project - whether it is just to see what we are up to or whether it is because you would like to help out - to make use of the following resources to get in contact: 1. Our GitHub repository: https://github.com/carpentriesoffline 2. We have a channel in the Carpentries Slack workspace. Just add the #carpentries-offline and start talking to us. If for any reason you have problems to get into contact with us via the above, then track one of us down in the main Carpentries Slack workspace. It is quite impossible for us to hide! Some of the things that we need help with are the following: 1. Our website (https://carpentriesoffline.org) 2. Testing our scripts for creating Raspberry Pi images 3. Testing our infrastructure 4. Running pilot offline workshops 5. Help with developing and testing our instructor onboarding workshop 6. Helping with arranging our monthly meetings - taking notes, sending out reminders, setting up the HackMD document, synchronising the HackMD doc to GitHub 7. Anything you think you can help with that I have not mentioned here. If you are interested, please get involved. Every little contribution would help.\nThis blog post was also posted on: - The Carpentries Website - Medium\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "people/jannetta.html",
+    "href": "people/jannetta.html",
+    "title": "Dr Jannetta Steyn",
+    "section": "",
+    "text": "Jannetta Steyn is a Senior Research Software Engineer and Head of Training and Community in the Research Software Engineering Team at Newcastle University."
+  },
+  {
+    "objectID": "people/jannetta.html#education",
+    "href": "people/jannetta.html#education",
+    "title": "Dr Jannetta Steyn",
+    "section": "Education",
+    "text": "Education\nNewcastle University | Newcastle-upon-Tyne, UK PhD Computational Neuroscience | Jan 2011 - Jun 2016\nNewcastle University | Newcastle-upon-Tyne, UK MSc Bioinformatics and Computational Systems Biology | Sep 2009 - Aug 2010\nThe Open University | Milton Keynes, UK MSc Computing for Commerce and Industry | Feb 2007 - Sep 2008"
+  },
+  {
+    "objectID": "people/jannetta.html#experience",
+    "href": "people/jannetta.html#experience",
+    "title": "Dr Jannetta Steyn",
+    "section": "Experience",
+    "text": "Experience\nNewcastle University | Senior Research Software Engineer | April 2019 - present\nNewcastle University | Senior Research Associate | January 2015 - March 2019\nSerco | Analyst/Programmer | December 2005 - February 2010"
+  },
+  {
+    "objectID": "lessons/index.html",
+    "href": "lessons/index.html",
+    "title": "Lessons",
+    "section": "",
+    "text": "Onboarding Instructors to use a Raspberry Pi with the SD card\n\n\n\nsdcard\n\n\n\n\n\n\n\n\n\n\n\n\nBuilding a miniHPC with Raspberry Pis\n\n\n\nHPC\n\n\nminihpc\n\n\n\n\n\n\n\n\nNo matching items\n\n Back to top"
   }
 ]

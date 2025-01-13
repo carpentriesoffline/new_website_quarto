@@ -4,30 +4,6 @@
     "items": []
   },
   {
-    "listing": "/projects/index.html",
-    "items": [
-      "/projects/FlashDrive.html",
-      "/projects/RaspberryPi.html",
-      "/projects/miniHPC.html",
-      "/projects/offlinedatasci.html"
-    ]
-  },
-  {
-    "listing": "/lessons/index.html",
-    "items": [
-      "/lessons/onboarding_sdcard.html",
-      "/lessons/building_a_minihpc.html"
-    ]
-  },
-  {
-    "listing": "/blog/index.html",
-    "items": [
-      "/blog/2022-06-27-CarpentriesOffline.html",
-      "/blog/2022-12-12-CarpentriesOffline.html",
-      "/blog/2023-01-18-Testing-CarpentriesOffline.html"
-    ]
-  },
-  {
     "listing": "/documentation/index.html",
     "items": [
       "/documentation/eessi_with_pxe.html",
@@ -40,6 +16,30 @@
       "/documentation/flashdrive_step_by_step.html",
       "/documentation/offlinedatasci.html",
       "/documentation/creating_an_sdcard.html"
+    ]
+  },
+  {
+    "listing": "/projects/index.html",
+    "items": [
+      "/projects/FlashDrive.html",
+      "/projects/RaspberryPi.html",
+      "/projects/miniHPC.html",
+      "/projects/offlinedatasci.html"
+    ]
+  },
+  {
+    "listing": "/blog/index.html",
+    "items": [
+      "/blog/2023-01-18-Testing-CarpentriesOffline.html",
+      "/blog/2022-06-27-CarpentriesOffline.html",
+      "/blog/2022-12-12-CarpentriesOffline.html"
+    ]
+  },
+  {
+    "listing": "/lessons/index.html",
+    "items": [
+      "/lessons/onboarding_sdcard.html",
+      "/lessons/building_a_minihpc.html"
     ]
   }
 ]

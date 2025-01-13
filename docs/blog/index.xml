@@ -6,8 +6,8 @@
       version="2.0">
 <channel>
 <title>The Carpentries Offline</title>
-<link>https://carpentriesoffline.org/new_website_quarto/blog/</link>
-<atom:link href="https://carpentriesoffline.org/new_website_quarto/blog/index.xml" rel="self" type="application/rss+xml"/>
+<link>https://carpentriesoffline.org/blog/</link>
+<atom:link href="https://carpentriesoffline.org/blog/index.xml" rel="self" type="application/rss+xml"/>
 <description>CarpentriesOffline Blog
 </description>
 <generator>quarto-1.6.39</generator>
@@ -15,7 +15,7 @@
 <item>
   <title>CarpentriesOffline - Testing CarpentriesOffline</title>
   <dc:creator>Jannetta S Steyn</dc:creator>
-  <link>https://carpentriesoffline.org/new_website_quarto/blog/2023-01-18-Testing-CarpentriesOffline.html</link>
+  <link>https://carpentriesoffline.org/blog/2023-01-18-Testing-CarpentriesOffline.html</link>
   <description><![CDATA[ 
 
 
@@ -43,7 +43,7 @@
 
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>CarpentriesOffline</category>
-  <guid>https://carpentriesoffline.org/new_website_quarto/blog/2023-01-18-Testing-CarpentriesOffline.html</guid>
+  <guid>https://carpentriesoffline.org/blog/2023-01-18-Testing-CarpentriesOffline.html</guid>
   <pubDate>Wed, 18 Jan 2023 00:00:00 GMT</pubDate>
 </item>
 <item>
@@ -51,7 +51,7 @@
   <dc:creator>Jannetta S. Steyn</dc:creator>
   <dc:creator>Colin Sauze</dc:creator>
   <dc:creator>Abhishek Dasgupta</dc:creator>
-  <link>https://carpentriesoffline.org/new_website_quarto/blog/2022-12-12-CarpentriesOffline.html</link>
+  <link>https://carpentriesoffline.org/blog/2022-12-12-CarpentriesOffline.html</link>
   <description><![CDATA[ 
 
 
@@ -65,13 +65,13 @@
 
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>CarpentriesOffline</category>
-  <guid>https://carpentriesoffline.org/new_website_quarto/blog/2022-12-12-CarpentriesOffline.html</guid>
+  <guid>https://carpentriesoffline.org/blog/2022-12-12-CarpentriesOffline.html</guid>
   <pubDate>Mon, 12 Dec 2022 00:00:00 GMT</pubDate>
 </item>
 <item>
   <title>CarpentriesOffline - Running Software/Data and Library Carpentries workshops offline</title>
   <dc:creator>Jannetta S. Steyn</dc:creator>
-  <link>https://carpentriesoffline.org/new_website_quarto/blog/2022-06-27-CarpentriesOffline.html</link>
+  <link>https://carpentriesoffline.org/blog/2022-06-27-CarpentriesOffline.html</link>
   <description><![CDATA[ 
 
 
@@ -100,7 +100,7 @@ Raspberry Pi 400 (photo: SparkFun Electronics, CC BY 2.0 &lt;<a href="https://cr
 
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>CarpentriesOffline</category>
-  <guid>https://carpentriesoffline.org/new_website_quarto/blog/2022-06-27-CarpentriesOffline.html</guid>
+  <guid>https://carpentriesoffline.org/blog/2022-06-27-CarpentriesOffline.html</guid>
   <pubDate>Sun, 26 Jun 2022 23:00:00 GMT</pubDate>
 </item>
 </channel>
