@@ -6,15 +6,15 @@
       version="2.0">
 <channel>
 <title>The Carpentries Offline</title>
-<link>https://carpentriesoffline.org/new_website_quarto/projects/</link>
-<atom:link href="https://carpentriesoffline.org/new_website_quarto/projects/index.xml" rel="self" type="application/rss+xml"/>
+<link>https://carpentriesoffline.org/projects/</link>
+<atom:link href="https://carpentriesoffline.org/projects/index.xml" rel="self" type="application/rss+xml"/>
 <description>Projects we are currently working on
 </description>
 <generator>quarto-1.6.39</generator>
-<lastBuildDate>Sun, 12 Jan 2025 18:27:36 GMT</lastBuildDate>
+<lastBuildDate>Mon, 13 Jan 2025 14:58:22 GMT</lastBuildDate>
 <item>
   <title>Bootable Flash Drive</title>
-  <link>https://carpentriesoffline.org/new_website_quarto/projects/FlashDrive.html</link>
+  <link>https://carpentriesoffline.org/projects/FlashDrive.html</link>
   <description><![CDATA[ 
 
 
@@ -39,13 +39,42 @@ Important
 
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>flashdrive</category>
-  <guid>https://carpentriesoffline.org/new_website_quarto/projects/FlashDrive.html</guid>
-  <pubDate>Sun, 12 Jan 2025 18:27:36 GMT</pubDate>
-  <media:content url="https://carpentriesoffline.org/new_website_quarto/projects/images/flashdrive.png" medium="image" type="image/png" height="203" width="144"/>
+  <guid>https://carpentriesoffline.org/projects/FlashDrive.html</guid>
+  <pubDate>Mon, 13 Jan 2025 14:58:22 GMT</pubDate>
+  <media:content url="https://carpentriesoffline.org/projects/images/flashdrive.png" medium="image" type="image/png" height="203" width="144"/>
+</item>
+<item>
+  <title>CarpentriesOffline with a Raspberry Pi</title>
+  <link>https://carpentriesoffline.org/projects/RaspberryPi.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>For the last year we have been working on creating an image that can be written to an SD card which is then used to boot a Raspberry Pi (RPi). The SD card turns the RPi into:</p>
+<ul>
+<li>an access point for learners to connect to with their computers,</li>
+<li>a web server with all the learning materials</li>
+<li>a Gitea server which acts as a replacement for GitHub to practise the collaborative parts of version control with Git</li>
+</ul>
+<p>We have, so far, experienced a few challenges with this solution.</p>
+<ul>
+<li>there seems to be a limit to the number of computers that can connect to the RPi access point</li>
+<li>RPis suddenly became impossible to obtain after Covid lockdown - however, they are available again.</li>
+</ul>
+<p><a href="../documentation/rpiimage_step_by_step.html">Step-by-step instructions for creating the SD card image</a></p>
+
+
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>sdcard</category>
+  <guid>https://carpentriesoffline.org/projects/RaspberryPi.html</guid>
+  <pubDate>Mon, 13 Jan 2025 14:58:22 GMT</pubDate>
+  <media:content url="https://carpentriesoffline.org/projects/images/sd_card.png" medium="image" type="image/png" height="164" width="144"/>
 </item>
 <item>
   <title>The miniHPC</title>
-  <link>https://carpentriesoffline.org/new_website_quarto/projects/miniHPC.html</link>
+  <link>https://carpentriesoffline.org/projects/miniHPC.html</link>
   <description><![CDATA[ 
 
 
@@ -81,56 +110,28 @@ Important
 
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>minihpc</category>
-  <guid>https://carpentriesoffline.org/new_website_quarto/projects/miniHPC.html</guid>
-  <pubDate>Sun, 12 Jan 2025 18:27:36 GMT</pubDate>
-  <media:content url="https://carpentriesoffline.org/new_website_quarto/projects/images/pixie.jpg" medium="image" type="image/jpeg"/>
+  <guid>https://carpentriesoffline.org/projects/miniHPC.html</guid>
+  <pubDate>Mon, 13 Jan 2025 14:58:22 GMT</pubDate>
+  <media:content url="https://carpentriesoffline.org/projects/images/pixie.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>The OfflineDataSci Python package</title>
-  <link>https://carpentriesoffline.org/new_website_quarto/projects/offlinedatasci.html</link>
+  <link>https://carpentriesoffline.org/projects/offlinedatasci.html</link>
   <description><![CDATA[ 
 
 
 
 
-<p>The quick brown fox</p>
+<p>OfflineDataSci is a Python package that can be downloaded from PyPi. It scrapes and downloads all Carpentries lesson material to your local computer. This means that you don’t need Internet access to view the materials. The package is also used to create the CarpentriesOffline operating system image for the Raspberry Pi and FlashDrive projects which allow you to turn a Raspberry Pi computer or your laptop (with the use of the FlashDrive) into a web server and an access point for learners to connect to.</p>
+<p><a href="../documentation/offlinedatasci.html">Offline Documentation</a></p>
 
 
 
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>offlinedatasci</category>
-  <guid>https://carpentriesoffline.org/new_website_quarto/projects/offlinedatasci.html</guid>
-  <pubDate>Sun, 12 Jan 2025 18:27:36 GMT</pubDate>
-  <media:content url="https://carpentriesoffline.org/new_website_quarto/projects/images/pypilogo.svg" medium="image" type="image/svg+xml"/>
-</item>
-<item>
-  <title>CarpentriesOffline with a Raspberry Pi</title>
-  <link>https://carpentriesoffline.org/new_website_quarto/projects/RaspberryPi.html</link>
-  <description><![CDATA[ 
-
-
-
-
-<p>For the last year we have been working on creating an image that can be written to an SD card which is then used to boot a Raspberry Pi (RPi). The SD card turns the RPi into:</p>
-<ul>
-<li>an access point for learners to connect to with their computers,</li>
-<li>a web server with all the learning materials</li>
-<li>a Gitea server which acts as a replacement for GitHub to practise the collaborative parts of version control with Git</li>
-</ul>
-<p>We have, so far, experienced a few challenges with this solution.</p>
-<ul>
-<li>there seems to be a limit to the number of computers that can connect to the RPi access point</li>
-<li>RPis suddenly became impossible to obtain after Covid lockdown - however, they are available again.</li>
-</ul>
-<p><a href="../documentation/rpiimage_step_by_step.html">Step-by-step instructions for creating the SD card image</a></p>
-
-
-
-<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
-  <category>sdcard</category>
-  <guid>https://carpentriesoffline.org/new_website_quarto/projects/RaspberryPi.html</guid>
-  <pubDate>Sun, 12 Jan 2025 18:27:36 GMT</pubDate>
-  <media:content url="https://carpentriesoffline.org/new_website_quarto/projects/images/sd_card.png" medium="image" type="image/png" height="164" width="144"/>
+  <guid>https://carpentriesoffline.org/projects/offlinedatasci.html</guid>
+  <pubDate>Mon, 13 Jan 2025 14:58:22 GMT</pubDate>
+  <media:content url="https://carpentriesoffline.org/projects/images/pypilogo.svg" medium="image" type="image/svg+xml"/>
 </item>
 </channel>
 </rss>

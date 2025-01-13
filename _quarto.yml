@@ -7,7 +7,7 @@ project:
 website:
   title: "The Carpentries Offline"
   description: "CarpentriesOffline Website"
-  site-url: "https://carpentriesoffline.org/new_website_quarto/"
+  site-url: "https://carpentriesoffline.org/"
   page-navigation: true
   back-to-top-navigation: true
   favicon: images/favicon.ico
@@ -17,7 +17,7 @@ website:
     background: primary
     toggle-position: right
     # logo: images/OFFLINE_logo.png
-    logo-href: https://carpentriesoffline.org/new_website_quarto
+    logo-href: https://carpentriesoffline.org/
     logo-alt: "CarpentriesOffline web page and documentation"
     title: "The Carpentries Offline"
     tools:

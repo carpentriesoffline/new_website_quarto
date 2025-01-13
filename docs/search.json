@@ -18,7 +18,7 @@
     "href": "projects/index.html",
     "title": "Projects",
     "section": "",
-    "text": "Bootable Flash Drive\n\n\n\nflashdrive\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe miniHPC\n\n\n\nminihpc\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe OfflineDataSci Python package\n\n\n\nofflinedatasci\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCarpentriesOffline with a Raspberry Pi\n\n\n\nsdcard\n\n\n\n\n\n\n\n\nNo matching items\n\n Back to top"
+    "text": "Bootable Flash Drive\n\n\n\nflashdrive\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCarpentriesOffline with a Raspberry Pi\n\n\n\nsdcard\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe miniHPC\n\n\n\nminihpc\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe OfflineDataSci Python package\n\n\n\nofflinedatasci\n\n\n\n\n\n\n\n\nNo matching items\n\n Back to top"
   },
   {
     "objectID": "people/jannetta.html",
@@ -46,7 +46,7 @@
     "href": "lessons/index.html",
     "title": "Lessons",
     "section": "",
-    "text": "Building a miniHPC with Raspberry Pis\n\n\n\nHPC\n\n\nminihpc\n\n\n\n\n\n\n\n\n\n\n\n\nOnboarding Instructors to use a Raspberry Pi with the SD card\n\n\n\nsdcard\n\n\n\n\n\n\n\n\nNo matching items\n\n Back to top"
+    "text": "Onboarding Instructors to use a Raspberry Pi with the SD card\n\n\n\nsdcard\n\n\n\n\n\n\n\n\n\n\n\n\nBuilding a miniHPC with Raspberry Pis\n\n\n\nHPC\n\n\nminihpc\n\n\n\n\n\n\n\n\nNo matching items\n\n Back to top"
   },
   {
     "objectID": "index.html",
@@ -158,7 +158,7 @@
     "href": "documentation/index.html",
     "title": "Documents",
     "section": "",
-    "text": "Title\n\n\nCategories\n\n\n\n\n\n\n\n\n\nCarpentriesOffline SD card images\n\n\nminihpc, sdcard\n\n\n\n\n\n\n\nSetting up EESSI with PXE on the miniHPC\n\n\nminihpc\n\n\n\n\n\n\n\nBootable Flash Drive - step-by-step\n\n\nflashdrive\n\n\n\n\n\n\n\nCreating a compute node with a Raspberry Pi for the miniHPC\n\n\nminihpc\n\n\n\n\n\n\n\nCreating a login node with a Raspberry Pi for the miniHPC\n\n\nminihpc\n\n\n\n\n\n\n\nOffline Documentation\n\n\nofflinedatasci\n\n\n\n\n\n\n\nThe Pixie Network\n\n\nminihpc\n\n\n\n\n\n\n\nSetting up PXE on the miniHPC\n\n\nminihpc\n\n\n\n\n\n\n\nCreating an SD card image: step-by-step\n\n\nsdcard\n\n\n\n\n\n\n\nA summary of the services required on the login node\n\n\nminihpc\n\n\n\n\n\nNo matching items\n\n Back to top"
+    "text": "Title\n\n\nCategories\n\n\n\n\n\n\n\n\n\nSetting up EESSI with PXE on the miniHPC\n\n\nminihpc\n\n\n\n\n\n\n\nA summary of the services required on the login node\n\n\nminihpc\n\n\n\n\n\n\n\nCreating a login node with a Raspberry Pi for the miniHPC\n\n\nminihpc\n\n\n\n\n\n\n\nCreating an SD card image: step-by-step\n\n\nsdcard\n\n\n\n\n\n\n\nSetting up PXE on the miniHPC\n\n\nminihpc\n\n\n\n\n\n\n\nThe Pixie Network\n\n\nminihpc\n\n\n\n\n\n\n\nCreating a compute node with a Raspberry Pi for the miniHPC\n\n\nminihpc\n\n\n\n\n\n\n\nBootable Flash Drive - step-by-step\n\n\nflashdrive\n\n\n\n\n\n\n\nOffline Documentation\n\n\nofflinedatasci\n\n\n\n\n\n\n\nCarpentriesOffline SD card images\n\n\nminihpc, sdcard\n\n\n\n\n\nNo matching items\n\n Back to top"
   },
   {
     "objectID": "documentation/minihpc_login_node.html",

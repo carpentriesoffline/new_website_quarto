@@ -6,11 +6,11 @@
       version="2.0">
 <channel>
 <title>The Carpentries Offline</title>
-<link>https://carpentriesoffline.org/new_website_quarto/resources/</link>
-<atom:link href="https://carpentriesoffline.org/new_website_quarto/resources/index.xml" rel="self" type="application/rss+xml"/>
+<link>https://carpentriesoffline.org/resources/</link>
+<atom:link href="https://carpentriesoffline.org/resources/index.xml" rel="self" type="application/rss+xml"/>
 <description>CarpentriesOffline Resources
 </description>
 <generator>quarto-1.6.39</generator>
-<lastBuildDate>Sat, 11 Jan 2025 00:19:43 GMT</lastBuildDate>
+<lastBuildDate>Mon, 13 Jan 2025 14:58:23 GMT</lastBuildDate>
 </channel>
 </rss>

@@ -1,1 +1,1 @@
-Sitemap: https://carpentriesoffline.org/new_website_quarto/sitemap.xml
+Sitemap: https://carpentriesoffline.org/sitemap.xml
