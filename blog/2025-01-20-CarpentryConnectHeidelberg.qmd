@@ -36,7 +36,7 @@ One of the attendees managed to get the login and compute node to work. My hope 
 
 My worry was that attendees would have been disappointed with the session but they all said that it was good fun to get their hands on the RPis and to be able to work through the process of trying to get everything up and running.
 
-We did learn several lessons with regards to what works and what can go wrong and all this experience will be documented (eventually) on the [CarpentriesOffline website](https://carpentriesoffline.org). I am still looking for a server where I can make the RPi OS images available for anyone to download. They are to large for GitHub, unless one zips and splits the files which I don't really want to do. In the meantime, do keep an eye on the website as I have been updating it over the last couple of months. 
+We did learn several lessons with regards to what works and what can go wrong and all this experience will be documented (eventually) on the [CarpentriesOffline website](https://carpentriesoffline.org). I am still looking for a server where I can make the RPi OS images available for anyone to download. They are too large for GitHub, unless one zips and splits the files which I don't really want to do. In the meantime, do keep an eye on the website as I have been updating it over the last couple of months. 
 
 As always, I would welcome and help and/or suggestions with our CarpentriesOffline projects. Do get in touch if you are interested. You should be able to track me down on the Carpentries and RSE Slack workspaces and I also lurk around on Mastodon, BlueSky and LinkedIn.
 
