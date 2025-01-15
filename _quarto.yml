@@ -37,6 +37,7 @@ website:
         href: resources/index.qmd
       - text: "About"
         href: about.qmd
+    draft-mode: unlinked
 
 format:
   html:

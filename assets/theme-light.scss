@@ -67,6 +67,7 @@ h1, h2, h3, h4, h5, h6 {
 // Captions
 .panel-caption, .figure-caption, .subfigure-caption, .table-caption, figcaption, caption {
   color: $carp-bodygrey !important;
+  font-style: italic;
 }
 
 .sourceCode {
