@@ -35,7 +35,7 @@ After you have downloaded and unzipped the image files, write the image file to 
 * In the boot (small FAT32) partition on the SD card create an empty file called "ssh"
 * If you're using WiFi to get access to the Pi, create a file called wpa_supplicant.conf in the boot partition. Paste in the following and set your network SSID and password appropriately.
 
-```
+```ini
 #set this to your country code, gb=great britain
 country=gb
 update_config=1

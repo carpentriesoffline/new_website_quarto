@@ -236,16 +236,16 @@ Note
 <li>In the boot (small FAT32) partition on the SD card create an empty file called “ssh”</li>
 <li>If you’re using WiFi to get access to the Pi, create a file called wpa_supplicant.conf in the boot partition. Paste in the following and set your network SSID and password appropriately.</li>
 </ul>
-<pre><code>#set this to your country code, gb=great britain
-country=gb
-update_config=1
-ctrl_interface=/var/run/wpa_supplicant
-
-network={
- scan_ssid=1
- ssid="my_networks_ssid"
- psk="my_networks_password"
-}</code></pre>
+<div class="sourceCode" id="cb2"><pre class="sourceCode ini code-with-copy"><code class="sourceCode ini"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">#set this to your country code, gb=great britain</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="dt">country</span><span class="ot">=</span><span class="st">gb</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="dt">update_config</span><span class="ot">=</span><span class="dv">1</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="dt">ctrl_interface</span><span class="ot">=</span><span class="st">/var/run/wpa_supplicant</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="dt">network</span><span class="ot">=</span><span class="st">{</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="dt"> scan_ssid</span><span class="ot">=</span><span class="dv">1</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="dt"> ssid</span><span class="ot">=</span><span class="st">"my_networks_ssid"</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="dt"> psk</span><span class="ot">=</span><span class="st">"my_networks_password"</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="dt">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="login-to-the-pi" class="level4">
 <h4 class="anchored" data-anchor-id="login-to-the-pi">Login to the Pi</h4>
