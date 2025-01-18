@@ -13,10 +13,11 @@
     ]
   },
   {
-    "listing": "/lessons/index.html",
+    "listing": "/blog/index.html",
     "items": [
-      "/lessons/building_a_minihpc.html",
-      "/lessons/onboarding_sdcard.html"
+      "/blog/2022-06-27-CarpentriesOffline.html",
+      "/blog/2022-12-12-CarpentriesOffline.html",
+      "/blog/2023-01-18-Testing-CarpentriesOffline.html"
     ]
   },
   {
@@ -35,11 +36,10 @@
     ]
   },
   {
-    "listing": "/blog/index.html",
+    "listing": "/lessons/index.html",
     "items": [
-      "/blog/2022-06-27-CarpentriesOffline.html",
-      "/blog/2022-12-12-CarpentriesOffline.html",
-      "/blog/2023-01-18-Testing-CarpentriesOffline.html"
+      "/lessons/building_a_minihpc.html",
+      "/lessons/onboarding_sdcard.html"
     ]
   }
 ]
