@@ -1,0 +1,41 @@
+---
+title: "Dr Ethan P. White"
+about:
+  template: broadside
+  image: images/ethan-white.jpg
+  links:
+    - icon: bluesky
+      text: Bluesky
+      href: https://bsky.app/profile/ethan.weecology.org
+    - icon: github
+      text: GitHub
+      href: https://github.com/ethanwhite
+    - icon: mastodon
+      text: Mastodon
+      href: https://hachyderm.io/@ethanwhite
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/ethanpwhite/
+---
+
+Ethan White is a Professor and Environmental Data Scientist at the University of Florida.
+
+## Education
+
+University of New Mexico | Albuquerque, NM, USA
+PhD Biology | 1999-2005
+
+Colorado College | Colorado Springs, CO, USA
+BA Biology | 1994-1998
+
+## Experience
+
+University of Florida | Professor 2024 - present
+
+University of Florida | Associate Professor
+
+Utah State University | Associate Professor 2012-2015
+
+Utah State University | Assistant Professor 2007-2012
+
+University of Arizona | NSF Postdoctoral Fellow in Biological Informatics 2005-2007
