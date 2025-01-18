@@ -21,7 +21,7 @@ CarpentriesOffline was born out of the Software Sustainability Institute’s 202
 - Abhishek Dasgupta
 - Colin Sauze
 - [Jannetta Steyn](people/jannetta.qmd)
-- Ethan White
+- [Ethan White](people/ethan-white.html)
 
 
 ## The SSI CW 2021 HackDay Team
