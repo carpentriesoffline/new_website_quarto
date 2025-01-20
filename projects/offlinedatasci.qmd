@@ -6,6 +6,13 @@ image: images/pypilogo.svg
 image-alt: "A photo of Raspberry Pi High Performance cluster consisting of six nodes. "
 ---
 
-OfflineDataSci is a Python package that can be downloaded from PyPi. It scrapes and downloads all Carpentries lesson material to your local computer. This means that you don't need Internet access to view the materials. The package is also used to create the CarpentriesOffline operating system image for the Raspberry Pi and FlashDrive projects which allow you to turn a Raspberry Pi computer or your laptop (with the use of the FlashDrive) into a web server and an access point for learners to connect to.
+offlinedatsci is a tool for supporting teaching and doing data science in internet-limited environments. It helps you download and configure common tools for teaching and doing data science without an internet connection including:
 
-[Offline Documentation](/documentation/offlinedatasci.qmd)
+- Installers for data science languages: Currently R and Python
+- Installers for common data science IDEs: Currently RStudio
+- Partial, data science focused, local mirrors of package repositories: Currently CRAN (for R) and PyPI (for Python)
+- Locally browseable clones of data science teaching websites: Currently Data Carpentry, Software Carpentry, and Library Carpentry
+
+The package is also used to create the CarpentriesOffline operating system image for the Raspberry Pi and FlashDrive projects which allow you to turn a Raspberry Pi computer or your laptop (with the use of the FlashDrive) into a web server and an access point for learners to connect to. It can be used to quickly update all materials to the newest versions when an internet connection is available.
+
+[Package Documentation](https://offlinedatasci.readthedocs.io/)
