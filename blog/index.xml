@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>The Carpentries Offline</title>
+<link>https://carpentriesoffline.org/blog/</link>
+<atom:link href="https://carpentriesoffline.org/blog/index.xml" rel="self" type="application/rss+xml"/>
+<description>CarpentriesOffline Blog
+</description>
+<generator>quarto-1.6.39</generator>
+<lastBuildDate>Wed, 18 Jan 2023 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>CarpentriesOffline - Testing CarpentriesOffline</title>
+  <dc:creator>Jannetta S Steyn</dc:creator>
+  <link>https://carpentriesoffline.org/blog/2023-01-18-Testing-CarpentriesOffline.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>This blog post was originally published on 18 January 2023 on the <a href="https://www.software.ac.uk/blog/2023-01-18-testing-carpentriesoffline">SSI blog</a>.</p>
+<p>This is my third blog post for <a href="https://github.com/carpentriesoffline/CarpentriesOffline.github.io/blob/main/publications_and_conferences/carpentriesoffline.org">CarpentriesOffline</a> - our expedition to find an easy way to present Carpentries workshops when there is no or limited access to the Internet. It is also part of my activities as a <a href="https://software.ac.uk/">Software Sustainability Institute</a> Fellow. At the end of September 2022 I was visiting the <a href="https://http//www.sun.ac.za">University of Stellenbosch</a>&nbsp; in South Africa, at the invitation of <a href="https://www.software.ac.uk/about/fellows/kim-martin">Dr.&nbsp;Kim Martin</a>, to deliver two workshops. I discussed the first workshop, An <a href="https://society-rse.org/iot-for-novices-in-south-africa/">Introduction to The Internet of Things (IoT)</a> in <a href="https://www.software.ac.uk/blog/2023-01-10-internet-things-novices-south-africa">a previous blog post</a>. The second workshop was a two day workshop covering version control with Git and Programming with Python. At the same time I wanted to test some of our implementations and ideas for CarpentriesOffline. For the past year we (that would be myself, Colin Sauze, Abhishek Dasgupta, Ethan White and Virnaliz Cruz) have been working on creating an image that can be written to a micro-SD card which is used to boot Raspberry Pi (RPi) computer. The SD card then contains everything required to turn the RPi into an access point for computers to connect to and also acting as a web server making all the lesson material, program downloads and a colloborative version control system available. An RPi have relatively low power requirements and I have been able to run one for an entire day from an 60W USB power bank.</p>
+<p>There were a few things we wanted to test. We wanted to determine&nbsp; - how many people could connect to the CarpentriesOffline RPi server at any one time - how well did Gitea work as a replacement for GitHub - My intention was to also test an instance of JupyterHub installed on a Pi (but that didn’t happen as I unintentionally messed the Pi’s networking up when I installed a driver for a USB network card).</p>
+<section id="connectivity" class="level3">
+<h3 class="anchored" data-anchor-id="connectivity">Connectivity</h3>
+<p>We started by asking people to connect to the server using the carpentries-offline.org domain. Only five managed to connect with the domain name and one person was able to connect with the IP address. Eventually eight people managed to connect at one time. We were able to confirm that if one person disconnected, another could connect. I have since googled the issue and it seems that the onboard network chipset of the Pi (BCM4345/6) limits the connections to eight. An external USB network card might thus increase the number of connections allowed. I did realise though that this issue is something that I need to add to my list of “things to check” when investigating hardware for CarpentriesOffline. Although it sounds like an obvious thing to check, I didn’t think of it as an issue before.</p>
+<p>There is one question that sprouted from this test. Just before this workshop we ran the previously mentioned IoT workshop during which we were able to get 14 to 15 microcontrollers to connect to a RPi access point. However, for that workshop we used <a href="https://raspap.com/">RaspAP</a> rather than pure <a href="https://www.netfilter.org/">iptables</a> (which now makes part of the CarpentriesOffline RPi image). This would contradict the limit of eight connections. It looks like more googling will be required.</p>
+</section>
+<section id="gitea" class="level3">
+<h3 class="anchored" data-anchor-id="gitea">Gitea</h3>
+<p><a href="https://gitea.io/">Gitea</a> is a community managed lightweight code hosting solution that we decided to use when GitHub is not available for the collaborative part of the <a href="https://swcarpentry.github.io/git-novice/">version control lesson</a>. Gitea behaved really well. We did have the limit of only eight people being able to connect but they were all able to create accounts and push and pull to their repositories. Working colloboratively on repositories also worked smoothly and in the same manner as on GitHub. The Git lesson would thus require very limited modification to be adapted for use with Gitea. The one issue that will need resolving is the date and time on the Pi. RPis do not have a real-time-clock (RTC) on board. We have thought of this issue before but have not yet implemented a solution. One solution would be to have the Pi automatically synchronise with the instructor’s laptop or for the instructor to manually set the time and date every time the Pi is switched on for the workshop. My thinking, however, is that it is probably simple and cheap enough to buy an RTC for the Pi. An RTC costs about 5 GBP and is very simple to fit.</p>
+</section>
+<section id="going-forward" class="level3">
+<h3 class="anchored" data-anchor-id="going-forward">Going forward</h3>
+<p>It looks like we should invest time in finding solutions other than RPis.&nbsp; This does not mean we abandon the RPi as an option though. The idea of being able to take everything you need to present a Carpentries workshop in a pocket mint sized box still intrigues me. However, what about creating a CarpentriesOffline environment on a USB flash drive, which is even smaller than a RPi, and use it to boot your laptop from. If you are anything&nbsp; like me you always have a laptop with you anyway. And if you are not like me, there always seem to be old laptops floating around. The advantage of a laptop is that you don’t need an external screen and monitor (or network access) to work on it as it is part of the device. You can also, if everything is ready on the USB flashdrive, boot your laptop from the flashdrive and everything should be ready to present a workshop. I was also wondering whether instructors would be interested if we were to start making short “How-Tos” explaining, for instance, how to quickly create things like: - a webserver on a laptop (or a RPi) with the Carpentries lessons - an access point&nbsp; - a Gitea server if GitHub becomes unavailable</p>
+<p>This information is already freely available on The Internet, but as always you need to know what you are looking for and you then need to sift through tons of irrelevant information to find what is appropriate and what you can actually get to work. If you are a social scientist or a biologist, this is probably not your idea of fun, but to me it is. If these HowTos are available on the CarpentriesOffline website instructors will know where to go to find ready made solutions. If you have any suggestions, would like to volunteer or would just like to see what progress we are making, please join one of the CarpentriesOffline themed discussions. You can find a schedule of the meetings in the <a href="https://pad.carpentries.org/community-discussions#L72">Community Discussions Etherpad</a>.</p>
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>CarpentriesOffline</category>
+  <guid>https://carpentriesoffline.org/blog/2023-01-18-Testing-CarpentriesOffline.html</guid>
+  <pubDate>Wed, 18 Jan 2023 00:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>CarpentriesOffline - CarpentryCon 2022 feedback and call for help</title>
+  <dc:creator>Jannetta S. Steyn</dc:creator>
+  <dc:creator>Colin Sauze</dc:creator>
+  <dc:creator>Abhishek Dasgupta</dc:creator>
+  <link>https://carpentriesoffline.org/blog/2022-12-12-CarpentriesOffline.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>This blog post was originally published on 18 January 2023 on the <a href="https://medium.com/@jannetta/carpentriesoffline-carpentrycon-2022-feedback-and-call-for-help-3379345f07cf">Medium</a></p>
+<p>In July we published our first blog post to introduce CarpentriesOffline. This will be post number two, a report back of CarpentryCon 2022. We should probably get a name for this series. Any suggestions? If you are not familiar with CarpentriesOffline - it is a project to create an environment for delivering Carpentries workshops offline using Raspberry Pi (RPi) computers. It could be any computer lying around that you don’t know what to do with, but for starters we are focussing on the RPi. I (Jannetta) was fortunate enough to be able to attend quite a few sessions at CarpentryCon 2022 and as usual it was quite an experience. The amount of effort that the core team and the CarpentryCon Task Force must have put into organising the conference and make things run so smoothly goes beyond my comprehension. Not only were there sessions in both English and Spanish but we had sub-titles, captions, sign language and repeated sessions to accomodate people from different time zones. With the help of Colin Sauze and Abhishek Dasgupta, we ran a breakout session, and my lightning talk was presented in three sessions. From the four sessions we were able to get really interesting questions and invaluable feedback from the community. Several people expressed their interest in the project and willingness to contribute in some way or the other. Kari Jordan also asked whether there is any way that the core committee can support us. With this blogpost I would like to call on all readers who are interested in the project - whether it is just to see what we are up to or whether it is because you would like to help out - to make use of the following resources to get in contact: 1. Our GitHub repository: https://github.com/carpentriesoffline 2. We have a channel in the Carpentries Slack workspace. Just add the #carpentries-offline and start talking to us. If for any reason you have problems to get into contact with us via the above, then track one of us down in the main Carpentries Slack workspace. It is quite impossible for us to hide! Some of the things that we need help with are the following: 1. Our website (https://carpentriesoffline.org) 2. Testing our scripts for creating Raspberry Pi images 3. Testing our infrastructure 4. Running pilot offline workshops 5. Help with developing and testing our instructor onboarding workshop 6. Helping with arranging our monthly meetings - taking notes, sending out reminders, setting up the HackMD document, synchronising the HackMD doc to GitHub 7. Anything you think you can help with that I have not mentioned here. If you are interested, please get involved. Every little contribution would help.</p>
+<p>This blog post was also posted on: - <a href="https://carpentries.org/blog/2022/12/carpentries-offline-carpentrycon/">The Carpentries Website</a> - <a href="https://medium.com/@jannetta/carpentriesoffline-carpentrycon-2022-feedback-and-call-for-help-3379345f07cf">Medium</a></p>
+
+
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>CarpentriesOffline</category>
+  <guid>https://carpentriesoffline.org/blog/2022-12-12-CarpentriesOffline.html</guid>
+  <pubDate>Mon, 12 Dec 2022 00:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>CarpentriesOffline - Running Software/Data and Library Carpentries workshops offline</title>
+  <dc:creator>Jannetta S. Steyn</dc:creator>
+  <link>https://carpentriesoffline.org/blog/2022-06-27-CarpentriesOffline.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>This blog post was originally published on <a href="https://medium.com/newcastle-university-research-software-engineering/running-software-data-and-library-carpentries-workshops-offline-a583adf087ca">Medium</a></p>
+<p><strong>This blog post is the first of a a series to share our progress of the CarpentriesOffline project.</strong></p>
+<p>When the Internet “goes down”, my life comes to a standstill. So what happens when you are trying to deliver a Carpentries workshop and you have no Internet access? Usually, our workshop website with the schedule and all the links to the lessons materials are online. The collaborative part of the git lesson requires access to GitHub and of course, quite often, students have to download the data and the software they require for the workshop.</p>
+<p>Just over a year ago at the Software Sustainability Institute’s Collaborations Workshop (SSI CW2021), a group of us discussed the problem of delivering Carpentries Workshops in areas where there is no, limited or intermittent Internet access. We took the problem forward to the Hackday which was part of CW2021 and won the first prize with our solution. A year later we are still working on the project and I even managed to be awarded an SSI fellowship to develop it even further. The project started off being called CarpenPi but we decided to change the name to avoid any problems with trademarks and settled on The CarpentriesOffline.</p>
+<p>The solution we proposed, and are currently working on, is to use a Raspberry Pi (RPi) computer to serve as an access point and a web server. If you have not heard of a Raspberry Pi computer before, it is a credit card-sized computer which was originally developed for educational purposes. The latest RPi comes with a quad-core ARM processor in two, four or eight gigabyte RAM versions and onboard WiFi. There is also a microSD card slot which is used to boot from and four USB ports for any external USB devices. It runs a version of the Linux operating system called Raspberry Pi OS. This combination makes it ideal for creating a headless (i.e.&nbsp;without keyboard or monitor) server that serves as an access point for other computers to connect to using WiFi. A 32GB microSD card is large enough to take the operating system and the software for the access point, a web server with all Carpentries learning materials, Gitea which is a web-based Git service, and all the software that would be needed for workstations to download. With this setup, you can literally put a server in your jacket pocket and travel to anywhere in the world to deliver a Carpentries workshop.</p>
+<p>The assumption at this point is that learners will have their own laptops but we hope to eventually address alternative solutions for that too. I have been asked many times whether we have to use RPis. The truth is that we don’t have to, but for the moment it makes it easier to focus on the RPi for a compact portable solution. Once we have reached our immediate goal (the RPi server) we can look into alternatives.</p>
+<p>With funding from my SSI fellowship I have bought six RPi 400s. These are RPis integrated into a keyboard. My plan was to get RPi 4s but those are rare as chicken teeth at the moment thanks to the Covid-19 pandemic (https://www.raspberrypi.com/news/supply-chain-shortages-and-our-first-ever-price-increase/). The only difference between the RPi 4 and the RPi400 is that the RPi4 is is just a little motherboard, that the user can fit into a case of their choice. RPi400s in hand I hoped to do an initial test. The CarpentriesOffline team has created a working SD card image which would allow one to immediately have an access point with all the lessons and software, minutes after it is switched on. Being an RPi enthusiast I have enough RPis around the house to launch a mission to Mars so I used one of my own RPi4s as a server with the intention of having my colleagues at work connect to it using the RPi400s. We didn’t get very far as the first problem we ran into was the speed of the RPi4s WiFi. I’ll now have to rerun my test with the USB WiFi Adapter that I bought (keep an eye out for my next blog post). I did try it out at home and it did seem to be much faster but I won’t believe anything until we have tried it in circumstances where I can be embarrassed the most!</p>
+<p>I hope that this project will be of interest to many of the readers who would like to get involved. Whether it is to help us with piloting workshops during the development phase or even with the development itself. If you think you can help in any way, please drop me an email. Our website and GitHub repository can be found at https://github.com/carpentriesoffline/CarpentriesOffline.github.io. And yes, even our website and landing page needs a load of work.</p>
+<p>In my next post I hope to be able to share with how I have solved the WiFi issue, and perhaps, share something about a trip I’m planning to do more pilot tests and learn about the issues people are facing in “Internet-poor” parts of the world.</p>
+<img alt="Image of a Raspberry Pi 4" src="https://miro.medium.com/max/1400/0*baoJqSznz3jyLaaQ" loading="lazy" width="500">
+<figcaption class="caption">
+Raspberry Pi 4 (photo by Michael H. „Laserlicht“ / Wikimedia Commons)
+</figcaption>
+<img alt="Image of a Raspberry Pi 400" src="https://miro.medium.com/max/1200/0*mGAVsLE7KwuWuYNi" loading="lazy" width="500">
+<figcaption class="caption">
+Raspberry Pi 400 (photo: SparkFun Electronics, CC BY 2.0 &lt;<a href="https://creativecommons.org/licenses/by/2.0" rel="noopener ugc nofollow" target="_blank">https://creativecommons.org/licenses/by/2.0</a>&gt;, via Wikimedia Commons)
+</figcaption>
+<p>This blog post was also posted on: - <a href="https://carpentries.org/blog/2022/07/carpentries-offline/">The Carpentries Website</a> - <a href="https://www.software.ac.uk/blog/2022-07-25-running-softwaredata-and-library-carpentries-workshops-offline">The Software Sustainability Website</a></p>
+
+
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>CarpentriesOffline</category>
+  <guid>https://carpentriesoffline.org/blog/2022-06-27-CarpentriesOffline.html</guid>
+  <pubDate>Sun, 26 Jun 2022 23:00:00 GMT</pubDate>
+</item>
+</channel>
+</rss>

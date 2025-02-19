@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>The Carpentries Offline</title>
+<link>https://carpentriesoffline.org/documentation/</link>
+<atom:link href="https://carpentriesoffline.org/documentation/index.xml" rel="self" type="application/rss+xml"/>
+<description>CarpentriesOffline Documentation
+</description>
+<generator>quarto-1.6.39</generator>
+<lastBuildDate>Wed, 19 Feb 2025 22:41:34 GMT</lastBuildDate>
+<item>
+  <title>CarpentriesOffline SD card images</title>
+  <link>https://carpentriesoffline.org/documentation/creating_an_sdcard.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>The quick brown fox</p>
+
+
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>minihpc</category>
+  <category>sdcard</category>
+  <guid>https://carpentriesoffline.org/documentation/creating_an_sdcard.html</guid>
+  <pubDate>Wed, 19 Feb 2025 22:41:34 GMT</pubDate>
+</item>
+<item>
+  <title>Setting up EESSI with PXE on the miniHPC</title>
+  <link>https://carpentriesoffline.org/documentation/eessi_with_pxe.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>The quick brown fox</p>
+
+
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>minihpc</category>
+  <guid>https://carpentriesoffline.org/documentation/eessi_with_pxe.html</guid>
+  <pubDate>Wed, 19 Feb 2025 22:41:34 GMT</pubDate>
+</item>
+<item>
+  <title>Bootable Flash Drive - step-by-step</title>
+  <link>https://carpentriesoffline.org/documentation/flashdrive_step_by_step.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="these-are-the-manual-steps-for-creating-a-carpentriesoffline-flashdrive" class="level2">
+<h2 class="anchored" data-anchor-id="these-are-the-manual-steps-for-creating-a-carpentriesoffline-flashdrive">These are the manual steps for creating a CarpentriesOffline flashdrive:</h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Work in progress</p>
+</div>
+</div>
+<ol type="1">
+<li>You will need a 4GB flashdrive to start with</li>
+<li>Download Slax Linux. If you have a 32bit computer you will need the 32bit version which you can download with this link: <a href="https://slax.org/download-slax.php?a=32bit&amp;b=Debian">https://slax.org/download-slax.php?a=32bit&amp;b=Debian</a>. If you have a 64 bit computer, download Slax with this link: <a href="https://slax.org/download-slax.php?a=64bit&amp;b=Debian">https://slax.org/download-slax.php?a=64bit&amp;b=Debian</a></li>
+<li><ul>
+<li><p>The file you just downloaded is an ISO image which you can mount on your computer as a virtual disk. (Instructions to mount of the three main operating systems will follow soon).</p></li>
+<li><p>To mount on Linux, assuming you are in the same directory as where you download the iso to.</p></li>
+<li><p><code>sudo mount -o loop ./slax-##bit-#.#.#.iso</code></p></li>
+<li><p>where the #s are replaced by the actual numbers in the name of the file you downloaded.</p></li>
+</ul></li>
+</ol>
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>flashdrive</category>
+  <guid>https://carpentriesoffline.org/documentation/flashdrive_step_by_step.html</guid>
+  <pubDate>Wed, 19 Feb 2025 22:41:34 GMT</pubDate>
+</item>
+<item>
+  <title>Creating a compute node with a Raspberry Pi for the miniHPC</title>
+  <link>https://carpentriesoffline.org/documentation/minihpc_compute_node.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>The quick brown fox</p>
+
+
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>minihpc</category>
+  <guid>https://carpentriesoffline.org/documentation/minihpc_compute_node.html</guid>
+  <pubDate>Wed, 19 Feb 2025 22:41:34 GMT</pubDate>
+</item>
+<item>
+  <title>Creating a login node with a Raspberry Pi for the miniHPC</title>
+  <link>https://carpentriesoffline.org/documentation/minihpc_login_node.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>The quick brown fox</p>
+
+
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>minihpc</category>
+  <guid>https://carpentriesoffline.org/documentation/minihpc_login_node.html</guid>
+  <pubDate>Wed, 19 Feb 2025 22:41:34 GMT</pubDate>
+</item>
+<item>
+  <title>Offline Documentation</title>
+  <link>https://carpentriesoffline.org/documentation/offlinedatasci.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p><a href="https://devdocs.io/">DevDocs</a> centralizes documentation for a large number of programming languages and packages including many relevant to Data Science. The available documentation includes R, Python, Julia, JavaScript, pandas, Numpy, scikit-learn, SQLite, and much more.</p>
+<p>The site is designed to use local storage for offline use, and the great thing is you don’t need to change anything to work offline. Just set up the sync the documentation you want and then visit the website, even if you’re offline.</p>
+<section id="instructions" class="level2">
+<h2 class="anchored" data-anchor-id="instructions">Instructions</h2>
+<ol type="1">
+<li>Go to <a href="https://devdocs.io/">https://devdocs.io/</a></li>
+<li>In the menu bar on the left in the “Disabled” section (underneath CSS, HTML, HTTP, JavaScript, and Web APIs) find the documentation you want to access offline, hover over a version number, and click when it says “Enable”. You should see the documentation you just selected added to the list at the top of the side bar.</li>
+<li>Go to <a href="https://devdocs.io/offline">https://devdocs.io/offline</a> and click “Install all” in the top right corner (or just select the documentation you want to sync by clicking “Install” next to each set of documentation)</li>
+<li>Leave the “Install updates automatically” box checked if you want the site to update as newer versions of the documentation become available or uncheck it to update manually.</li>
+<li>Enjoy browsing the same docs (including the integrated search), in the same way, online or offline!</li>
+</ol>
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>offlinedatasci</category>
+  <guid>https://carpentriesoffline.org/documentation/offlinedatasci.html</guid>
+  <pubDate>Wed, 19 Feb 2025 22:41:34 GMT</pubDate>
+</item>
+<item>
+  <title>The Pixie Network</title>
+  <link>https://carpentriesoffline.org/documentation/pixieNetwork.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>For the purposes of this documentation we’ll assume network that looks as follow:</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<svg width="672" height="480" viewbox="0.00 0.00 866.50 310.40" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 306.4)">
+<title>G</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-306.4 862.5,-306.4 862.5,4 -4,4"></polygon>
+<!-- InternetAP -->
+<g id="node1" class="node">
+<title>InternetAP</title>
+<polygon fill="none" stroke="black" points="491.36,-302.2 367.14,-302.2 367.14,-261 491.36,-261 491.36,-302.2"></polygon>
+<text text-anchor="middle" x="429.25" y="-285.8" font-family="Times,serif" font-size="14.00">InternetAP</text>
+<text text-anchor="middle" x="429.25" y="-269" font-family="Times,serif" font-size="14.00">wlan0=192.168.0.1</text>
+</g>
+<!-- RaspAP -->
+<g id="node2" class="node">
+<title>RaspAP</title>
+<polygon fill="none" stroke="black" points="494.86,-224.9 363.64,-224.9 363.64,-149.5 494.86,-149.5 494.86,-224.9"></polygon>
+<text text-anchor="middle" x="429.25" y="-208.2" font-family="Times,serif" font-size="14.00">RaspAP</text>
+<text text-anchor="middle" x="429.25" y="-191.4" font-family="Times,serif" font-size="14.00">wlan0=192.168.0.10</text>
+<text text-anchor="middle" x="429.25" y="-174.6" font-family="Times,serif" font-size="14.00">wlan1=10.3.141.1</text>
+<text text-anchor="middle" x="429.25" y="-157.8" font-family="Times,serif" font-size="14.00">eth0=192.168.5.1</text>
+</g>
+<!-- InternetAP&#45;&gt;RaspAP -->
+<g id="edge1" class="edge">
+<title>InternetAP-&gt;RaspAP</title>
+<path fill="none" stroke="black" d="M429.25,-260.55C429.25,-252.99 429.25,-244.04 429.25,-235.06"></path>
+<polygon fill="black" stroke="black" points="432.75,-234.97 429.25,-224.97 425.75,-234.97 432.75,-234.97"></polygon>
+</g>
+<!-- Switch -->
+<g id="node3" class="node">
+<title>Switch</title>
+<path fill="none" stroke="black" d="M444.64,-113.6C444.64,-113.6 413.86,-113.6 413.86,-113.6 407.86,-113.6 401.86,-107.6 401.86,-101.6 401.86,-101.6 401.86,-89.6 401.86,-89.6 401.86,-83.6 407.86,-77.6 413.86,-77.6 413.86,-77.6 444.64,-77.6 444.64,-77.6 450.64,-77.6 456.64,-83.6 456.64,-89.6 456.64,-89.6 456.64,-101.6 456.64,-101.6 456.64,-107.6 450.64,-113.6 444.64,-113.6"></path>
+<text text-anchor="middle" x="429.25" y="-91.4" font-family="Times,serif" font-size="14.00">Switch</text>
+</g>
+<!-- RaspAP&#45;&gt;Switch -->
+<g id="edge2" class="edge">
+<title>RaspAP-&gt;Switch</title>
+<path fill="none" stroke="black" d="M429.25,-149.5C429.25,-140.9 429.25,-131.88 429.25,-123.78"></path>
+<polygon fill="black" stroke="black" points="432.75,-123.77 429.25,-113.77 425.75,-123.77 432.75,-123.77"></polygon>
+</g>
+<!-- pixielogin -->
+<g id="node4" class="node">
+<title>pixielogin</title>
+<polygon fill="none" stroke="black" points="128.75,-41.4 -0.25,-41.4 -0.25,-0.2 128.75,-0.2 128.75,-41.4"></polygon>
+<text text-anchor="middle" x="64.25" y="-25" font-family="Times,serif" font-size="14.00">pixielogin</text>
+<text text-anchor="middle" x="64.25" y="-8.2" font-family="Times,serif" font-size="14.00">eth0=192.168.5.100</text>
+</g>
+<!-- Switch&#45;&gt;pixielogin -->
+<g id="edge3" class="edge">
+<title>Switch-&gt;pixielogin</title>
+<path fill="none" stroke="black" d="M401.72,-90.41C351.37,-82.57 240.93,-64.57 138.54,-41.81"></path>
+<polygon fill="black" stroke="black" points="139.19,-38.37 128.66,-39.59 137.65,-45.2 139.19,-38.37"></polygon>
+</g>
+<!-- pixie001 -->
+<g id="node5" class="node">
+<title>pixie001</title>
+<polygon fill="none" stroke="black" points="274.75,-41.4 145.75,-41.4 145.75,-0.2 274.75,-0.2 274.75,-41.4"></polygon>
+<text text-anchor="middle" x="210.25" y="-25" font-family="Times,serif" font-size="14.00">pixie001</text>
+<text text-anchor="middle" x="210.25" y="-8.2" font-family="Times,serif" font-size="14.00">eth0=192.168.5.101</text>
+</g>
+<!-- Switch&#45;&gt;pixie001 -->
+<g id="edge4" class="edge">
+<title>Switch-&gt;pixie001</title>
+<path fill="none" stroke="black" d="M401.51,-85.38C370.87,-75.19 320.37,-58.41 278.96,-44.64"></path>
+<polygon fill="black" stroke="black" points="280.05,-41.32 269.46,-41.48 277.84,-47.96 280.05,-41.32"></polygon>
+</g>
+<!-- pixie002 -->
+<g id="node6" class="node">
+<title>pixie002</title>
+<polygon fill="none" stroke="black" points="420.75,-41.4 291.75,-41.4 291.75,-0.2 420.75,-0.2 420.75,-41.4"></polygon>
+<text text-anchor="middle" x="356.25" y="-25" font-family="Times,serif" font-size="14.00">pixie002</text>
+<text text-anchor="middle" x="356.25" y="-8.2" font-family="Times,serif" font-size="14.00">eth0=192.168.5.102</text>
+</g>
+<!-- Switch&#45;&gt;pixie002 -->
+<g id="edge5" class="edge">
+<title>Switch-&gt;pixie002</title>
+<path fill="none" stroke="black" d="M411.95,-77.35C403.35,-68.77 392.76,-58.21 383.13,-48.61"></path>
+<polygon fill="black" stroke="black" points="385.56,-46.08 376,-41.5 380.61,-51.04 385.56,-46.08"></polygon>
+</g>
+<!-- pixie003 -->
+<g id="node7" class="node">
+<title>pixie003</title>
+<polygon fill="none" stroke="black" points="566.75,-41.4 437.75,-41.4 437.75,-0.2 566.75,-0.2 566.75,-41.4"></polygon>
+<text text-anchor="middle" x="502.25" y="-25" font-family="Times,serif" font-size="14.00">pixie003</text>
+<text text-anchor="middle" x="502.25" y="-8.2" font-family="Times,serif" font-size="14.00">eth0=192.168.5.103</text>
+</g>
+<!-- Switch&#45;&gt;pixie003 -->
+<g id="edge6" class="edge">
+<title>Switch-&gt;pixie003</title>
+<path fill="none" stroke="black" d="M446.55,-77.35C455.15,-68.77 465.74,-58.21 475.37,-48.61"></path>
+<polygon fill="black" stroke="black" points="477.89,-51.04 482.49,-41.5 472.94,-46.08 477.89,-51.04"></polygon>
+</g>
+<!-- pixie004 -->
+<g id="node8" class="node">
+<title>pixie004</title>
+<polygon fill="none" stroke="black" points="712.75,-41.4 583.75,-41.4 583.75,-0.2 712.75,-0.2 712.75,-41.4"></polygon>
+<text text-anchor="middle" x="648.25" y="-25" font-family="Times,serif" font-size="14.00">pixie004</text>
+<text text-anchor="middle" x="648.25" y="-8.2" font-family="Times,serif" font-size="14.00">eth0=192.168.5.104</text>
+</g>
+<!-- Switch&#45;&gt;pixie004 -->
+<g id="edge7" class="edge">
+<title>Switch-&gt;pixie004</title>
+<path fill="none" stroke="black" d="M456.99,-85.38C487.63,-75.19 538.13,-58.41 579.54,-44.64"></path>
+<polygon fill="black" stroke="black" points="580.66,-47.96 589.04,-41.48 578.45,-41.32 580.66,-47.96"></polygon>
+</g>
+<!-- pixie005 -->
+<g id="node9" class="node">
+<title>pixie005</title>
+<polygon fill="none" stroke="black" points="858.75,-41.4 729.75,-41.4 729.75,-0.2 858.75,-0.2 858.75,-41.4"></polygon>
+<text text-anchor="middle" x="794.25" y="-25" font-family="Times,serif" font-size="14.00">pixie005</text>
+<text text-anchor="middle" x="794.25" y="-8.2" font-family="Times,serif" font-size="14.00">eth0=192.168.5.105</text>
+</g>
+<!-- Switch&#45;&gt;pixie005 -->
+<g id="edge8" class="edge">
+<title>Switch-&gt;pixie005</title>
+<path fill="none" stroke="black" d="M456.78,-90.41C507.13,-82.57 617.57,-64.57 719.96,-41.81"></path>
+<polygon fill="black" stroke="black" points="720.85,-45.2 729.84,-39.59 719.31,-38.37 720.85,-45.2"></polygon>
+</g>
+</g>
+</svg>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+
+
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>minihpc</category>
+  <guid>https://carpentriesoffline.org/documentation/pixieNetwork.html</guid>
+  <pubDate>Wed, 19 Feb 2025 22:41:34 GMT</pubDate>
+</item>
+<item>
+  <title>Setting up PXE on the miniHPC</title>
+  <link>https://carpentriesoffline.org/documentation/pxe.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="what-is-pxe-boot" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-pxe-boot">What is PXE Boot?</h2>
+<p><em>In computing, the</em> <strong><em>Preboot eXecution Environment</em></strong> <em>specification describes a standardised client–server environment that boots a software assembly, retrieved from a network, on PXE-enabled clients. (<a href="https://en.wikipedia.org/wiki/Preboot_Execution_Environment">Wikipedia</a>)</em></p>
+</section>
+<section id="list-of-todos" class="level2">
+<h2 class="anchored" data-anchor-id="list-of-todos">List of ToDos</h2>
+<ul class="task-list">
+<li><label><input type="checkbox">Write the Raspberry Pi OS image to an SD card.</label></li>
+<li><label><input type="checkbox">Run and update and an upgrade.</label></li>
+<li><label><input type="checkbox">Install and configure DNS masquerade.</label></li>
+<li><label><input type="checkbox">Install and configure Network File System.</label></li>
+<li><label><input type="checkbox">Download and install PXE scripts: <code>git clone https://github.com/carpentriesoffline/pxe-boot.git</code></label></li>
+</ul>
+</section>
+<section id="step-1" class="level2">
+<h2 class="anchored" data-anchor-id="step-1">Step 1</h2>
+<p>Rather than duplicating instructions that might change, we’d rather link to the Raspberry Pi website where you can download the Raspberry Pi imager from and also find the instruction for writing an image to an SD card. The most important thing to remember is to select the <strong>Raspberry Pi OS Lite</strong> image because you don’t want to unneccessarily install a graphics environment which only takes up space on the installation disk and make things slower. The link to the web page is <a href="https://www.raspberrypi.com/software/">https://www.raspberrypi.com/software/</a>.</p>
+</section>
+<section id="step-2" class="level2">
+<h2 class="anchored" data-anchor-id="step-2">Step 2</h2>
+<p>In a bash terminal do the following:</p>
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sudo</span> apt update <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-y</span></span>
+<span id="cb1-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sudo</span> apt full-upgrade <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-y</span></span></code></pre></div>
+<section id="step-3" class="level3">
+<h3 class="anchored" data-anchor-id="step-3">Step 3</h3>
+<p>Install dnsmasq and nfs (Network file system):</p>
+<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sudo</span> apt install dnsmasq nfs-kernel nfs-common</span></code></pre></div>
+</section>
+<section id="step-4" class="level3">
+<h3 class="anchored" data-anchor-id="step-4">Step 4</h3>
+<p>Configure DNS masquerading and NFS.</p>
+<p>To configure DNS masquerading edit the file <code>/etc/dnsmasq.conf</code> as follows:</p>
+<pre><code>port=0
+bind-dynamic
+interface=eth0
+domain-needed
+bogus-priv
+enable-tftp
+tftp-root=/pxe-boot
+pxe-service=0,"Raspberry Pi Boot"
+dhcp-option=3,192.168.5.100
+dhcp-option=6,10.3.141.1
+dhcp-range=eth0,192.168.5.101,192.168.5.200,12h
+dhcp-host=a1:a1:a1:a1:a1:a1,192.168.5.101
+dhcp-host=a2:a2:a2:a2:a2:a2,192.168.5.102
+dhcp-host=a3:a3:a3:a3:a3:a3,192.168.5.103
+dhcp-host=a4:a4:a4:a4:a4:a4,192.168.5.104
+dhcp-host=a5:a5:a5:a5:a5:a5,192.168.5.105
+dhcp-host=a6:a6:a6:a6:a6:a6,192.168.5.106</code></pre>
+
+
+</section>
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>minihpc</category>
+  <guid>https://carpentriesoffline.org/documentation/pxe.html</guid>
+  <pubDate>Wed, 19 Feb 2025 22:41:34 GMT</pubDate>
+</item>
+<item>
+  <title>Creating an SD card image: step-by-step</title>
+  <link>https://carpentriesoffline.org/documentation/rpiimage_step_by_step.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>(2025-01-10) Transferred from the old website - this probably needs updating)</p>
+</div>
+</div>
+<section id="creating-an-sd-card-image-step-by-step" class="level1">
+<h1>Creating an SD card image: step-by-step</h1>
+<section id="using-a-pre-built-image" class="level3">
+<h3 class="anchored" data-anchor-id="using-a-pre-built-image">Using a pre-built image</h3>
+<p>You can download a pre-built image from our <a href="https://github.com/carpentriesoffline/carpentriesoffline-installer/releases">releases page</a></p>
+<p>These are experimental and unlikely to be fully working yet. These are built as multipart zip files with names like release.zip and release.z01, this is due to a 2GB upload limit in our build process. Download each of these. To extract them on a Linux system run the following:</p>
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">cat</span> release.z01 release.zip <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;</span> carpentries-offline.zip</span>
+<span id="cb1-2"></span>
+<span id="cb1-3"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">unzip</span> carpentries-offline.zip</span></code></pre></div>
+<p>After you have downloaded and unzipped the image files, write the image file to an SD card with Etcher or your image writing program of choice.</p>
+</section>
+<section id="installing-carpentriesoffline-manually" class="level3">
+<h3 class="anchored" data-anchor-id="installing-carpentriesoffline-manually">Installing CarpentriesOffline manually</h3>
+<section id="setting-up-a-raspberry-pi" class="level4">
+<h4 class="anchored" data-anchor-id="setting-up-a-raspberry-pi">Setting up a Raspberry Pi</h4>
+<ul>
+<li>Download Raspbian OS Lite: https://www.raspberrypi.org/software/operating-systems/</li>
+<li>Write image to SD card using rpi-imager: https://www.raspberrypi.org/software/</li>
+</ul>
+</section>
+<section id="setup-for-headless-config-useful-if-you-dont-have-a-screen-and-keyboard-to-hand" class="level4">
+<h4 class="anchored" data-anchor-id="setup-for-headless-config-useful-if-you-dont-have-a-screen-and-keyboard-to-hand">Setup for headless config (useful if you don’t have a screen and keyboard to hand)</h4>
+<ul>
+<li>In the boot (small FAT32) partition on the SD card create an empty file called “ssh”</li>
+<li>If you’re using WiFi to get access to the Pi, create a file called wpa_supplicant.conf in the boot partition. Paste in the following and set your network SSID and password appropriately.</li>
+</ul>
+<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode ini code-with-copy"><code class="sourceCode ini"><span id="cb2-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">#set this to your country code, gb=great britain</span></span>
+<span id="cb2-2"><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">country</span><span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">gb</span></span>
+<span id="cb2-3"><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">update_config</span><span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span></span>
+<span id="cb2-4"><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">ctrl_interface</span><span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">/var/run/wpa_supplicant</span></span>
+<span id="cb2-5"></span>
+<span id="cb2-6"><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">network</span><span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">{</span></span>
+<span id="cb2-7"><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;"> scan_ssid</span><span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span></span>
+<span id="cb2-8"><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;"> ssid</span><span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"my_networks_ssid"</span></span>
+<span id="cb2-9"><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;"> psk</span><span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"my_networks_password"</span></span>
+<span id="cb2-10"><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">}</span></span></code></pre></div>
+</section>
+<section id="login-to-the-pi" class="level4">
+<h4 class="anchored" data-anchor-id="login-to-the-pi">Login to the Pi</h4>
+<p>Use SSH or login with a local console if you have a monitor attached.</p>
+</section>
+<section id="run-the-install-script" class="level4">
+<h4 class="anchored" data-anchor-id="run-the-install-script">Run the install script</h4>
+<ul>
+<li>Login to your Raspberry Pi with an SSH client or on a local screen/keyboard and run the command:</li>
+<li><code>curl https://raw.githubusercontent.com/carpentriesoffline/carpentriesoffline-installer/main/setup.sh &gt; setup.sh &amp;&amp; bash ./setup.sh</code></li>
+</ul>
+</section>
+<section id="change-the-password" class="level4">
+<h4 class="anchored" data-anchor-id="change-the-password">Change the password</h4>
+<ul>
+<li>Run the <code>passwd</code> command. Leaving the default password will mean anybody in your workshop can login to your Pi and change settings on it.</li>
+</ul>
+</section>
+<section id="connect-to-carpentries-offline" class="level4">
+<h4 class="anchored" data-anchor-id="connect-to-carpentries-offline">Connect to Carpentries Offline</h4>
+<ul>
+<li>After installing the Raspberry Pi will reboot.</li>
+<li>It will then switch the WiFi interface to access point mode and will be available as a network called carpentries-offline.</li>
+<li>Connect to the carpentries-offline WiFi network</li>
+<li>Visting <a href="http://carpentries.org">http://carpentriesoffline.org</a> or <a href="http://192.168.1.1">http://192.168.1.1</a></li>
+<li>You should get links to the Carpentries Lessons and the Gitea server on the Raspberry Pi</li>
+</ul>
+</section>
+<section id="using-pypi-and-cran-mirrors-from-your-pi" class="level4">
+<h4 class="anchored" data-anchor-id="using-pypi-and-cran-mirrors-from-your-pi">Using PyPi and CRAN mirrors from your Pi</h4>
+<ul>
+<li>These are downloaded to the Pi and placed in <a href="http://192.168.1.1/pypi">http://192.168.1.1/pypi</a> and <a href="http://192.168.1.1/miniCRAN">http://192.168.1.1/miniCRAN</a>.</li>
+<li>You will need to update your settings to use these locations. (TODO: write instructions on how to do this)</li>
+</ul>
+
+
+</section>
+</section>
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>sdcard</category>
+  <guid>https://carpentriesoffline.org/documentation/rpiimage_step_by_step.html</guid>
+  <pubDate>Wed, 19 Feb 2025 22:41:34 GMT</pubDate>
+</item>
+<item>
+  <title>A summary of the services required on the login node</title>
+  <link>https://carpentriesoffline.org/documentation/services.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="dnsmasq" class="level2">
+
+</section>
+<section id="wpa_supplicant" class="level2">
+<h2 class="anchored" data-anchor-id="wpa_supplicant">wpa_supplicant</h2>
+</section>
+<section id="nfs" class="level2">
+<h2 class="anchored" data-anchor-id="nfs">nfs</h2>
+</section>
+<section id="ntp" class="level2">
+<h2 class="anchored" data-anchor-id="ntp">ntp</h2>
+</section>
+<section id="networkmanager" class="level2">
+<h2 class="anchored" data-anchor-id="networkmanager">NetworkManager</h2>
+</section>
+<section id="iptables" class="level2">
+<h2 class="anchored" data-anchor-id="iptables">iptables</h2>
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>minihpc</category>
+  <guid>https://carpentriesoffline.org/documentation/services.html</guid>
+  <pubDate>Wed, 19 Feb 2025 22:41:34 GMT</pubDate>
+</item>
+</channel>
+</rss>
