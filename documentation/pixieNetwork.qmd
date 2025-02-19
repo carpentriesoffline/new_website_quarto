@@ -12,9 +12,9 @@ digraph G {
   node [shape=box];
 
   InternetAP [label="InternetAP\nwlan0=192.168.0.1"];
-	RaspAP [label="RaspAP\nwlan0=192.168.0.10\nwlan1=10.3.141.1"];
+	RaspAP [label="RaspAP\nwlan0=192.168.0.10\nwlan1=10.3.141.1\neth0=192.168.5.1"];
   Switch [style=rounded, label="Switch"];
-  pixielogin [label="pixielogin\nwlan0=10.3.141.10\neth0=192.168.5.100"];
+  pixielogin [label="pixielogin\neth0=192.168.5.100"];
   pixie001 [label="pixie001\neth0=192.168.5.101"];
   pixie002 [label="pixie002\neth0=192.168.5.102"];
   pixie003 [label="pixie003\neth0=192.168.5.103"];

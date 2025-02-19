@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>The Carpentries Offline</title>
+<link>https://carpentriesoffline.org/blog/</link>
+<atom:link href="https://carpentriesoffline.org/blog/index.xml" rel="self" type="application/rss+xml"/>
+<description>CarpentriesOffline Blog
+</description>
+<generator>quarto-1.6.39</generator>
+<lastBuildDate>Wed, 18 Jan 2023 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>{B4F502887207:/blog/2023-01-18-Testing-CarpentriesOffline.html}</title>
+  <dc:creator>Jannetta S Steyn</dc:creator>
+  <link>https://carpentriesoffline.org/blog/2023-01-18-Testing-CarpentriesOffline.html</link>
+  <description>{B4F502887207:/blog/2023-01-18-Testing-CarpentriesOffline.html}</description>
+  <category>CarpentriesOffline</category>
+  <guid>https://carpentriesoffline.org/blog/2023-01-18-Testing-CarpentriesOffline.html</guid>
+  <pubDate>Wed, 18 Jan 2023 00:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>{B4F502887207:/blog/2022-12-12-CarpentriesOffline.html}</title>
+  <dc:creator>Jannetta S. Steyn</dc:creator>
+  <dc:creator>Colin Sauze</dc:creator>
+  <dc:creator>Abhishek Dasgupta</dc:creator>
+  <link>https://carpentriesoffline.org/blog/2022-12-12-CarpentriesOffline.html</link>
+  <description>{B4F502887207:/blog/2022-12-12-CarpentriesOffline.html}</description>
+  <category>CarpentriesOffline</category>
+  <guid>https://carpentriesoffline.org/blog/2022-12-12-CarpentriesOffline.html</guid>
+  <pubDate>Mon, 12 Dec 2022 00:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>{B4F502887207:/blog/2022-06-27-CarpentriesOffline.html}</title>
+  <dc:creator>Jannetta S. Steyn</dc:creator>
+  <link>https://carpentriesoffline.org/blog/2022-06-27-CarpentriesOffline.html</link>
+  <description>{B4F502887207:/blog/2022-06-27-CarpentriesOffline.html}</description>
+  <category>CarpentriesOffline</category>
+  <guid>https://carpentriesoffline.org/blog/2022-06-27-CarpentriesOffline.html</guid>
+  <pubDate>Sun, 26 Jun 2022 23:00:00 GMT</pubDate>
+</item>
+</channel>
+</rss>
