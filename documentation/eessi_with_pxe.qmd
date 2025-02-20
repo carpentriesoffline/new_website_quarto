@@ -4,5 +4,43 @@ categories:
   - minihpc 
 ---
 
-The quick brown fox
+### Using EESSI on a Rasbperry Pi without local storage
+
+#### Firstime setup
+
+(first time) edit /etc/cvmfs/default.local to set CVMFS_CACHE_BASE directory to /var/lib/cvmfs
+set CVMFS_QUOTA_LIMIT to 10000
+
+created loopback device in /sharedfs/eessiloop00N (N=node number)
+
+`mount /var/lib/cvmfs -o loop`
+
+or
+`losetup -f /sharedfs/eessiloop00N
+mount /dev/loop0 /var/lib/cvmfs`
+
+
+set permissions
+`sudo chown -R cvmfs:cvmfs /var/lib/cvmfs`
+
+
+reload the config
+`sudo cvmfs_config reload`
+
+
+ls /cvmfs should now show something
+
+#### Loading EESSI
+
+`source /cvmfs/software.eessi.io/versions/2023.06/init/lmod/bash`
+
+module av should now show stuff
+
+
+#### Running Amdhal example
+- use amdhal example from the HPC Carpentry
+- change `module load Python` to `module load amdhal`
+- delete the `SBATCH -p` line since we only have one partition
+
+
 
