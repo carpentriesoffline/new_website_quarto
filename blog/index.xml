@@ -10,7 +10,7 @@
 <atom:link href="https://carpentriesoffline.org/blog/index.xml" rel="self" type="application/rss+xml"/>
 <description>CarpentriesOffline Blog
 </description>
-<generator>quarto-1.6.39</generator>
+<generator>quarto-1.6.40</generator>
 <lastBuildDate>Wed, 18 Jan 2023 00:00:00 GMT</lastBuildDate>
 <item>
   <title>CarpentriesOffline - Testing CarpentriesOffline</title>
@@ -101,7 +101,7 @@ Raspberry Pi 400 (photo: SparkFun Electronics, CC BY 2.0 &lt;<a href="https://cr
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>CarpentriesOffline</category>
   <guid>https://carpentriesoffline.org/blog/2022-06-27-CarpentriesOffline.html</guid>
-  <pubDate>Sun, 26 Jun 2022 23:00:00 GMT</pubDate>
+  <pubDate>Mon, 27 Jun 2022 00:00:00 GMT</pubDate>
 </item>
 </channel>
 </rss>

@@ -10,8 +10,8 @@
 <atom:link href="https://carpentriesoffline.org/projects/index.xml" rel="self" type="application/rss+xml"/>
 <description>Projects we are currently working on
 </description>
-<generator>quarto-1.6.39</generator>
-<lastBuildDate>Thu, 20 Feb 2025 08:20:37 GMT</lastBuildDate>
+<generator>quarto-1.6.40</generator>
+<lastBuildDate>Thu, 20 Feb 2025 08:22:27 GMT</lastBuildDate>
 <item>
   <title>Bootable Flash Drive</title>
   <link>https://carpentriesoffline.org/projects/FlashDrive.html</link>
@@ -40,8 +40,63 @@ Important
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>flashdrive</category>
   <guid>https://carpentriesoffline.org/projects/FlashDrive.html</guid>
-  <pubDate>Thu, 20 Feb 2025 08:20:37 GMT</pubDate>
-  <media:content url="https://carpentriesoffline.org/projects/images/flashdrive.png" medium="image" type="image/png" height="203" width="144"/>
+  <pubDate>Thu, 20 Feb 2025 08:22:27 GMT</pubDate>
+  <media:content url="https://carpentriesoffline.org/projects/images/flashdrive.png" medium="image" type="image/png"/>
+</item>
+<item>
+  <title>CarpentriesOffline with a Raspberry Pi</title>
+  <link>https://carpentriesoffline.org/projects/RaspberryPi.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>For the last year we have been working on creating an image that can be written to an SD card which is then used to boot a Raspberry Pi (RPi). The SD card turns the RPi into:</p>
+<ul>
+<li>an access point for learners to connect to with their computers,</li>
+<li>a web server with all the learning materials</li>
+<li>a Gitea server which acts as a replacement for GitHub to practise the collaborative parts of version control with Git</li>
+</ul>
+<p>We have, so far, experienced a few challenges with this solution.</p>
+<ul>
+<li>there seems to be a limit to the number of computers that can connect to the RPi access point</li>
+<li>RPis suddenly became impossible to obtain after Covid lockdown - however, they are available again.</li>
+</ul>
+<p><a href="../documentation/rpiimage_step_by_step.html">Step-by-step instructions for creating the SD card image</a></p>
+
+
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>sdcard</category>
+  <guid>https://carpentriesoffline.org/projects/RaspberryPi.html</guid>
+  <pubDate>Thu, 20 Feb 2025 08:22:27 GMT</pubDate>
+  <media:content url="https://carpentriesoffline.org/projects/images/sd_card.png" medium="image" type="image/png" height="164" width="144"/>
+</item>
+<item>
+  <title>The OfflineDataSci Python package</title>
+  <link>https://carpentriesoffline.org/projects/offlinedatasci.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>offlinedatsci is a tool for supporting teaching and doing data science in internet-limited environments. It helps you download and configure common tools for teaching and doing data science without an internet connection including:</p>
+<ul>
+<li>Installers for data science languages: Currently R and Python</li>
+<li>Installers for common data science IDEs: Currently RStudio</li>
+<li>Partial, data science focused, local mirrors of package repositories: Currently CRAN (for R) and PyPI (for Python)</li>
+<li>Locally browseable clones of data science teaching websites: Currently Data Carpentry, Software Carpentry, and Library Carpentry</li>
+</ul>
+<p>The package is also used to create the CarpentriesOffline operating system image for the Raspberry Pi and FlashDrive projects which allow you to turn a Raspberry Pi computer or your laptop (with the use of the FlashDrive) into a web server and an access point for learners to connect to. It can be used to quickly update all materials to the newest versions when an internet connection is available.</p>
+<p><a href="https://offlinedatasci.readthedocs.io/">Package Documentation</a></p>
+
+
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>offlinedatasci</category>
+  <guid>https://carpentriesoffline.org/projects/offlinedatasci.html</guid>
+  <pubDate>Thu, 20 Feb 2025 08:22:27 GMT</pubDate>
+  <media:content url="https://carpentriesoffline.org/projects/images/pypilogo.svg" medium="image" type="image/svg+xml"/>
 </item>
 <item>
   <title>The miniHPC</title>
@@ -82,63 +137,8 @@ Important
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>minihpc</category>
   <guid>https://carpentriesoffline.org/projects/miniHPC.html</guid>
-  <pubDate>Thu, 20 Feb 2025 08:20:37 GMT</pubDate>
+  <pubDate>Thu, 20 Feb 2025 08:22:27 GMT</pubDate>
   <media:content url="https://carpentriesoffline.org/projects/images/pixie.jpg" medium="image" type="image/jpeg"/>
-</item>
-<item>
-  <title>The OfflineDataSci Python package</title>
-  <link>https://carpentriesoffline.org/projects/offlinedatasci.html</link>
-  <description><![CDATA[ 
-
-
-
-
-<p>offlinedatsci is a tool for supporting teaching and doing data science in internet-limited environments. It helps you download and configure common tools for teaching and doing data science without an internet connection including:</p>
-<ul>
-<li>Installers for data science languages: Currently R and Python</li>
-<li>Installers for common data science IDEs: Currently RStudio</li>
-<li>Partial, data science focused, local mirrors of package repositories: Currently CRAN (for R) and PyPI (for Python)</li>
-<li>Locally browseable clones of data science teaching websites: Currently Data Carpentry, Software Carpentry, and Library Carpentry</li>
-</ul>
-<p>The package is also used to create the CarpentriesOffline operating system image for the Raspberry Pi and FlashDrive projects which allow you to turn a Raspberry Pi computer or your laptop (with the use of the FlashDrive) into a web server and an access point for learners to connect to. It can be used to quickly update all materials to the newest versions when an internet connection is available.</p>
-<p><a href="https://offlinedatasci.readthedocs.io/">Package Documentation</a></p>
-
-
-
-<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
-  <category>offlinedatasci</category>
-  <guid>https://carpentriesoffline.org/projects/offlinedatasci.html</guid>
-  <pubDate>Thu, 20 Feb 2025 08:20:37 GMT</pubDate>
-  <media:content url="https://carpentriesoffline.org/projects/images/pypilogo.svg" medium="image" type="image/svg+xml"/>
-</item>
-<item>
-  <title>CarpentriesOffline with a Raspberry Pi</title>
-  <link>https://carpentriesoffline.org/projects/RaspberryPi.html</link>
-  <description><![CDATA[ 
-
-
-
-
-<p>For the last year we have been working on creating an image that can be written to an SD card which is then used to boot a Raspberry Pi (RPi). The SD card turns the RPi into:</p>
-<ul>
-<li>an access point for learners to connect to with their computers,</li>
-<li>a web server with all the learning materials</li>
-<li>a Gitea server which acts as a replacement for GitHub to practise the collaborative parts of version control with Git</li>
-</ul>
-<p>We have, so far, experienced a few challenges with this solution.</p>
-<ul>
-<li>there seems to be a limit to the number of computers that can connect to the RPi access point</li>
-<li>RPis suddenly became impossible to obtain after Covid lockdown - however, they are available again.</li>
-</ul>
-<p><a href="../documentation/rpiimage_step_by_step.html">Step-by-step instructions for creating the SD card image</a></p>
-
-
-
-<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
-  <category>sdcard</category>
-  <guid>https://carpentriesoffline.org/projects/RaspberryPi.html</guid>
-  <pubDate>Thu, 20 Feb 2025 08:20:37 GMT</pubDate>
-  <media:content url="https://carpentriesoffline.org/projects/images/sd_card.png" medium="image" type="image/png" height="164" width="144"/>
 </item>
 </channel>
 </rss>

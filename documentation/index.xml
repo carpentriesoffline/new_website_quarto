@@ -10,11 +10,11 @@
 <atom:link href="https://carpentriesoffline.org/documentation/index.xml" rel="self" type="application/rss+xml"/>
 <description>CarpentriesOffline Documentation
 </description>
-<generator>quarto-1.6.39</generator>
-<lastBuildDate>Thu, 20 Feb 2025 08:20:13 GMT</lastBuildDate>
+<generator>quarto-1.6.40</generator>
+<lastBuildDate>Thu, 20 Feb 2025 08:22:20 GMT</lastBuildDate>
 <item>
-  <title>CarpentriesOffline SD card images</title>
-  <link>https://carpentriesoffline.org/documentation/creating_an_sdcard.html</link>
+  <title>Creating a compute node with a Raspberry Pi for the miniHPC</title>
+  <link>https://carpentriesoffline.org/documentation/minihpc_compute_node.html</link>
   <description><![CDATA[ 
 
 
@@ -26,9 +26,8 @@
 
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>minihpc</category>
-  <category>sdcard</category>
-  <guid>https://carpentriesoffline.org/documentation/creating_an_sdcard.html</guid>
-  <pubDate>Thu, 20 Feb 2025 08:20:13 GMT</pubDate>
+  <guid>https://carpentriesoffline.org/documentation/minihpc_compute_node.html</guid>
+  <pubDate>Thu, 20 Feb 2025 08:22:20 GMT</pubDate>
 </item>
 <item>
   <title>Setting up EESSI with PXE on the miniHPC</title>
@@ -70,53 +69,11 @@
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>minihpc</category>
   <guid>https://carpentriesoffline.org/documentation/eessi_with_pxe.html</guid>
-  <pubDate>Thu, 20 Feb 2025 08:20:13 GMT</pubDate>
+  <pubDate>Thu, 20 Feb 2025 08:22:20 GMT</pubDate>
 </item>
 <item>
-  <title>Bootable Flash Drive - step-by-step</title>
-  <link>https://carpentriesoffline.org/documentation/flashdrive_step_by_step.html</link>
-  <description><![CDATA[ 
-
-
-
-
-<section id="these-are-the-manual-steps-for-creating-a-carpentriesoffline-flashdrive" class="level2">
-<h2 class="anchored" data-anchor-id="these-are-the-manual-steps-for-creating-a-carpentriesoffline-flashdrive">These are the manual steps for creating a CarpentriesOffline flashdrive:</h2>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Work in progress</p>
-</div>
-</div>
-<ol type="1">
-<li>You will need a 4GB flashdrive to start with</li>
-<li>Download Slax Linux. If you have a 32bit computer you will need the 32bit version which you can download with this link: <a href="https://slax.org/download-slax.php?a=32bit&amp;b=Debian">https://slax.org/download-slax.php?a=32bit&amp;b=Debian</a>. If you have a 64 bit computer, download Slax with this link: <a href="https://slax.org/download-slax.php?a=64bit&amp;b=Debian">https://slax.org/download-slax.php?a=64bit&amp;b=Debian</a></li>
-<li><ul>
-<li><p>The file you just downloaded is an ISO image which you can mount on your computer as a virtual disk. (Instructions to mount of the three main operating systems will follow soon).</p></li>
-<li><p>To mount on Linux, assuming you are in the same directory as where you download the iso to.</p></li>
-<li><p><code>sudo mount -o loop ./slax-##bit-#.#.#.iso</code></p></li>
-<li><p>where the #s are replaced by the actual numbers in the name of the file you downloaded.</p></li>
-</ul></li>
-</ol>
-
-
-</section>
-
-<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
-  <category>flashdrive</category>
-  <guid>https://carpentriesoffline.org/documentation/flashdrive_step_by_step.html</guid>
-  <pubDate>Thu, 20 Feb 2025 08:20:13 GMT</pubDate>
-</item>
-<item>
-  <title>Creating a compute node with a Raspberry Pi for the miniHPC</title>
-  <link>https://carpentriesoffline.org/documentation/minihpc_compute_node.html</link>
+  <title>CarpentriesOffline SD card images</title>
+  <link>https://carpentriesoffline.org/documentation/creating_an_sdcard.html</link>
   <description><![CDATA[ 
 
 
@@ -128,8 +85,86 @@ Note
 
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>minihpc</category>
-  <guid>https://carpentriesoffline.org/documentation/minihpc_compute_node.html</guid>
-  <pubDate>Thu, 20 Feb 2025 08:20:13 GMT</pubDate>
+  <category>sdcard</category>
+  <guid>https://carpentriesoffline.org/documentation/creating_an_sdcard.html</guid>
+  <pubDate>Thu, 20 Feb 2025 08:22:20 GMT</pubDate>
+</item>
+<item>
+  <title>Setting up PXE on the miniHPC</title>
+  <link>https://carpentriesoffline.org/documentation/pxe.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="what-is-pxe-boot" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-pxe-boot">What is PXE Boot?</h2>
+<p><em>In computing, the</em> <strong><em>Preboot eXecution Environment</em></strong> <em>specification describes a standardised client–server environment that boots a software assembly, retrieved from a network, on PXE-enabled clients. (<a href="https://en.wikipedia.org/wiki/Preboot_Execution_Environment">Wikipedia</a>)</em></p>
+</section>
+<section id="list-of-todos" class="level2">
+<h2 class="anchored" data-anchor-id="list-of-todos">List of ToDos</h2>
+<ul class="task-list">
+<li><label><input type="checkbox">Write the Raspberry Pi OS image to an SD card.</label></li>
+<li><label><input type="checkbox">Run and update and an upgrade.</label></li>
+<li><label><input type="checkbox">Install and configure DNS masquerade.</label></li>
+<li><label><input type="checkbox">Install and configure Network File System.</label></li>
+<li><label><input type="checkbox">Download and install PXE scripts: <code>git clone https://github.com/carpentriesoffline/pxe-boot.git</code></label></li>
+</ul>
+</section>
+<section id="step-1" class="level2">
+<h2 class="anchored" data-anchor-id="step-1">Step 1</h2>
+<p>Rather than duplicating instructions that might change, we’d rather link to the Raspberry Pi website where you can download the Raspberry Pi imager from and also find the instruction for writing an image to an SD card. The most important thing to remember is to select the <strong>Raspberry Pi OS Lite</strong> image because you don’t want to unneccessarily install a graphics environment which only takes up space on the installation disk and make things slower. The link to the web page is <a href="https://www.raspberrypi.com/software/">https://www.raspberrypi.com/software/</a>.</p>
+</section>
+<section id="step-2" class="level2">
+<h2 class="anchored" data-anchor-id="step-2">Step 2</h2>
+<p>In a bash terminal do the following:</p>
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sudo</span> apt update <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-y</span></span>
+<span id="cb1-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sudo</span> apt full-upgrade <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-y</span></span></code></pre></div>
+<section id="step-3" class="level3">
+<h3 class="anchored" data-anchor-id="step-3">Step 3</h3>
+<p>Install dnsmasq and nfs (Network file system):</p>
+<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sudo</span> apt install dnsmasq nfs-kernel nfs-common</span></code></pre></div>
+</section>
+<section id="step-4" class="level3">
+<h3 class="anchored" data-anchor-id="step-4">Step 4</h3>
+<p>Configure DNS masquerading and NFS.</p>
+<p>To configure DNS masquerading edit the file <code>/etc/dnsmasq.conf</code> as follows:</p>
+<pre><code>port=0
+bind-dynamic
+interface=eth0
+domain-needed
+bogus-priv
+enable-tftp
+tftp-root=/pxe-boot
+pxe-service=0,"Raspberry Pi Boot"
+dhcp-option=3,192.168.5.100
+dhcp-option=6,10.3.141.1
+dhcp-range=eth0,192.168.5.101,192.168.5.200,12h
+dhcp-host=a1:a1:a1:a1:a1:a1,192.168.5.101
+dhcp-host=a2:a2:a2:a2:a2:a2,192.168.5.102
+dhcp-host=a3:a3:a3:a3:a3:a3,192.168.5.103
+dhcp-host=a4:a4:a4:a4:a4:a4,192.168.5.104
+dhcp-host=a5:a5:a5:a5:a5:a5,192.168.5.105
+dhcp-host=a6:a6:a6:a6:a6:a6,192.168.5.106</code></pre>
+
+
+</section>
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>minihpc</category>
+  <guid>https://carpentriesoffline.org/documentation/pxe.html</guid>
+  <pubDate>Thu, 20 Feb 2025 08:22:20 GMT</pubDate>
 </item>
 <item>
   <title>Creating a login node with a Raspberry Pi for the miniHPC</title>
@@ -146,35 +181,7 @@ Note
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>minihpc</category>
   <guid>https://carpentriesoffline.org/documentation/minihpc_login_node.html</guid>
-  <pubDate>Thu, 20 Feb 2025 08:20:13 GMT</pubDate>
-</item>
-<item>
-  <title>Offline Documentation</title>
-  <link>https://carpentriesoffline.org/documentation/offlinedatasci.html</link>
-  <description><![CDATA[ 
-
-
-
-
-<p><a href="https://devdocs.io/">DevDocs</a> centralizes documentation for a large number of programming languages and packages including many relevant to Data Science. The available documentation includes R, Python, Julia, JavaScript, pandas, Numpy, scikit-learn, SQLite, and much more.</p>
-<p>The site is designed to use local storage for offline use, and the great thing is you don’t need to change anything to work offline. Just set up the sync the documentation you want and then visit the website, even if you’re offline.</p>
-<section id="instructions" class="level2">
-<h2 class="anchored" data-anchor-id="instructions">Instructions</h2>
-<ol type="1">
-<li>Go to <a href="https://devdocs.io/">https://devdocs.io/</a></li>
-<li>In the menu bar on the left in the “Disabled” section (underneath CSS, HTML, HTTP, JavaScript, and Web APIs) find the documentation you want to access offline, hover over a version number, and click when it says “Enable”. You should see the documentation you just selected added to the list at the top of the side bar.</li>
-<li>Go to <a href="https://devdocs.io/offline">https://devdocs.io/offline</a> and click “Install all” in the top right corner (or just select the documentation you want to sync by clicking “Install” next to each set of documentation)</li>
-<li>Leave the “Install updates automatically” box checked if you want the site to update as newer versions of the documentation become available or uncheck it to update manually.</li>
-<li>Enjoy browsing the same docs (including the integrated search), in the same way, online or offline!</li>
-</ol>
-
-
-</section>
-
-<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
-  <category>offlinedatasci</category>
-  <guid>https://carpentriesoffline.org/documentation/offlinedatasci.html</guid>
-  <pubDate>Thu, 20 Feb 2025 08:20:13 GMT</pubDate>
+  <pubDate>Thu, 20 Feb 2025 08:22:20 GMT</pubDate>
 </item>
 <item>
   <title>The Pixie Network</title>
@@ -319,84 +326,7 @@ Note
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>minihpc</category>
   <guid>https://carpentriesoffline.org/documentation/pixieNetwork.html</guid>
-  <pubDate>Thu, 20 Feb 2025 08:20:13 GMT</pubDate>
-</item>
-<item>
-  <title>Setting up PXE on the miniHPC</title>
-  <link>https://carpentriesoffline.org/documentation/pxe.html</link>
-  <description><![CDATA[ 
-
-
-
-
-<section id="what-is-pxe-boot" class="level2">
-<h2 class="anchored" data-anchor-id="what-is-pxe-boot">What is PXE Boot?</h2>
-<p><em>In computing, the</em> <strong><em>Preboot eXecution Environment</em></strong> <em>specification describes a standardised client–server environment that boots a software assembly, retrieved from a network, on PXE-enabled clients. (<a href="https://en.wikipedia.org/wiki/Preboot_Execution_Environment">Wikipedia</a>)</em></p>
-</section>
-<section id="list-of-todos" class="level2">
-<h2 class="anchored" data-anchor-id="list-of-todos">List of ToDos</h2>
-<ul class="task-list">
-<li><label><input type="checkbox">Write the Raspberry Pi OS image to an SD card.</label></li>
-<li><label><input type="checkbox">Run and update and an upgrade.</label></li>
-<li><label><input type="checkbox">Install and configure DNS masquerade.</label></li>
-<li><label><input type="checkbox">Install and configure Network File System.</label></li>
-<li><label><input type="checkbox">Download and install PXE scripts: <code>git clone https://github.com/carpentriesoffline/pxe-boot.git</code></label></li>
-</ul>
-</section>
-<section id="step-1" class="level2">
-<h2 class="anchored" data-anchor-id="step-1">Step 1</h2>
-<p>Rather than duplicating instructions that might change, we’d rather link to the Raspberry Pi website where you can download the Raspberry Pi imager from and also find the instruction for writing an image to an SD card. The most important thing to remember is to select the <strong>Raspberry Pi OS Lite</strong> image because you don’t want to unneccessarily install a graphics environment which only takes up space on the installation disk and make things slower. The link to the web page is <a href="https://www.raspberrypi.com/software/">https://www.raspberrypi.com/software/</a>.</p>
-</section>
-<section id="step-2" class="level2">
-<h2 class="anchored" data-anchor-id="step-2">Step 2</h2>
-<p>In a bash terminal do the following:</p>
-<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">sudo</span> apt update <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">-y</span></span>
-<span id="cb1-2"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">sudo</span> apt full-upgrade <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">-y</span></span></code></pre></div>
-<section id="step-3" class="level3">
-<h3 class="anchored" data-anchor-id="step-3">Step 3</h3>
-<p>Install dnsmasq and nfs (Network file system):</p>
-<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">sudo</span> apt install dnsmasq nfs-kernel nfs-common</span></code></pre></div>
-</section>
-<section id="step-4" class="level3">
-<h3 class="anchored" data-anchor-id="step-4">Step 4</h3>
-<p>Configure DNS masquerading and NFS.</p>
-<p>To configure DNS masquerading edit the file <code>/etc/dnsmasq.conf</code> as follows:</p>
-<pre><code>port=0
-bind-dynamic
-interface=eth0
-domain-needed
-bogus-priv
-enable-tftp
-tftp-root=/pxe-boot
-pxe-service=0,"Raspberry Pi Boot"
-dhcp-option=3,192.168.5.100
-dhcp-option=6,10.3.141.1
-dhcp-range=eth0,192.168.5.101,192.168.5.200,12h
-dhcp-host=a1:a1:a1:a1:a1:a1,192.168.5.101
-dhcp-host=a2:a2:a2:a2:a2:a2,192.168.5.102
-dhcp-host=a3:a3:a3:a3:a3:a3,192.168.5.103
-dhcp-host=a4:a4:a4:a4:a4:a4,192.168.5.104
-dhcp-host=a5:a5:a5:a5:a5:a5,192.168.5.105
-dhcp-host=a6:a6:a6:a6:a6:a6,192.168.5.106</code></pre>
-
-
-</section>
-</section>
-
-<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
-  <category>minihpc</category>
-  <guid>https://carpentriesoffline.org/documentation/pxe.html</guid>
-  <pubDate>Thu, 20 Feb 2025 08:20:13 GMT</pubDate>
+  <pubDate>Thu, 20 Feb 2025 08:22:20 GMT</pubDate>
 </item>
 <item>
   <title>Creating an SD card image: step-by-step</title>
@@ -550,7 +480,77 @@ font-style: inherit;">}</span></span></code></pre></div>
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>sdcard</category>
   <guid>https://carpentriesoffline.org/documentation/rpiimage_step_by_step.html</guid>
-  <pubDate>Thu, 20 Feb 2025 08:20:13 GMT</pubDate>
+  <pubDate>Thu, 20 Feb 2025 08:22:20 GMT</pubDate>
+</item>
+<item>
+  <title>Bootable Flash Drive - step-by-step</title>
+  <link>https://carpentriesoffline.org/documentation/flashdrive_step_by_step.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="these-are-the-manual-steps-for-creating-a-carpentriesoffline-flashdrive" class="level2">
+<h2 class="anchored" data-anchor-id="these-are-the-manual-steps-for-creating-a-carpentriesoffline-flashdrive">These are the manual steps for creating a CarpentriesOffline flashdrive:</h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Work in progress</p>
+</div>
+</div>
+<ol type="1">
+<li>You will need a 4GB flashdrive to start with</li>
+<li>Download Slax Linux. If you have a 32bit computer you will need the 32bit version which you can download with this link: <a href="https://slax.org/download-slax.php?a=32bit&amp;b=Debian">https://slax.org/download-slax.php?a=32bit&amp;b=Debian</a>. If you have a 64 bit computer, download Slax with this link: <a href="https://slax.org/download-slax.php?a=64bit&amp;b=Debian">https://slax.org/download-slax.php?a=64bit&amp;b=Debian</a></li>
+<li><ul>
+<li><p>The file you just downloaded is an ISO image which you can mount on your computer as a virtual disk. (Instructions to mount of the three main operating systems will follow soon).</p></li>
+<li><p>To mount on Linux, assuming you are in the same directory as where you download the iso to.</p></li>
+<li><p><code>sudo mount -o loop ./slax-##bit-#.#.#.iso</code></p></li>
+<li><p>where the #s are replaced by the actual numbers in the name of the file you downloaded.</p></li>
+</ul></li>
+</ol>
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>flashdrive</category>
+  <guid>https://carpentriesoffline.org/documentation/flashdrive_step_by_step.html</guid>
+  <pubDate>Thu, 20 Feb 2025 08:22:20 GMT</pubDate>
+</item>
+<item>
+  <title>Offline Documentation</title>
+  <link>https://carpentriesoffline.org/documentation/offlinedatasci.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p><a href="https://devdocs.io/">DevDocs</a> centralizes documentation for a large number of programming languages and packages including many relevant to Data Science. The available documentation includes R, Python, Julia, JavaScript, pandas, Numpy, scikit-learn, SQLite, and much more.</p>
+<p>The site is designed to use local storage for offline use, and the great thing is you don’t need to change anything to work offline. Just set up the sync the documentation you want and then visit the website, even if you’re offline.</p>
+<section id="instructions" class="level2">
+<h2 class="anchored" data-anchor-id="instructions">Instructions</h2>
+<ol type="1">
+<li>Go to <a href="https://devdocs.io/">https://devdocs.io/</a></li>
+<li>In the menu bar on the left in the “Disabled” section (underneath CSS, HTML, HTTP, JavaScript, and Web APIs) find the documentation you want to access offline, hover over a version number, and click when it says “Enable”. You should see the documentation you just selected added to the list at the top of the side bar.</li>
+<li>Go to <a href="https://devdocs.io/offline">https://devdocs.io/offline</a> and click “Install all” in the top right corner (or just select the documentation you want to sync by clicking “Install” next to each set of documentation)</li>
+<li>Leave the “Install updates automatically” box checked if you want the site to update as newer versions of the documentation become available or uncheck it to update manually.</li>
+<li>Enjoy browsing the same docs (including the integrated search), in the same way, online or offline!</li>
+</ol>
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>offlinedatasci</category>
+  <guid>https://carpentriesoffline.org/documentation/offlinedatasci.html</guid>
+  <pubDate>Thu, 20 Feb 2025 08:22:20 GMT</pubDate>
 </item>
 <item>
   <title>A summary of the services required on the login node</title>
@@ -584,7 +584,7 @@ font-style: inherit;">}</span></span></code></pre></div>
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>minihpc</category>
   <guid>https://carpentriesoffline.org/documentation/services.html</guid>
-  <pubDate>Thu, 20 Feb 2025 08:20:13 GMT</pubDate>
+  <pubDate>Thu, 20 Feb 2025 08:22:20 GMT</pubDate>
 </item>
 </channel>
 </rss>
