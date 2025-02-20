@@ -1,5 +1,26 @@
 [
   {
+    "listing": "/resources/index.html",
+    "items": []
+  },
+  {
+    "listing": "/projects/index.html",
+    "items": [
+      "/projects/FlashDrive.html",
+      "/projects/miniHPC.html",
+      "/projects/offlinedatasci.html",
+      "/projects/RaspberryPi.html"
+    ]
+  },
+  {
+    "listing": "/blog/index.html",
+    "items": [
+      "/blog/2022-06-27-CarpentriesOffline.html",
+      "/blog/2022-12-12-CarpentriesOffline.html",
+      "/blog/2023-01-18-Testing-CarpentriesOffline.html"
+    ]
+  },
+  {
     "listing": "/documentation/index.html",
     "items": [
       "/documentation/creating_an_sdcard.html",
@@ -12,6 +33,13 @@
       "/documentation/pxe.html",
       "/documentation/rpiimage_step_by_step.html",
       "/documentation/services.html"
+    ]
+  },
+  {
+    "listing": "/lessons/index.html",
+    "items": [
+      "/lessons/building_a_minihpc.html",
+      "/lessons/onboarding_sdcard.html"
     ]
   }
 ]
