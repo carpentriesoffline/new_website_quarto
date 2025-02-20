@@ -11,7 +11,7 @@
 <description>CarpentriesOffline Documentation
 </description>
 <generator>quarto-1.6.40</generator>
-<lastBuildDate>Thu, 20 Feb 2025 07:45:58 GMT</lastBuildDate>
+<lastBuildDate>Thu, 20 Feb 2025 08:06:24 GMT</lastBuildDate>
 <item>
   <title>Creating a compute node with a Raspberry Pi for the miniHPC</title>
   <link>https://carpentriesoffline.org/documentation/minihpc_compute_node.html</link>
@@ -27,7 +27,7 @@
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>minihpc</category>
   <guid>https://carpentriesoffline.org/documentation/minihpc_compute_node.html</guid>
-  <pubDate>Thu, 20 Feb 2025 07:45:58 GMT</pubDate>
+  <pubDate>Thu, 20 Feb 2025 08:06:24 GMT</pubDate>
 </item>
 <item>
   <title>Setting up EESSI with PXE on the miniHPC</title>
@@ -37,14 +37,39 @@
 
 
 
-<p>The quick brown fox</p>
+<section id="using-eessi-on-a-rasbperry-pi-without-local-storage" class="level3">
+<h3 class="anchored" data-anchor-id="using-eessi-on-a-rasbperry-pi-without-local-storage">Using EESSI on a Rasbperry Pi without local storage</h3>
+<section id="firstime-setup" class="level4">
+<h4 class="anchored" data-anchor-id="firstime-setup">Firstime setup</h4>
+<p>(first time) edit /etc/cvmfs/default.local to set CVMFS_CACHE_BASE directory to /var/lib/cvmfs set CVMFS_QUOTA_LIMIT to 10000</p>
+<p>created loopback device in /sharedfs/eessiloop00N (N=node number)</p>
+<p><code>mount /var/lib/cvmfs -o loop</code></p>
+<p>or <code>losetup -f /sharedfs/eessiloop00N mount /dev/loop0 /var/lib/cvmfs</code></p>
+<p>set permissions <code>sudo chown -R cvmfs:cvmfs /var/lib/cvmfs</code></p>
+<p>reload the config <code>sudo cvmfs_config reload</code></p>
+<p>ls /cvmfs should now show something</p>
+</section>
+<section id="loading-eessi" class="level4">
+<h4 class="anchored" data-anchor-id="loading-eessi">Loading EESSI</h4>
+<p><code>source /cvmfs/software.eessi.io/versions/2023.06/init/lmod/bash</code></p>
+<p>module av should now show stuff</p>
+</section>
+<section id="running-amdhal-example" class="level4">
+<h4 class="anchored" data-anchor-id="running-amdhal-example">Running Amdhal example</h4>
+<ul>
+<li>use amdhal example from the HPC Carpentry</li>
+<li>change <code>module load Python</code> to <code>module load amdhal</code></li>
+<li>delete the <code>SBATCH -p</code> line since we only have one partition</li>
+</ul>
 
 
+</section>
+</section>
 
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>minihpc</category>
   <guid>https://carpentriesoffline.org/documentation/eessi_with_pxe.html</guid>
-  <pubDate>Thu, 20 Feb 2025 07:45:58 GMT</pubDate>
+  <pubDate>Thu, 20 Feb 2025 08:06:24 GMT</pubDate>
 </item>
 <item>
   <title>CarpentriesOffline SD card images</title>
@@ -62,7 +87,7 @@
   <category>minihpc</category>
   <category>sdcard</category>
   <guid>https://carpentriesoffline.org/documentation/creating_an_sdcard.html</guid>
-  <pubDate>Thu, 20 Feb 2025 07:45:58 GMT</pubDate>
+  <pubDate>Thu, 20 Feb 2025 08:06:24 GMT</pubDate>
 </item>
 <item>
   <title>Setting up PXE on the miniHPC</title>
@@ -139,7 +164,7 @@ dhcp-host=a6:a6:a6:a6:a6:a6,192.168.5.106</code></pre>
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>minihpc</category>
   <guid>https://carpentriesoffline.org/documentation/pxe.html</guid>
-  <pubDate>Thu, 20 Feb 2025 07:45:58 GMT</pubDate>
+  <pubDate>Thu, 20 Feb 2025 08:06:24 GMT</pubDate>
 </item>
 <item>
   <title>Creating a login node with a Raspberry Pi for the miniHPC</title>
@@ -156,7 +181,7 @@ dhcp-host=a6:a6:a6:a6:a6:a6,192.168.5.106</code></pre>
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>minihpc</category>
   <guid>https://carpentriesoffline.org/documentation/minihpc_login_node.html</guid>
-  <pubDate>Thu, 20 Feb 2025 07:45:58 GMT</pubDate>
+  <pubDate>Thu, 20 Feb 2025 08:06:24 GMT</pubDate>
 </item>
 <item>
   <title>The Pixie Network</title>
@@ -301,7 +326,7 @@ dhcp-host=a6:a6:a6:a6:a6:a6,192.168.5.106</code></pre>
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>minihpc</category>
   <guid>https://carpentriesoffline.org/documentation/pixieNetwork.html</guid>
-  <pubDate>Thu, 20 Feb 2025 07:45:58 GMT</pubDate>
+  <pubDate>Thu, 20 Feb 2025 08:06:24 GMT</pubDate>
 </item>
 <item>
   <title>Creating an SD card image: step-by-step</title>
@@ -455,7 +480,7 @@ font-style: inherit;">}</span></span></code></pre></div>
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>sdcard</category>
   <guid>https://carpentriesoffline.org/documentation/rpiimage_step_by_step.html</guid>
-  <pubDate>Thu, 20 Feb 2025 07:45:58 GMT</pubDate>
+  <pubDate>Thu, 20 Feb 2025 08:06:24 GMT</pubDate>
 </item>
 <item>
   <title>Bootable Flash Drive - step-by-step</title>
@@ -497,7 +522,7 @@ Note
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>flashdrive</category>
   <guid>https://carpentriesoffline.org/documentation/flashdrive_step_by_step.html</guid>
-  <pubDate>Thu, 20 Feb 2025 07:45:58 GMT</pubDate>
+  <pubDate>Thu, 20 Feb 2025 08:06:24 GMT</pubDate>
 </item>
 <item>
   <title>Offline Documentation</title>
@@ -525,7 +550,7 @@ Note
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>offlinedatasci</category>
   <guid>https://carpentriesoffline.org/documentation/offlinedatasci.html</guid>
-  <pubDate>Thu, 20 Feb 2025 07:45:58 GMT</pubDate>
+  <pubDate>Thu, 20 Feb 2025 08:06:24 GMT</pubDate>
 </item>
 <item>
   <title>A summary of the services required on the login node</title>
@@ -559,7 +584,7 @@ Note
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>minihpc</category>
   <guid>https://carpentriesoffline.org/documentation/services.html</guid>
-  <pubDate>Thu, 20 Feb 2025 07:45:58 GMT</pubDate>
+  <pubDate>Thu, 20 Feb 2025 08:06:24 GMT</pubDate>
 </item>
 </channel>
 </rss>
