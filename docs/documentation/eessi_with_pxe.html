@@ -125,8 +125,14 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#using-eessi-on-a-rasbperry-pi-without-local-storage" id="toc-using-eessi-on-a-rasbperry-pi-without-local-storage" class="nav-link active" data-scroll-target="#using-eessi-on-a-rasbperry-pi-without-local-storage">Using EESSI on a Rasbperry Pi without local storage</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/carpentriesoffline/new_website_quarto/edit/main/documentation/eessi_with_pxe.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/carpentriesoffline/new_website_quarto/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -153,9 +159,34 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>The quick brown fox</p>
+<section id="using-eessi-on-a-rasbperry-pi-without-local-storage" class="level3">
+<h3 class="anchored" data-anchor-id="using-eessi-on-a-rasbperry-pi-without-local-storage">Using EESSI on a Rasbperry Pi without local storage</h3>
+<section id="firstime-setup" class="level4">
+<h4 class="anchored" data-anchor-id="firstime-setup">Firstime setup</h4>
+<p>(first time) edit /etc/cvmfs/default.local to set CVMFS_CACHE_BASE directory to /var/lib/cvmfs set CVMFS_QUOTA_LIMIT to 10000</p>
+<p>created loopback device in /sharedfs/eessiloop00N (N=node number)</p>
+<p><code>mount /var/lib/cvmfs -o loop</code></p>
+<p>or <code>losetup -f /sharedfs/eessiloop00N mount /dev/loop0 /var/lib/cvmfs</code></p>
+<p>set permissions <code>sudo chown -R cvmfs:cvmfs /var/lib/cvmfs</code></p>
+<p>reload the config <code>sudo cvmfs_config reload</code></p>
+<p>ls /cvmfs should now show something</p>
+</section>
+<section id="loading-eessi" class="level4">
+<h4 class="anchored" data-anchor-id="loading-eessi">Loading EESSI</h4>
+<p><code>source /cvmfs/software.eessi.io/versions/2023.06/init/lmod/bash</code></p>
+<p>module av should now show stuff</p>
+</section>
+<section id="running-amdhal-example" class="level4">
+<h4 class="anchored" data-anchor-id="running-amdhal-example">Running Amdhal example</h4>
+<ul>
+<li>use amdhal example from the HPC Carpentry</li>
+<li>change <code>module load Python</code> to <code>module load amdhal</code></li>
+<li>delete the <code>SBATCH -p</code> line since we only have one partition</li>
+</ul>
 
 
+</section>
+</section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -585,4 +616,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/carpentriesoffline/new_website_quarto/edit/main/documentation/eessi_with_pxe.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/carpentriesoffline/new_website_quarto/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/carpentriesoffline/new_website_quarto/edit/main/documentation/eessi_with_pxe.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/carpentriesoffline/new_website_quarto/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>

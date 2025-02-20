@@ -228,7 +228,7 @@
     "href": "documentation/eessi_with_pxe.html",
     "title": "Setting up EESSI with PXE on the miniHPC",
     "section": "",
-    "text": "The quick brown fox\n\n\n\n Back to top"
+    "text": "Using EESSI on a Rasbperry Pi without local storage\n\nFirstime setup\n(first time) edit /etc/cvmfs/default.local to set CVMFS_CACHE_BASE directory to /var/lib/cvmfs set CVMFS_QUOTA_LIMIT to 10000\ncreated loopback device in /sharedfs/eessiloop00N (N=node number)\nmount /var/lib/cvmfs -o loop\nor losetup -f /sharedfs/eessiloop00N mount /dev/loop0 /var/lib/cvmfs\nset permissions sudo chown -R cvmfs:cvmfs /var/lib/cvmfs\nreload the config sudo cvmfs_config reload\nls /cvmfs should now show something\n\n\nLoading EESSI\nsource /cvmfs/software.eessi.io/versions/2023.06/init/lmod/bash\nmodule av should now show stuff\n\n\nRunning Amdhal example\n\nuse amdhal example from the HPC Carpentry\nchange module load Python to module load amdhal\ndelete the SBATCH -p line since we only have one partition\n\n\n\n\n\n\n Back to top"
   },
   {
     "objectID": "documentation/index.html",
