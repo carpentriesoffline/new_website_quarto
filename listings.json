@@ -4,42 +4,42 @@
     "items": []
   },
   {
-    "listing": "/documentation/index.html",
+    "listing": "/projects/index.html",
     "items": [
-      "/documentation/minihpc_compute_node.html",
-      "/documentation/eessi_with_pxe.html",
-      "/documentation/creating_an_sdcard.html",
-      "/documentation/pxe.html",
-      "/documentation/minihpc_login_node.html",
-      "/documentation/pixieNetwork.html",
-      "/documentation/rpiimage_step_by_step.html",
-      "/documentation/flashdrive_step_by_step.html",
-      "/documentation/offlinedatasci.html",
-      "/documentation/services.html"
+      "/projects/FlashDrive.html",
+      "/projects/miniHPC.html",
+      "/projects/offlinedatasci.html",
+      "/projects/RaspberryPi.html"
     ]
   },
   {
     "listing": "/blog/index.html",
     "items": [
+      "/blog/2022-06-27-CarpentriesOffline.html",
       "/blog/2022-12-12-CarpentriesOffline.html",
-      "/blog/2023-01-18-Testing-CarpentriesOffline.html",
-      "/blog/2022-06-27-CarpentriesOffline.html"
+      "/blog/2023-01-18-Testing-CarpentriesOffline.html"
     ]
   },
   {
-    "listing": "/projects/index.html",
+    "listing": "/documentation/index.html",
     "items": [
-      "/projects/FlashDrive.html",
-      "/projects/RaspberryPi.html",
-      "/projects/offlinedatasci.html",
-      "/projects/miniHPC.html"
+      "/documentation/creating_an_sdcard.html",
+      "/documentation/eessi_with_pxe.html",
+      "/documentation/flashdrive_step_by_step.html",
+      "/documentation/minihpc_compute_node.html",
+      "/documentation/minihpc_login_node.html",
+      "/documentation/offlinedatasci.html",
+      "/documentation/pixieNetwork.html",
+      "/documentation/pxe.html",
+      "/documentation/rpiimage_step_by_step.html",
+      "/documentation/services.html"
     ]
   },
   {
     "listing": "/lessons/index.html",
     "items": [
-      "/lessons/onboarding_sdcard.html",
-      "/lessons/building_a_minihpc.html"
+      "/lessons/building_a_minihpc.html",
+      "/lessons/onboarding_sdcard.html"
     ]
   }
 ]
