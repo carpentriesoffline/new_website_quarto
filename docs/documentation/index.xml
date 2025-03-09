@@ -11,7 +11,7 @@
 <description>CarpentriesOffline Documentation
 </description>
 <generator>quarto-1.6.39</generator>
-<lastBuildDate>Sun, 09 Mar 2025 12:35:12 GMT</lastBuildDate>
+<lastBuildDate>Sun, 09 Mar 2025 23:33:15 GMT</lastBuildDate>
 <item>
   <title>CarpentriesOffline SD card images</title>
   <link>https://carpentriesoffline.org/documentation/creating_an_sdcard.html</link>
@@ -28,7 +28,7 @@
   <category>minihpc</category>
   <category>sdcard</category>
   <guid>https://carpentriesoffline.org/documentation/creating_an_sdcard.html</guid>
-  <pubDate>Sun, 09 Mar 2025 12:35:12 GMT</pubDate>
+  <pubDate>Sun, 09 Mar 2025 23:33:15 GMT</pubDate>
 </item>
 <item>
   <title>Setting up EESSI with PXE on the miniHPC</title>
@@ -70,7 +70,7 @@
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>minihpc</category>
   <guid>https://carpentriesoffline.org/documentation/eessi_with_pxe.html</guid>
-  <pubDate>Sun, 09 Mar 2025 12:35:12 GMT</pubDate>
+  <pubDate>Sun, 09 Mar 2025 23:33:15 GMT</pubDate>
 </item>
 <item>
   <title>Bootable Flash Drive - step-by-step</title>
@@ -112,7 +112,7 @@ Note
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>flashdrive</category>
   <guid>https://carpentriesoffline.org/documentation/flashdrive_step_by_step.html</guid>
-  <pubDate>Sun, 09 Mar 2025 12:35:12 GMT</pubDate>
+  <pubDate>Sun, 09 Mar 2025 23:33:15 GMT</pubDate>
 </item>
 <item>
   <title>Creating a compute node with a Raspberry Pi for the miniHPC</title>
@@ -129,7 +129,7 @@ Note
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>minihpc</category>
   <guid>https://carpentriesoffline.org/documentation/minihpc_compute_node.html</guid>
-  <pubDate>Sun, 09 Mar 2025 12:35:12 GMT</pubDate>
+  <pubDate>Sun, 09 Mar 2025 23:33:15 GMT</pubDate>
 </item>
 <item>
   <title>Creating a login node with a Raspberry Pi for the miniHPC</title>
@@ -173,7 +173,7 @@ font-style: inherit;">\</span></span>
 <section id="enable-ip-forwarding" class="level2">
 <h2 class="anchored" data-anchor-id="enable-ip-forwarding">Enable IP forwarding</h2>
 <ul>
-<li>As <code>sudo</code>, edit the file <code>\etc\sysctl.conf</code>. Find the line that reads <code>#net.ipv4.ip_forward=1</code> and remove the <code>#</code> at the beginning of the line. Save the file. The change will become active after a reboot.</li>
+<li>As <code>sudo</code>, edit the file <code>/etc/sysctl.conf</code>. Find the line that reads <code>#net.ipv4.ip_forward=1</code> and remove the <code>#</code> at the beginning of the line. Save the file. The change will become active after a reboot.</li>
 </ul>
 </section>
 <section id="configure-ip-tables" class="level2">
@@ -254,50 +254,32 @@ font-style: inherit;">|</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">sudo</span> tee /etc/hostname</span></code></pre></div>
 </section>
-<section id="configure-dhcp" class="level2">
-<h2 class="anchored" data-anchor-id="configure-dhcp">Configure DHCP</h2>
-<ul>
-<li>Configure dhcp by entering the following in the file <code>/etc/dhcpd.conf</code></li>
-</ul>
-<div class="sourceCode" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><span class="ex" style="color: null;
-background-color: null;
-font-style: inherit;">interface</span> eth0</span>
-<span id="cb6-2"><span class="ex" style="color: null;
-background-color: null;
-font-style: inherit;">static</span> ip_address=192.168.5.101/24</span>
-<span id="cb6-3"><span class="ex" style="color: null;
-background-color: null;
-font-style: inherit;">static</span> routers=192.168.5.101</span>
-<span id="cb6-4"><span class="ex" style="color: null;
-background-color: null;
-font-style: inherit;">static</span> domain_name_servers=192.168.5.101</span></code></pre></div>
-</section>
 <section id="configure-dns-masquerading" class="level2">
 <h2 class="anchored" data-anchor-id="configure-dns-masquerading">Configure DNS masquerading</h2>
 <ul>
 <li>Configure dnsmasq by entering the following in the file <code>/etc/dnsmasq.conf</code>. Replace the MAC address on the sixth line with the MAC address of your compute node.</li>
 </ul>
-<div class="sourceCode" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><span class="va" style="color: #111111;
+<div class="sourceCode" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><span class="va" style="color: #111111;
 background-color: null;
 font-style: inherit;">interface</span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span>eth0</span>
-<span id="cb7-2"><span class="ex" style="color: null;
+<span id="cb6-2"><span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">bind-dynamic</span></span>
-<span id="cb7-3"><span class="ex" style="color: null;
+<span id="cb6-3"><span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">domain-needed</span></span>
-<span id="cb7-4"><span class="ex" style="color: null;
+<span id="cb6-4"><span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">bogus-priv</span></span>
-<span id="cb7-5"><span class="ex" style="color: null;
+<span id="cb6-5"><span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">dhcp-range=192.168.5.102,192.168.5.200,255.255.255.0,12h</span></span>
-<span id="cb7-6"><span class="ex" style="color: null;
+<span id="cb6-6"><span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">dhcp-host=ab:cd:12:34:ab:cd,192.168.5.102</span></span>
-<span id="cb7-7"><span class="ex" style="color: null;
+<span id="cb6-7"><span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">dhcp-option=3,192.168.0.1</span> <span class="co" style="color: #5E5E5E;
 background-color: null;
@@ -305,15 +287,15 @@ font-style: inherit;"># default route</span></span></code></pre></div>
 </section>
 <section id="create-a-shared-directory." class="level2">
 <h2 class="anchored" data-anchor-id="create-a-shared-directory.">Create a shared directory.</h2>
-<div class="sourceCode" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">sudo</span> mkdir /sharedfs</span>
-<span id="cb8-2"><span class="fu" style="color: #4758AB;
+<span id="cb7-2"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">sudo</span> chown nobody:nogroup <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">-R</span> /sharedfs</span>
-<span id="cb8-3"><span class="fu" style="color: #4758AB;
+<span id="cb7-3"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">sudo</span> chmod 777 <span class="at" style="color: #657422;
 background-color: null;
@@ -324,7 +306,7 @@ font-style: inherit;">-R</span> /sharedfs</span></code></pre></div>
 <ul>
 <li>Configure shared drives by adding the following at the end of the file <code>/etc/exports</code></li>
 </ul>
-<div class="sourceCode" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><span class="ex" style="color: null;
+<div class="sourceCode" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">/sharedfs</span>    192.168.5.0/24<span class="er" style="color: #AD0000;
 background-color: null;
@@ -340,30 +322,30 @@ font-style: inherit;">)</span></span></code></pre></div>
 <ul>
 <li>The <code>/etc/hosts</code> file should contain the following. Make sure to change all occurences of <code>pixie</code> in the script to the name of your cluster:</li>
 </ul>
-<div class="sourceCode" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><span class="ex" style="color: null;
+<div class="sourceCode" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">127.0.0.1</span>   localhost</span>
-<span id="cb10-2"><span class="ex" style="color: null;
+<span id="cb9-2"><span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">::1</span>     localhost ip6-localhost ip6-loopback</span>
-<span id="cb10-3"><span class="ex" style="color: null;
+<span id="cb9-3"><span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">ff02::1</span>     ip6-allnodes</span>
-<span id="cb10-4"><span class="ex" style="color: null;
+<span id="cb9-4"><span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">ff02::2</span>     ip6-allrouters</span>
-<span id="cb10-5"></span>
-<span id="cb10-6"><span class="co" style="color: #5E5E5E;
+<span id="cb9-5"></span>
+<span id="cb9-6"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># This login node's hostname</span></span>
-<span id="cb10-7"><span class="ex" style="color: null;
+<span id="cb9-7"><span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">127.0.1.1</span>   pixie001</span>
-<span id="cb10-8"></span>
-<span id="cb10-9"><span class="co" style="color: #5E5E5E;
+<span id="cb9-8"></span>
+<span id="cb9-9"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># IP and hostname of compute nodes</span></span>
-<span id="cb10-10"><span class="ex" style="color: null;
+<span id="cb9-10"><span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">192.168.5.102</span>   pixie002</span></code></pre></div>
 </section>
@@ -411,7 +393,7 @@ NodeName=pixie002 NodeAddr=192.168.5.102 CPUs=4 State=IDLE</code></pre>
 <ul>
 <li>Restart slurm</li>
 </ul>
-<div class="sourceCode" id="cb12" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">sudo</span> systemctl restart slurmctld</span></code></pre></div>
 </section>
@@ -420,10 +402,10 @@ font-style: inherit;">sudo</span> systemctl restart slurmctld</span></code></pre
 <ul>
 <li>Create munge key</li>
 </ul>
-<div class="sourceCode" id="cb13" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode" id="cb12" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">sudo</span> mkdir /etc/munge</span>
-<span id="cb13-2"><span class="fu" style="color: #4758AB;
+<span id="cb12-2"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">dd</span> if=/dev/urandom bs=1 count=1024 <span class="kw" style="color: #003B4F;
 background-color: null;
@@ -436,37 +418,31 @@ font-style: inherit;">-a</span> /etc/munge/munge.key</span></code></pre></div>
 <ul>
 <li>Set ownership</li>
 </ul>
-<div class="sourceCode" id="cb14" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode" id="cb13" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">sudo</span> chown munge: /etc/munge/munge.key</span>
-<span id="cb14-2"><span class="fu" style="color: #4758AB;
+<span id="cb13-2"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">sudo</span> chmod 400 /etc/munge/munge.key</span></code></pre></div>
 </section>
 <section id="install-essi" class="level2">
 <h2 class="anchored" data-anchor-id="install-essi">Install ESSI</h2>
-<div class="sourceCode" id="cb15" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode" id="cb14" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">mkdir</span> essi</span>
-<span id="cb15-2"><span class="bu" style="color: null;
+<span id="cb14-2"><span class="bu" style="color: null;
 background-color: null;
 font-style: inherit;">cd</span> essi</span>
-<span id="cb15-3"><span class="fu" style="color: #4758AB;
+<span id="cb14-3"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">wget</span> https://raw.githubusercontent.com/EESSI/eessi-demo/main/scripts/install_cvmfs_eessi.sh</span>
-<span id="cb15-4"><span class="fu" style="color: #4758AB;
+<span id="cb14-4"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">sudo</span> bash ./install_cvmfs_eessi.sh</span>
-<span id="cb15-5"></span>
-<span id="cb15-6"><span class="bu" style="color: null;
+<span id="cb14-5"></span>
+<span id="cb14-6"><span class="bu" style="color: null;
 background-color: null;
-font-style: inherit;">source</span> /cvmfs/software.eessi.io/versions/2023.06/init/lmod/bash</span>
-<span id="cb15-7"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># We don't do this one anymore:</span></span>
-<span id="cb15-8"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># echo "source /cvmfs/software.eessi.io/versions/2023.06/init/bash" | sudo tee -a /etc/profile</span></span></code></pre></div>
+font-style: inherit;">source</span> /cvmfs/software.eessi.io/versions/2023.06/init/lmod/bash</span></code></pre></div>
 
 
 </section>
@@ -474,7 +450,7 @@ font-style: inherit;"># echo "source /cvmfs/software.eessi.io/versions/2023.06/i
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>minihpc</category>
   <guid>https://carpentriesoffline.org/documentation/minihpc_login_node.html</guid>
-  <pubDate>Sun, 09 Mar 2025 12:35:12 GMT</pubDate>
+  <pubDate>Sun, 09 Mar 2025 23:33:15 GMT</pubDate>
 </item>
 <item>
   <title>Offline Documentation</title>
@@ -502,7 +478,7 @@ font-style: inherit;"># echo "source /cvmfs/software.eessi.io/versions/2023.06/i
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>offlinedatasci</category>
   <guid>https://carpentriesoffline.org/documentation/offlinedatasci.html</guid>
-  <pubDate>Sun, 09 Mar 2025 12:35:12 GMT</pubDate>
+  <pubDate>Sun, 09 Mar 2025 23:33:15 GMT</pubDate>
 </item>
 <item>
   <title>The Pixie Network</title>
@@ -647,7 +623,7 @@ font-style: inherit;"># echo "source /cvmfs/software.eessi.io/versions/2023.06/i
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>minihpc</category>
   <guid>https://carpentriesoffline.org/documentation/pixieNetwork.html</guid>
-  <pubDate>Sun, 09 Mar 2025 12:35:12 GMT</pubDate>
+  <pubDate>Sun, 09 Mar 2025 23:33:15 GMT</pubDate>
 </item>
 <item>
   <title>Setting up PXE on the miniHPC</title>
@@ -724,7 +700,7 @@ dhcp-host=a6:a6:a6:a6:a6:a6,192.168.5.106</code></pre>
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>minihpc</category>
   <guid>https://carpentriesoffline.org/documentation/pxe.html</guid>
-  <pubDate>Sun, 09 Mar 2025 12:35:12 GMT</pubDate>
+  <pubDate>Sun, 09 Mar 2025 23:33:15 GMT</pubDate>
 </item>
 <item>
   <title>Creating an SD card image: step-by-step</title>
@@ -878,7 +854,7 @@ font-style: inherit;">}</span></span></code></pre></div>
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>sdcard</category>
   <guid>https://carpentriesoffline.org/documentation/rpiimage_step_by_step.html</guid>
-  <pubDate>Sun, 09 Mar 2025 12:35:12 GMT</pubDate>
+  <pubDate>Sun, 09 Mar 2025 23:33:15 GMT</pubDate>
 </item>
 <item>
   <title>A summary of the services required on the login node</title>
@@ -912,7 +888,7 @@ font-style: inherit;">}</span></span></code></pre></div>
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>minihpc</category>
   <guid>https://carpentriesoffline.org/documentation/services.html</guid>
-  <pubDate>Sun, 09 Mar 2025 12:35:12 GMT</pubDate>
+  <pubDate>Sun, 09 Mar 2025 23:33:15 GMT</pubDate>
 </item>
 </channel>
 </rss>
