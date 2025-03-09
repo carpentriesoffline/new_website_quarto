@@ -221,7 +221,7 @@
     "href": "documentation/minihpc_login_node.html#install-essi",
     "title": "Creating a login node with a Raspberry Pi for the miniHPC",
     "section": "Install ESSI",
-    "text": "Install ESSI\nmkdir essi\ncd essi\nwget https://raw.githubusercontent.com/EESSI/eessi-demo/main/scripts/install_cvmfs_eessi.sh\nsudo bash ./install_cvmfs_eessi.sh\n\nsource /cvmfs/software.eessi.io/versions/2023.06/init/lmod/bash\n# We don't do this one anymore:\n# echo \"source /cvmfs/software.eessi.io/versions/2023.06/init/bash\" | sudo tee -a /etc/profile"
+    "text": "Install ESSI\nmkdir essi\ncd essi\nwget https://raw.githubusercontent.com/EESSI/eessi-demo/main/scripts/install_cvmfs_eessi.sh\nsudo bash ./install_cvmfs_eessi.sh\n\nsource /cvmfs/software.eessi.io/versions/2023.06/init/lmod/bash"
   },
   {
     "objectID": "documentation/offlinedatasci.html",
