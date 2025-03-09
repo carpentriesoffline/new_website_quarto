@@ -179,7 +179,7 @@
     "href": "documentation/minihpc_login_node.html#configure-dns-masquerading",
     "title": "Creating a login node with a Raspberry Pi for the miniHPC",
     "section": "Configure DNS masquerading",
-    "text": "Configure DNS masquerading\n\nConfigure dnsmasq by entering the following in the file /etc/dnsmasq.conf. Replace the MAC address on the sixth line with the MAC address of your compute node.\n\ninterface=eth0\nbind-dynamic\ndomain-needed\nbogus-priv\ndhcp-range=192.168.5.102,192.168.5.200,255.255.255.0,12h\ndhcp-host=ab:cd:12:34:ab:cd,192.168.5.102\ndhcp-option=3,192.168.0.1 # default route"
+    "text": "Configure DNS masquerading\n\nConfigure dnsmasq by entering the following in the file /etc/dnsmasq.conf. Replace the MAC address on the sixth line with the MAC address of your compute node.\n\ninterface=eth0\nbind-dynamic\ndomain-needed\nbogus-priv\ndhcp-range=192.168.5.102,192.168.5.200,255.255.255.0,12h\ndhcp-host=ab:cd:12:34:ab:cd,192.168.5.102\ndhcp-option=3,192.168.0.1 # default route\ndhcp-option=6,192.168.0.1 # default route"
   },
   {
     "objectID": "documentation/minihpc_login_node.html#create-a-shared-directory.",
