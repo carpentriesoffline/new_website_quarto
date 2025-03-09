@@ -11,7 +11,7 @@
 <description>CarpentriesOffline Documentation
 </description>
 <generator>quarto-1.6.39</generator>
-<lastBuildDate>Thu, 20 Feb 2025 08:20:13 GMT</lastBuildDate>
+<lastBuildDate>Sun, 09 Mar 2025 12:35:12 GMT</lastBuildDate>
 <item>
   <title>CarpentriesOffline SD card images</title>
   <link>https://carpentriesoffline.org/documentation/creating_an_sdcard.html</link>
@@ -28,7 +28,7 @@
   <category>minihpc</category>
   <category>sdcard</category>
   <guid>https://carpentriesoffline.org/documentation/creating_an_sdcard.html</guid>
-  <pubDate>Thu, 20 Feb 2025 08:20:13 GMT</pubDate>
+  <pubDate>Sun, 09 Mar 2025 12:35:12 GMT</pubDate>
 </item>
 <item>
   <title>Setting up EESSI with PXE on the miniHPC</title>
@@ -70,7 +70,7 @@
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>minihpc</category>
   <guid>https://carpentriesoffline.org/documentation/eessi_with_pxe.html</guid>
-  <pubDate>Thu, 20 Feb 2025 08:20:13 GMT</pubDate>
+  <pubDate>Sun, 09 Mar 2025 12:35:12 GMT</pubDate>
 </item>
 <item>
   <title>Bootable Flash Drive - step-by-step</title>
@@ -112,7 +112,7 @@ Note
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>flashdrive</category>
   <guid>https://carpentriesoffline.org/documentation/flashdrive_step_by_step.html</guid>
-  <pubDate>Thu, 20 Feb 2025 08:20:13 GMT</pubDate>
+  <pubDate>Sun, 09 Mar 2025 12:35:12 GMT</pubDate>
 </item>
 <item>
   <title>Creating a compute node with a Raspberry Pi for the miniHPC</title>
@@ -129,7 +129,7 @@ Note
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>minihpc</category>
   <guid>https://carpentriesoffline.org/documentation/minihpc_compute_node.html</guid>
-  <pubDate>Thu, 20 Feb 2025 08:20:13 GMT</pubDate>
+  <pubDate>Sun, 09 Mar 2025 12:35:12 GMT</pubDate>
 </item>
 <item>
   <title>Creating a login node with a Raspberry Pi for the miniHPC</title>
@@ -139,14 +139,342 @@ Note
 
 
 
-<p>The quick brown fox</p>
+<section id="start-with-an-update" class="level2">
+<h2 class="anchored" data-anchor-id="start-with-an-update">Start with an update</h2>
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sudo</span> apt update <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-y</span></span>
+<span id="cb1-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sudo</span> apt upgrade <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-y</span></span></code></pre></div>
+</section>
+<section id="install-required-packages." class="level2">
+<h2 class="anchored" data-anchor-id="install-required-packages.">Install required packages.</h2>
+<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sudo</span> apt install <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-y</span> nfs-kernel-server lmod ansible slurm munge nmap <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">\</span></span>
+<span id="cb2-2">nfs-common net-tools build-essential htop net-tools screen vim python3-pip <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">\</span></span>
+<span id="cb2-3">dnsmasq slurm-wlm iptables iptables-persistent libmunge-dev libmunge2 <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">\</span></span>
+<span id="cb2-4">libpmix2 libpmix-bin libpmix-dev git</span></code></pre></div>
+<p>A dialog block will appear on the screen. Answer yes to both questions.</p>
+</section>
+<section id="enable-ip-forwarding" class="level2">
+<h2 class="anchored" data-anchor-id="enable-ip-forwarding">Enable IP forwarding</h2>
+<ul>
+<li>As <code>sudo</code>, edit the file <code>\etc\sysctl.conf</code>. Find the line that reads <code>#net.ipv4.ip_forward=1</code> and remove the <code>#</code> at the beginning of the line. Save the file. The change will become active after a reboot.</li>
+</ul>
+</section>
+<section id="configure-ip-tables" class="level2">
+<h2 class="anchored" data-anchor-id="configure-ip-tables">Configure IP-tables</h2>
+<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sudo</span> iptables <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-t</span> nat <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-A</span> POSTROUTING <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-o</span> eth0 <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-j</span> MASQUERADE</span>
+<span id="cb3-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sudo</span> iptables <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-A</span> FORWARD <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-i</span> wlan0 <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-o</span> eth0 <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-j</span> ACCEPT</span>
+<span id="cb3-3"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sudo</span> iptables <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-A</span> FORWARD <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-i</span> eth0 <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-o</span> wlan0 <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-m</span> state <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">--state</span> RELATED,ESTABLISHED <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-j</span> ACCEPT</span>
+<span id="cb3-4"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sudo</span> netfilter-persistent save</span></code></pre></div>
+</section>
+<section id="configure-the-network-interfaces" class="level2">
+<h2 class="anchored" data-anchor-id="configure-the-network-interfaces">Configure the network interfaces</h2>
+<p>Place the following into <code>/etc/network/interfaces</code></p>
+<div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">auto</span> eth0</span>
+<span id="cb4-2"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">allow-hotplug</span> eth0</span>
+<span id="cb4-3"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">iface</span> eth0 inet static</span>
+<span id="cb4-4">  <span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">address</span> 192.168.5.101</span>
+<span id="cb4-5">  <span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">netmask</span> 255.255.255.0</span>
+<span id="cb4-6"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">source</span> /etc/network/interfaces.d/<span class="pp" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">*</span></span></code></pre></div>
+</section>
+<section id="modify-the-hostname" class="level2">
+<h2 class="anchored" data-anchor-id="modify-the-hostname">Modify the hostname</h2>
+<div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">echo</span> pixie001 <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">|</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sudo</span> tee /etc/hostname</span></code></pre></div>
+</section>
+<section id="configure-dhcp" class="level2">
+<h2 class="anchored" data-anchor-id="configure-dhcp">Configure DHCP</h2>
+<ul>
+<li>Configure dhcp by entering the following in the file <code>/etc/dhcpd.conf</code></li>
+</ul>
+<div class="sourceCode" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">interface</span> eth0</span>
+<span id="cb6-2"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">static</span> ip_address=192.168.5.101/24</span>
+<span id="cb6-3"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">static</span> routers=192.168.5.101</span>
+<span id="cb6-4"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">static</span> domain_name_servers=192.168.5.101</span></code></pre></div>
+</section>
+<section id="configure-dns-masquerading" class="level2">
+<h2 class="anchored" data-anchor-id="configure-dns-masquerading">Configure DNS masquerading</h2>
+<ul>
+<li>Configure dnsmasq by entering the following in the file <code>/etc/dnsmasq.conf</code>. Replace the MAC address on the sixth line with the MAC address of your compute node.</li>
+</ul>
+<div class="sourceCode" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">interface</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>eth0</span>
+<span id="cb7-2"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">bind-dynamic</span></span>
+<span id="cb7-3"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">domain-needed</span></span>
+<span id="cb7-4"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">bogus-priv</span></span>
+<span id="cb7-5"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">dhcp-range=192.168.5.102,192.168.5.200,255.255.255.0,12h</span></span>
+<span id="cb7-6"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">dhcp-host=ab:cd:12:34:ab:cd,192.168.5.102</span></span>
+<span id="cb7-7"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">dhcp-option=3,192.168.0.1</span> <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># default route</span></span></code></pre></div>
+</section>
+<section id="create-a-shared-directory." class="level2">
+<h2 class="anchored" data-anchor-id="create-a-shared-directory.">Create a shared directory.</h2>
+<div class="sourceCode" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sudo</span> mkdir /sharedfs</span>
+<span id="cb8-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sudo</span> chown nobody:nogroup <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-R</span> /sharedfs</span>
+<span id="cb8-3"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sudo</span> chmod 777 <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-R</span> /sharedfs</span></code></pre></div>
+</section>
+<section id="configure-nfs" class="level2">
+<h2 class="anchored" data-anchor-id="configure-nfs">Configure NFS</h2>
+<ul>
+<li>Configure shared drives by adding the following at the end of the file <code>/etc/exports</code></li>
+</ul>
+<div class="sourceCode" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">/sharedfs</span>    192.168.5.0/24<span class="er" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">(</span><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">rw,sync,no_root_squash,no_subtree_check</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">)</span></span></code></pre></div>
+</section>
+<section id="configure-hosts" class="level2">
+<h2 class="anchored" data-anchor-id="configure-hosts">Configure hosts</h2>
+<ul>
+<li>The <code>/etc/hosts</code> file should contain the following. Make sure to change all occurences of <code>pixie</code> in the script to the name of your cluster:</li>
+</ul>
+<div class="sourceCode" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">127.0.0.1</span>   localhost</span>
+<span id="cb10-2"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">::1</span>     localhost ip6-localhost ip6-loopback</span>
+<span id="cb10-3"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">ff02::1</span>     ip6-allnodes</span>
+<span id="cb10-4"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">ff02::2</span>     ip6-allrouters</span>
+<span id="cb10-5"></span>
+<span id="cb10-6"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># This login node's hostname</span></span>
+<span id="cb10-7"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">127.0.1.1</span>   pixie001</span>
+<span id="cb10-8"></span>
+<span id="cb10-9"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># IP and hostname of compute nodes</span></span>
+<span id="cb10-10"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">192.168.5.102</span>   pixie002</span></code></pre></div>
+</section>
+<section id="configure-slurm" class="level2">
+<h2 class="anchored" data-anchor-id="configure-slurm">Configure Slurm</h2>
+<p>Add the following to /etc/slurm/slurm.conf. Change all occurences of <code>pixie</code> in this script to the name of your cluster.</p>
+<pre><code>SlurmctldHost=pixie001(192.168.5.101)
+MpiDefault=none
+ProctrackType=proctrack/cgroup
+#ProctrackType=proctrack/linuxproc
+ReturnToService=1
+SlurmctldPidFile=/run/slurmctld.pid
+SlurmctldPort=6817
+SlurmdPidFile=/run/slurmd.pid
+SlurmdPort=6818
+SlurmdSpoolDir=/var/lib/slurm/slurmd
+SlurmUser=slurm
+StateSaveLocation=/var/lib/slurm/slurmctld
+SwitchType=switch/none
+TaskPlugin=task/affinity
+InactiveLimit=0
+KillWait=30
+MinJobAge=300
+SlurmctldTimeout=120
+SlurmdTimeout=300
+Waittime=0
+SchedulerType=sched/backfill
+SelectType=select/cons_res
+SelectTypeParameters=CR_Core
+AccountingStorageType=accounting_storage/none
+# AccountingStoreJobComment=YES
+AccountingStoreFlags=job_comment
+ClusterName=pixie
+JobCompType=jobcomp/none
+JobAcctGatherFrequency=30
+JobAcctGatherType=jobacct_gather/none
+SlurmctldDebug=info
+SlurmctldLogFile=/var/log/slurm/slurmctld.log
+SlurmdDebug=info
+SlurmdLogFile=/var/log/slurm/slurmd.log
+PartitionName=pixiecluster Nodes=pixie[002-002] Default=YES MaxTime=INFINITE State=UP
+RebootProgram=/etc/slurm/slurmreboot.sh
+NodeName=pixie001 NodeAddr=192.168.5.101 CPUs=4 State=IDLE
+NodeName=pixie002 NodeAddr=192.168.5.102 CPUs=4 State=IDLE</code></pre>
+<ul>
+<li>Restart slurm</li>
+</ul>
+<div class="sourceCode" id="cb12" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sudo</span> systemctl restart slurmctld</span></code></pre></div>
+</section>
+<section id="configure-munge" class="level2">
+<h2 class="anchored" data-anchor-id="configure-munge">Configure munge</h2>
+<ul>
+<li>Create munge key</li>
+</ul>
+<div class="sourceCode" id="cb13" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sudo</span> mkdir /etc/munge</span>
+<span id="cb13-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">dd</span> if=/dev/urandom bs=1 count=1024 <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">|</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sudo</span> tee <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-a</span> /etc/munge/munge.key</span></code></pre></div>
+<ul>
+<li>Set ownership</li>
+</ul>
+<div class="sourceCode" id="cb14" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sudo</span> chown munge: /etc/munge/munge.key</span>
+<span id="cb14-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sudo</span> chmod 400 /etc/munge/munge.key</span></code></pre></div>
+</section>
+<section id="install-essi" class="level2">
+<h2 class="anchored" data-anchor-id="install-essi">Install ESSI</h2>
+<div class="sourceCode" id="cb15" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mkdir</span> essi</span>
+<span id="cb15-2"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">cd</span> essi</span>
+<span id="cb15-3"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">wget</span> https://raw.githubusercontent.com/EESSI/eessi-demo/main/scripts/install_cvmfs_eessi.sh</span>
+<span id="cb15-4"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sudo</span> bash ./install_cvmfs_eessi.sh</span>
+<span id="cb15-5"></span>
+<span id="cb15-6"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">source</span> /cvmfs/software.eessi.io/versions/2023.06/init/lmod/bash</span>
+<span id="cb15-7"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># We don't do this one anymore:</span></span>
+<span id="cb15-8"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># echo "source /cvmfs/software.eessi.io/versions/2023.06/init/bash" | sudo tee -a /etc/profile</span></span></code></pre></div>
 
 
+</section>
 
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>minihpc</category>
   <guid>https://carpentriesoffline.org/documentation/minihpc_login_node.html</guid>
-  <pubDate>Thu, 20 Feb 2025 08:20:13 GMT</pubDate>
+  <pubDate>Sun, 09 Mar 2025 12:35:12 GMT</pubDate>
 </item>
 <item>
   <title>Offline Documentation</title>
@@ -174,7 +502,7 @@ Note
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>offlinedatasci</category>
   <guid>https://carpentriesoffline.org/documentation/offlinedatasci.html</guid>
-  <pubDate>Thu, 20 Feb 2025 08:20:13 GMT</pubDate>
+  <pubDate>Sun, 09 Mar 2025 12:35:12 GMT</pubDate>
 </item>
 <item>
   <title>The Pixie Network</title>
@@ -319,7 +647,7 @@ Note
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>minihpc</category>
   <guid>https://carpentriesoffline.org/documentation/pixieNetwork.html</guid>
-  <pubDate>Thu, 20 Feb 2025 08:20:13 GMT</pubDate>
+  <pubDate>Sun, 09 Mar 2025 12:35:12 GMT</pubDate>
 </item>
 <item>
   <title>Setting up PXE on the miniHPC</title>
@@ -396,7 +724,7 @@ dhcp-host=a6:a6:a6:a6:a6:a6,192.168.5.106</code></pre>
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>minihpc</category>
   <guid>https://carpentriesoffline.org/documentation/pxe.html</guid>
-  <pubDate>Thu, 20 Feb 2025 08:20:13 GMT</pubDate>
+  <pubDate>Sun, 09 Mar 2025 12:35:12 GMT</pubDate>
 </item>
 <item>
   <title>Creating an SD card image: step-by-step</title>
@@ -550,7 +878,7 @@ font-style: inherit;">}</span></span></code></pre></div>
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>sdcard</category>
   <guid>https://carpentriesoffline.org/documentation/rpiimage_step_by_step.html</guid>
-  <pubDate>Thu, 20 Feb 2025 08:20:13 GMT</pubDate>
+  <pubDate>Sun, 09 Mar 2025 12:35:12 GMT</pubDate>
 </item>
 <item>
   <title>A summary of the services required on the login node</title>
@@ -584,7 +912,7 @@ font-style: inherit;">}</span></span></code></pre></div>
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>minihpc</category>
   <guid>https://carpentriesoffline.org/documentation/services.html</guid>
-  <pubDate>Thu, 20 Feb 2025 08:20:13 GMT</pubDate>
+  <pubDate>Sun, 09 Mar 2025 12:35:12 GMT</pubDate>
 </item>
 </channel>
 </rss>
