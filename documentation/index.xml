@@ -10,85 +10,8 @@
 <atom:link href="https://carpentriesoffline.org/documentation/index.xml" rel="self" type="application/rss+xml"/>
 <description>CarpentriesOffline Documentation
 </description>
-<generator>quarto-1.6.40</generator>
-<lastBuildDate>Thu, 20 Feb 2025 08:22:20 GMT</lastBuildDate>
-<item>
-  <title>Creating a compute node with a Raspberry Pi for the miniHPC</title>
-  <link>https://carpentriesoffline.org/documentation/minihpc_compute_node.html</link>
-  <description><![CDATA[ 
-
-
-
-
-<p>The quick brown fox</p>
-
-
-
-<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
-  <category>minihpc</category>
-  <guid>https://carpentriesoffline.org/documentation/minihpc_compute_node.html</guid>
-  <pubDate>Thu, 20 Feb 2025 08:22:20 GMT</pubDate>
-</item>
-<item>
-  <title>Setting up EESSI with PXE on the miniHPC</title>
-  <link>https://carpentriesoffline.org/documentation/eessi_with_pxe.html</link>
-  <description><![CDATA[ 
-
-
-
-
-<section id="using-eessi-on-a-rasbperry-pi-without-local-storage" class="level3">
-<h3 class="anchored" data-anchor-id="using-eessi-on-a-rasbperry-pi-without-local-storage">Using EESSI on a Rasbperry Pi without local storage</h3>
-<section id="firstime-setup" class="level4">
-<h4 class="anchored" data-anchor-id="firstime-setup">Firstime setup</h4>
-<p>(first time) edit /etc/cvmfs/default.local to set CVMFS_CACHE_BASE directory to /var/lib/cvmfs set CVMFS_QUOTA_LIMIT to 10000</p>
-<p>created loopback device in /sharedfs/eessiloop00N (N=node number)</p>
-<p><code>mount /var/lib/cvmfs -o loop</code></p>
-<p>or <code>losetup -f /sharedfs/eessiloop00N mount /dev/loop0 /var/lib/cvmfs</code></p>
-<p>set permissions <code>sudo chown -R cvmfs:cvmfs /var/lib/cvmfs</code></p>
-<p>reload the config <code>sudo cvmfs_config reload</code></p>
-<p>ls /cvmfs should now show something</p>
-</section>
-<section id="loading-eessi" class="level4">
-<h4 class="anchored" data-anchor-id="loading-eessi">Loading EESSI</h4>
-<p><code>source /cvmfs/software.eessi.io/versions/2023.06/init/lmod/bash</code></p>
-<p>module av should now show stuff</p>
-</section>
-<section id="running-amdhal-example" class="level4">
-<h4 class="anchored" data-anchor-id="running-amdhal-example">Running Amdhal example</h4>
-<ul>
-<li>use amdhal example from the HPC Carpentry</li>
-<li>change <code>module load Python</code> to <code>module load amdhal</code></li>
-<li>delete the <code>SBATCH -p</code> line since we only have one partition</li>
-</ul>
-
-
-</section>
-</section>
-
-<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
-  <category>minihpc</category>
-  <guid>https://carpentriesoffline.org/documentation/eessi_with_pxe.html</guid>
-  <pubDate>Thu, 20 Feb 2025 08:22:20 GMT</pubDate>
-</item>
-<item>
-  <title>CarpentriesOffline SD card images</title>
-  <link>https://carpentriesoffline.org/documentation/creating_an_sdcard.html</link>
-  <description><![CDATA[ 
-
-
-
-
-<p>The quick brown fox</p>
-
-
-
-<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
-  <category>minihpc</category>
-  <category>sdcard</category>
-  <guid>https://carpentriesoffline.org/documentation/creating_an_sdcard.html</guid>
-  <pubDate>Thu, 20 Feb 2025 08:22:20 GMT</pubDate>
-</item>
+<generator>quarto-1.6.42</generator>
+<lastBuildDate>Sun, 09 Mar 2025 23:29:41 GMT</lastBuildDate>
 <item>
   <title>Setting up PXE on the miniHPC</title>
   <link>https://carpentriesoffline.org/documentation/pxe.html</link>
@@ -164,169 +87,7 @@ dhcp-host=a6:a6:a6:a6:a6:a6,192.168.5.106</code></pre>
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>minihpc</category>
   <guid>https://carpentriesoffline.org/documentation/pxe.html</guid>
-  <pubDate>Thu, 20 Feb 2025 08:22:20 GMT</pubDate>
-</item>
-<item>
-  <title>Creating a login node with a Raspberry Pi for the miniHPC</title>
-  <link>https://carpentriesoffline.org/documentation/minihpc_login_node.html</link>
-  <description><![CDATA[ 
-
-
-
-
-<p>The quick brown fox</p>
-
-
-
-<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
-  <category>minihpc</category>
-  <guid>https://carpentriesoffline.org/documentation/minihpc_login_node.html</guid>
-  <pubDate>Thu, 20 Feb 2025 08:22:20 GMT</pubDate>
-</item>
-<item>
-  <title>The Pixie Network</title>
-  <link>https://carpentriesoffline.org/documentation/pixieNetwork.html</link>
-  <description><![CDATA[ 
-
-
-
-
-<p>For the purposes of this documentation we’ll assume network that looks as follow:</p>
-<div class="cell" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class="figure"><p></p>
-<div>
-<svg width="672" height="480" viewbox="0.00 0.00 866.50 310.40" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none">
-<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 306.4)">
-<title>G</title>
-<polygon fill="white" stroke="transparent" points="-4,4 -4,-306.4 862.5,-306.4 862.5,4 -4,4"></polygon>
-<!-- InternetAP -->
-<g id="node1" class="node">
-<title>InternetAP</title>
-<polygon fill="none" stroke="black" points="491.36,-302.2 367.14,-302.2 367.14,-261 491.36,-261 491.36,-302.2"></polygon>
-<text text-anchor="middle" x="429.25" y="-285.8" font-family="Times,serif" font-size="14.00">InternetAP</text>
-<text text-anchor="middle" x="429.25" y="-269" font-family="Times,serif" font-size="14.00">wlan0=192.168.0.1</text>
-</g>
-<!-- RaspAP -->
-<g id="node2" class="node">
-<title>RaspAP</title>
-<polygon fill="none" stroke="black" points="494.86,-224.9 363.64,-224.9 363.64,-149.5 494.86,-149.5 494.86,-224.9"></polygon>
-<text text-anchor="middle" x="429.25" y="-208.2" font-family="Times,serif" font-size="14.00">RaspAP</text>
-<text text-anchor="middle" x="429.25" y="-191.4" font-family="Times,serif" font-size="14.00">wlan0=192.168.0.10</text>
-<text text-anchor="middle" x="429.25" y="-174.6" font-family="Times,serif" font-size="14.00">wlan1=10.3.141.1</text>
-<text text-anchor="middle" x="429.25" y="-157.8" font-family="Times,serif" font-size="14.00">eth0=192.168.5.1</text>
-</g>
-<!-- InternetAP&#45;&gt;RaspAP -->
-<g id="edge1" class="edge">
-<title>InternetAP-&gt;RaspAP</title>
-<path fill="none" stroke="black" d="M429.25,-260.55C429.25,-252.99 429.25,-244.04 429.25,-235.06"></path>
-<polygon fill="black" stroke="black" points="432.75,-234.97 429.25,-224.97 425.75,-234.97 432.75,-234.97"></polygon>
-</g>
-<!-- Switch -->
-<g id="node3" class="node">
-<title>Switch</title>
-<path fill="none" stroke="black" d="M444.64,-113.6C444.64,-113.6 413.86,-113.6 413.86,-113.6 407.86,-113.6 401.86,-107.6 401.86,-101.6 401.86,-101.6 401.86,-89.6 401.86,-89.6 401.86,-83.6 407.86,-77.6 413.86,-77.6 413.86,-77.6 444.64,-77.6 444.64,-77.6 450.64,-77.6 456.64,-83.6 456.64,-89.6 456.64,-89.6 456.64,-101.6 456.64,-101.6 456.64,-107.6 450.64,-113.6 444.64,-113.6"></path>
-<text text-anchor="middle" x="429.25" y="-91.4" font-family="Times,serif" font-size="14.00">Switch</text>
-</g>
-<!-- RaspAP&#45;&gt;Switch -->
-<g id="edge2" class="edge">
-<title>RaspAP-&gt;Switch</title>
-<path fill="none" stroke="black" d="M429.25,-149.5C429.25,-140.9 429.25,-131.88 429.25,-123.78"></path>
-<polygon fill="black" stroke="black" points="432.75,-123.77 429.25,-113.77 425.75,-123.77 432.75,-123.77"></polygon>
-</g>
-<!-- pixielogin -->
-<g id="node4" class="node">
-<title>pixielogin</title>
-<polygon fill="none" stroke="black" points="128.75,-41.4 -0.25,-41.4 -0.25,-0.2 128.75,-0.2 128.75,-41.4"></polygon>
-<text text-anchor="middle" x="64.25" y="-25" font-family="Times,serif" font-size="14.00">pixielogin</text>
-<text text-anchor="middle" x="64.25" y="-8.2" font-family="Times,serif" font-size="14.00">eth0=192.168.5.100</text>
-</g>
-<!-- Switch&#45;&gt;pixielogin -->
-<g id="edge3" class="edge">
-<title>Switch-&gt;pixielogin</title>
-<path fill="none" stroke="black" d="M401.72,-90.41C351.37,-82.57 240.93,-64.57 138.54,-41.81"></path>
-<polygon fill="black" stroke="black" points="139.19,-38.37 128.66,-39.59 137.65,-45.2 139.19,-38.37"></polygon>
-</g>
-<!-- pixie001 -->
-<g id="node5" class="node">
-<title>pixie001</title>
-<polygon fill="none" stroke="black" points="274.75,-41.4 145.75,-41.4 145.75,-0.2 274.75,-0.2 274.75,-41.4"></polygon>
-<text text-anchor="middle" x="210.25" y="-25" font-family="Times,serif" font-size="14.00">pixie001</text>
-<text text-anchor="middle" x="210.25" y="-8.2" font-family="Times,serif" font-size="14.00">eth0=192.168.5.101</text>
-</g>
-<!-- Switch&#45;&gt;pixie001 -->
-<g id="edge4" class="edge">
-<title>Switch-&gt;pixie001</title>
-<path fill="none" stroke="black" d="M401.51,-85.38C370.87,-75.19 320.37,-58.41 278.96,-44.64"></path>
-<polygon fill="black" stroke="black" points="280.05,-41.32 269.46,-41.48 277.84,-47.96 280.05,-41.32"></polygon>
-</g>
-<!-- pixie002 -->
-<g id="node6" class="node">
-<title>pixie002</title>
-<polygon fill="none" stroke="black" points="420.75,-41.4 291.75,-41.4 291.75,-0.2 420.75,-0.2 420.75,-41.4"></polygon>
-<text text-anchor="middle" x="356.25" y="-25" font-family="Times,serif" font-size="14.00">pixie002</text>
-<text text-anchor="middle" x="356.25" y="-8.2" font-family="Times,serif" font-size="14.00">eth0=192.168.5.102</text>
-</g>
-<!-- Switch&#45;&gt;pixie002 -->
-<g id="edge5" class="edge">
-<title>Switch-&gt;pixie002</title>
-<path fill="none" stroke="black" d="M411.95,-77.35C403.35,-68.77 392.76,-58.21 383.13,-48.61"></path>
-<polygon fill="black" stroke="black" points="385.56,-46.08 376,-41.5 380.61,-51.04 385.56,-46.08"></polygon>
-</g>
-<!-- pixie003 -->
-<g id="node7" class="node">
-<title>pixie003</title>
-<polygon fill="none" stroke="black" points="566.75,-41.4 437.75,-41.4 437.75,-0.2 566.75,-0.2 566.75,-41.4"></polygon>
-<text text-anchor="middle" x="502.25" y="-25" font-family="Times,serif" font-size="14.00">pixie003</text>
-<text text-anchor="middle" x="502.25" y="-8.2" font-family="Times,serif" font-size="14.00">eth0=192.168.5.103</text>
-</g>
-<!-- Switch&#45;&gt;pixie003 -->
-<g id="edge6" class="edge">
-<title>Switch-&gt;pixie003</title>
-<path fill="none" stroke="black" d="M446.55,-77.35C455.15,-68.77 465.74,-58.21 475.37,-48.61"></path>
-<polygon fill="black" stroke="black" points="477.89,-51.04 482.49,-41.5 472.94,-46.08 477.89,-51.04"></polygon>
-</g>
-<!-- pixie004 -->
-<g id="node8" class="node">
-<title>pixie004</title>
-<polygon fill="none" stroke="black" points="712.75,-41.4 583.75,-41.4 583.75,-0.2 712.75,-0.2 712.75,-41.4"></polygon>
-<text text-anchor="middle" x="648.25" y="-25" font-family="Times,serif" font-size="14.00">pixie004</text>
-<text text-anchor="middle" x="648.25" y="-8.2" font-family="Times,serif" font-size="14.00">eth0=192.168.5.104</text>
-</g>
-<!-- Switch&#45;&gt;pixie004 -->
-<g id="edge7" class="edge">
-<title>Switch-&gt;pixie004</title>
-<path fill="none" stroke="black" d="M456.99,-85.38C487.63,-75.19 538.13,-58.41 579.54,-44.64"></path>
-<polygon fill="black" stroke="black" points="580.66,-47.96 589.04,-41.48 578.45,-41.32 580.66,-47.96"></polygon>
-</g>
-<!-- pixie005 -->
-<g id="node9" class="node">
-<title>pixie005</title>
-<polygon fill="none" stroke="black" points="858.75,-41.4 729.75,-41.4 729.75,-0.2 858.75,-0.2 858.75,-41.4"></polygon>
-<text text-anchor="middle" x="794.25" y="-25" font-family="Times,serif" font-size="14.00">pixie005</text>
-<text text-anchor="middle" x="794.25" y="-8.2" font-family="Times,serif" font-size="14.00">eth0=192.168.5.105</text>
-</g>
-<!-- Switch&#45;&gt;pixie005 -->
-<g id="edge8" class="edge">
-<title>Switch-&gt;pixie005</title>
-<path fill="none" stroke="black" d="M456.78,-90.41C507.13,-82.57 617.57,-64.57 719.96,-41.81"></path>
-<polygon fill="black" stroke="black" points="720.85,-45.2 729.84,-39.59 719.31,-38.37 720.85,-45.2"></polygon>
-</g>
-</g>
-</svg>
-</div>
-<p></p></figure><p></p>
-</div>
-</div>
-</div>
-
-
-
-<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
-  <category>minihpc</category>
-  <guid>https://carpentriesoffline.org/documentation/pixieNetwork.html</guid>
-  <pubDate>Thu, 20 Feb 2025 08:22:20 GMT</pubDate>
+  <pubDate>Sun, 09 Mar 2025 23:29:41 GMT</pubDate>
 </item>
 <item>
   <title>Creating an SD card image: step-by-step</title>
@@ -480,7 +241,473 @@ font-style: inherit;">}</span></span></code></pre></div>
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>sdcard</category>
   <guid>https://carpentriesoffline.org/documentation/rpiimage_step_by_step.html</guid>
-  <pubDate>Thu, 20 Feb 2025 08:22:20 GMT</pubDate>
+  <pubDate>Sun, 09 Mar 2025 23:29:41 GMT</pubDate>
+</item>
+<item>
+  <title>CarpentriesOffline SD card images</title>
+  <link>https://carpentriesoffline.org/documentation/creating_an_sdcard.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>The quick brown fox</p>
+
+
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>minihpc</category>
+  <category>sdcard</category>
+  <guid>https://carpentriesoffline.org/documentation/creating_an_sdcard.html</guid>
+  <pubDate>Sun, 09 Mar 2025 23:29:41 GMT</pubDate>
+</item>
+<item>
+  <title>Offline Documentation</title>
+  <link>https://carpentriesoffline.org/documentation/offlinedatasci.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p><a href="https://devdocs.io/">DevDocs</a> centralizes documentation for a large number of programming languages and packages including many relevant to Data Science. The available documentation includes R, Python, Julia, JavaScript, pandas, Numpy, scikit-learn, SQLite, and much more.</p>
+<p>The site is designed to use local storage for offline use, and the great thing is you don’t need to change anything to work offline. Just set up the sync the documentation you want and then visit the website, even if you’re offline.</p>
+<section id="instructions" class="level2">
+<h2 class="anchored" data-anchor-id="instructions">Instructions</h2>
+<ol type="1">
+<li>Go to <a href="https://devdocs.io/">https://devdocs.io/</a></li>
+<li>In the menu bar on the left in the “Disabled” section (underneath CSS, HTML, HTTP, JavaScript, and Web APIs) find the documentation you want to access offline, hover over a version number, and click when it says “Enable”. You should see the documentation you just selected added to the list at the top of the side bar.</li>
+<li>Go to <a href="https://devdocs.io/offline">https://devdocs.io/offline</a> and click “Install all” in the top right corner (or just select the documentation you want to sync by clicking “Install” next to each set of documentation)</li>
+<li>Leave the “Install updates automatically” box checked if you want the site to update as newer versions of the documentation become available or uncheck it to update manually.</li>
+<li>Enjoy browsing the same docs (including the integrated search), in the same way, online or offline!</li>
+</ol>
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>offlinedatasci</category>
+  <guid>https://carpentriesoffline.org/documentation/offlinedatasci.html</guid>
+  <pubDate>Sun, 09 Mar 2025 23:29:41 GMT</pubDate>
+</item>
+<item>
+  <title>Setting up EESSI with PXE on the miniHPC</title>
+  <link>https://carpentriesoffline.org/documentation/eessi_with_pxe.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="using-eessi-on-a-rasbperry-pi-without-local-storage" class="level3">
+<h3 class="anchored" data-anchor-id="using-eessi-on-a-rasbperry-pi-without-local-storage">Using EESSI on a Rasbperry Pi without local storage</h3>
+<section id="firstime-setup" class="level4">
+<h4 class="anchored" data-anchor-id="firstime-setup">Firstime setup</h4>
+<p>(first time) edit /etc/cvmfs/default.local to set CVMFS_CACHE_BASE directory to /var/lib/cvmfs set CVMFS_QUOTA_LIMIT to 10000</p>
+<p>created loopback device in /sharedfs/eessiloop00N (N=node number)</p>
+<p><code>mount /var/lib/cvmfs -o loop</code></p>
+<p>or <code>losetup -f /sharedfs/eessiloop00N mount /dev/loop0 /var/lib/cvmfs</code></p>
+<p>set permissions <code>sudo chown -R cvmfs:cvmfs /var/lib/cvmfs</code></p>
+<p>reload the config <code>sudo cvmfs_config reload</code></p>
+<p>ls /cvmfs should now show something</p>
+</section>
+<section id="loading-eessi" class="level4">
+<h4 class="anchored" data-anchor-id="loading-eessi">Loading EESSI</h4>
+<p><code>source /cvmfs/software.eessi.io/versions/2023.06/init/lmod/bash</code></p>
+<p>module av should now show stuff</p>
+</section>
+<section id="running-amdhal-example" class="level4">
+<h4 class="anchored" data-anchor-id="running-amdhal-example">Running Amdhal example</h4>
+<ul>
+<li>use amdhal example from the HPC Carpentry</li>
+<li>change <code>module load Python</code> to <code>module load amdhal</code></li>
+<li>delete the <code>SBATCH -p</code> line since we only have one partition</li>
+</ul>
+
+
+</section>
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>minihpc</category>
+  <guid>https://carpentriesoffline.org/documentation/eessi_with_pxe.html</guid>
+  <pubDate>Sun, 09 Mar 2025 23:29:41 GMT</pubDate>
+</item>
+<item>
+  <title>Creating a login node with a Raspberry Pi for the miniHPC</title>
+  <link>https://carpentriesoffline.org/documentation/minihpc_login_node.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="start-with-an-update" class="level2">
+<h2 class="anchored" data-anchor-id="start-with-an-update">Start with an update</h2>
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sudo</span> apt update <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-y</span></span>
+<span id="cb1-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sudo</span> apt upgrade <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-y</span></span></code></pre></div>
+</section>
+<section id="install-required-packages." class="level2">
+<h2 class="anchored" data-anchor-id="install-required-packages.">Install required packages.</h2>
+<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sudo</span> apt install <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-y</span> nfs-kernel-server lmod ansible slurm munge nmap <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">\</span></span>
+<span id="cb2-2">nfs-common net-tools build-essential htop net-tools screen vim python3-pip <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">\</span></span>
+<span id="cb2-3">dnsmasq slurm-wlm iptables iptables-persistent libmunge-dev libmunge2 <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">\</span></span>
+<span id="cb2-4">libpmix2 libpmix-bin libpmix-dev git</span></code></pre></div>
+<p>A dialog block will appear on the screen. Answer yes to both questions.</p>
+</section>
+<section id="enable-ip-forwarding" class="level2">
+<h2 class="anchored" data-anchor-id="enable-ip-forwarding">Enable IP forwarding</h2>
+<ul>
+<li>As <code>sudo</code>, edit the file <code>/etc/sysctl.conf</code>. Find the line that reads <code>#net.ipv4.ip_forward=1</code> and remove the <code>#</code> at the beginning of the line. Save the file. The change will become active after a reboot.</li>
+</ul>
+</section>
+<section id="configure-ip-tables" class="level2">
+<h2 class="anchored" data-anchor-id="configure-ip-tables">Configure IP-tables</h2>
+<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sudo</span> iptables <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-t</span> nat <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-A</span> POSTROUTING <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-o</span> eth0 <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-j</span> MASQUERADE</span>
+<span id="cb3-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sudo</span> iptables <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-A</span> FORWARD <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-i</span> wlan0 <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-o</span> eth0 <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-j</span> ACCEPT</span>
+<span id="cb3-3"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sudo</span> iptables <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-A</span> FORWARD <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-i</span> eth0 <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-o</span> wlan0 <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-m</span> state <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">--state</span> RELATED,ESTABLISHED <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-j</span> ACCEPT</span>
+<span id="cb3-4"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sudo</span> netfilter-persistent save</span></code></pre></div>
+</section>
+<section id="configure-the-network-interfaces" class="level2">
+<h2 class="anchored" data-anchor-id="configure-the-network-interfaces">Configure the network interfaces</h2>
+<p>Place the following into <code>/etc/network/interfaces</code></p>
+<div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">auto</span> eth0</span>
+<span id="cb4-2"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">allow-hotplug</span> eth0</span>
+<span id="cb4-3"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">iface</span> eth0 inet static</span>
+<span id="cb4-4">  <span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">address</span> 192.168.5.101</span>
+<span id="cb4-5">  <span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">netmask</span> 255.255.255.0</span>
+<span id="cb4-6"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">source</span> /etc/network/interfaces.d/<span class="pp" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">*</span></span></code></pre></div>
+</section>
+<section id="modify-the-hostname" class="level2">
+<h2 class="anchored" data-anchor-id="modify-the-hostname">Modify the hostname</h2>
+<div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">echo</span> pixie001 <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">|</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sudo</span> tee /etc/hostname</span></code></pre></div>
+</section>
+<section id="configure-dns-masquerading" class="level2">
+<h2 class="anchored" data-anchor-id="configure-dns-masquerading">Configure DNS masquerading</h2>
+<ul>
+<li>Configure dnsmasq by entering the following in the file <code>/etc/dnsmasq.conf</code>. Replace the MAC address on the sixth line with the MAC address of your compute node.</li>
+</ul>
+<div class="sourceCode" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">interface</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>eth0</span>
+<span id="cb6-2"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">bind-dynamic</span></span>
+<span id="cb6-3"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">domain-needed</span></span>
+<span id="cb6-4"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">bogus-priv</span></span>
+<span id="cb6-5"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">dhcp-range=192.168.5.102,192.168.5.200,255.255.255.0,12h</span></span>
+<span id="cb6-6"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">dhcp-host=ab:cd:12:34:ab:cd,192.168.5.102</span></span>
+<span id="cb6-7"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">dhcp-option=3,192.168.0.1</span> <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># default route</span></span></code></pre></div>
+</section>
+<section id="create-a-shared-directory." class="level2">
+<h2 class="anchored" data-anchor-id="create-a-shared-directory.">Create a shared directory.</h2>
+<div class="sourceCode" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sudo</span> mkdir /sharedfs</span>
+<span id="cb7-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sudo</span> chown nobody:nogroup <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-R</span> /sharedfs</span>
+<span id="cb7-3"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sudo</span> chmod 777 <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-R</span> /sharedfs</span></code></pre></div>
+</section>
+<section id="configure-nfs" class="level2">
+<h2 class="anchored" data-anchor-id="configure-nfs">Configure NFS</h2>
+<ul>
+<li>Configure shared drives by adding the following at the end of the file <code>/etc/exports</code></li>
+</ul>
+<div class="sourceCode" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">/sharedfs</span>    192.168.5.0/24<span class="er" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">(</span><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">rw,sync,no_root_squash,no_subtree_check</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">)</span></span></code></pre></div>
+</section>
+<section id="configure-hosts" class="level2">
+<h2 class="anchored" data-anchor-id="configure-hosts">Configure hosts</h2>
+<ul>
+<li>The <code>/etc/hosts</code> file should contain the following. Make sure to change all occurences of <code>pixie</code> in the script to the name of your cluster:</li>
+</ul>
+<div class="sourceCode" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">127.0.0.1</span>   localhost</span>
+<span id="cb9-2"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">::1</span>     localhost ip6-localhost ip6-loopback</span>
+<span id="cb9-3"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">ff02::1</span>     ip6-allnodes</span>
+<span id="cb9-4"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">ff02::2</span>     ip6-allrouters</span>
+<span id="cb9-5"></span>
+<span id="cb9-6"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># This login node's hostname</span></span>
+<span id="cb9-7"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">127.0.1.1</span>   pixie001</span>
+<span id="cb9-8"></span>
+<span id="cb9-9"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># IP and hostname of compute nodes</span></span>
+<span id="cb9-10"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">192.168.5.102</span>   pixie002</span></code></pre></div>
+</section>
+<section id="configure-slurm" class="level2">
+<h2 class="anchored" data-anchor-id="configure-slurm">Configure Slurm</h2>
+<p>Add the following to /etc/slurm/slurm.conf. Change all occurences of <code>pixie</code> in this script to the name of your cluster.</p>
+<pre><code>SlurmctldHost=pixie001(192.168.5.101)
+MpiDefault=none
+ProctrackType=proctrack/cgroup
+#ProctrackType=proctrack/linuxproc
+ReturnToService=1
+SlurmctldPidFile=/run/slurmctld.pid
+SlurmctldPort=6817
+SlurmdPidFile=/run/slurmd.pid
+SlurmdPort=6818
+SlurmdSpoolDir=/var/lib/slurm/slurmd
+SlurmUser=slurm
+StateSaveLocation=/var/lib/slurm/slurmctld
+SwitchType=switch/none
+TaskPlugin=task/affinity
+InactiveLimit=0
+KillWait=30
+MinJobAge=300
+SlurmctldTimeout=120
+SlurmdTimeout=300
+Waittime=0
+SchedulerType=sched/backfill
+SelectType=select/cons_res
+SelectTypeParameters=CR_Core
+AccountingStorageType=accounting_storage/none
+# AccountingStoreJobComment=YES
+AccountingStoreFlags=job_comment
+ClusterName=pixie
+JobCompType=jobcomp/none
+JobAcctGatherFrequency=30
+JobAcctGatherType=jobacct_gather/none
+SlurmctldDebug=info
+SlurmctldLogFile=/var/log/slurm/slurmctld.log
+SlurmdDebug=info
+SlurmdLogFile=/var/log/slurm/slurmd.log
+PartitionName=pixiecluster Nodes=pixie[002-002] Default=YES MaxTime=INFINITE State=UP
+RebootProgram=/etc/slurm/slurmreboot.sh
+NodeName=pixie001 NodeAddr=192.168.5.101 CPUs=4 State=IDLE
+NodeName=pixie002 NodeAddr=192.168.5.102 CPUs=4 State=IDLE</code></pre>
+<ul>
+<li>Restart slurm</li>
+</ul>
+<div class="sourceCode" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sudo</span> systemctl restart slurmctld</span></code></pre></div>
+</section>
+<section id="configure-munge" class="level2">
+<h2 class="anchored" data-anchor-id="configure-munge">Configure munge</h2>
+<ul>
+<li>Create munge key</li>
+</ul>
+<div class="sourceCode" id="cb12" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sudo</span> mkdir /etc/munge</span>
+<span id="cb12-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">dd</span> if=/dev/urandom bs=1 count=1024 <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">|</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sudo</span> tee <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-a</span> /etc/munge/munge.key</span></code></pre></div>
+<ul>
+<li>Set ownership</li>
+</ul>
+<div class="sourceCode" id="cb13" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sudo</span> chown munge: /etc/munge/munge.key</span>
+<span id="cb13-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sudo</span> chmod 400 /etc/munge/munge.key</span></code></pre></div>
+</section>
+<section id="install-essi" class="level2">
+<h2 class="anchored" data-anchor-id="install-essi">Install ESSI</h2>
+<div class="sourceCode" id="cb14" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mkdir</span> essi</span>
+<span id="cb14-2"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">cd</span> essi</span>
+<span id="cb14-3"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">wget</span> https://raw.githubusercontent.com/EESSI/eessi-demo/main/scripts/install_cvmfs_eessi.sh</span>
+<span id="cb14-4"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sudo</span> bash ./install_cvmfs_eessi.sh</span>
+<span id="cb14-5"></span>
+<span id="cb14-6"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">source</span> /cvmfs/software.eessi.io/versions/2023.06/init/lmod/bash</span>
+<span id="cb14-7"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># We don't do this one anymore:</span></span>
+<span id="cb14-8"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># echo "source /cvmfs/software.eessi.io/versions/2023.06/init/bash" | sudo tee -a /etc/profile</span></span></code></pre></div>
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>minihpc</category>
+  <guid>https://carpentriesoffline.org/documentation/minihpc_login_node.html</guid>
+  <pubDate>Sun, 09 Mar 2025 23:29:41 GMT</pubDate>
+</item>
+<item>
+  <title>A summary of the services required on the login node</title>
+  <link>https://carpentriesoffline.org/documentation/services.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="dnsmasq" class="level2">
+
+</section>
+<section id="wpa_supplicant" class="level2">
+<h2 class="anchored" data-anchor-id="wpa_supplicant">wpa_supplicant</h2>
+</section>
+<section id="nfs" class="level2">
+<h2 class="anchored" data-anchor-id="nfs">nfs</h2>
+</section>
+<section id="ntp" class="level2">
+<h2 class="anchored" data-anchor-id="ntp">ntp</h2>
+</section>
+<section id="networkmanager" class="level2">
+<h2 class="anchored" data-anchor-id="networkmanager">NetworkManager</h2>
+</section>
+<section id="iptables" class="level2">
+<h2 class="anchored" data-anchor-id="iptables">iptables</h2>
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>minihpc</category>
+  <guid>https://carpentriesoffline.org/documentation/services.html</guid>
+  <pubDate>Sun, 09 Mar 2025 23:29:41 GMT</pubDate>
+</item>
+<item>
+  <title>Creating a compute node with a Raspberry Pi for the miniHPC</title>
+  <link>https://carpentriesoffline.org/documentation/minihpc_compute_node.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>The quick brown fox</p>
+
+
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>minihpc</category>
+  <guid>https://carpentriesoffline.org/documentation/minihpc_compute_node.html</guid>
+  <pubDate>Sun, 09 Mar 2025 23:29:41 GMT</pubDate>
 </item>
 <item>
   <title>Bootable Flash Drive - step-by-step</title>
@@ -522,69 +749,152 @@ Note
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>flashdrive</category>
   <guid>https://carpentriesoffline.org/documentation/flashdrive_step_by_step.html</guid>
-  <pubDate>Thu, 20 Feb 2025 08:22:20 GMT</pubDate>
+  <pubDate>Sun, 09 Mar 2025 23:29:41 GMT</pubDate>
 </item>
 <item>
-  <title>Offline Documentation</title>
-  <link>https://carpentriesoffline.org/documentation/offlinedatasci.html</link>
+  <title>The Pixie Network</title>
+  <link>https://carpentriesoffline.org/documentation/pixieNetwork.html</link>
   <description><![CDATA[ 
 
 
 
 
-<p><a href="https://devdocs.io/">DevDocs</a> centralizes documentation for a large number of programming languages and packages including many relevant to Data Science. The available documentation includes R, Python, Julia, JavaScript, pandas, Numpy, scikit-learn, SQLite, and much more.</p>
-<p>The site is designed to use local storage for offline use, and the great thing is you don’t need to change anything to work offline. Just set up the sync the documentation you want and then visit the website, even if you’re offline.</p>
-<section id="instructions" class="level2">
-<h2 class="anchored" data-anchor-id="instructions">Instructions</h2>
-<ol type="1">
-<li>Go to <a href="https://devdocs.io/">https://devdocs.io/</a></li>
-<li>In the menu bar on the left in the “Disabled” section (underneath CSS, HTML, HTTP, JavaScript, and Web APIs) find the documentation you want to access offline, hover over a version number, and click when it says “Enable”. You should see the documentation you just selected added to the list at the top of the side bar.</li>
-<li>Go to <a href="https://devdocs.io/offline">https://devdocs.io/offline</a> and click “Install all” in the top right corner (or just select the documentation you want to sync by clicking “Install” next to each set of documentation)</li>
-<li>Leave the “Install updates automatically” box checked if you want the site to update as newer versions of the documentation become available or uncheck it to update manually.</li>
-<li>Enjoy browsing the same docs (including the integrated search), in the same way, online or offline!</li>
-</ol>
+<p>For the purposes of this documentation we’ll assume network that looks as follow:</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<svg width="672" height="480" viewbox="0.00 0.00 866.50 310.40" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 306.4)">
+<title>G</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-306.4 862.5,-306.4 862.5,4 -4,4"></polygon>
+<!-- InternetAP -->
+<g id="node1" class="node">
+<title>InternetAP</title>
+<polygon fill="none" stroke="black" points="491.36,-302.2 367.14,-302.2 367.14,-261 491.36,-261 491.36,-302.2"></polygon>
+<text text-anchor="middle" x="429.25" y="-285.8" font-family="Times,serif" font-size="14.00">InternetAP</text>
+<text text-anchor="middle" x="429.25" y="-269" font-family="Times,serif" font-size="14.00">wlan0=192.168.0.1</text>
+</g>
+<!-- RaspAP -->
+<g id="node2" class="node">
+<title>RaspAP</title>
+<polygon fill="none" stroke="black" points="494.86,-224.9 363.64,-224.9 363.64,-149.5 494.86,-149.5 494.86,-224.9"></polygon>
+<text text-anchor="middle" x="429.25" y="-208.2" font-family="Times,serif" font-size="14.00">RaspAP</text>
+<text text-anchor="middle" x="429.25" y="-191.4" font-family="Times,serif" font-size="14.00">wlan0=192.168.0.10</text>
+<text text-anchor="middle" x="429.25" y="-174.6" font-family="Times,serif" font-size="14.00">wlan1=10.3.141.1</text>
+<text text-anchor="middle" x="429.25" y="-157.8" font-family="Times,serif" font-size="14.00">eth0=192.168.5.1</text>
+</g>
+<!-- InternetAP&#45;&gt;RaspAP -->
+<g id="edge1" class="edge">
+<title>InternetAP-&gt;RaspAP</title>
+<path fill="none" stroke="black" d="M429.25,-260.55C429.25,-252.99 429.25,-244.04 429.25,-235.06"></path>
+<polygon fill="black" stroke="black" points="432.75,-234.97 429.25,-224.97 425.75,-234.97 432.75,-234.97"></polygon>
+</g>
+<!-- Switch -->
+<g id="node3" class="node">
+<title>Switch</title>
+<path fill="none" stroke="black" d="M444.64,-113.6C444.64,-113.6 413.86,-113.6 413.86,-113.6 407.86,-113.6 401.86,-107.6 401.86,-101.6 401.86,-101.6 401.86,-89.6 401.86,-89.6 401.86,-83.6 407.86,-77.6 413.86,-77.6 413.86,-77.6 444.64,-77.6 444.64,-77.6 450.64,-77.6 456.64,-83.6 456.64,-89.6 456.64,-89.6 456.64,-101.6 456.64,-101.6 456.64,-107.6 450.64,-113.6 444.64,-113.6"></path>
+<text text-anchor="middle" x="429.25" y="-91.4" font-family="Times,serif" font-size="14.00">Switch</text>
+</g>
+<!-- RaspAP&#45;&gt;Switch -->
+<g id="edge2" class="edge">
+<title>RaspAP-&gt;Switch</title>
+<path fill="none" stroke="black" d="M429.25,-149.5C429.25,-140.9 429.25,-131.88 429.25,-123.78"></path>
+<polygon fill="black" stroke="black" points="432.75,-123.77 429.25,-113.77 425.75,-123.77 432.75,-123.77"></polygon>
+</g>
+<!-- pixielogin -->
+<g id="node4" class="node">
+<title>pixielogin</title>
+<polygon fill="none" stroke="black" points="128.75,-41.4 -0.25,-41.4 -0.25,-0.2 128.75,-0.2 128.75,-41.4"></polygon>
+<text text-anchor="middle" x="64.25" y="-25" font-family="Times,serif" font-size="14.00">pixielogin</text>
+<text text-anchor="middle" x="64.25" y="-8.2" font-family="Times,serif" font-size="14.00">eth0=192.168.5.100</text>
+</g>
+<!-- Switch&#45;&gt;pixielogin -->
+<g id="edge3" class="edge">
+<title>Switch-&gt;pixielogin</title>
+<path fill="none" stroke="black" d="M401.72,-90.41C351.37,-82.57 240.93,-64.57 138.54,-41.81"></path>
+<polygon fill="black" stroke="black" points="139.19,-38.37 128.66,-39.59 137.65,-45.2 139.19,-38.37"></polygon>
+</g>
+<!-- pixie001 -->
+<g id="node5" class="node">
+<title>pixie001</title>
+<polygon fill="none" stroke="black" points="274.75,-41.4 145.75,-41.4 145.75,-0.2 274.75,-0.2 274.75,-41.4"></polygon>
+<text text-anchor="middle" x="210.25" y="-25" font-family="Times,serif" font-size="14.00">pixie001</text>
+<text text-anchor="middle" x="210.25" y="-8.2" font-family="Times,serif" font-size="14.00">eth0=192.168.5.101</text>
+</g>
+<!-- Switch&#45;&gt;pixie001 -->
+<g id="edge4" class="edge">
+<title>Switch-&gt;pixie001</title>
+<path fill="none" stroke="black" d="M401.51,-85.38C370.87,-75.19 320.37,-58.41 278.96,-44.64"></path>
+<polygon fill="black" stroke="black" points="280.05,-41.32 269.46,-41.48 277.84,-47.96 280.05,-41.32"></polygon>
+</g>
+<!-- pixie002 -->
+<g id="node6" class="node">
+<title>pixie002</title>
+<polygon fill="none" stroke="black" points="420.75,-41.4 291.75,-41.4 291.75,-0.2 420.75,-0.2 420.75,-41.4"></polygon>
+<text text-anchor="middle" x="356.25" y="-25" font-family="Times,serif" font-size="14.00">pixie002</text>
+<text text-anchor="middle" x="356.25" y="-8.2" font-family="Times,serif" font-size="14.00">eth0=192.168.5.102</text>
+</g>
+<!-- Switch&#45;&gt;pixie002 -->
+<g id="edge5" class="edge">
+<title>Switch-&gt;pixie002</title>
+<path fill="none" stroke="black" d="M411.95,-77.35C403.35,-68.77 392.76,-58.21 383.13,-48.61"></path>
+<polygon fill="black" stroke="black" points="385.56,-46.08 376,-41.5 380.61,-51.04 385.56,-46.08"></polygon>
+</g>
+<!-- pixie003 -->
+<g id="node7" class="node">
+<title>pixie003</title>
+<polygon fill="none" stroke="black" points="566.75,-41.4 437.75,-41.4 437.75,-0.2 566.75,-0.2 566.75,-41.4"></polygon>
+<text text-anchor="middle" x="502.25" y="-25" font-family="Times,serif" font-size="14.00">pixie003</text>
+<text text-anchor="middle" x="502.25" y="-8.2" font-family="Times,serif" font-size="14.00">eth0=192.168.5.103</text>
+</g>
+<!-- Switch&#45;&gt;pixie003 -->
+<g id="edge6" class="edge">
+<title>Switch-&gt;pixie003</title>
+<path fill="none" stroke="black" d="M446.55,-77.35C455.15,-68.77 465.74,-58.21 475.37,-48.61"></path>
+<polygon fill="black" stroke="black" points="477.89,-51.04 482.49,-41.5 472.94,-46.08 477.89,-51.04"></polygon>
+</g>
+<!-- pixie004 -->
+<g id="node8" class="node">
+<title>pixie004</title>
+<polygon fill="none" stroke="black" points="712.75,-41.4 583.75,-41.4 583.75,-0.2 712.75,-0.2 712.75,-41.4"></polygon>
+<text text-anchor="middle" x="648.25" y="-25" font-family="Times,serif" font-size="14.00">pixie004</text>
+<text text-anchor="middle" x="648.25" y="-8.2" font-family="Times,serif" font-size="14.00">eth0=192.168.5.104</text>
+</g>
+<!-- Switch&#45;&gt;pixie004 -->
+<g id="edge7" class="edge">
+<title>Switch-&gt;pixie004</title>
+<path fill="none" stroke="black" d="M456.99,-85.38C487.63,-75.19 538.13,-58.41 579.54,-44.64"></path>
+<polygon fill="black" stroke="black" points="580.66,-47.96 589.04,-41.48 578.45,-41.32 580.66,-47.96"></polygon>
+</g>
+<!-- pixie005 -->
+<g id="node9" class="node">
+<title>pixie005</title>
+<polygon fill="none" stroke="black" points="858.75,-41.4 729.75,-41.4 729.75,-0.2 858.75,-0.2 858.75,-41.4"></polygon>
+<text text-anchor="middle" x="794.25" y="-25" font-family="Times,serif" font-size="14.00">pixie005</text>
+<text text-anchor="middle" x="794.25" y="-8.2" font-family="Times,serif" font-size="14.00">eth0=192.168.5.105</text>
+</g>
+<!-- Switch&#45;&gt;pixie005 -->
+<g id="edge8" class="edge">
+<title>Switch-&gt;pixie005</title>
+<path fill="none" stroke="black" d="M456.78,-90.41C507.13,-82.57 617.57,-64.57 719.96,-41.81"></path>
+<polygon fill="black" stroke="black" points="720.85,-45.2 729.84,-39.59 719.31,-38.37 720.85,-45.2"></polygon>
+</g>
+</g>
+</svg>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
 
 
-</section>
-
-<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
-  <category>offlinedatasci</category>
-  <guid>https://carpentriesoffline.org/documentation/offlinedatasci.html</guid>
-  <pubDate>Thu, 20 Feb 2025 08:22:20 GMT</pubDate>
-</item>
-<item>
-  <title>A summary of the services required on the login node</title>
-  <link>https://carpentriesoffline.org/documentation/services.html</link>
-  <description><![CDATA[ 
-
-
-
-
-<section id="dnsmasq" class="level2">
-
-</section>
-<section id="wpa_supplicant" class="level2">
-<h2 class="anchored" data-anchor-id="wpa_supplicant">wpa_supplicant</h2>
-</section>
-<section id="nfs" class="level2">
-<h2 class="anchored" data-anchor-id="nfs">nfs</h2>
-</section>
-<section id="ntp" class="level2">
-<h2 class="anchored" data-anchor-id="ntp">ntp</h2>
-</section>
-<section id="networkmanager" class="level2">
-<h2 class="anchored" data-anchor-id="networkmanager">NetworkManager</h2>
-</section>
-<section id="iptables" class="level2">
-<h2 class="anchored" data-anchor-id="iptables">iptables</h2>
-
-
-</section>
 
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>minihpc</category>
-  <guid>https://carpentriesoffline.org/documentation/services.html</guid>
-  <pubDate>Thu, 20 Feb 2025 08:22:20 GMT</pubDate>
+  <guid>https://carpentriesoffline.org/documentation/pixieNetwork.html</guid>
+  <pubDate>Sun, 09 Mar 2025 23:29:41 GMT</pubDate>
 </item>
 </channel>
 </rss>
