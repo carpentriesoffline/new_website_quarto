@@ -11,7 +11,7 @@
 <description>Projects we are currently working on
 </description>
 <generator>quarto-1.6.42</generator>
-<lastBuildDate>Sun, 09 Mar 2025 23:38:09 GMT</lastBuildDate>
+<lastBuildDate>Sun, 09 Mar 2025 23:40:33 GMT</lastBuildDate>
 <item>
   <title>Bootable Flash Drive</title>
   <link>https://carpentriesoffline.org/projects/FlashDrive.html</link>
@@ -40,7 +40,7 @@ Important
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>flashdrive</category>
   <guid>https://carpentriesoffline.org/projects/FlashDrive.html</guid>
-  <pubDate>Sun, 09 Mar 2025 23:38:09 GMT</pubDate>
+  <pubDate>Sun, 09 Mar 2025 23:40:33 GMT</pubDate>
   <media:content url="https://carpentriesoffline.org/projects/images/flashdrive.png" medium="image" type="image/png"/>
 </item>
 <item>
@@ -69,7 +69,7 @@ Important
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>sdcard</category>
   <guid>https://carpentriesoffline.org/projects/RaspberryPi.html</guid>
-  <pubDate>Sun, 09 Mar 2025 23:38:09 GMT</pubDate>
+  <pubDate>Sun, 09 Mar 2025 23:40:33 GMT</pubDate>
   <media:content url="https://carpentriesoffline.org/projects/images/sd_card.png" medium="image" type="image/png" height="164" width="144"/>
 </item>
 <item>
@@ -95,7 +95,7 @@ Important
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>offlinedatasci</category>
   <guid>https://carpentriesoffline.org/projects/offlinedatasci.html</guid>
-  <pubDate>Sun, 09 Mar 2025 23:38:09 GMT</pubDate>
+  <pubDate>Sun, 09 Mar 2025 23:40:33 GMT</pubDate>
   <media:content url="https://carpentriesoffline.org/projects/images/pypilogo.svg" medium="image" type="image/svg+xml"/>
 </item>
 <item>
@@ -137,7 +137,7 @@ Important
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>minihpc</category>
   <guid>https://carpentriesoffline.org/projects/miniHPC.html</guid>
-  <pubDate>Sun, 09 Mar 2025 23:38:09 GMT</pubDate>
+  <pubDate>Sun, 09 Mar 2025 23:40:33 GMT</pubDate>
   <media:content url="https://carpentriesoffline.org/projects/images/pixie.jpg" medium="image" type="image/jpeg"/>
 </item>
 </channel>
