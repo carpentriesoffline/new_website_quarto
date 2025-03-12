@@ -20,3 +20,4 @@ CarpentriesOffline aims to provide a solution for running Software, Data, Librar
 <div><img class="image_on" src="/projects/images/blank.png" alt="logo" /></div>
 </div>
 
+<center>Our old home page is still available at <a href="https://carpentriesoffline.github.io">https://carpentriesoffline.github.io</a>. If you find some pages, that you need, are not transferred yet, please have a look on the old site.</center>
