@@ -10,8 +10,8 @@
 <atom:link href="https://carpentriesoffline.org/projects/index.xml" rel="self" type="application/rss+xml"/>
 <description>Projects we are currently working on
 </description>
-<generator>quarto-1.6.42</generator>
-<lastBuildDate>Wed, 12 Mar 2025 22:26:46 GMT</lastBuildDate>
+<generator>quarto-1.7.31</generator>
+<lastBuildDate>Fri, 13 Jun 2025 21:33:47 GMT</lastBuildDate>
 <item>
   <title>Bootable Flash Drive</title>
   <link>https://carpentriesoffline.org/projects/FlashDrive.html</link>
@@ -40,8 +40,34 @@ Important
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>flashdrive</category>
   <guid>https://carpentriesoffline.org/projects/FlashDrive.html</guid>
-  <pubDate>Wed, 12 Mar 2025 22:26:46 GMT</pubDate>
+  <pubDate>Fri, 13 Jun 2025 21:33:47 GMT</pubDate>
   <media:content url="https://carpentriesoffline.org/projects/images/flashdrive.png" medium="image" type="image/png"/>
+</item>
+<item>
+  <title>The OfflineDataSci Python package</title>
+  <link>https://carpentriesoffline.org/projects/offlinedatasci.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>offlinedatsci is a tool for supporting teaching and doing data science in internet-limited environments. It helps you download and configure common tools for teaching and doing data science without an internet connection including:</p>
+<ul>
+<li>Installers for data science languages: Currently R and Python</li>
+<li>Installers for common data science IDEs: Currently RStudio</li>
+<li>Partial, data science focused, local mirrors of package repositories: Currently CRAN (for R) and PyPI (for Python)</li>
+<li>Locally browseable clones of data science teaching websites: Currently Data Carpentry, Software Carpentry, and Library Carpentry</li>
+</ul>
+<p>The package is also used to create the CarpentriesOffline operating system image for the Raspberry Pi and FlashDrive projects which allow you to turn a Raspberry Pi computer or your laptop (with the use of the FlashDrive) into a web server and an access point for learners to connect to. It can be used to quickly update all materials to the newest versions when an internet connection is available.</p>
+<p><a href="https://offlinedatasci.readthedocs.io/">Package Documentation</a></p>
+
+
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>offlinedatasci</category>
+  <guid>https://carpentriesoffline.org/projects/offlinedatasci.html</guid>
+  <pubDate>Fri, 13 Jun 2025 21:33:47 GMT</pubDate>
+  <media:content url="https://carpentriesoffline.org/projects/images/pypilogo.svg" medium="image" type="image/svg+xml"/>
 </item>
 <item>
   <title>CarpentriesOffline with a Raspberry Pi</title>
@@ -69,34 +95,8 @@ Important
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>sdcard</category>
   <guid>https://carpentriesoffline.org/projects/RaspberryPi.html</guid>
-  <pubDate>Wed, 12 Mar 2025 22:26:46 GMT</pubDate>
+  <pubDate>Fri, 13 Jun 2025 21:33:47 GMT</pubDate>
   <media:content url="https://carpentriesoffline.org/projects/images/sd_card.png" medium="image" type="image/png" height="164" width="144"/>
-</item>
-<item>
-  <title>The OfflineDataSci Python package</title>
-  <link>https://carpentriesoffline.org/projects/offlinedatasci.html</link>
-  <description><![CDATA[ 
-
-
-
-
-<p>offlinedatsci is a tool for supporting teaching and doing data science in internet-limited environments. It helps you download and configure common tools for teaching and doing data science without an internet connection including:</p>
-<ul>
-<li>Installers for data science languages: Currently R and Python</li>
-<li>Installers for common data science IDEs: Currently RStudio</li>
-<li>Partial, data science focused, local mirrors of package repositories: Currently CRAN (for R) and PyPI (for Python)</li>
-<li>Locally browseable clones of data science teaching websites: Currently Data Carpentry, Software Carpentry, and Library Carpentry</li>
-</ul>
-<p>The package is also used to create the CarpentriesOffline operating system image for the Raspberry Pi and FlashDrive projects which allow you to turn a Raspberry Pi computer or your laptop (with the use of the FlashDrive) into a web server and an access point for learners to connect to. It can be used to quickly update all materials to the newest versions when an internet connection is available.</p>
-<p><a href="https://offlinedatasci.readthedocs.io/">Package Documentation</a></p>
-
-
-
-<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
-  <category>offlinedatasci</category>
-  <guid>https://carpentriesoffline.org/projects/offlinedatasci.html</guid>
-  <pubDate>Wed, 12 Mar 2025 22:26:46 GMT</pubDate>
-  <media:content url="https://carpentriesoffline.org/projects/images/pypilogo.svg" medium="image" type="image/svg+xml"/>
 </item>
 <item>
   <title>The miniHPC</title>
@@ -108,9 +108,16 @@ Important
 
 <p>Pixie is our prototype High Performance Computer (HPC), built with:</p>
 <ul>
-<li>6 x Raspberry Pi (RPi) 4GB single board computers (SBC).</li>
-<li>An SSD drive with a power USB adapter</li>
-<li>An 8 port PXE TP-Link switch</li>
+<li>7 x Raspberry Pi (RPi) 4GB single board computers (SBC).
+<ul>
+<li>1 x RPi for a login node
+<ul>
+<li>5 x RPi for compute nodes</li>
+<li>1 x RPi for and access point using RaspAP</li>
+</ul></li>
+</ul></li>
+<li>An SSD drive with a SATA to USB converter</li>
+<li>An 8 port PoE TP-Link switch</li>
 <li>A dual USB fan</li>
 <li>Loads of 10BaseT Cat6 ethernet cables</li>
 <li>3D printed DIN Rail stand</li>
@@ -137,7 +144,7 @@ Important
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>minihpc</category>
   <guid>https://carpentriesoffline.org/projects/miniHPC.html</guid>
-  <pubDate>Wed, 12 Mar 2025 22:26:46 GMT</pubDate>
+  <pubDate>Fri, 13 Jun 2025 21:33:47 GMT</pubDate>
   <media:content url="https://carpentriesoffline.org/projects/images/pixie.jpg" medium="image" type="image/jpeg"/>
 </item>
 </channel>
