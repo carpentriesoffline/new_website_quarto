@@ -8,9 +8,12 @@ image-alt: "A photo of Raspberry Pi High Performance cluster consisting of six n
 
 Pixie is our prototype High Performance Computer (HPC), built with:
 
-- 6 x Raspberry Pi (RPi) 4GB single board computers (SBC).
-- An SSD drive with a power USB adapter
-- An 8 port PXE TP-Link switch
+- 7 x Raspberry Pi (RPi) 4GB single board computers (SBC).
+  - 1 x RPi for a login node
+	- 5 x RPi for compute nodes
+	- 1 x RPi for and access point using RaspAP
+- An SSD drive with a SATA to USB converter
+- An 8 port PoE TP-Link switch
 - A dual USB fan
 - Loads of 10BaseT Cat6 ethernet cables
 - 3D printed DIN Rail stand
