@@ -1,0 +1,34 @@
+---
+title: Dr Samantha Finnigan
+about:
+  template: broadside
+  image: images/samantha.png
+  links:
+    - icon: www
+      text: website
+      href: https://finnigan.dev/
+    - icon: github
+      text: GitHub
+      href: https://github.com/sjmf
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/sjmf/
+---
+
+Samantha Finnigan is a Senior Research Software Engineer and RSE Team Lead in the Advanced Research Computing group at Durham University.
+
+## Education
+
+Newcastle University | Newcastle-upon-Tyne, UK
+PhD Human Computer Interaction | Sept 2014 - December 2020
+
+Newcastle University | Newcastle-upon-Tyne, UK
+BSc Computing Science | Sep 2009 - Aug 2012
+
+## Experience
+
+Durham University | Senior Research Software Engineer | September 2022 - present
+
+Newcastle University | Research Software Engineer | August 2021 - August 2022
+
+Northumbria University | Postdoctoral Research Associate | August 2019 - July 2021

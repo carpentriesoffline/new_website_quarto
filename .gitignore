@@ -1,8 +1,12 @@
 *.swp
 _site/
 
+docs/*
+!docs/.gitkeep
+
 /.quarto/
 .Rproj.user
 *.Rproj
 
 *.DS_Store
+**/*.quarto_ipynb
