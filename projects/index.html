@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.31">
+<meta name="generator" content="quarto-1.8.25">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -36,14 +36,15 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-a235af8ba4cd76ce85e444f4e35d5649.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-4c05ec43582a483ba732a9d6be2af5f6.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -115,7 +116,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -141,6 +142,8 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="https://carpentriesoffline.org/" class="navbar-brand navbar-brand-logo">
+    </a>
     <a class="navbar-brand" href="https://carpentriesoffline.org/">
     <span class="navbar-title">The Carpentries Offline</span>
     </a>
@@ -221,43 +224,7 @@ window.Quarto = {
 
 <div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="Zmxhc2hkcml2ZQ==" data-listing-file-modified-sort="1749850397345" data-listing-reading-time-sort="1" data-listing-word-count-sort="85">
-<a href="../projects/FlashDrive.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="../projects/images/flashdrive.png" class="thumbnail-image card-img" style="height: 150px;" alt="A photo of a flash drive">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Bootable Flash Drive
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('Zmxhc2hkcml2ZQ=='); return false;">flashdrive</div>
-
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="1" data-categories="b2ZmbGluZWRhdGFzY2k=" data-listing-file-modified-sort="1749850397355" data-listing-reading-time-sort="1" data-listing-word-count-sort="152">
-<a href="../projects/offlinedatasci.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="../projects/images/pypilogo.svg" class="thumbnail-image card-img" style="height: 150px;" alt="A photo of Raspberry Pi High Performance cluster consisting of six nodes. ">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-The OfflineDataSci Python package
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('b2ZmbGluZWRhdGFzY2k='); return false;">offlinedatasci</div>
-
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="2" data-categories="c2RjYXJk" data-listing-file-modified-sort="1749850397345" data-listing-reading-time-sort="1" data-listing-word-count-sort="127">
+<div class="g-col-1" data-index="0" data-categories="c2RjYXJk" data-listing-file-modified-sort="1760188507568" data-listing-reading-time-sort="1" data-listing-word-count-sort="127">
 <a href="../projects/RaspberryPi.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -275,7 +242,43 @@ CarpentriesOffline with a Raspberry Pi
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="3" data-categories="bWluaWhwYw==" data-listing-file-modified-sort="1749850397355" data-listing-reading-time-sort="3" data-listing-word-count-sort="542">
+<div class="g-col-1" data-index="1" data-categories="bWluaWhwYw==" data-listing-file-modified-sort="1760188507568" data-listing-reading-time-sort="1" data-listing-word-count-sort="197">
+<a href="../projects/KVMStick.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="../projects/images/kvm-stick.png" class="thumbnail-image card-img" style="height: 150px;" alt="A photo of a USB stick in 3d-printed housing">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Serial KVM stick
+</h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('bWluaWhwYw=='); return false;">minihpc</div>
+
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="2" data-categories="Zmxhc2hkcml2ZQ==" data-listing-file-modified-sort="1760188507568" data-listing-reading-time-sort="1" data-listing-word-count-sort="85">
+<a href="../projects/FlashDrive.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="../projects/images/flashdrive.png" class="thumbnail-image card-img" style="height: 150px;" alt="A photo of a flash drive">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Bootable Flash Drive
+</h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('Zmxhc2hkcml2ZQ=='); return false;">flashdrive</div>
+
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="3" data-categories="bWluaWhwYw==" data-listing-file-modified-sort="1760188507577" data-listing-reading-time-sort="3" data-listing-word-count-sort="542">
 <a href="../projects/miniHPC.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -288,6 +291,24 @@ The miniHPC
 <div class="listing-categories">
 
 <div class="listing-category" onclick="window.quartoListingCategory('bWluaWhwYw=='); return false;">minihpc</div>
+
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="4" data-categories="b2ZmbGluZWRhdGFzY2k=" data-listing-file-modified-sort="1760188507577" data-listing-reading-time-sort="1" data-listing-word-count-sort="152">
+<a href="../projects/offlinedatasci.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="../projects/images/pypilogo.svg" class="thumbnail-image card-img" style="height: 150px;" alt="A photo of Raspberry Pi High Performance cluster consisting of six nodes. ">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+The OfflineDataSci Python package
+</h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('b2ZmbGluZWRhdGFzY2k='); return false;">offlinedatasci</div>
 
 </div>
 </div>
@@ -347,13 +368,14 @@ The miniHPC
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

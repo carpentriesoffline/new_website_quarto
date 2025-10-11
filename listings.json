@@ -1,5 +1,34 @@
 [
   {
+    "listing": "/resources/index.html",
+    "items": []
+  },
+  {
+    "listing": "/projects/index.html",
+    "items": [
+      "/projects/RaspberryPi.html",
+      "/projects/KVMStick.html",
+      "/projects/FlashDrive.html",
+      "/projects/miniHPC.html",
+      "/projects/offlinedatasci.html"
+    ]
+  },
+  {
+    "listing": "/documentation/index.html",
+    "items": [
+      "/documentation/eessi_with_pxe.html",
+      "/documentation/rpiimage_step_by_step.html",
+      "/documentation/minihpc_login_node.html",
+      "/documentation/flashdrive_step_by_step.html",
+      "/documentation/services.html",
+      "/documentation/pxe.html",
+      "/documentation/pixieNetwork.html",
+      "/documentation/minihpc_compute_node.html",
+      "/documentation/creating_an_sdcard.html",
+      "/documentation/offlinedatasci.html"
+    ]
+  },
+  {
     "listing": "/lessons/index.html",
     "items": [
       "/lessons/building_a_minihpc.html",
@@ -10,36 +39,8 @@
     "listing": "/blog/index.html",
     "items": [
       "/blog/2023-01-18-Testing-CarpentriesOffline.html",
-      "/blog/2022-12-12-CarpentriesOffline.html",
-      "/blog/2022-06-27-CarpentriesOffline.html"
+      "/blog/2022-06-27-CarpentriesOffline.html",
+      "/blog/2022-12-12-CarpentriesOffline.html"
     ]
-  },
-  {
-    "listing": "/documentation/index.html",
-    "items": [
-      "/documentation/minihpc_login_node.html",
-      "/documentation/pxe.html",
-      "/documentation/creating_an_sdcard.html",
-      "/documentation/flashdrive_step_by_step.html",
-      "/documentation/eessi_with_pxe.html",
-      "/documentation/minihpc_compute_node.html",
-      "/documentation/services.html",
-      "/documentation/offlinedatasci.html",
-      "/documentation/rpiimage_step_by_step.html",
-      "/documentation/pixieNetwork.html"
-    ]
-  },
-  {
-    "listing": "/projects/index.html",
-    "items": [
-      "/projects/FlashDrive.html",
-      "/projects/offlinedatasci.html",
-      "/projects/RaspberryPi.html",
-      "/projects/miniHPC.html"
-    ]
-  },
-  {
-    "listing": "/resources/index.html",
-    "items": []
   }
 ]

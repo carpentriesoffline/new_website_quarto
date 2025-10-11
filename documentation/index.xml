@@ -10,471 +10,8 @@
 <atom:link href="https://carpentriesoffline.org/documentation/index.xml" rel="self" type="application/rss+xml"/>
 <description>CarpentriesOffline Documentation
 </description>
-<generator>quarto-1.7.31</generator>
-<lastBuildDate>Fri, 13 Jun 2025 21:33:46 GMT</lastBuildDate>
-<item>
-  <title>Creating a login node with a Raspberry Pi for the miniHPC</title>
-  <link>https://carpentriesoffline.org/documentation/minihpc_login_node.html</link>
-  <description><![CDATA[ 
-
-
-
-
-<section id="start-with-an-update" class="level2">
-<h2 class="anchored" data-anchor-id="start-with-an-update">Start with an update</h2>
-<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">sudo</span> apt update <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">-y</span></span>
-<span id="cb1-2"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">sudo</span> apt upgrade <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">-y</span></span></code></pre></div>
-</section>
-<section id="install-required-packages." class="level2">
-<h2 class="anchored" data-anchor-id="install-required-packages.">Install required packages.</h2>
-<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">sudo</span> apt install <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">-y</span> nfs-kernel-server lmod ansible slurm munge nmap <span class="dt" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">\</span></span>
-<span id="cb2-2">nfs-common net-tools build-essential htop net-tools screen vim python3-pip <span class="dt" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">\</span></span>
-<span id="cb2-3">dnsmasq slurm-wlm iptables iptables-persistent libmunge-dev libmunge2 <span class="dt" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">\</span></span>
-<span id="cb2-4">libpmix2 libpmix-bin libpmix-dev git</span></code></pre></div>
-<p>A dialog block will appear on the screen. Answer yes to both questions.</p>
-</section>
-<section id="enable-ip-forwarding" class="level2">
-<h2 class="anchored" data-anchor-id="enable-ip-forwarding">Enable IP forwarding</h2>
-<ul>
-<li>As <code>sudo</code>, edit the file <code>/etc/sysctl.conf</code>. Find the line that reads <code>#net.ipv4.ip_forward=1</code> and remove the <code>#</code> at the beginning of the line. Save the file. The change will become active after a reboot.</li>
-</ul>
-</section>
-<section id="configure-ip-tables" class="level2">
-<h2 class="anchored" data-anchor-id="configure-ip-tables">Configure IP-tables</h2>
-<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">sudo</span> iptables <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">-t</span> nat <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">-A</span> POSTROUTING <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">-o</span> eth0 <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">-j</span> MASQUERADE</span>
-<span id="cb3-2"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">sudo</span> iptables <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">-A</span> FORWARD <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">-i</span> wlan0 <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">-o</span> eth0 <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">-j</span> ACCEPT</span>
-<span id="cb3-3"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">sudo</span> iptables <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">-A</span> FORWARD <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">-i</span> eth0 <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">-o</span> wlan0 <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">-m</span> state <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">--state</span> RELATED,ESTABLISHED <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">-j</span> ACCEPT</span>
-<span id="cb3-4"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">sudo</span> netfilter-persistent save</span></code></pre></div>
-</section>
-<section id="configure-the-network-interfaces" class="level2">
-<h2 class="anchored" data-anchor-id="configure-the-network-interfaces">Configure the network interfaces</h2>
-<p>Place the following into <code>/etc/network/interfaces</code></p>
-<div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><span class="ex" style="color: null;
-background-color: null;
-font-style: inherit;">auto</span> eth0</span>
-<span id="cb4-2"><span class="ex" style="color: null;
-background-color: null;
-font-style: inherit;">allow-hotplug</span> eth0</span>
-<span id="cb4-3"><span class="ex" style="color: null;
-background-color: null;
-font-style: inherit;">iface</span> eth0 inet static</span>
-<span id="cb4-4">  <span class="ex" style="color: null;
-background-color: null;
-font-style: inherit;">address</span> 192.168.5.101</span>
-<span id="cb4-5">  <span class="ex" style="color: null;
-background-color: null;
-font-style: inherit;">netmask</span> 255.255.255.0</span>
-<span id="cb4-6"><span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">source</span> /etc/network/interfaces.d/<span class="pp" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">*</span></span></code></pre></div>
-</section>
-<section id="modify-the-hostname" class="level2">
-<h2 class="anchored" data-anchor-id="modify-the-hostname">Modify the hostname</h2>
-<div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">echo</span> pixie001 <span class="kw" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">|</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">sudo</span> tee /etc/hostname</span></code></pre></div>
-</section>
-<section id="configure-dns-masquerading" class="level2">
-<h2 class="anchored" data-anchor-id="configure-dns-masquerading">Configure DNS masquerading</h2>
-<ul>
-<li>Configure dnsmasq by entering the following in the file <code>/etc/dnsmasq.conf</code>. Replace the MAC address on the sixth line with the MAC address of your compute node.</li>
-</ul>
-<div class="sourceCode" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">interface</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span>eth0</span>
-<span id="cb6-2"><span class="ex" style="color: null;
-background-color: null;
-font-style: inherit;">bind-dynamic</span></span>
-<span id="cb6-3"><span class="ex" style="color: null;
-background-color: null;
-font-style: inherit;">domain-needed</span></span>
-<span id="cb6-4"><span class="ex" style="color: null;
-background-color: null;
-font-style: inherit;">bogus-priv</span></span>
-<span id="cb6-5"><span class="ex" style="color: null;
-background-color: null;
-font-style: inherit;">dhcp-range=192.168.5.102,192.168.5.200,255.255.255.0,12h</span></span>
-<span id="cb6-6"><span class="ex" style="color: null;
-background-color: null;
-font-style: inherit;">dhcp-host=ab:cd:12:34:ab:cd,192.168.5.102</span></span>
-<span id="cb6-7"><span class="ex" style="color: null;
-background-color: null;
-font-style: inherit;">dhcp-option=3,192.168.0.1</span> <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># default route</span></span>
-<span id="cb6-8"><span class="ex" style="color: null;
-background-color: null;
-font-style: inherit;">dhcp-option=6,192.168.0.1</span> <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># default route</span></span></code></pre></div>
-</section>
-<section id="create-a-shared-directory." class="level2">
-<h2 class="anchored" data-anchor-id="create-a-shared-directory.">Create a shared directory.</h2>
-<div class="sourceCode" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">sudo</span> mkdir /sharedfs</span>
-<span id="cb7-2"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">sudo</span> chown nobody:nogroup <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">-R</span> /sharedfs</span>
-<span id="cb7-3"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">sudo</span> chmod 777 <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">-R</span> /sharedfs</span></code></pre></div>
-</section>
-<section id="configure-nfs" class="level2">
-<h2 class="anchored" data-anchor-id="configure-nfs">Configure NFS</h2>
-<ul>
-<li>Configure shared drives by adding the following at the end of the file <code>/etc/exports</code></li>
-</ul>
-<div class="sourceCode" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><span class="ex" style="color: null;
-background-color: null;
-font-style: inherit;">/sharedfs</span>    192.168.5.0/24<span class="er" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">(</span><span class="ex" style="color: null;
-background-color: null;
-font-style: inherit;">rw,sync,no_root_squash,no_subtree_check</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">)</span></span></code></pre></div>
-</section>
-<section id="configure-hosts" class="level2">
-<h2 class="anchored" data-anchor-id="configure-hosts">Configure hosts</h2>
-<ul>
-<li>The <code>/etc/hosts</code> file should contain the following. Make sure to change all occurences of <code>pixie</code> in the script to the name of your cluster:</li>
-</ul>
-<div class="sourceCode" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><span class="ex" style="color: null;
-background-color: null;
-font-style: inherit;">127.0.0.1</span>   localhost</span>
-<span id="cb9-2"><span class="ex" style="color: null;
-background-color: null;
-font-style: inherit;">::1</span>     localhost ip6-localhost ip6-loopback</span>
-<span id="cb9-3"><span class="ex" style="color: null;
-background-color: null;
-font-style: inherit;">ff02::1</span>     ip6-allnodes</span>
-<span id="cb9-4"><span class="ex" style="color: null;
-background-color: null;
-font-style: inherit;">ff02::2</span>     ip6-allrouters</span>
-<span id="cb9-5"></span>
-<span id="cb9-6"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># This login node's hostname</span></span>
-<span id="cb9-7"><span class="ex" style="color: null;
-background-color: null;
-font-style: inherit;">127.0.1.1</span>   pixie001</span>
-<span id="cb9-8"></span>
-<span id="cb9-9"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># IP and hostname of compute nodes</span></span>
-<span id="cb9-10"><span class="ex" style="color: null;
-background-color: null;
-font-style: inherit;">192.168.5.102</span>   pixie002</span></code></pre></div>
-</section>
-<section id="configure-slurm" class="level2">
-<h2 class="anchored" data-anchor-id="configure-slurm">Configure Slurm</h2>
-<p>Add the following to /etc/slurm/slurm.conf. Change all occurences of <code>pixie</code> in this script to the name of your cluster.</p>
-<pre><code>SlurmctldHost=pixie001(192.168.5.101)
-MpiDefault=none
-ProctrackType=proctrack/cgroup
-#ProctrackType=proctrack/linuxproc
-ReturnToService=1
-SlurmctldPidFile=/run/slurmctld.pid
-SlurmctldPort=6817
-SlurmdPidFile=/run/slurmd.pid
-SlurmdPort=6818
-SlurmdSpoolDir=/var/lib/slurm/slurmd
-SlurmUser=slurm
-StateSaveLocation=/var/lib/slurm/slurmctld
-SwitchType=switch/none
-TaskPlugin=task/affinity
-InactiveLimit=0
-KillWait=30
-MinJobAge=300
-SlurmctldTimeout=120
-SlurmdTimeout=300
-Waittime=0
-SchedulerType=sched/backfill
-SelectType=select/cons_res
-SelectTypeParameters=CR_Core
-AccountingStorageType=accounting_storage/none
-# AccountingStoreJobComment=YES
-AccountingStoreFlags=job_comment
-ClusterName=pixie
-JobCompType=jobcomp/none
-JobAcctGatherFrequency=30
-JobAcctGatherType=jobacct_gather/none
-SlurmctldDebug=info
-SlurmctldLogFile=/var/log/slurm/slurmctld.log
-SlurmdDebug=info
-SlurmdLogFile=/var/log/slurm/slurmd.log
-PartitionName=pixiecluster Nodes=pixie[002-002] Default=YES MaxTime=INFINITE State=UP
-RebootProgram=/etc/slurm/slurmreboot.sh
-NodeName=pixie001 NodeAddr=192.168.5.101 CPUs=4 State=IDLE
-NodeName=pixie002 NodeAddr=192.168.5.102 CPUs=4 State=IDLE</code></pre>
-<ul>
-<li>Restart slurm</li>
-</ul>
-<div class="sourceCode" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">sudo</span> systemctl restart slurmctld</span></code></pre></div>
-</section>
-<section id="configure-munge" class="level2">
-<h2 class="anchored" data-anchor-id="configure-munge">Configure munge</h2>
-<ul>
-<li>Create munge key</li>
-</ul>
-<div class="sourceCode" id="cb12" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">sudo</span> mkdir /etc/munge</span>
-<span id="cb12-2"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">dd</span> if=/dev/urandom bs=1 count=1024 <span class="kw" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">|</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">sudo</span> tee <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">-a</span> /etc/munge/munge.key</span></code></pre></div>
-<ul>
-<li>Set ownership</li>
-</ul>
-<div class="sourceCode" id="cb13" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">sudo</span> chown munge: /etc/munge/munge.key</span>
-<span id="cb13-2"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">sudo</span> chmod 400 /etc/munge/munge.key</span></code></pre></div>
-</section>
-<section id="install-essi" class="level2">
-<h2 class="anchored" data-anchor-id="install-essi">Install ESSI</h2>
-<div class="sourceCode" id="cb14" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">mkdir</span> essi</span>
-<span id="cb14-2"><span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">cd</span> essi</span>
-<span id="cb14-3"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">wget</span> https://raw.githubusercontent.com/EESSI/eessi-demo/main/scripts/install_cvmfs_eessi.sh</span>
-<span id="cb14-4"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">sudo</span> bash ./install_cvmfs_eessi.sh</span>
-<span id="cb14-5"></span>
-<span id="cb14-6"><span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">source</span> /cvmfs/software.eessi.io/versions/2023.06/init/lmod/bash</span></code></pre></div>
-
-
-</section>
-
-<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
-  <category>minihpc</category>
-  <guid>https://carpentriesoffline.org/documentation/minihpc_login_node.html</guid>
-  <pubDate>Fri, 13 Jun 2025 21:33:46 GMT</pubDate>
-</item>
-<item>
-  <title>Setting up PXE on the miniHPC</title>
-  <link>https://carpentriesoffline.org/documentation/pxe.html</link>
-  <description><![CDATA[ 
-
-
-
-
-<section id="what-is-pxe-boot" class="level2">
-<h2 class="anchored" data-anchor-id="what-is-pxe-boot">What is PXE Boot?</h2>
-<p><em>In computing, the</em> <strong><em>Preboot eXecution Environment</em></strong> <em>specification describes a standardised client–server environment that boots a software assembly, retrieved from a network, on PXE-enabled clients. (<a href="https://en.wikipedia.org/wiki/Preboot_Execution_Environment">Wikipedia</a>)</em></p>
-</section>
-<section id="list-of-todos" class="level2">
-<h2 class="anchored" data-anchor-id="list-of-todos">List of ToDos</h2>
-<ul class="task-list">
-<li><label><input type="checkbox">Write the Raspberry Pi OS image to an SD card.</label></li>
-<li><label><input type="checkbox">Run and update and an upgrade.</label></li>
-<li><label><input type="checkbox">Install and configure DNS masquerade.</label></li>
-<li><label><input type="checkbox">Install and configure Network File System.</label></li>
-<li><label><input type="checkbox">Download and install PXE scripts: <code>git clone https://github.com/carpentriesoffline/pxe-boot.git</code></label></li>
-</ul>
-</section>
-<section id="step-1" class="level2">
-<h2 class="anchored" data-anchor-id="step-1">Step 1</h2>
-<p>Rather than duplicating instructions that might change, we’d rather link to the Raspberry Pi website where you can download the Raspberry Pi imager from and also find the instruction for writing an image to an SD card. The most important thing to remember is to select the <strong>Raspberry Pi OS Lite</strong> image because you don’t want to unneccessarily install a graphics environment which only takes up space on the installation disk and make things slower. The link to the web page is <a href="https://www.raspberrypi.com/software/">https://www.raspberrypi.com/software/</a>.</p>
-</section>
-<section id="step-2" class="level2">
-<h2 class="anchored" data-anchor-id="step-2">Step 2</h2>
-<p>In a bash terminal do the following:</p>
-<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">sudo</span> apt update <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">-y</span></span>
-<span id="cb1-2"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">sudo</span> apt full-upgrade <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">-y</span></span></code></pre></div>
-<section id="step-3" class="level3">
-<h3 class="anchored" data-anchor-id="step-3">Step 3</h3>
-<p>Install dnsmasq and nfs (Network file system):</p>
-<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">sudo</span> apt install dnsmasq nfs-kernel nfs-common</span></code></pre></div>
-</section>
-<section id="step-4" class="level3">
-<h3 class="anchored" data-anchor-id="step-4">Step 4</h3>
-<p>Configure DNS masquerading and NFS.</p>
-<p>To configure DNS masquerading edit the file <code>/etc/dnsmasq.conf</code> as follows:</p>
-<pre><code>port=0
-bind-dynamic
-interface=eth0
-domain-needed
-bogus-priv
-enable-tftp
-tftp-root=/pxe-boot
-pxe-service=0,"Raspberry Pi Boot"
-dhcp-option=3,192.168.5.100
-dhcp-option=6,10.3.141.1
-dhcp-range=eth0,192.168.5.101,192.168.5.200,12h
-dhcp-host=a1:a1:a1:a1:a1:a1,192.168.5.101
-dhcp-host=a2:a2:a2:a2:a2:a2,192.168.5.102
-dhcp-host=a3:a3:a3:a3:a3:a3,192.168.5.103
-dhcp-host=a4:a4:a4:a4:a4:a4,192.168.5.104
-dhcp-host=a5:a5:a5:a5:a5:a5,192.168.5.105
-dhcp-host=a6:a6:a6:a6:a6:a6,192.168.5.106</code></pre>
-
-
-</section>
-</section>
-
-<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
-  <category>minihpc</category>
-  <guid>https://carpentriesoffline.org/documentation/pxe.html</guid>
-  <pubDate>Fri, 13 Jun 2025 21:33:46 GMT</pubDate>
-</item>
-<item>
-  <title>CarpentriesOffline SD card images</title>
-  <link>https://carpentriesoffline.org/documentation/creating_an_sdcard.html</link>
-  <description><![CDATA[ 
-
-
-
-
-<p>The quick brown fox</p>
-
-
-
-<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
-  <category>minihpc</category>
-  <category>sdcard</category>
-  <guid>https://carpentriesoffline.org/documentation/creating_an_sdcard.html</guid>
-  <pubDate>Fri, 13 Jun 2025 21:33:46 GMT</pubDate>
-</item>
-<item>
-  <title>Bootable Flash Drive - step-by-step</title>
-  <link>https://carpentriesoffline.org/documentation/flashdrive_step_by_step.html</link>
-  <description><![CDATA[ 
-
-
-
-
-<section id="these-are-the-manual-steps-for-creating-a-carpentriesoffline-flashdrive" class="level2">
-<h2 class="anchored" data-anchor-id="these-are-the-manual-steps-for-creating-a-carpentriesoffline-flashdrive">These are the manual steps for creating a CarpentriesOffline flashdrive:</h2>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Work in progress</p>
-</div>
-</div>
-<ol type="1">
-<li>You will need a 4GB flashdrive to start with</li>
-<li>Download Slax Linux. If you have a 32bit computer you will need the 32bit version which you can download with this link: <a href="https://slax.org/download-slax.php?a=32bit&amp;b=Debian">https://slax.org/download-slax.php?a=32bit&amp;b=Debian</a>. If you have a 64 bit computer, download Slax with this link: <a href="https://slax.org/download-slax.php?a=64bit&amp;b=Debian">https://slax.org/download-slax.php?a=64bit&amp;b=Debian</a></li>
-<li><ul>
-<li><p>The file you just downloaded is an ISO image which you can mount on your computer as a virtual disk. (Instructions to mount of the three main operating systems will follow soon).</p></li>
-<li><p>To mount on Linux, assuming you are in the same directory as where you download the iso to.</p></li>
-<li><p><code>sudo mount -o loop ./slax-##bit-#.#.#.iso</code></p></li>
-<li><p>where the #s are replaced by the actual numbers in the name of the file you downloaded.</p></li>
-</ul></li>
-</ol>
-
-
-</section>
-
-<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
-  <category>flashdrive</category>
-  <guid>https://carpentriesoffline.org/documentation/flashdrive_step_by_step.html</guid>
-  <pubDate>Fri, 13 Jun 2025 21:33:46 GMT</pubDate>
-</item>
+<generator>quarto-1.8.25</generator>
+<lastBuildDate>Sat, 11 Oct 2025 13:15:41 GMT</lastBuildDate>
 <item>
   <title>Setting up EESSI with PXE on the miniHPC</title>
   <link>https://carpentriesoffline.org/documentation/eessi_with_pxe.html</link>
@@ -515,86 +52,7 @@ Note
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>minihpc</category>
   <guid>https://carpentriesoffline.org/documentation/eessi_with_pxe.html</guid>
-  <pubDate>Fri, 13 Jun 2025 21:33:46 GMT</pubDate>
-</item>
-<item>
-  <title>Creating a compute node with a Raspberry Pi for the miniHPC</title>
-  <link>https://carpentriesoffline.org/documentation/minihpc_compute_node.html</link>
-  <description><![CDATA[ 
-
-
-
-
-<p>The quick brown fox</p>
-
-
-
-<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
-  <category>minihpc</category>
-  <guid>https://carpentriesoffline.org/documentation/minihpc_compute_node.html</guid>
-  <pubDate>Fri, 13 Jun 2025 21:33:46 GMT</pubDate>
-</item>
-<item>
-  <title>A summary of the services required on the login node</title>
-  <link>https://carpentriesoffline.org/documentation/services.html</link>
-  <description><![CDATA[ 
-
-
-
-
-<section id="dnsmasq" class="level2">
-
-</section>
-<section id="wpa_supplicant" class="level2">
-<h2 class="anchored" data-anchor-id="wpa_supplicant">wpa_supplicant</h2>
-</section>
-<section id="nfs" class="level2">
-<h2 class="anchored" data-anchor-id="nfs">nfs</h2>
-</section>
-<section id="ntp" class="level2">
-<h2 class="anchored" data-anchor-id="ntp">ntp</h2>
-</section>
-<section id="networkmanager" class="level2">
-<h2 class="anchored" data-anchor-id="networkmanager">NetworkManager</h2>
-</section>
-<section id="iptables" class="level2">
-<h2 class="anchored" data-anchor-id="iptables">iptables</h2>
-
-
-</section>
-
-<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
-  <category>minihpc</category>
-  <guid>https://carpentriesoffline.org/documentation/services.html</guid>
-  <pubDate>Fri, 13 Jun 2025 21:33:46 GMT</pubDate>
-</item>
-<item>
-  <title>Offline Documentation</title>
-  <link>https://carpentriesoffline.org/documentation/offlinedatasci.html</link>
-  <description><![CDATA[ 
-
-
-
-
-<p><a href="https://devdocs.io/">DevDocs</a> centralizes documentation for a large number of programming languages and packages including many relevant to Data Science. The available documentation includes R, Python, Julia, JavaScript, pandas, Numpy, scikit-learn, SQLite, and much more.</p>
-<p>The site is designed to use local storage for offline use, and the great thing is you don’t need to change anything to work offline. Just set up the sync the documentation you want and then visit the website, even if you’re offline.</p>
-<section id="instructions" class="level2">
-<h2 class="anchored" data-anchor-id="instructions">Instructions</h2>
-<ol type="1">
-<li>Go to <a href="https://devdocs.io/">https://devdocs.io/</a></li>
-<li>In the menu bar on the left in the “Disabled” section (underneath CSS, HTML, HTTP, JavaScript, and Web APIs) find the documentation you want to access offline, hover over a version number, and click when it says “Enable”. You should see the documentation you just selected added to the list at the top of the side bar.</li>
-<li>Go to <a href="https://devdocs.io/offline">https://devdocs.io/offline</a> and click “Install all” in the top right corner (or just select the documentation you want to sync by clicking “Install” next to each set of documentation)</li>
-<li>Leave the “Install updates automatically” box checked if you want the site to update as newer versions of the documentation become available or uncheck it to update manually.</li>
-<li>Enjoy browsing the same docs (including the integrated search), in the same way, online or offline!</li>
-</ol>
-
-
-</section>
-
-<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
-  <category>offlinedatasci</category>
-  <guid>https://carpentriesoffline.org/documentation/offlinedatasci.html</guid>
-  <pubDate>Fri, 13 Jun 2025 21:33:46 GMT</pubDate>
+  <pubDate>Sat, 11 Oct 2025 13:15:41 GMT</pubDate>
 </item>
 <item>
   <title>Creating an SD card image: step-by-step</title>
@@ -623,7 +81,7 @@ Note
 <h3 class="anchored" data-anchor-id="using-a-pre-built-image">Using a pre-built image</h3>
 <p>You can download a pre-built image from our <a href="https://github.com/carpentriesoffline/carpentriesoffline-installer/releases">releases page</a></p>
 <p>These are experimental and unlikely to be fully working yet. These are built as multipart zip files with names like release.zip and release.z01, this is due to a 2GB upload limit in our build process. Download each of these. To extract them on a Linux system run the following:</p>
-<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">cat</span> release.z01 release.zip <span class="op" style="color: #5E5E5E;
 background-color: null;
@@ -631,7 +89,7 @@ font-style: inherit;">&gt;</span> carpentries-offline.zip</span>
 <span id="cb1-2"></span>
 <span id="cb1-3"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">unzip</span> carpentries-offline.zip</span></code></pre></div>
+font-style: inherit;">unzip</span> carpentries-offline.zip</span></code></pre></div></div>
 <p>After you have downloaded and unzipped the image files, write the image file to an SD card with Etcher or your image writing program of choice.</p>
 </section>
 <section id="installing-carpentriesoffline-manually" class="level3">
@@ -649,7 +107,7 @@ font-style: inherit;">unzip</span> carpentries-offline.zip</span></code></pre></
 <li>In the boot (small FAT32) partition on the SD card create an empty file called “ssh”</li>
 <li>If you’re using WiFi to get access to the Pi, create a file called wpa_supplicant.conf in the boot partition. Paste in the following and set your network SSID and password appropriately.</li>
 </ul>
-<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode ini code-with-copy"><code class="sourceCode ini"><span id="cb2-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode ini code-with-copy"><code class="sourceCode ini"><span id="cb2-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">#set this to your country code, gb=great britain</span></span>
 <span id="cb2-2"><span class="dt" style="color: #AD0000;
@@ -704,7 +162,7 @@ background-color: null;
 font-style: inherit;">"my_networks_password"</span></span>
 <span id="cb2-10"><span class="dt" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">}</span></span></code></pre></div>
+font-style: inherit;">}</span></span></code></pre></div></div>
 </section>
 <section id="login-to-the-pi" class="level4">
 <h4 class="anchored" data-anchor-id="login-to-the-pi">Login to the Pi</h4>
@@ -748,7 +206,486 @@ font-style: inherit;">}</span></span></code></pre></div>
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>sdcard</category>
   <guid>https://carpentriesoffline.org/documentation/rpiimage_step_by_step.html</guid>
-  <pubDate>Fri, 13 Jun 2025 21:33:46 GMT</pubDate>
+  <pubDate>Sat, 11 Oct 2025 13:15:41 GMT</pubDate>
+</item>
+<item>
+  <title>Creating a login node with a Raspberry Pi for the miniHPC</title>
+  <link>https://carpentriesoffline.org/documentation/minihpc_login_node.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="start-with-an-update" class="level2">
+<h2 class="anchored" data-anchor-id="start-with-an-update">Start with an update</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sudo</span> apt update <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-y</span></span>
+<span id="cb1-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sudo</span> apt upgrade <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-y</span></span></code></pre></div></div>
+</section>
+<section id="install-required-packages." class="level2">
+<h2 class="anchored" data-anchor-id="install-required-packages.">Install required packages.</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sudo</span> apt install <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-y</span> nfs-kernel-server lmod ansible slurm munge nmap <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">\</span></span>
+<span id="cb2-2">nfs-common net-tools build-essential htop net-tools screen vim python3-pip <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">\</span></span>
+<span id="cb2-3">dnsmasq slurm-wlm iptables iptables-persistent libmunge-dev libmunge2 <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">\</span></span>
+<span id="cb2-4">libpmix2 libpmix-bin libpmix-dev git</span></code></pre></div></div>
+<p>A dialog block will appear on the screen. Answer yes to both questions.</p>
+</section>
+<section id="enable-ip-forwarding" class="level2">
+<h2 class="anchored" data-anchor-id="enable-ip-forwarding">Enable IP forwarding</h2>
+<ul>
+<li>As <code>sudo</code>, edit the file <code>/etc/sysctl.conf</code>. Find the line that reads <code>#net.ipv4.ip_forward=1</code> and remove the <code>#</code> at the beginning of the line. Save the file. The change will become active after a reboot.</li>
+</ul>
+</section>
+<section id="configure-ip-tables" class="level2">
+<h2 class="anchored" data-anchor-id="configure-ip-tables">Configure IP-tables</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sudo</span> iptables <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-t</span> nat <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-A</span> POSTROUTING <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-o</span> eth0 <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-j</span> MASQUERADE</span>
+<span id="cb3-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sudo</span> iptables <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-A</span> FORWARD <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-i</span> wlan0 <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-o</span> eth0 <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-j</span> ACCEPT</span>
+<span id="cb3-3"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sudo</span> iptables <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-A</span> FORWARD <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-i</span> eth0 <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-o</span> wlan0 <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-m</span> state <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">--state</span> RELATED,ESTABLISHED <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-j</span> ACCEPT</span>
+<span id="cb3-4"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sudo</span> netfilter-persistent save</span></code></pre></div></div>
+</section>
+<section id="configure-the-network-interfaces" class="level2">
+<h2 class="anchored" data-anchor-id="configure-the-network-interfaces">Configure the network interfaces</h2>
+<p>Place the following into <code>/etc/network/interfaces</code></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">auto</span> eth0</span>
+<span id="cb4-2"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">allow-hotplug</span> eth0</span>
+<span id="cb4-3"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">iface</span> eth0 inet static</span>
+<span id="cb4-4">  <span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">address</span> 192.168.5.101</span>
+<span id="cb4-5">  <span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">netmask</span> 255.255.255.0</span>
+<span id="cb4-6"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">source</span> /etc/network/interfaces.d/<span class="pp" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">*</span></span></code></pre></div></div>
+</section>
+<section id="modify-the-hostname" class="level2">
+<h2 class="anchored" data-anchor-id="modify-the-hostname">Modify the hostname</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">echo</span> pixie001 <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">|</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sudo</span> tee /etc/hostname</span></code></pre></div></div>
+</section>
+<section id="configure-dns-masquerading" class="level2">
+<h2 class="anchored" data-anchor-id="configure-dns-masquerading">Configure DNS masquerading</h2>
+<ul>
+<li>Configure dnsmasq by entering the following in the file <code>/etc/dnsmasq.conf</code>. Replace the MAC address on the sixth line with the MAC address of your compute node.</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">interface</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>eth0</span>
+<span id="cb6-2"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">bind-dynamic</span></span>
+<span id="cb6-3"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">domain-needed</span></span>
+<span id="cb6-4"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">bogus-priv</span></span>
+<span id="cb6-5"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">dhcp-range=192.168.5.102,192.168.5.200,255.255.255.0,12h</span></span>
+<span id="cb6-6"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">dhcp-host=ab:cd:12:34:ab:cd,192.168.5.102</span></span>
+<span id="cb6-7"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">dhcp-option=3,192.168.0.1</span> <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># default route</span></span>
+<span id="cb6-8"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">dhcp-option=6,192.168.0.1</span> <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># default route</span></span></code></pre></div></div>
+</section>
+<section id="create-a-shared-directory." class="level2">
+<h2 class="anchored" data-anchor-id="create-a-shared-directory.">Create a shared directory.</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sudo</span> mkdir /sharedfs</span>
+<span id="cb7-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sudo</span> chown nobody:nogroup <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-R</span> /sharedfs</span>
+<span id="cb7-3"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sudo</span> chmod 777 <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-R</span> /sharedfs</span></code></pre></div></div>
+</section>
+<section id="configure-nfs" class="level2">
+<h2 class="anchored" data-anchor-id="configure-nfs">Configure NFS</h2>
+<ul>
+<li>Configure shared drives by adding the following at the end of the file <code>/etc/exports</code></li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">/sharedfs</span>    192.168.5.0/24<span class="er" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">(</span><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">rw,sync,no_root_squash,no_subtree_check</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">)</span></span></code></pre></div></div>
+</section>
+<section id="configure-hosts" class="level2">
+<h2 class="anchored" data-anchor-id="configure-hosts">Configure hosts</h2>
+<ul>
+<li>The <code>/etc/hosts</code> file should contain the following. Make sure to change all occurences of <code>pixie</code> in the script to the name of your cluster:</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">127.0.0.1</span>   localhost</span>
+<span id="cb9-2"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">::1</span>     localhost ip6-localhost ip6-loopback</span>
+<span id="cb9-3"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">ff02::1</span>     ip6-allnodes</span>
+<span id="cb9-4"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">ff02::2</span>     ip6-allrouters</span>
+<span id="cb9-5"></span>
+<span id="cb9-6"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># This login node's hostname</span></span>
+<span id="cb9-7"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">127.0.1.1</span>   pixie001</span>
+<span id="cb9-8"></span>
+<span id="cb9-9"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># IP and hostname of compute nodes</span></span>
+<span id="cb9-10"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">192.168.5.102</span>   pixie002</span></code></pre></div></div>
+</section>
+<section id="configure-slurm" class="level2">
+<h2 class="anchored" data-anchor-id="configure-slurm">Configure Slurm</h2>
+<p>Add the following to /etc/slurm/slurm.conf. Change all occurences of <code>pixie</code> in this script to the name of your cluster.</p>
+<pre><code>SlurmctldHost=pixie001(192.168.5.101)
+MpiDefault=none
+ProctrackType=proctrack/cgroup
+#ProctrackType=proctrack/linuxproc
+ReturnToService=1
+SlurmctldPidFile=/run/slurmctld.pid
+SlurmctldPort=6817
+SlurmdPidFile=/run/slurmd.pid
+SlurmdPort=6818
+SlurmdSpoolDir=/var/lib/slurm/slurmd
+SlurmUser=slurm
+StateSaveLocation=/var/lib/slurm/slurmctld
+SwitchType=switch/none
+TaskPlugin=task/affinity
+InactiveLimit=0
+KillWait=30
+MinJobAge=300
+SlurmctldTimeout=120
+SlurmdTimeout=300
+Waittime=0
+SchedulerType=sched/backfill
+SelectType=select/cons_res
+SelectTypeParameters=CR_Core
+AccountingStorageType=accounting_storage/none
+# AccountingStoreJobComment=YES
+AccountingStoreFlags=job_comment
+ClusterName=pixie
+JobCompType=jobcomp/none
+JobAcctGatherFrequency=30
+JobAcctGatherType=jobacct_gather/none
+SlurmctldDebug=info
+SlurmctldLogFile=/var/log/slurm/slurmctld.log
+SlurmdDebug=info
+SlurmdLogFile=/var/log/slurm/slurmd.log
+PartitionName=pixiecluster Nodes=pixie[002-002] Default=YES MaxTime=INFINITE State=UP
+RebootProgram=/etc/slurm/slurmreboot.sh
+NodeName=pixie001 NodeAddr=192.168.5.101 CPUs=4 State=IDLE
+NodeName=pixie002 NodeAddr=192.168.5.102 CPUs=4 State=IDLE</code></pre>
+<ul>
+<li>Restart slurm</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sudo</span> systemctl restart slurmctld</span></code></pre></div></div>
+</section>
+<section id="configure-munge" class="level2">
+<h2 class="anchored" data-anchor-id="configure-munge">Configure munge</h2>
+<ul>
+<li>Create munge key</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sudo</span> mkdir /etc/munge</span>
+<span id="cb12-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">dd</span> if=/dev/urandom bs=1 count=1024 <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">|</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sudo</span> tee <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-a</span> /etc/munge/munge.key</span></code></pre></div></div>
+<ul>
+<li>Set ownership</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sudo</span> chown munge: /etc/munge/munge.key</span>
+<span id="cb13-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sudo</span> chmod 400 /etc/munge/munge.key</span></code></pre></div></div>
+</section>
+<section id="install-essi" class="level2">
+<h2 class="anchored" data-anchor-id="install-essi">Install ESSI</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mkdir</span> essi</span>
+<span id="cb14-2"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">cd</span> essi</span>
+<span id="cb14-3"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">wget</span> https://raw.githubusercontent.com/EESSI/eessi-demo/main/scripts/install_cvmfs_eessi.sh</span>
+<span id="cb14-4"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sudo</span> bash ./install_cvmfs_eessi.sh</span>
+<span id="cb14-5"></span>
+<span id="cb14-6"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">source</span> /cvmfs/software.eessi.io/versions/2023.06/init/lmod/bash</span></code></pre></div></div>
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>minihpc</category>
+  <guid>https://carpentriesoffline.org/documentation/minihpc_login_node.html</guid>
+  <pubDate>Sat, 11 Oct 2025 13:15:41 GMT</pubDate>
+</item>
+<item>
+  <title>Bootable Flash Drive - step-by-step</title>
+  <link>https://carpentriesoffline.org/documentation/flashdrive_step_by_step.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="these-are-the-manual-steps-for-creating-a-carpentriesoffline-flashdrive" class="level2">
+<h2 class="anchored" data-anchor-id="these-are-the-manual-steps-for-creating-a-carpentriesoffline-flashdrive">These are the manual steps for creating a CarpentriesOffline flashdrive:</h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Work in progress</p>
+</div>
+</div>
+<ol type="1">
+<li>You will need a 4GB flashdrive to start with</li>
+<li>Download Slax Linux. If you have a 32bit computer you will need the 32bit version which you can download with this link: <a href="https://slax.org/download-slax.php?a=32bit&amp;b=Debian">https://slax.org/download-slax.php?a=32bit&amp;b=Debian</a>. If you have a 64 bit computer, download Slax with this link: <a href="https://slax.org/download-slax.php?a=64bit&amp;b=Debian">https://slax.org/download-slax.php?a=64bit&amp;b=Debian</a></li>
+<li><ul>
+<li><p>The file you just downloaded is an ISO image which you can mount on your computer as a virtual disk. (Instructions to mount of the three main operating systems will follow soon).</p></li>
+<li><p>To mount on Linux, assuming you are in the same directory as where you download the iso to.</p></li>
+<li><p><code>sudo mount -o loop ./slax-##bit-#.#.#.iso</code></p></li>
+<li><p>where the #s are replaced by the actual numbers in the name of the file you downloaded.</p></li>
+</ul></li>
+</ol>
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>flashdrive</category>
+  <guid>https://carpentriesoffline.org/documentation/flashdrive_step_by_step.html</guid>
+  <pubDate>Sat, 11 Oct 2025 13:15:41 GMT</pubDate>
+</item>
+<item>
+  <title>A summary of the services required on the login node</title>
+  <link>https://carpentriesoffline.org/documentation/services.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="dnsmasq" class="level2">
+
+</section>
+<section id="wpa_supplicant" class="level2">
+<h2 class="anchored" data-anchor-id="wpa_supplicant">wpa_supplicant</h2>
+</section>
+<section id="nfs" class="level2">
+<h2 class="anchored" data-anchor-id="nfs">nfs</h2>
+</section>
+<section id="ntp" class="level2">
+<h2 class="anchored" data-anchor-id="ntp">ntp</h2>
+</section>
+<section id="networkmanager" class="level2">
+<h2 class="anchored" data-anchor-id="networkmanager">NetworkManager</h2>
+</section>
+<section id="iptables" class="level2">
+<h2 class="anchored" data-anchor-id="iptables">iptables</h2>
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>minihpc</category>
+  <guid>https://carpentriesoffline.org/documentation/services.html</guid>
+  <pubDate>Sat, 11 Oct 2025 13:15:41 GMT</pubDate>
+</item>
+<item>
+  <title>Setting up PXE on the miniHPC</title>
+  <link>https://carpentriesoffline.org/documentation/pxe.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="what-is-pxe-boot" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-pxe-boot">What is PXE Boot?</h2>
+<p><em>In computing, the</em> <strong><em>Preboot eXecution Environment</em></strong> <em>specification describes a standardised client–server environment that boots a software assembly, retrieved from a network, on PXE-enabled clients. (<a href="https://en.wikipedia.org/wiki/Preboot_Execution_Environment">Wikipedia</a>)</em></p>
+</section>
+<section id="list-of-todos" class="level2">
+<h2 class="anchored" data-anchor-id="list-of-todos">List of ToDos</h2>
+<ul class="task-list">
+<li><label><input type="checkbox">Write the Raspberry Pi OS image to an SD card.</label></li>
+<li><label><input type="checkbox">Run and update and an upgrade.</label></li>
+<li><label><input type="checkbox">Install and configure DNS masquerade.</label></li>
+<li><label><input type="checkbox">Install and configure Network File System.</label></li>
+<li><label><input type="checkbox">Download and install PXE scripts: <code>git clone https://github.com/carpentriesoffline/pxe-boot.git</code></label></li>
+</ul>
+</section>
+<section id="step-1" class="level2">
+<h2 class="anchored" data-anchor-id="step-1">Step 1</h2>
+<p>Rather than duplicating instructions that might change, we’d rather link to the Raspberry Pi website where you can download the Raspberry Pi imager from and also find the instruction for writing an image to an SD card. The most important thing to remember is to select the <strong>Raspberry Pi OS Lite</strong> image because you don’t want to unneccessarily install a graphics environment which only takes up space on the installation disk and make things slower. The link to the web page is <a href="https://www.raspberrypi.com/software/">https://www.raspberrypi.com/software/</a>.</p>
+</section>
+<section id="step-2" class="level2">
+<h2 class="anchored" data-anchor-id="step-2">Step 2</h2>
+<p>In a bash terminal do the following:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sudo</span> apt update <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-y</span></span>
+<span id="cb1-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sudo</span> apt full-upgrade <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-y</span></span></code></pre></div></div>
+<section id="step-3" class="level3">
+<h3 class="anchored" data-anchor-id="step-3">Step 3</h3>
+<p>Install dnsmasq and nfs (Network file system):</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sudo</span> apt install dnsmasq nfs-kernel nfs-common</span></code></pre></div></div>
+</section>
+<section id="step-4" class="level3">
+<h3 class="anchored" data-anchor-id="step-4">Step 4</h3>
+<p>Configure DNS masquerading and NFS.</p>
+<p>To configure DNS masquerading edit the file <code>/etc/dnsmasq.conf</code> as follows:</p>
+<pre><code>port=0
+bind-dynamic
+interface=eth0
+domain-needed
+bogus-priv
+enable-tftp
+tftp-root=/pxe-boot
+pxe-service=0,"Raspberry Pi Boot"
+dhcp-option=3,192.168.5.100
+dhcp-option=6,10.3.141.1
+dhcp-range=eth0,192.168.5.101,192.168.5.200,12h
+dhcp-host=a1:a1:a1:a1:a1:a1,192.168.5.101
+dhcp-host=a2:a2:a2:a2:a2:a2,192.168.5.102
+dhcp-host=a3:a3:a3:a3:a3:a3,192.168.5.103
+dhcp-host=a4:a4:a4:a4:a4:a4,192.168.5.104
+dhcp-host=a5:a5:a5:a5:a5:a5,192.168.5.105
+dhcp-host=a6:a6:a6:a6:a6:a6,192.168.5.106</code></pre>
+
+
+</section>
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>minihpc</category>
+  <guid>https://carpentriesoffline.org/documentation/pxe.html</guid>
+  <pubDate>Sat, 11 Oct 2025 13:15:41 GMT</pubDate>
 </item>
 <item>
   <title>The Pixie Network</title>
@@ -893,7 +830,70 @@ font-style: inherit;">}</span></span></code></pre></div>
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>minihpc</category>
   <guid>https://carpentriesoffline.org/documentation/pixieNetwork.html</guid>
-  <pubDate>Fri, 13 Jun 2025 21:33:46 GMT</pubDate>
+  <pubDate>Sat, 11 Oct 2025 13:15:41 GMT</pubDate>
+</item>
+<item>
+  <title>Creating a compute node with a Raspberry Pi for the miniHPC</title>
+  <link>https://carpentriesoffline.org/documentation/minihpc_compute_node.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>The quick brown fox</p>
+
+
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>minihpc</category>
+  <guid>https://carpentriesoffline.org/documentation/minihpc_compute_node.html</guid>
+  <pubDate>Sat, 11 Oct 2025 13:15:41 GMT</pubDate>
+</item>
+<item>
+  <title>CarpentriesOffline SD card images</title>
+  <link>https://carpentriesoffline.org/documentation/creating_an_sdcard.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>The quick brown fox</p>
+
+
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>minihpc</category>
+  <category>sdcard</category>
+  <guid>https://carpentriesoffline.org/documentation/creating_an_sdcard.html</guid>
+  <pubDate>Sat, 11 Oct 2025 13:15:41 GMT</pubDate>
+</item>
+<item>
+  <title>Offline Documentation</title>
+  <link>https://carpentriesoffline.org/documentation/offlinedatasci.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p><a href="https://devdocs.io/">DevDocs</a> centralizes documentation for a large number of programming languages and packages including many relevant to Data Science. The available documentation includes R, Python, Julia, JavaScript, pandas, Numpy, scikit-learn, SQLite, and much more.</p>
+<p>The site is designed to use local storage for offline use, and the great thing is you don’t need to change anything to work offline. Just set up the sync the documentation you want and then visit the website, even if you’re offline.</p>
+<section id="instructions" class="level2">
+<h2 class="anchored" data-anchor-id="instructions">Instructions</h2>
+<ol type="1">
+<li>Go to <a href="https://devdocs.io/">https://devdocs.io/</a></li>
+<li>In the menu bar on the left in the “Disabled” section (underneath CSS, HTML, HTTP, JavaScript, and Web APIs) find the documentation you want to access offline, hover over a version number, and click when it says “Enable”. You should see the documentation you just selected added to the list at the top of the side bar.</li>
+<li>Go to <a href="https://devdocs.io/offline">https://devdocs.io/offline</a> and click “Install all” in the top right corner (or just select the documentation you want to sync by clicking “Install” next to each set of documentation)</li>
+<li>Leave the “Install updates automatically” box checked if you want the site to update as newer versions of the documentation become available or uncheck it to update manually.</li>
+<li>Enjoy browsing the same docs (including the integrated search), in the same way, online or offline!</li>
+</ol>
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>offlinedatasci</category>
+  <guid>https://carpentriesoffline.org/documentation/offlinedatasci.html</guid>
+  <pubDate>Sat, 11 Oct 2025 13:15:41 GMT</pubDate>
 </item>
 </channel>
 </rss>
