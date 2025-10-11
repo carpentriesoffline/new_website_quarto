@@ -2,7 +2,7 @@
 title: "Bootable Flash Drive"
 categories:
   - flashdrive
-image: images/flashdrive.png
+image: images/FlashDrive.png
 image-alt: "A photo of a flash drive"
 ---
 
