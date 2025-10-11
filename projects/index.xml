@@ -11,7 +11,7 @@
 <description>Projects we are currently working on
 </description>
 <generator>quarto-1.8.25</generator>
-<lastBuildDate>Sat, 11 Oct 2025 13:15:39 GMT</lastBuildDate>
+<lastBuildDate>Sat, 11 Oct 2025 13:20:51 GMT</lastBuildDate>
 <item>
   <title>CarpentriesOffline with a Raspberry Pi</title>
   <link>https://carpentriesoffline.org/projects/RaspberryPi.html</link>
@@ -38,7 +38,7 @@
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>sdcard</category>
   <guid>https://carpentriesoffline.org/projects/RaspberryPi.html</guid>
-  <pubDate>Sat, 11 Oct 2025 13:15:39 GMT</pubDate>
+  <pubDate>Sat, 11 Oct 2025 13:20:51 GMT</pubDate>
   <media:content url="https://carpentriesoffline.org/projects/images/sd_card.png" medium="image" type="image/png" height="164" width="144"/>
 </item>
 <item>
@@ -69,7 +69,7 @@
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>minihpc</category>
   <guid>https://carpentriesoffline.org/projects/KVMStick.html</guid>
-  <pubDate>Sat, 11 Oct 2025 13:15:39 GMT</pubDate>
+  <pubDate>Sat, 11 Oct 2025 13:20:51 GMT</pubDate>
   <media:content url="https://carpentriesoffline.org/projects/images/kvm-stick.png" medium="image" type="image/png" height="69" width="144"/>
 </item>
 <item>
@@ -100,8 +100,8 @@ Important
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>flashdrive</category>
   <guid>https://carpentriesoffline.org/projects/FlashDrive.html</guid>
-  <pubDate>Sat, 11 Oct 2025 13:15:39 GMT</pubDate>
-  <media:content url="https://carpentriesoffline.org/projects/images/flashdrive.png" medium="image" type="image/png"/>
+  <pubDate>Sat, 11 Oct 2025 13:20:51 GMT</pubDate>
+  <media:content url="https://carpentriesoffline.org/projects/images/FlashDrive.png" medium="image" type="image/png" height="203" width="144"/>
 </item>
 <item>
   <title>The miniHPC</title>
@@ -149,7 +149,7 @@ Important
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>minihpc</category>
   <guid>https://carpentriesoffline.org/projects/miniHPC.html</guid>
-  <pubDate>Sat, 11 Oct 2025 13:15:39 GMT</pubDate>
+  <pubDate>Sat, 11 Oct 2025 13:20:51 GMT</pubDate>
   <media:content url="https://carpentriesoffline.org/projects/images/pixie.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
@@ -175,7 +175,7 @@ Important
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>offlinedatasci</category>
   <guid>https://carpentriesoffline.org/projects/offlinedatasci.html</guid>
-  <pubDate>Sat, 11 Oct 2025 13:15:39 GMT</pubDate>
+  <pubDate>Sat, 11 Oct 2025 13:20:51 GMT</pubDate>
   <media:content url="https://carpentriesoffline.org/projects/images/pypilogo.svg" medium="image" type="image/svg+xml"/>
 </item>
 </channel>

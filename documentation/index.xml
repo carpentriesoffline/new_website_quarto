@@ -11,7 +11,7 @@
 <description>CarpentriesOffline Documentation
 </description>
 <generator>quarto-1.8.25</generator>
-<lastBuildDate>Sat, 11 Oct 2025 13:15:41 GMT</lastBuildDate>
+<lastBuildDate>Sat, 11 Oct 2025 13:20:54 GMT</lastBuildDate>
 <item>
   <title>Setting up EESSI with PXE on the miniHPC</title>
   <link>https://carpentriesoffline.org/documentation/eessi_with_pxe.html</link>
@@ -52,7 +52,7 @@
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>minihpc</category>
   <guid>https://carpentriesoffline.org/documentation/eessi_with_pxe.html</guid>
-  <pubDate>Sat, 11 Oct 2025 13:15:41 GMT</pubDate>
+  <pubDate>Sat, 11 Oct 2025 13:20:54 GMT</pubDate>
 </item>
 <item>
   <title>Creating an SD card image: step-by-step</title>
@@ -206,7 +206,7 @@ font-style: inherit;">}</span></span></code></pre></div></div>
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>sdcard</category>
   <guid>https://carpentriesoffline.org/documentation/rpiimage_step_by_step.html</guid>
-  <pubDate>Sat, 11 Oct 2025 13:15:41 GMT</pubDate>
+  <pubDate>Sat, 11 Oct 2025 13:20:54 GMT</pubDate>
 </item>
 <item>
   <title>Creating a login node with a Raspberry Pi for the miniHPC</title>
@@ -532,7 +532,7 @@ font-style: inherit;">source</span> /cvmfs/software.eessi.io/versions/2023.06/in
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>minihpc</category>
   <guid>https://carpentriesoffline.org/documentation/minihpc_login_node.html</guid>
-  <pubDate>Sat, 11 Oct 2025 13:15:41 GMT</pubDate>
+  <pubDate>Sat, 11 Oct 2025 13:20:54 GMT</pubDate>
 </item>
 <item>
   <title>Bootable Flash Drive - step-by-step</title>
@@ -574,7 +574,7 @@ Note
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>flashdrive</category>
   <guid>https://carpentriesoffline.org/documentation/flashdrive_step_by_step.html</guid>
-  <pubDate>Sat, 11 Oct 2025 13:15:41 GMT</pubDate>
+  <pubDate>Sat, 11 Oct 2025 13:20:54 GMT</pubDate>
 </item>
 <item>
   <title>A summary of the services required on the login node</title>
@@ -608,7 +608,7 @@ Note
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>minihpc</category>
   <guid>https://carpentriesoffline.org/documentation/services.html</guid>
-  <pubDate>Sat, 11 Oct 2025 13:15:41 GMT</pubDate>
+  <pubDate>Sat, 11 Oct 2025 13:20:54 GMT</pubDate>
 </item>
 <item>
   <title>Setting up PXE on the miniHPC</title>
@@ -685,7 +685,7 @@ dhcp-host=a6:a6:a6:a6:a6:a6,192.168.5.106</code></pre>
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>minihpc</category>
   <guid>https://carpentriesoffline.org/documentation/pxe.html</guid>
-  <pubDate>Sat, 11 Oct 2025 13:15:41 GMT</pubDate>
+  <pubDate>Sat, 11 Oct 2025 13:20:54 GMT</pubDate>
 </item>
 <item>
   <title>The Pixie Network</title>
@@ -830,7 +830,7 @@ dhcp-host=a6:a6:a6:a6:a6:a6,192.168.5.106</code></pre>
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>minihpc</category>
   <guid>https://carpentriesoffline.org/documentation/pixieNetwork.html</guid>
-  <pubDate>Sat, 11 Oct 2025 13:15:41 GMT</pubDate>
+  <pubDate>Sat, 11 Oct 2025 13:20:54 GMT</pubDate>
 </item>
 <item>
   <title>Creating a compute node with a Raspberry Pi for the miniHPC</title>
@@ -847,7 +847,7 @@ dhcp-host=a6:a6:a6:a6:a6:a6,192.168.5.106</code></pre>
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>minihpc</category>
   <guid>https://carpentriesoffline.org/documentation/minihpc_compute_node.html</guid>
-  <pubDate>Sat, 11 Oct 2025 13:15:41 GMT</pubDate>
+  <pubDate>Sat, 11 Oct 2025 13:20:54 GMT</pubDate>
 </item>
 <item>
   <title>CarpentriesOffline SD card images</title>
@@ -865,7 +865,7 @@ dhcp-host=a6:a6:a6:a6:a6:a6,192.168.5.106</code></pre>
   <category>minihpc</category>
   <category>sdcard</category>
   <guid>https://carpentriesoffline.org/documentation/creating_an_sdcard.html</guid>
-  <pubDate>Sat, 11 Oct 2025 13:15:41 GMT</pubDate>
+  <pubDate>Sat, 11 Oct 2025 13:20:54 GMT</pubDate>
 </item>
 <item>
   <title>Offline Documentation</title>
@@ -893,7 +893,7 @@ dhcp-host=a6:a6:a6:a6:a6:a6,192.168.5.106</code></pre>
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>offlinedatasci</category>
   <guid>https://carpentriesoffline.org/documentation/offlinedatasci.html</guid>
-  <pubDate>Sat, 11 Oct 2025 13:15:41 GMT</pubDate>
+  <pubDate>Sat, 11 Oct 2025 13:20:54 GMT</pubDate>
 </item>
 </channel>
 </rss>
