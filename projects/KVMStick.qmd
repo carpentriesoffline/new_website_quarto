@@ -1,0 +1,30 @@
+---
+title: "Serial KVM stick"
+categories:
+  - minihpc
+image: images/kvm-stick.png
+image-alt: "A photo of a USB stick in 3d-printed housing"
+---
+
+At our Carpentries Offline hackathon at RSECon'22, we found that working with Raspberry Pis can be 
+difficult if there are limited screens and keyboards to plug into them. However, everyone always
+brings a laptop to a hackathon.
+
+The Serial KVM stick allows controlling a Raspberry Pi or other single board computer (SBC) with 
+just a laptop: no external screen and keyboard required.
+
+It's already possible to use a Raspberry Pi via SSH or serial connection. However, this isn't true
+of all SBCs, and has a few problems:
+
+- A network connection is required to use SSH, which isn't always possible if the device can't be 
+  connected to a network (e.g. the only available network is Eduroam) or doesn't already have 
+  network credentials stored on it
+- Serial connections are possible but must be enabled in the `/boot/config.txt` file.
+- It's not possible to use a GUI over either of these methods
+
+This solution uses a USB video capture card and a CH9329-based Serial -> USB HID Keyboard emulator.
+
+- This emulates a keyboard and mouse on the guest computer
+- Using software, the guest machine can be controlled directly within a window on the latop.
+
+For more information see [the serial-kvm repository](https://github.com/sjmf/kvm-serial) on github.
